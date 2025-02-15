@@ -1,2 +1,0 @@
-*.bcsar filter=lfs diff=lfs merge=lfs -text
-romfs/sound/IRON15_sound.bcsar filter=lfs diff=lfs merge=lfs -text
