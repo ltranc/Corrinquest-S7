@@ -1,0 +1,455 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話_プレイヤー");
+    ev::FlagEntry("戦闘会話ガンズ");
+    ev::FlagEntry("増援条件1");
+    ev::FlagEntry("増援条件2");
+    ev::FlagEntry("増援条件4");
+    ev::FlagEntry("増援条件6");
+    ev::FlagEntry("増援1");
+    ev::FlagEntry("増援2");
+    ev::FlagEntry("増援3");
+    ev::FlagEntry("増援4");
+    ev::FlagEntry("増援5");
+    ev::FlagEntry("増援6");
+    ev::FlagEntry("増援7");
+    ev::VariableEntry("Move", 0);
+    ev::FlagEntry("SongChange");
+    ev::FlagEntry("Pair");
+    ev::FlagEntry("BlockedTopRight1");
+    ev::FlagEntry("BlockedTopRight2");
+    ev::FlagEntry("BlockedTopLeft1");
+    ev::FlagEntry("BlockedTopLeft2");
+    ev::VariableEntry("ReinforceAll", 0);
+    ev::VariableEntry("AllCounter", 0);
+    ev::FlagEntry("EatRock");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleBreakdown(1);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    v0 = ev::UnitGetByPID("PID_B026_ボス");
+    if (ev::DifficultyGet() <= 0) {
+        if (v0) {
+            ev::UnitSetPrivateSkill(v0, "SPID_回避-10");
+        }
+    }
+    if (v0) {
+        ev::UnitSetPrivateSkill(v0, "SPID_強制スキル発動");
+        ev::UnitSetPrivateSkill(v0, "SPID_強制必殺回避");
+        ev::UnitSetEnhance(v0, 21);
+        ev::UnitSetEnhance(v0, 46);
+        ev::UnitSetEnhance(v0, 47);
+        ev::UnitSetEnhance(v0, 22);
+        ev::UnitSetEnhance(v0, 48);
+        ev::UnitSetEnhance(v0, 49);
+    }
+    v1 = ev::UnitGetByPID("PID_B026_ガンズ");
+    if (v1) {
+        ev::UnitSetPrivateSkill(v1, "SPID_強制必殺回避");
+        ev::UnitSetPrivateSkill(v1, "SPID_ワープ禁止");
+        ev::UnitSetMovePower(v1, 7);
+    }
+    v2 = ev::ForceUnitGetNext(v1);
+    if (v2) {
+        ev::UnitSetPrivateSkill(v2, "SPID_ワープ禁止");
+    }
+    v3 = ev::ForceUnitGetNext(v2);
+    if (v3) {
+        ev::UnitSetPrivateSkill(v3, "SPID_ワープ禁止");
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B026_OP1_1");
+    ev::CutScene("B026_OP1_2");
+    ev::MapEventBeginForOpening(0);
+    ev::CameraSetPosition(13, 5);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::Dispos("Event01", 2052);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(1000);
+    v0 = ev::UnitGetByPID(XANDER);
+    ev::UnitMovePosition(v0, 13, 5, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B026_OP2_1");
+    v1 = ev::UnitGetByPID(LEO);
+    ev::UnitMovePosition(v1, 14, 5, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B026_OP2_2");
+    v2 = ev::UnitGetByPID(ELISE);
+    v3 = ev::UnitGetByPID(CAMILLA);
+    ev::UnitMovePosition(v2, 12, 5, 0);
+    ev::UnitMovePosition(v3, 15, 5, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B026_OP2_3");
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForOpening();
+}
+
+callback[Event.Turn](1, 1, 0) {}
+
+callback[Event.Turn](40, 40, 0) {
+    v0 = ev::UnitGetByPID("PID_B026_ガンズ");
+    if (v0) {
+        ev::AiSetActive(v0, 1);
+    }
+}
+
+def anonfn6(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    v2 = 0;
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            if (ev::AiGetActive(v1)) {
+                return 1;
+            }
+            v2++;
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+    return v2 == 0;
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("増援3")) {
+        ev::VariableInc("Move");
+        v0 = ev::VariableGet("Move");
+        match (v0) {
+            2 -> {
+                v1 = ev::UnitGetByPID("PID_B026_ガンズ");
+                if (v1) {
+                    ev::UnitClrPrivateSkill(v1, "SPID_強制必殺回避");
+                }
+            }
+            5 -> {
+                v1 = ev::ForceUnitGetFirst(1);
+                while (v1) {
+                    ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+                    ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+                    ev::AiClrFlag(v1, 256);
+                    if (ev::AiGetBand(v1) < 11) {
+                        ev::UnitClrPrivateSkill(v1, "SPID_移動禁止");
+                    }
+                    v1 = ev::ForceUnitGetNext(v1);
+                }
+            }
+            6 -> {
+                if (!ev::FlagGet("増援1")) {
+                    ev::Dispos("Reinforce01", 8);
+                    ev::DisposWait();
+                    ev::FlagSet("増援1");
+                }
+                if (!ev::FlagGet("増援2")) {
+                    ev::Dispos("Reinforce02", 8);
+                    ev::DisposWait();
+                    ev::FlagSet("増援2");
+                }
+            }
+            7 -> {
+                if (ev::FlagGet("BlockedTopLeft1")) {
+                    ev::Dispos("Reinforce01", 8);
+                    ev::DisposWait();
+                    ev::FlagClr("BlockedTopLeft1");
+                }
+                if (ev::FlagGet("BlockedTopRight1")) {
+                    ev::Dispos("Reinforce02", 8);
+                    ev::DisposWait();
+                    ev::FlagClr("BlockedTopRight1");
+                }
+            }
+            8 -> {
+                if (ev::FlagGet("BlockedTopLeft2")) {
+                    ev::Dispos("Reinforce04", 8);
+                    ev::DisposWait();
+                    ev::FlagClr("BlockedTopLeft2");
+                }
+                if (ev::FlagGet("BlockedTopRight2")) {
+                    ev::Dispos("Reinforce06", 8);
+                    ev::DisposWait();
+                    ev::FlagClr("BlockedTopRight2");
+                }
+            }
+        }
+        if (v0 > 9) {
+            v2 = ev::VariableGet("ReinforceAll");
+            v3 = ev::VariableGet("AllCounter");
+            if (ev::ForceUnitGetCount(1) < 35 && v3 < 3) {
+                if (v2 == 0 || ev::TurnGet() > v2 + 1) {
+                    v4 = ev::UnitGetByPID("PID_B026_ボス");
+                    if (v4) {
+                        ev::CameraSetPositionByUnit(v4);
+                        ev::CameraWait();
+                        ev::TimeWait(250);
+                        ev::UnitSetMotion(v4, 9);
+                        ev::TimeWait(250);
+                    }
+                    ev::Dispos("Reinforce10", 1032);
+                    ev::DisposWait();
+                    ev::VariableSet("ReinforceAll", ev::TurnGet());
+                    ev::VariableInc("AllCounter");
+                }
+            }
+        }
+    }
+    if (!ev::FlagGet("増援1") && ev::FlagGet("増援条件1")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        v5 = ev::UnitGetByPosition(1, 13);
+        v1 = ev::UnitGetByPosition(1, 12);
+        if (ev::UnitGetForce(v5) == 0 && ev::UnitGetForce(v1) == 0) {
+            ev::FlagSet("BlockedTopLeft1");
+        }
+        ev::FlagSet("増援1");
+    }
+    if (!ev::FlagGet("増援2") && ev::FlagGet("増援条件2")) {
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        v5 = ev::UnitGetByPosition(26, 13);
+        v1 = ev::UnitGetByPosition(26, 12);
+        if (ev::UnitGetForce(v5) == 0 && ev::UnitGetForce(v1) == 0) {
+            ev::FlagSet("BlockedTopRight1");
+        }
+        ev::FlagSet("増援2");
+    }
+    if (!ev::FlagGet("増援3") && anonfn6(9)) {
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        ev::FlagSet("増援3");
+    }
+    if (!ev::FlagGet("増援5") && ev::FlagGet("増援4")) {
+        ev::Dispos("Reinforce05", 8);
+        ev::DisposWait();
+        ev::FlagSet("増援5");
+    }
+    if (!ev::FlagGet("増援4") && ev::FlagGet("増援条件4")) {
+        ev::Dispos("Reinforce04", 8);
+        ev::DisposWait();
+        ev::FlagSet("増援4");
+        v5 = ev::UnitGetByPosition(1, 13);
+        v1 = ev::UnitGetByPosition(1, 12);
+        if (ev::UnitGetForce(v5) == 0 && ev::UnitGetForce(v1) == 0) {
+            ev::FlagSet("BlockedTopLeft2");
+        }
+    }
+    if (!ev::FlagGet("増援7") && ev::FlagGet("増援6")) {
+        ev::Dispos("Reinforce07", 8);
+        ev::DisposWait();
+        ev::FlagSet("増援7");
+    }
+    if (!ev::FlagGet("増援6") && ev::FlagGet("増援条件6")) {
+        ev::Dispos("Reinforce06", 8);
+        ev::DisposWait();
+        v5 = ev::UnitGetByPosition(26, 13);
+        v1 = ev::UnitGetByPosition(26, 12);
+        if (ev::UnitGetForce(v5) == 0 && ev::UnitGetForce(v1) == 0) {
+            ev::FlagSet("BlockedTopRight2");
+        }
+        ev::FlagSet("増援6");
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (!ev::FlagGet("増援3")) {
+        if (ev::FlagGet("増援条件1")) {
+            if (ev::ForceUnitGetCountArea(1, 3, 22, 19, 30, 1) < 6) {
+                v0 = ev::ForceUnitGetFirst(1);
+                while (v0) {
+                    if (ev::AiGetBand(v0) == 9) {
+                        ev::AiSetActive(v0, 1);
+                    }
+                    v1 = ev::ForceUnitGetNext(v0);
+                    v0 = v1;
+                }
+            }
+        }
+        if (ev::FlagGet("増援条件2")) {
+            if (ev::ForceUnitGetCountArea(1, 8, 22, 24, 30, 1) < 6) {
+                v0 = ev::ForceUnitGetFirst(1);
+                while (v0) {
+                    if (ev::AiGetBand(v0) == 9) {
+                        ev::AiSetActive(v0, 1);
+                    }
+                    v1 = ev::ForceUnitGetNext(v0);
+                    v0 = v1;
+                }
+            }
+        }
+    }
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    v0 = ev::ForceUnitGetCount(1);
+    if (v0 < 50) {
+        if (!ev::FlagGet("Pair")) {
+            v1 = ev::UnitGetByPID("PID_B026_ボス");
+            if (v1) {
+                ev::CameraSetPositionByUnit(v1);
+                ev::CameraWait();
+                ev::TimeWait(250);
+                ev::UnitSetMotion(v1, 9);
+                ev::TimeWait(250);
+                ev::Dispos("ReinforcePair", 1032);
+                v2 = ev::UnitGetByPID("PID_B026_ダークナイト");
+                ev::EffectPlayUnit("Hra_七難即滅1", v2);
+                ev::DisposWait();
+                ev::TimeWait(500);
+                if (v2) {
+                    ev::UnitDoubleOn(v1, v2);
+                }
+                ev::FlagSet("Pair");
+            }
+        }
+    }
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "") {
+    if (ev::FlagGet("増援6")) {
+        v0 = ev::UnitGetByPID("PID_B026_魔女1");
+        v1 = ev::UnitGetByPID("PID_B026_魔女2");
+        if (v0) {
+            ev::UnitClrEnhance(v0, 7);
+            ev::UnitClrEnhance(v0, 6);
+            ev::UnitClrEnhance(v0, 5);
+            v2 = ev::UnitGetWeakness(v0, 2);
+            if (v2 > 1) {
+                v2 = v2 * -1;
+                ev::UnitAddWeakness(v0, 2, v2);
+            }
+        }
+        if (v1) {
+            ev::UnitClrEnhance(v1, 7);
+            ev::UnitClrEnhance(v1, 6);
+            ev::UnitClrEnhance(v1, 5);
+            v2 = ev::UnitGetWeakness(v1, 2);
+            if (v2 > 1) {
+                v2 = v2 * -1;
+                ev::UnitAddWeakness(v1, 2, v2);
+            }
+        }
+    }
+}
+
+def ev::IagoFight() {
+    v0 = ev::UnitGetByPID("PID_B026_ボス");
+    if (!v0) {
+        return 0;
+    }
+    if (v0 && !ev::UnitTstPrivateSkill(v0, "SPID_強制必殺回避")) {
+        return 0;
+    }
+    if (ev::FlagGet("戦闘会話_プレイヤー")) {
+        return 1;
+    }
+    if (ev::FlagGet("戦闘会話")) {
+        return 1;
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "IagoFight") {
+    v0 = ev::UnitGetByPID("PID_B026_ボス");
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_強制スキル発動");
+        ev::UnitClrPrivateSkill(v0, "SPID_強制必殺回避");
+    }
+}
+
+callback[Event.BattleTalk]("PID_B026_ボス", 1, CORRIN_M, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B026_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B026_ボス", 1, CORRIN_F, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B026_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B026_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B026_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B026_ガンズ", 1, "", -1, 1, "戦闘会話ガンズ") {
+    ev::Talk("MID_B026_BT3");
+    ev::FlagSet("戦闘会話ガンズ");
+}
+
+callback[Event.BattleTalk]("PID_B026_ゴーレム", 1, "", -1, 1, "EatRock") {
+    ev::Talk("MID_B026_BT4");
+    ev::FlagSet("EatRock");
+}
+
+callback[Event.BattleTalk]("PID_B026_ゴーレム", 1, "", -1, 1, "") {
+    ev::Talk("MID_B026_BT5");
+}
+
+callback[Event.Die]("PID_B026_ボス", 1, "", -1) {
+    ev::Talk("MID_B026_BOSS_DIE1");
+}
+
+callback[Event.Die]("PID_B026_ガンズ", 1, "", -1) {
+    ev::Talk("MID_B026_BOSS_DIE2");
+    v0 = ev::VariableGet("Move");
+    if (v0 < 4) {
+        ev::VariableSet("Move", 4);
+    }
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::MapEventBeginForComplete();
+    ev::TrickSet(13, 21, 9, 2, 2);
+    ev::CameraSetPosition(13, 22);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::Dispos("Event11", 2052);
+    ev::BGMPlay("STRM_EVT_ENEMY_E1_2", 50);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B026_ED_1");
+    v0 = ev::UnitGetByPID("PID_B026_イベント用マクベス");
+    ev::UnitMovePosition(v0, 13, 21, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B026_ED_2");
+    v1 = ev::UnitGetByPID(LEO);
+    v2 = [65, 0];
+    ev::Battle(v1, 0, v0, 0, &v2[0]);
+    ev::Talk("MID_B026_ED_3");
+    ev::UnitMoveAlphaDeadOut(v0);
+    ev::UnitMoveWait();
+    ev::UnitExpulsionByIndex(v0);
+    ev::Talk("MID_B026_ED_4");
+    ev::BGMStop(2000);
+    ev::EnvSEOff(2000);
+    ev::FadeOut(3, 0, 2000);
+    ev::FadeWait();
+    ev::MapEventEndForComplete();
+}
+
+callback[Event.MapEnding]() {}
+

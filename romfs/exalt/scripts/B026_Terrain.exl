@@ -1,0 +1,192 @@
+include std:fe14:prelude;
+
+def anonfn0(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+}
+
+def anonfn1(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+            ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+}
+
+def anonfn2(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            ev::AiSetSequence(v1, 0, "AI_AC_AttackRange", "");
+            ev::UnitClrPrivateSkill(v1, "SPID_ワープ禁止");
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+}
+
+def anonfn3(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            ev::AiClrFlag(v1, 256);
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+}
+
+callback[Event.Poke](13, 19, 1, 1, 3, 0, 0, "") {}
+
+callback[Event.Poke](13, 10, 2, 1, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+    anonfn0(1);
+}
+
+callback[Event.Poke](8, 12, 1, 2, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+    anonfn0(3);
+    anonfn1(4);
+}
+
+callback[Event.Poke](19, 12, 1, 2, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+}
+
+callback[Event.Poke](5, 19, 1, 2, 9, 50, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    if (!ev::FlagGet("増援条件4") || !ev::FlagGet("増援条件6")) {
+        ev::TrickSet(22, 19, 9, 4, 0);
+    }
+    anonfn1(4);
+    anonfn0(5);
+    anonfn3(10);
+    ev::FlagSet("増援条件1");
+}
+
+callback[Event.Poke](22, 19, 1, 2, 9, 50, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    if (!ev::FlagGet("増援条件4") || !ev::FlagGet("増援条件6")) {
+        ev::TrickSet(5, 19, 9, 4, 0);
+    }
+    anonfn0(7);
+    ev::FlagSet("増援条件2");
+}
+
+callback[Event.Poke](3, 23, 2, 1, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+    anonfn0(4);
+    anonfn0(5);
+    anonfn3(10);
+}
+
+callback[Event.Poke](23, 23, 2, 1, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+    anonfn0(7);
+}
+
+callback[Event.Poke](7, 25, 1, 2, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+    anonfn0(8);
+    anonfn2(9);
+    if (!ev::FlagGet("増援条件2")) {
+        ev::TrickSet(22, 19, 9, 2, 0);
+    }
+    if (!ev::FlagGet("SongChange")) {
+        ev::BGMStop(100);
+        ev::BMapBGMChnageFlagOn();
+        ev::FlagSet("SongChange");
+    }
+    ev::FlagSet("増援条件4");
+}
+
+callback[Event.Poke](20, 25, 1, 2, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+    anonfn0(8);
+    anonfn2(9);
+    if (!ev::FlagGet("増援条件1")) {
+        ev::TrickSet(5, 19, 9, 2, 0);
+    }
+    if (!ev::FlagGet("SongChange")) {
+        ev::BGMStop(100);
+        ev::BMapBGMChnageFlagOn();
+        ev::FlagSet("SongChange");
+    }
+    ev::FlagSet("増援条件6");
+}
+
+callback[Event.Poke](13, 21, 2, 1, 9, 50, 0, "") {
+    if (ev::TrickGetHp(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4)) > 0) {
+        ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+        goto l1;
+    }
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+    label l1;
+}
+
+callback[Event.Poke](14, 19, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), BIFRÖST);
+}
+
+callback[Event.Poke](9, 19, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), "IID_20000G");
+}
+
+callback[Event.Poke](18, 19, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), SERAPH_ROBE);
+}
+
+callback[Event.Poke](1, 15, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), DUAL_YUMI);
+}
+
+callback[Event.Poke](26, 15, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), VENGE_NAGINATA);
+}
+
