@@ -115,6 +115,17 @@ callback[Event.Turn](40, 40, 0) {
     }
 }
 
+callback[Event.Turn](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_B026_バーサーカー");
+    if((v0 && ev::AiGetActive(v0)) || !v0) {
+        if (!ev::FlagGet("SongChange")) {
+            ev::BGMStop(100);
+            ev::BMapBGMChnageFlagOn();
+            ev::FlagSet("SongChange");
+        }
+    }
+}
+
 def anonfn6(v0) {
     v1 = ev::ForceUnitGetFirst(1);
     v2 = 0;

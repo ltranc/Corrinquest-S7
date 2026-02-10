@@ -128,11 +128,6 @@ callback[Event.Poke](7, 25, 1, 2, 9, 50, 0, "") {
     if (!ev::FlagGet("増援条件2")) {
         ev::TrickSet(22, 19, 9, 2, 0);
     }
-    if (!ev::FlagGet("SongChange")) {
-        ev::BGMStop(100);
-        ev::BMapBGMChnageFlagOn();
-        ev::FlagSet("SongChange");
-    }
     ev::FlagSet("増援条件4");
 }
 
@@ -147,11 +142,6 @@ callback[Event.Poke](20, 25, 1, 2, 9, 50, 0, "") {
     anonfn2(9);
     if (!ev::FlagGet("増援条件1")) {
         ev::TrickSet(5, 19, 9, 2, 0);
-    }
-    if (!ev::FlagGet("SongChange")) {
-        ev::BGMStop(100);
-        ev::BMapBGMChnageFlagOn();
-        ev::FlagSet("SongChange");
     }
     ev::FlagSet("増援条件6");
 }
