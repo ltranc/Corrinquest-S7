@@ -1,0 +1,908 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話_プレイヤー");
+    ev::FlagEntry("SidesPairUp");
+    ev::FlagEntry("Paired");
+    ev::VariableEntry("チャージHandle", 0);
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::ChapterSetTrickDragon(4);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy2", 4);
+    v0 = ev::UnitGetByPID("PID_B028_ボス");
+    if (v0) {
+        v1 = ev::UnitCreateClone(v0, 15, 30);
+        if (v1) {
+            ev::UnitDoubleOn(v0, v1);
+        }
+    }
+    ev::GiveSkill("PID_B028_TIROKAFTERI", HOSHIDAN_UNITY, DARTING_BLOW, 0);
+    ev::GiveSkill("PID_B028_NOODLE", DRAGON_FANG, NOHRIAN_TRUST, 0);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B028_EV3");
+    ev::CutScene("B028_EV4");
+    ev::CutScene("B028_EV5");
+    ev::CutScene("B028_EV5_2");
+}
+
+def anonfn4(v0, v1, v2) {
+    v3 = 0;
+    v4 = ev::UnitGetByPID(v1);
+    if (v0 == v4) {
+        ev::Talk(v2);
+        v3 = 1;
+    }
+    return v3;
+}
+
+def anonfn5(v0) {
+    if (anonfn4(v0, RYOMA, "MID_B028_EV3_リョウマ")) {
+        return 0;
+    }
+    if (anonfn4(v0, TAKUMI, "MID_B028_EV3_タクミ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SAIZO, "MID_B028_EV3_サイゾウ")) {
+        return 0;
+    }
+    if (anonfn4(v0, KADEN, "MID_B028_EV3_ニシキ")) {
+        return 0;
+    }
+    if (anonfn4(v0, HINATA, "MID_B028_EV3_ヒナタ")) {
+        return 0;
+    }
+    if (anonfn4(v0, AZAMA, "MID_B028_EV3_アサマ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SUBAKI, "MID_B028_EV3_ツバキ")) {
+        return 0;
+    }
+    if (anonfn4(v0, HAYATO, "MID_B028_EV3_ツクヨミ")) {
+        return 0;
+    }
+    if (anonfn4(v0, JAKOB, "MID_B028_EV3_ジョーカー")) {
+        return 0;
+    }
+    if (anonfn4(v0, SILAS, "MID_B028_EV3_サイラス")) {
+        return 0;
+    }
+    if (anonfn4(v0, KAZE, "MID_B028_EV3_スズカゼ")) {
+        return 0;
+    }
+    if (anonfn4(v0, XANDER, "MID_B028_EV3_マークス")) {
+        return 0;
+    }
+    if (anonfn4(v0, LEO, "MID_B028_EV3_レオン")) {
+        return 0;
+    }
+    if (anonfn4(v0, BENNY, "MID_B028_EV3_ブノワ")) {
+        return 0;
+    }
+    if (anonfn4(v0, KEATON, "MID_B028_EV3_フランネル")) {
+        return 0;
+    }
+    if (anonfn4(v0, ARTHUR, "MID_B028_EV3_ハロルド")) {
+        return 0;
+    }
+    if (anonfn4(v0, ODIN, "MID_B028_EV3_オーディン")) {
+        return 0;
+    }
+    if (anonfn4(v0, LASLOW, "MID_B028_EV3_ラズワルド")) {
+        return 0;
+    }
+    if (anonfn4(v0, NILES, "MID_B028_EV3_ゼロ")) {
+        return 0;
+    }
+    if (anonfn4(v0, HINOKA, "MID_B028_EV3_ヒノカ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SAKURA, "MID_B028_EV3_サクラ")) {
+        return 0;
+    }
+    if (anonfn4(v0, RINKAH, "MID_B028_EV3_リンカ")) {
+        return 0;
+    }
+    if (anonfn4(v0, OROCHI, "MID_B028_EV3_オロチ")) {
+        return 0;
+    }
+    if (anonfn4(v0, KAGERO, "MID_B028_EV3_カゲロウ")) {
+        return 0;
+    }
+    if (anonfn4(v0, HANA, "MID_B028_EV3_カザハナ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SETSUNA, "MID_B028_EV3_セツナ")) {
+        return 0;
+    }
+    if (anonfn4(v0, OBORO, "MID_B028_EV3_オボロ")) {
+        return 0;
+    }
+    if (anonfn4(v0, FELICIA, "MID_B028_EV3_フェリシア")) {
+        return 0;
+    }
+    if (anonfn4(v0, AZURA, "MID_B028_EV3_アクア")) {
+        return 0;
+    }
+    if (anonfn4(v0, MOZU, "MID_B028_EV3_モズメ")) {
+        return 0;
+    }
+    if (anonfn4(v0, CAMILLA, "MID_B028_EV3_カミラ")) {
+        return 0;
+    }
+    if (anonfn4(v0, ELISE, "MID_B028_EV3_エリーゼ")) {
+        return 0;
+    }
+    if (anonfn4(v0, CHARLOTTE, "MID_B028_EV3_シャーロッテ")) {
+        return 0;
+    }
+    if (anonfn4(v0, EFFIE, "MID_B028_EV3_エルフィ")) {
+        return 0;
+    }
+    if (anonfn4(v0, PERI, "MID_B028_EV3_ピエリ")) {
+        return 0;
+    }
+    if (anonfn4(v0, BERUKA, "MID_B028_EV3_ベルカ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SELENA, "MID_B028_EV3_ルーナ")) {
+        return 0;
+    }
+    if (anonfn4(v0, NYX, "MID_B028_EV3_ニュクス")) {
+        return 0;
+    }
+    if (anonfn4(v0, SHIRO, "MID_B028_EV3_シノノメ")) {
+        return 0;
+    }
+    if (anonfn4(v0, KIRAGI, "MID_B028_EV3_キサラギ")) {
+        return 0;
+    }
+    if (anonfn4(v0, ASUGI, "MID_B028_EV3_グレイ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SELKIE, "MID_B028_EV3_キヌ")) {
+        return 0;
+    }
+    if (anonfn4(v0, HISAME, "MID_B028_EV3_ヒサメ")) {
+        return 0;
+    }
+    if (anonfn4(v0, MITAMA, "MID_B028_EV3_ミタマ")) {
+        return 0;
+    }
+    if (anonfn4(v0, CAELDORI, "MID_B028_EV3_マトイ")) {
+        return 0;
+    }
+    if (anonfn4(v0, RHAJAT, "MID_B028_EV3_シャラ")) {
+        return 0;
+    }
+    if (anonfn4(v0, KANA_F, "MID_B028_EV3_カンナ女")) {
+        return 0;
+    }
+    if (anonfn4(v0, KANA_M, "MID_B028_EV3_カンナ男")) {
+        return 0;
+    }
+    if (anonfn4(v0, SHIGURE, "MID_B028_EV3_シグレ")) {
+        return 0;
+    }
+    if (anonfn4(v0, DWYER, "MID_B028_EV3_ディーア")) {
+        return 0;
+    }
+    if (anonfn4(v0, SOPHIE, "MID_B028_EV3_ゾフィー")) {
+        return 0;
+    }
+    if (anonfn4(v0, MIDORI, "MID_B028_EV3_ミドリコ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SIEGBERT, "MID_B028_EV3_ジークベルト")) {
+        return 0;
+    }
+    if (anonfn4(v0, FORREST, "MID_B028_EV3_フォレオ")) {
+        return 0;
+    }
+    if (anonfn4(v0, IGNATIUS, "MID_B028_EV3_イグニス")) {
+        return 0;
+    }
+    if (anonfn4(v0, VELOURIA, "MID_B028_EV3_ベロア")) {
+        return 0;
+    }
+    if (anonfn4(v0, PERCY, "MID_B028_EV3_ルッツ")) {
+        return 0;
+    }
+    if (anonfn4(v0, OPHELIA, "MID_B028_EV3_オフェリア")) {
+        return 0;
+    }
+    if (anonfn4(v0, SOLEIL, "MID_B028_EV3_ソレイユ")) {
+        return 0;
+    }
+    if (anonfn4(v0, NINA, "MID_B028_EV3_エポニーヌ")) {
+        return 0;
+    }
+    if (anonfn4(v0, YUKIMURA, "MID_B028_EV3_ユキムラ")) {
+        return 0;
+    }
+    if (anonfn4(v0, IZANA, "MID_B028_EV3_イザナ")) {
+        return 0;
+    }
+    if (anonfn4(v0, SHURA, "MID_B028_EV3_アシュラ")) {
+        return 0;
+    }
+    if (anonfn4(v0, FUGA, "MID_B028_EV3_フウガ")) {
+        return 0;
+    }
+    if (anonfn4(v0, GUNTER, "MID_B028_EV3_ギュンター")) {
+        return 0;
+    }
+    if (anonfn4(v0, SCARLET, "MID_B028_EV3_クリムゾン")) {
+        return 0;
+    }
+    if (anonfn4(v0, REINA, "MID_B028_EV3_ユウギリ")) {
+        return 0;
+    }
+    if (anonfn4(v0, ANNA, "MID_B028_EV3_アンナ")) {
+        return 0;
+    }
+    if (anonfn4(v0, FLORA, "MID_B028_EV3_フローラ")) {
+        return 0;
+    }
+}
+
+def ev::B028_Enthusiasm() {
+    v0 = ev::UnitGetPlayer();
+    v1 = ev::ForceUnitGetFirst(3);
+    v2 = 0;
+    while (v1) {
+        v3 = ev::ForceUnitGetNext(v1);
+        if (v1 != v0) {
+            anonfn5(v1);
+            v2++;
+            if (v2 >= 15) {
+                break;
+            }
+        }
+        v1 = v3;
+    }
+}
+
+callback[Event.MapSetting]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::TrickStringSet("All", 12, 4, 2);
+}
+
+callback[Event.MapSettingResume]() {
+    v0 = ev::VariableGet("チャージHandle");
+    if (v0) {
+        v1 = ev::UnitGetByPID("PID_B028_ボス");
+        if (v1) {
+            v2 = ev::UnitGetX(v1);
+            v3 = ev::UnitGetY(v1);
+            v0 = ev::EffectPlayEternal3D("Fld_B028_AllAttack_Charge", v2, v3);
+            ev::VariableSet("チャージHandle", v0);
+            goto l0;
+        }
+        ev::VariableSet("チャージHandle", 0);
+    }
+    label l0;
+}
+
+def anonfn9(v0) {
+    v1 = ev::UnitGetX(v0);
+    v2 = ev::UnitGetY(v0);
+    ev::CameraSetPosition(v1, v2);
+    ev::CameraWait();
+    v3 = [
+        0, -2, -1, -1, 
+        0, -1, 1, -1, 
+        -2, 0, -1, 0, 
+        1, 0, 2, 0, 
+        -1, 1, 0, 1, 
+        1, 1, 0, 2, 
+    ];
+    for (v27 = 0; v27 < 12; v27++) {
+        v28 = v1 + v3[v27 * 2];
+        v29 = v2 + v3[v27 * 2 + 1];
+        if (ev::TerrainIsOutOfPlayArea(v28, v29)) {
+            continue;
+        }
+        v30 = ev::UnitGetByPosition(v28, v29);
+        if (v30 && ev::UnitGetForce(v30) == 0) {
+            ev::UnitHpDamage(v30, ev::UnitGetMHP(v30) / 2);
+        }
+        if (ev::TrickTryTst(v28, v29, 12, 1)) {
+            ev::TrickSet(v28, v29, 12, 4, 1);
+        }
+    }
+    ev::UnitMoveAlphaDeadOut(v0);
+    yield;
+    ev::UnitHpEffectWait();
+    ev::UnitMoveWait();
+    ev::UnitExpulsionByIndex(v0);
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::LSEPlay("SE_EVT_SINPI1", 1000);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    v0 = ev::UnitGetPlayer();
+    ev::CameraSetPositionByUnit(v0);
+    ev::CameraWait();
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_B028_EV6_1");
+    ev::CameraSetPosition(15, 29);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B028_EV6_2");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    ev::CameraSetPositionByUnit(v0);
+    ev::CameraWait();
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    v0 = 3;
+    if (ev::DifficultyGet() >= 2) {
+        v0 = 2;
+    }
+    v1 = ev::ForceUnitGetFirst(1);
+    while (v1) {
+        v2 = ev::ForceUnitGetNext(v1);
+        if (ev::UnitIsEquipSkill(v1, SELF_DESTRUCT) && ev::UnitGetHP(v1) <= ev::UnitGetMHP(v1) / 2) {
+            anonfn9(v1);
+        }
+        v1 = v2;
+    }
+    if (ev::TurnGet() % v0 == v0 - 1) {
+        v3 = ev::UnitGetByPID("PID_B028_ボス");
+        if (v3) {
+            v4 = ev::UnitGetX(v3);
+            v5 = ev::UnitGetY(v3);
+            ev::CameraSetPosition(v4, v5);
+            ev::CameraWait();
+            v6 = ev::VariableGet("チャージHandle");
+            if (v6) {
+                ev::EffectFadeOut(v6, 100);
+            }
+            ev::SEPlay3D("SE_BTL_EFF_ALLATTACKCHARGE", v4, v5);
+            v6 = ev::EffectPlayEternal3D("Fld_B028_AllAttack_Charge", v4, v5);
+            ev::VariableSet("チャージHandle", v6);
+            ev::TimeWait(1000);
+        }
+    }
+    if (ev::TurnGet() % v0 == 0) {
+        v7 = ev::UnitGetByPID("PID_B028_ボス");
+        if (v7) {
+            v8 = [
+                15, 23, 14, 23, 
+                16, 23, 13, 18, 
+                17, 18, 
+            ];
+            v18 = ev::UnitGetX(v7);
+            v19 = ev::UnitGetY(v7);
+            ev::CameraSetPosition(v18, v19);
+            ev::CameraWait();
+            v20 = ev::VariableGet("チャージHandle");
+            if (v20) {
+                ev::EffectFadeOut(v20, 100);
+                ev::VariableSet("チャージHandle", 0);
+            }
+            ev::EffectPlay3D("Fld_B028_AllAttack", v18, v19);
+            ev::EffectWait();
+            v21 = 0;
+            v22 = ev::ForceUnitGetFirst(0);
+            while (v22) {
+                v23 = ev::ForceUnitGetNext(v22);
+                if (!ev::UnitIsDoubleChild(v22)) {
+                    v24 = ev::UnitGetX(v22);
+                    v25 = ev::UnitGetY(v22);
+                    v26 = 1;
+                    if (v24 == 13 || v24 == 17) {
+                        if (v25 <= 18 && ev::TrickTst(v24, 18, 12, 1)) {
+                            v26 = 0;
+                        }
+                        goto l15;
+                    }
+                    if ((v24 == 14 || v24 == 15) || v24 == 16) {
+                        if (v25 <= 23 && ev::TrickTst(v24, 23, 12, 1)) {
+                            v26 = 0;
+                        }
+                    }
+                    label l15;
+                    if (v26) {
+                        ev::CameraSetPosition(v24, v25);
+                        ev::CameraWait();
+                        v21 = 1;
+                        break;
+                    }
+                }
+                v22 = v23;
+            }
+            if (!v21) {
+                for (v27 = 0; v27 < 5; v27++) {
+                    if (ev::TrickTst(v8[v27 * 2], v8[v27 * 2 + 1], 12, 1)) {
+                        ev::CameraSetPosition(v8[v27 * 2], v8[v27 * 2 + 1]);
+                        ev::CameraWait();
+                        v21 = 1;
+                        break;
+                    }
+                }
+            }
+            v28 = ev::ForceUnitGetFirst(0);
+            while (v28) {
+                v29 = ev::ForceUnitGetNext(v28);
+                if (!ev::UnitIsDoubleChild(v28)) {
+                    v30 = ev::UnitGetX(v28);
+                    v31 = ev::UnitGetY(v28);
+                    v32 = 1;
+                    if (v30 == 13 || v30 == 17) {
+                        if (v31 <= 18 && ev::TrickTst(v30, 18, 12, 1)) {
+                            v32 = 0;
+                        }
+                        goto l30;
+                    }
+                    if ((v30 == 14 || v30 == 15) || v30 == 16) {
+                        if (v31 <= 23 && ev::TrickTst(v30, 23, 12, 1)) {
+                            v32 = 0;
+                        }
+                    }
+                    label l30;
+                    if (v32) {
+                        ev::UnitHpDamage(v28, ev::UnitGetMHP(v28) / 2);
+                    }
+                }
+                v28 = v29;
+            }
+            for (v33 = 0; v33 < 5; v33++) {
+                if (ev::TrickTst(v8[v33 * 2], v8[v33 * 2 + 1], 12, 1)) {
+                    ev::TrickSet(v8[v33 * 2], v8[v33 * 2 + 1], 12, 4, 1);
+                }
+            }
+            yield;
+            ev::UnitHpEffectWait();
+        }
+    }
+}
+
+callback[Event.TurnAfter](1, 1, 1) {
+    v0 = ev::UnitGetByPID("PID_B028_LLAMA");
+    ev::CameraSetPositionByUnit(v0);
+    ev::CameraWait();
+    if (v0) {
+        ev::UnitCreateClone(v0, 17, 26);
+    }
+}
+
+callback[Event.TurnAfter](1, 4, 1) {
+    if (ev::FlagGet("SidesPairUp") && !ev::FlagGet("Paired")) {
+        ev::SkipDisable();
+        anonfn30(3, 23, 3, 22);
+        anonfn30(4, 23, 4, 22);
+        anonfn30(26, 23, 27, 23);
+        anonfn30(26, 24, 27, 24);
+        ev::SkipEnable();
+        ev::FlagSet("Paired");
+    }
+    if (ev::TurnGet() == 4 && !ev::FlagGet("Paired")) {
+        ev::SkipDisable();
+        anonfn30(3, 23, 3, 22);
+        anonfn30(4, 23, 4, 22);
+        anonfn30(26, 23, 27, 23);
+        anonfn30(26, 24, 27, 24);
+        ev::SkipEnable();
+        ev::FlagSet("Paired");
+    }
+}
+
+callback[Event.Reinforce](5, 5, 1) {
+    ev::Dispos("Reinforce1", 1032);
+    ev::DisposWait();
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](6, 6, 1) {
+    ev::Dispos("Reinforce3", 1032);
+    ev::DisposWait();
+    ev::Dispos("Reinforce4", 1032);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](7, 7, 1) {
+    ev::Dispos("Reinforce5", 1032);
+    ev::DisposWait();
+    ev::Dispos("Reinforce6", 1032);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](11, -1, 1) {
+    v0 = ev::TurnGet();
+    v0 -= 4;
+    v1 = [
+        "Reinforce01", "Reinforce02", "Reinforce03", "Reinforce04", 
+        "Reinforce05", "Reinforce06", "Reinforce11", "Reinforce12", 
+        "Reinforce13", "Reinforce14", "Reinforce15", "Reinforce16", 
+        "Reinforce21", "Reinforce22", "Reinforce23", "Reinforce24", 
+        "Reinforce25", "Reinforce26", 
+    ];
+    v19 = ((v0 / 4) % 3) * 6;
+    match (v0 % 4) {
+        0 -> {
+            ev::Dispos(v1[v19 + 0], 8);
+            ev::DisposWait();
+            ev::Dispos(v1[v19 + 1], 8);
+            ev::DisposWait();
+        }
+        1 -> {
+            ev::Dispos(v1[v19 + 2], 8);
+            ev::DisposWait();
+            ev::Dispos(v1[v19 + 3], 8);
+            ev::DisposWait();
+        }
+        2 -> {
+            ev::Dispos(v1[v19 + 4], 8);
+            ev::DisposWait();
+            ev::Dispos(v1[v19 + 5], 8);
+            ev::DisposWait();
+        }
+    }
+    if (v0 >= 4) {
+        v20 = [
+            "Reinforce31", "Reinforce32", "Reinforce33", "Reinforce34", 
+            "Reinforce35", "Reinforce36", "Reinforce41", "Reinforce42", 
+            "Reinforce43", "Reinforce44", "Reinforce45", "Reinforce46", 
+            "Reinforce51", "Reinforce52", "Reinforce53", "Reinforce54", 
+            "Reinforce55", "Reinforce56", "Reinforce61", "Reinforce62", 
+            "Reinforce63", "Reinforce64", "Reinforce65", "Reinforce66", 
+        ];
+        v44 = ((v0 / 4) % 4) * 6;
+        v45 = (v0 / 4) % 6;
+        match (v45) {
+            0 -> {
+                if (v0 % 4 == 1) {
+                    ev::Dispos(v20[v44 + 0], 8);
+                    ev::DisposWait();
+                }
+            }
+            1 -> {
+                if (v0 % 4 == 3) {
+                    ev::Dispos(v20[v44 + 5], 8);
+                    ev::DisposWait();
+                }
+            }
+            2 -> {
+                if (v0 % 4 == 2) {
+                    ev::Dispos(v20[v44 + 2], 8);
+                    ev::DisposWait();
+                }
+            }
+            3 -> {
+                if (v0 % 4 == 1) {
+                    ev::Dispos(v20[v44 + 1], 8);
+                    ev::DisposWait();
+                }
+            }
+            4 -> {
+                if (v0 % 4 == 3) {
+                    ev::Dispos(v20[v44 + 4], 8);
+                    ev::DisposWait();
+                }
+            }
+            5 -> {
+                if (v0 % 4 == 2) {
+                    ev::Dispos(v20[v44 + 3], 8);
+                    ev::DisposWait();
+                }
+            }
+        }
+    }
+}
+
+callback[Event.Reinforce](1, -1, 1) {
+    ev::RallyEffectForStaffUnits("PID_B028_PLACEHOLDER");
+    ev::RallyEffectForStaffUnits("PID_B028_PLACEHOLDER");
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    ev::ResolveEffect("PID_B028_PLACEHOLDER");
+    ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
+}
+
+callback[Event.Reinforce](1, 7, 1) {
+    ev::WitchsBrewEffect("PID_B028_PLACEHOLDER");
+    ev::ProfiteerEffect("PID_B028_PLACEHOLDER");
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "") {
+    ev::ShadowgiftEffect("PID_B028_PLACEHOLDER");
+    ev::ResolveEffect("PID_B028_PLACEHOLDER");
+}
+
+callback[Event.Area](12, 20, 18, 30, 0, "SidesPairUp") {
+    ev::FlagSet("SidesPairUp");
+}
+
+def ev::TakumiHP() {
+    v0 = ev::UnitGetByPID("PID_B028_ボス");
+    if (v0) {
+        if (ev::UnitTstEnhance(v0, 5)) {
+            return 1;
+        }
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, 0, "TakumiHP") {
+    v0 = ev::UnitGetByPID("PID_B028_ボス");
+    if (v0) {
+        ev::UnitClrEnhance(v0, 5);
+        ev::UnitSetHP(v0, 80);
+    }
+}
+
+def ev::GiveSkill(v0, v1, v2, v3) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, v1);
+        if (v2 != 0) {
+            ev::UnitAddEquipSkill(v0, v2);
+        }
+        if (v3 != 0) {
+            ev::UnitAddEquipSkill(v0, v3);
+        }
+        if (ev::UnitIsEquipSkill(v0, FOREIGN_PRINCESS)) {
+            ev::UnitSetEnhance(v0, 9);
+            ev::UnitSetEnhance(v0, 10);
+            ev::UnitSetEnhance(v0, 14);
+            ev::UnitSetEnhance(v0, 15);
+        }
+        if (ev::UnitIsEquipSkill(v0, HP_PLUS_5)) {
+            ev::UnitSetHP(v0, ev::UnitGetMHP(v0));
+        }
+    }
+}
+
+def ev::ShadowgiftEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        ev::UnitClrEnhance(v0, 7);
+        ev::UnitClrEnhance(v0, 6);
+        ev::UnitClrEnhance(v0, 5);
+        v1 = ev::UnitGetWeakness(v0, 2);
+        if (v1 > 1) {
+            v1 = v1 * -1;
+            ev::UnitAddWeakness(v0, 2, v1);
+        }
+        v1 = ev::UnitGetWeakness(v0, 1);
+        if (v1 > 1) {
+            v1 = v1 * -1;
+            ev::UnitAddWeakness(v0, 1, v1);
+        }
+    }
+}
+
+def ev::FortifySpectrumEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        v1 = ev::UnitGetX(v0);
+        v2 = ev::UnitGetY(v0);
+        v3 = ev::ForceUnitGetFirst(1);
+        while (v3) {
+            v4 = ev::UnitGetX(v3);
+            v5 = ev::UnitGetY(v3);
+            if (v1 - v4 == 1 || v4 - v1 == 1) {
+                if (v2 == v5) {
+                    ev::UnitSetEnhance(v3, 31);
+                }
+            }
+            if (v5 - v2 == 1 || v2 - v5 == 1) {
+                if (v1 == v4) {
+                    ev::UnitSetEnhance(v3, 31);
+                }
+            }
+            v6 = ev::ForceUnitGetNext(v3);
+            v3 = v6;
+        }
+    }
+}
+
+def ev::ResolveEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        if (ev::UnitGetHP(v0) * 2 <= ev::UnitGetMHP(v0)) {
+            ev::UnitSetEnhance(v0, 16);
+            ev::UnitSetEnhance(v0, 17);
+            ev::UnitSetEnhance(v0, 18);
+            ev::UnitSetEnhance(v0, 19);
+            goto l0;
+        }
+        ev::UnitClrEnhance(v0, 16);
+        ev::UnitClrEnhance(v0, 17);
+        ev::UnitClrEnhance(v0, 18);
+        ev::UnitClrEnhance(v0, 19);
+    }
+    label l0;
+}
+
+def ev::WitchsBrewEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        v1 = ev::RandomGetGame() % 100;
+        v2 = ev::UnitGetCapability(v0, 5, 1);
+        v2 = v2 * 2;
+        if (ev::UnitIsEquipSkill(v0, HOSHIDAN_UNITY)) {
+            v2 = v2 + 10;
+        }
+        if (v1 < v2) {
+            v3 = ev::RandomGetGame() % 8;
+            match (v3) {
+                0 -> {
+                    if (!ev::UnitTstEnhance(v0, 8)) {
+                        ev::UnitSetEnhance(v0, 8);
+                        ev::UnitSetHP(v0, ev::UnitGetHP(v0) + 5);
+                        if (ev::UnitIsEquipSkill(v0, POTENT_POTION)) {
+                            ev::UnitSetHP(v0, ev::UnitGetHP(v0) + 2);
+                        }
+                    }
+                }
+                1 -> {
+                    if (!ev::UnitTstEnhance(v0, 9)) {
+                        ev::UnitSetEnhance(v0, 9);
+                    }
+                }
+                2 -> {
+                    if (!ev::UnitTstEnhance(v0, 10)) {
+                        ev::UnitSetEnhance(v0, 10);
+                    }
+                }
+                3 -> {
+                    if (!ev::UnitTstEnhance(v0, 11)) {
+                        ev::UnitSetEnhance(v0, 11);
+                    }
+                }
+                4 -> {
+                    if (!ev::UnitTstEnhance(v0, 12)) {
+                        ev::UnitSetEnhance(v0, 12);
+                    }
+                }
+                5 -> {
+                    if (!ev::UnitTstEnhance(v0, 13)) {
+                        ev::UnitSetEnhance(v0, 13);
+                    }
+                }
+                6 -> {
+                    if (!ev::UnitTstEnhance(v0, 14)) {
+                        ev::UnitSetEnhance(v0, 14);
+                    }
+                }
+                7 -> {
+                    if (!ev::UnitTstEnhance(v0, 15)) {
+                        ev::UnitSetEnhance(v0, 15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+def anonfn30(v0, v1, v2, v3) {
+    v4 = ev::UnitGetByPosition(v0, v1);
+    v5 = ev::UnitGetByPosition(v2, v3);
+    if (v4 && v5) {
+        ev::CameraSetPositionByUnit(v4);
+        ev::CameraWait();
+        ev::TimeWait(250);
+        ev::UnitDoubleOn(v4, v5);
+        ev::TimeWait(250);
+    }
+}
+
+def ev::ProfiteerEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        v1 = ev::RandomGetGame() % 100;
+        v2 = ev::UnitGetCapability(v0, 5, 1);
+        v2 = v2 * 3;
+        v2 = v2 / 2;
+        if (ev::UnitIsEquipSkill(v0, HOSHIDAN_UNITY)) {
+            v2 = v2 + 10;
+        }
+        if (v1 < v2) {
+            ev::ItemGainSilent(v0, GOLD_BAR);
+        }
+    }
+}
+
+def ev::RallyEffectForStaffUnits(v0) {
+    v1 = ev::UnitGetByPID(v0);
+    v2 = ev::UnitGetX(v1);
+    v3 = ev::UnitGetY(v1);
+    if (v1) {
+        if (!ev::UnitTstStatus(v1, 1, 0)) {
+            v4 = ev::ForceUnitGetFirst(1);
+            while (v4) {
+                if (!ev::UnitIsPID(v4, v0)) {
+                    v5 = ev::UnitGetX(v4);
+                    v6 = ev::UnitGetY(v4);
+                    v7 = v2 - v5;
+                    if (v7 < 0) {
+                        v7 = v7 * -1;
+                    }
+                    v8 = v3 - v6;
+                    if (v8 < 0) {
+                        v8 = v8 * -1;
+                    }
+                    if (v7 + v8 <= 2) {
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYSTRENGTH")) {
+                            ev::UnitSetEnhance(v4, 23);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYMAGIC")) {
+                            ev::UnitSetEnhance(v4, 24);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYSKILL")) {
+                            ev::UnitSetEnhance(v4, 25);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYSPEED")) {
+                            ev::UnitSetEnhance(v4, 26);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYLUCK")) {
+                            ev::UnitSetEnhance(v4, 27);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYDEFENSE")) {
+                            ev::UnitSetEnhance(v4, 28);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYRESISTANCE")) {
+                            ev::UnitSetEnhance(v4, 29);
+                        }
+                    }
+                }
+                v4 = ev::ForceUnitGetNext(v4);
+            }
+        }
+    }
+}
+
+callback[Event.BattleTalk]("PID_B028_ボス", 1, CORRIN_M, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B028_BT4");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B028_ボス", 1, CORRIN_F, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B028_BT4");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B028_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B028_BT3");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die]("PID_B028_ボス", 1, "", -1) {
+    ev::Talk("MID_B028_BOSS_DIE2");
+    ev::ChapterSetNotReturnMap();
+}
+
+callback[Event.MapComplete]() {}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B028_ED");
+    ev::CutScene("B028_ED_2_1");
+    ev::CutScene("B028_ED_2_2");
+    ev::CutScene("B028_ED_3");
+    ev::CutScene("B028_ED_4");
+    ev::CutScene("B028_ED_5");
+    ev::MoviePlayWithEscapeSkip("s16");
+}
+
