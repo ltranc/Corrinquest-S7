@@ -25,6 +25,12 @@ callback[Event.MapLoad]() {
     }
     ev::GiveSkill("PID_B028_TIROKAFTERI", HOSHIDAN_UNITY, DARTING_BLOW, 0);
     ev::GiveSkill("PID_B028_NOODLE", DRAGON_FANG, NOHRIAN_TRUST, 0);
+    ev::GiveSkill("PID_B028_DUSK", POISON_STRIKE, DUELISTS_BLOW, INEVITABLE_END);
+    ev::GiveSkill("PID_B028_ZEV", AETHER, SUREFOOTED, 0);
+    ev::GiveSkill("PID_B028_CAMILLANT", SAVAGE_BLOW, TRAMPLE, 0);
+    ev::GiveSkill("PID_B028_BASTIAN", VANTAGE, GRISLY_WOUND, 0);
+    ev::GiveSkill("PID_B028_SIRROBIN", "SEID_DUMMYRALLYLUCK", "SEID_DUMMYRALLYMAGIC", STAFF_SAVANT);
+    ev::GiveSkill("PID_B028_PAPERZAC", BETTER_ODDS, AGGRESSOR, 0);
 }
 
 callback[Event.MapFree]() {
@@ -478,12 +484,6 @@ callback[Event.TurnAfter](-1, -1, 1) {
 }
 
 callback[Event.TurnAfter](1, 1, 1) {
-    v0 = ev::UnitGetByPID("PID_B028_LLAMA");
-    ev::CameraSetPositionByUnit(v0);
-    ev::CameraWait();
-    if (v0) {
-        ev::UnitCreateClone(v0, 17, 26);
-    }
 }
 
 callback[Event.TurnAfter](1, 4, 1) {
@@ -611,8 +611,7 @@ callback[Event.Reinforce](11, -1, 1) {
 }
 
 callback[Event.Reinforce](1, -1, 1) {
-    ev::RallyEffectForStaffUnits("PID_B028_PLACEHOLDER");
-    ev::RallyEffectForStaffUnits("PID_B028_PLACEHOLDER");
+    ev::RallyEffectForStaffUnits("PID_B028_SIRROBIN");
 }
 
 callback[Event.TurnAfter](-1, -1, 1) {
@@ -626,7 +625,7 @@ callback[Event.Reinforce](1, 7, 1) {
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "") {
-    ev::ShadowgiftEffect("PID_B028_PLACEHOLDER");
+    ev::ShadowgiftEffect("PID_B028_CAMILLANT");
     ev::ResolveEffect("PID_B028_PLACEHOLDER");
 }
 
