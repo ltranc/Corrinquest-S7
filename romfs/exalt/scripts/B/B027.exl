@@ -13,15 +13,15 @@ callback[Event.MapLoad]() {
     ev::TerrainLoad(ev::ChapterGetName());
     ev::DisposLoad(ev::ChapterGetName());
     ev::Dispos("Player", 4);
-    ev::Dispos("Enemy", 4);
+    ev::Dispos("Enemy2", 4);
     if (ev::DifficultyGet() <= 0) {
         v0 = ev::UnitGetByPID("PID_B027_ボス");
         if (v0) {
             ev::UnitSetPrivateSkill(v0, "SPID_回避-10");
         }
     }
-    ev::GiveSkill("PID_B028_PAPERZAC", AGGRESSOR, SPENDTHRIFT, COUNTERMAGIC);
-    ev::GiveSkill("PID_B028_LARGO", SEAL_STRENGTH, CERTAIN_BLOW, 0);
+    ev::GiveSkill("PID_B027_PAPERZAC", AGGRESSOR, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_LARGO", SEAL_STRENGTH, CERTAIN_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
