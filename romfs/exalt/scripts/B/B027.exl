@@ -20,7 +20,8 @@ callback[Event.MapLoad]() {
             ev::UnitSetPrivateSkill(v0, "SPID_回避-10");
         }
     }
-    ev::GiveSkill("PID_B028_PAPERZAC", BETTER_ODDS, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B028_PAPERZAC", AGGRESSOR, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B028_LARGO", SEAL_STRENGTH, CERTAIN_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -183,7 +184,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen2") {
 }
 
 def ev::IsDoorOpen3() {
-    return anonfn8(2, 15, "PID_B027_バーサーカー", "PID_B027_バーサーカー", "PID_B027_バーサーカー");
+    return anonfn8(2, 15, "PID_B027_LARGO", "PID_B027_バーサーカー", "PID_B027_バーサーカー");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen3") {
