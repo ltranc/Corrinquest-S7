@@ -1,0 +1,83 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("Reinforce");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+}
+
+callback[Event.MapFree]() {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    v0 = ev::ForceUnitGetFirst(3);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X013_OP1");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    v0 = ev::ForceUnitGetFirst(3);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (!ev::FlagGet("Reinforce")) {
+        v0 = ev::UnitGetByPID("PID_X013_ボス2");
+        if (v0 && ev::AiGetActive(v0) || !v0) {
+            if (ev::TurnGet() > 10) {
+                ev::Dispos("Reinforce01", 8);
+                ev::DisposWait();
+                ev::FlagSet("Reinforce");
+            }
+        }
+    }
+}
+
+callback[Event.Die](CAELDORI, 0, "", -1) {
+    ev::Talk("MID_X013_DIE_マトイ");
+}
+
+callback[Event.MapComplete]() {
+    ev::ItemGain(0, IRON_NAGINATA);
+    if (ev::RouteGet() == 1) {
+        goto l1;
+    }
+    ev::ItemGain(0, SWORDCATCHER);
+    label l1;
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X013_ED1");
+}
+
