@@ -1,0 +1,268 @@
+include std:fe14:prelude;
+
+def ev::LocalTutorial0() {
+    return "MID_B016_DIALOG1";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("会話_容疑者1");
+    ev::FlagEntry("会話_容疑者2");
+    ev::FlagEntry("会話_容疑者3");
+    ev::FlagEntry("会話_容疑者4");
+    ev::FlagEntry("会話使用済1");
+    ev::FlagEntry("会話使用済2");
+    ev::FlagEntry("会話使用済3");
+    ev::FlagEntry("カットシーン");
+    ev::FlagEntry("カットシーン2");
+    ev::FlagEntry("ターン資金強奪");
+    ev::VariableEntry("マクベス軍資金", 10000);
+    ev::VariableEntry("Spy", 0);
+    ev::VariableEntry("Spy2", 0);
+}
+
+callback[Event.MapLoad]() {
+    ev::PersonLoad("B_HANDOVER");
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Ally", 4);
+    ev::ForceUnitSetDontAttackForce(1, 2);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+    ev::PersonFree("B_HANDOVER");
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B016_OP1_1");
+    ev::CutScene("B016_OP1_2");
+    ev::CutScene("B016_OP2_1");
+    v0 = ev::UnitGetByPID(PERI);
+    if (v0 && ev::UnitIsAlive(v0)) {
+        ev::CutScene("B016_OP2_2");
+        goto l2;
+    }
+    ev::CutScene("B016_OP2_2B");
+    label l2;
+    ev::CutScene("B016_OP3");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_B016_EV1");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    ev::SkipEscape();
+    ev::TutorialDialogMustShow("MID_B016_DIALOG1");
+    ev::VariableSet("Spy", ev::RandomGetGame() % 3);
+    ev::VariableSet("Spy2", ev::RandomGetGame() % 3);
+    if(ev::VariableGet("Spy") == )
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_B016_ボス");
+    if (v0) {
+        v1 = ev::ForceUnitGetFirst(1);
+        while (v1) {
+            if (ev::UnitTstPrivateSkill(v1, "SPID_移動禁止")) {
+                ev::UnitClrPrivateSkill(v1, "SPID_移動禁止");
+            }
+            v1 = ev::ForceUnitGetNext(v1);
+        }
+    }
+}
+
+def anonfn7() {
+    if (ev::FlagGet("ターン資金強奪")) {
+        return 0;
+    }
+    v0 = ev::VariableGet("マクベス軍資金");
+    if (v0 > 0) {
+        v1 = 300;
+        if (v0 > v1) {
+            v0 -= v1;
+            goto l3;
+        }
+        v1 = v0;
+        v0 = 0;
+        label l3;
+        ev::VariableSet("マクベス軍資金", v0);
+        ev::MessSetArgumentByValue(0, v1);
+        ev::MessSetArgumentByValue(1, v0);
+        ev::TutorialDialogMustShow("MID_B016_DIALOG2");
+        if (v0 <= 0) {
+            ev::Talk("MID_B016_EV8");
+        }
+    }
+    ev::FlagSet("ターン資金強奪");
+}
+
+callback[Event.TurnAfter](1, -1, 0) {
+    ev::FlagClr("ターン資金強奪");
+}
+
+callback[Event.TurnAfter](1, -1, 1) {
+    anonfn7();
+}
+
+callback[Event.TurnAfter](1, -1, 2) {
+    anonfn7();
+}
+
+def anonfn11(v0) {
+    let v1[3];
+    v4 = ["会話_容疑者1", "会話_容疑者2", "会話_容疑者3", "会話_容疑者4"];
+    v8 = 0;
+    for (v9 = 0; v9 < 4; v9++) {
+        if (ev::FlagGet(v4[v9])) {
+            v8++;
+        }
+    }
+    if (v8 < 3) {
+        v10 = ["会話使用済1", "会話使用済2", "会話使用済3"];
+        v13 = ["MID_B016_EV3", "MID_B016_EV4", "MID_B016_EV5"];
+        for (v16 = 0; v16 < 3; v16++) {
+            v1[v16] = ev::FlagGet(v10[v16]);
+        }
+        v17 = 2;
+        for (v18 = 0; v18 < v0; v18++) {
+            v19 = v17;
+            v17++;
+            while (v17 != v19) {
+                if (!v1[v17]) {
+                    break;
+                }
+                v17++;
+                if (v17 >= 3) {
+                    v17 = 0;
+                }
+            }
+        }
+        if (v8 == ev::VariableGet("Spy")) {
+            ev::Talk("MID_B016_EV9");
+            v20 = ["PID_B016_容疑者1", "PID_B016_容疑者2", "PID_B016_容疑者3", "PID_B016_容疑者4"];
+            v24 = ["Reinforce01", "Reinforce02", "Reinforce03", "Reinforce04"];
+            v28 = ev::UnitGetByPID(v20[v0]);
+            v29 = ev::ForceUnitGetNext(v28);
+            if (v28) {
+                v30 = ["MID_B016_EV10", "MID_B016_EV11", "MID_B016_EV12", "MID_B016_EV13"];
+                ev::UnitExpulsionByIndex(v28);
+                ev::UnitExpulsionByIndex(v29);
+                ev::Dispos(v24[v0], 8192);
+                ev::ForceUnitSetDontAttackForce(1, 2);
+                ev::Talk(v30[v0]);
+                goto l16;
+            }
+        }
+        ev::Talk(v13[v17]);
+        label l16;
+        ev::FlagSet(v10[v17]);
+        goto l17;
+    }
+    v34 = ["PID_B016_容疑者1", "PID_B016_容疑者2", "PID_B016_容疑者3", "PID_B016_容疑者4"];
+    v38 = ["Shura1", "Shura2", "Shura3", "Shura4"];
+    ev::Talk("MID_B016_EV6");
+    v42 = ev::UnitGetByPID(v34[v0]);
+    v43 = ev::ForceUnitGetNext(v42);
+    if (v42) {
+        ev::UnitExpulsionByIndex(v43);
+        ev::UnitExpulsionByIndex(v42);
+        ev::Dispos(v38[v0], 8);
+        v44 = ev::UnitGetByPID("PID_B016_ボス");
+        if (v44) {
+            ev::UnitSetDontAttackForce(v44, 2);
+        }
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+            ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+    }
+    ev::BGMPlay("STRM_MAP_AMONG", 0);
+    ev::Talk("MID_B016_EV7");
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    label l17;
+    ev::FlagSet(v4[v0]);
+}
+
+callback[Event.Talk]("", 0, "PID_B016_容疑者1", 2, 0, "会話_容疑者1") {
+    anonfn11(0);
+}
+
+callback[Event.Talk]("", 0, "PID_B016_容疑者2", 2, 0, "会話_容疑者2") {
+    anonfn11(1);
+}
+
+callback[Event.Talk]("", 0, "PID_B016_容疑者3", 2, 0, "会話_容疑者3") {
+    anonfn11(2);
+}
+
+callback[Event.Talk]("", 0, "PID_B016_容疑者4", 2, 0, "会話_容疑者4") {
+    anonfn11(3);
+}
+
+callback[Event.BattleTalk]("PID_B016_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B016_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die]("PID_B016_ボス", 1, "", -1) {
+    ev::Talk("MID_B016_BOSS_DIE1");
+}
+
+callback[Event.MapComplete]() {
+    v0 = ev::VariableGet("マクベス軍資金");
+    if (v0 > 0) {
+        ev::GoldGain(0, v0);
+    }
+}
+
+def ev::B016_アシュラを殺す？(v0) {
+    if (ev::CutSceneGameEventBegin(v0, "カットシーン")) {
+        if (!v0) {
+            ev::SkipDisable();
+        }
+        ev::DialogYesNo("MID_B016_ED1_YN");
+        if (!v0) {
+            ev::SkipEnable();
+        }
+        ev::CutSceneGameEventEnd(v0);
+    }
+}
+
+def ev::B016_ブーツ入手(v0) {
+    if (ev::CutSceneGameEventBegin(v0, "カットシーン2")) {
+        ev::ItemGain(0, BOOTS);
+        ev::CutSceneGameEventEnd(v0);
+    }
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B016_ED1");
+    ev::B016_アシュラを殺す？(0);
+    if (ev::DialogGetResult() == 0) {
+        ev::CutScene("B016_ED2");
+        ev::B016_ブーツ入手(0);
+        goto l1;
+    }
+    ev::BGMStop(2000);
+    ev::CutScene("B016_ED3");
+    ev::PersonLoad("B_HANDOVER");
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Support01", 4);
+    ev::DisposFree();
+    ev::PersonFree(ev::ChapterGetName());
+    ev::PersonFree("B_HANDOVER");
+    label l1;
+}
+
