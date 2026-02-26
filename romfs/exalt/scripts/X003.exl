@@ -1,0 +1,327 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("思考近敵");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+def anonfn3(v0, v1, v2, v3) {
+    v4 = v0 + v2;
+    v5 = v1 + v3;
+    if (!ev::TerrainIsOutOfPlayArea(v4, v5)) {
+        if (ev::TerrainAttributeIsTIDWithEdge(v0, v1, "TID_床")) {
+            ev::TerrainAttributeSetTID(v4, v5, "TID_床");
+            goto l0;
+        }
+        if (ev::TerrainAttributeIsTIDWithEdge(v0, v1, "TID_階段")) {
+            ev::TerrainAttributeSetTID(v4, v5, "TID_階段");
+            goto l0;
+        }
+        if (ev::TerrainAttributeIsTIDWithEdge(v0, v1, "TID_壁")) {
+            ev::TerrainAttributeSetTID(v4, v5, "TID_壁");
+            goto l0;
+        }
+        if (ev::TerrainAttributeIsTIDWithEdge(v0, v1, "TID_低壁")) {
+            ev::TerrainAttributeSetTID(v4, v5, "TID_低壁");
+            goto l0;
+        }
+        ev::TerrainAttributeSetTID(v4, v5, "TID_海");
+    }
+    label l0;
+    if (!ev::TerrainIsOutOfPlayArea(v0, v1)) {
+        ev::TerrainAttributeSetTID(v0, v1, "TID_海");
+    }
+}
+
+def anonfn4(v0, v1, v2, v3, v4, v5, v6) {
+    match (v6) {
+        1 -> {
+            ev::FieldObjectMove("ship_a", v4, v5, "MOVE_SHIP");
+            yield;
+        }
+        2 -> {
+            ev::FieldObjectMove("ship_b", v4, v5, "MOVE_SHIP");
+            yield;
+        }
+        3 -> {
+            ev::FieldObjectMove("ship_c", v4, v5, "MOVE_SHIP");
+            yield;
+        }
+        else -> {}
+    }
+    if (v4 > 0) {
+        v7 = (v0 + v2) - 1;
+        v8 = v0;
+        goto l8;
+    }
+    v7 = v0;
+    v8 = (v0 + v2) - 1;
+    label l8;
+    if (v5 > 0) {
+        v9 = (v1 + v3) - 1;
+        v10 = v1;
+        goto l10;
+    }
+    v9 = v1;
+    v10 = (v1 + v3) - 1;
+    label l10;
+    if (v4 > 0 && v5 > 0) {
+        for (v11 = v7; v11 >= v8; v11--) {
+            for (v12 = v9; v12 >= v10; v12--) {
+                anonfn3(v11, v12, v4, v5);
+            }
+        }
+        goto l19;
+    }
+    if (v4 < 0 && v5 > 0) {
+        for (v11 = v7; v11 <= v8; v11++) {
+            for (v12 = v9; v12 >= v10; v12--) {
+                anonfn3(v11, v12, v4, v5);
+            }
+        }
+        goto l19;
+    }
+    if (v4 > 0 && v5 < 0) {
+        for (v11 = v7; v11 >= v8; v11--) {
+            for (v12 = v9; v12 <= v10; v12++) {
+                anonfn3(v11, v12, v4, v5);
+            }
+        }
+        goto l19;
+    }
+    if (v4 < 0 && v5 < 0) {
+        for (v11 = v7; v11 <= v8; v11++) {
+            for (v12 = v9; v12 <= v10; v12++) {
+                anonfn3(v11, v12, v4, v5);
+            }
+        }
+        goto l19;
+    }
+    if (v4 < 0 && v5 == 0) {
+        for (v11 = v7; v11 <= v8; v11++) {
+            for (v12 = v9; v12 <= v10; v12++) {
+                anonfn3(v11, v12, v4, v5);
+            }
+        }
+        goto l19;
+    }
+    if (v4 > 0 && v5 == 0) {
+        for (v11 = v7; v11 >= v8; v11--) {
+            for (v12 = v9; v12 <= v10; v12++) {
+                anonfn3(v11, v12, v4, v5);
+            }
+        }
+    }
+    label l19;
+    ev::UnitRescueAll();
+    yield;
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X003_OP1");
+    ev::MapEventBeginForOpening(0);
+    ev::Dispos("Event01", 2052);
+    ev::CameraSetPosition(13, 12);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::BGMPlay("STRM_EVT_STRAIN_E3", 0);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(1500);
+    ev::Dispos("Event02", 6144);
+    ev::DisposWait();
+    ev::Talk("MID_X003_OP2_1");
+    ev::CameraSetPosition(20, 5);
+    ev::CameraWait();
+    ev::Dispos("Event03", 1024);
+    ev::DisposWait();
+    ev::TimeWait(1000);
+    ev::CameraSetPosition(13, 12);
+    ev::CameraWait();
+    ev::Talk("MID_X003_OP2_2");
+    v0 = ev::UnitGetByPID(AZURA);
+    ev::UnitMovePosition(v0, 14, 12, 0);
+    ev::UnitMoveWait();
+    ev::TimeWait(1000);
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::DisableBGMCommandPG();
+    ev::MapEventEndForOpening();
+    ev::EnableBGMCommandPG();
+    ev::CutScene("X003_OP3");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    anonfn4(8, 2, 24, 6, -2, 3, 3);
+    ev::TimeWait(500);
+    ev::CameraSetAngle(-60);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X003_EV1");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+}
+
+callback[Event.Turn](2, -1, 0) {
+    ev::CameraSetDistanceFromFar();
+    ev::CameraSetAngleFromMiddle();
+    ev::CameraWait();
+    ev::TimeWait(1250);
+    match (ev::TurnGet() % 4) {
+        0 -> {
+            anonfn4(4, 11, 26, 8, -4, 0, 1);
+            ev::TimeWait(1000);
+            anonfn4(6, 5, 24, 6, 2, -3, 3);
+            ev::TimeWait(1000);
+            anonfn4(1, 22, 24, 6, -1, -3, 2);
+            ev::TimeWait(1000);
+        }
+        1 -> {
+            anonfn4(8, 2, 24, 6, -2, 3, 3);
+            ev::TimeWait(1000);
+            anonfn4(0, 19, 24, 6, 1, 3, 2);
+            ev::TimeWait(1000);
+        }
+        2 -> {
+            anonfn4(0, 11, 26, 8, 4, 0, 1);
+            ev::TimeWait(1000);
+            anonfn4(6, 5, 24, 6, 2, -3, 3);
+            ev::TimeWait(1000);
+            anonfn4(1, 22, 24, 6, -1, -3, 2);
+            ev::TimeWait(1000);
+        }
+        3 -> {
+            anonfn4(8, 2, 24, 6, -2, 3, 3);
+            ev::TimeWait(1000);
+            anonfn4(0, 19, 24, 6, 1, 3, 2);
+            ev::TimeWait(1000);
+        }
+        else -> {}
+    }
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::MapImageUpdate();
+}
+
+callback[Event.Reinforce](7, 7, 1) {
+    ev::Dispos("Reinforce01_1", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](8, 8, 1) {
+    ev::Dispos("Reinforce02_1", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](11, 11, 1) {
+    ev::Dispos("Reinforce01_2", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](12, 12, 1) {
+    ev::Dispos("Reinforce02_2", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](15, 15, 1) {
+    ev::Dispos("Reinforce01_1", 8);
+    ev::DisposWait();
+    v0 = ev::UnitGetByPID("PID_X003_ボス2");
+    if (v0) {
+        ev::AiSetMoveLimit(v0, 0, -1, -1, -1, -1);
+    }
+}
+
+callback[Event.Reinforce](16, 16, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](18, 18, 1) {
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](20, 20, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](22, 22, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](24, 24, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](26, 26, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](28, 28, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](30, 30, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Area](1, 1, 27, 10, 0, "") {
+    if (ev::TurnGet() > 10) {
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            ev::AiSetMoveLimit(v0, 0, -1, -1, -1, -1);
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+        ev::FlagSet("思考近敵");
+        goto l3;
+    }
+    ev::FlagClr("思考近敵");
+    label l3;
+}
+
+callback[Event.MapComplete]() {
+    ev::ItemGain(0, IRON_NAGINATA);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X003_ED1");
+}
+
