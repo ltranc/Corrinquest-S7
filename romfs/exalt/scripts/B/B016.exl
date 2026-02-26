@@ -63,8 +63,11 @@ callback[Event.Turn](1, 1, 0) {
     ev::SkipEscape();
     ev::TutorialDialogMustShow("MID_B016_DIALOG1");
     ev::VariableSet("Spy", ev::RandomGetGame() % 3);
-    ev::VariableSet("Spy2", ev::RandomGetGame() % 3);
-    if(ev::VariableGet("Spy") == )
+    if(ev::VariableGet("Spy") == 1) {
+        ev::VariableSet("Spy2", 0);
+    } else {
+        ev::VariableSet("Spy2", 2 - ev::VariableGet("Spy"));
+    }
 }
 
 callback[Event.Reinforce](-1, -1, 1) {
@@ -146,7 +149,7 @@ def anonfn11(v0) {
                 }
             }
         }
-        if (v8 == ev::VariableGet("Spy")) {
+        if (v8 == ev::VariableGet("Spy") || v8 == ev::VariableGet("Spy2")) {
             ev::Talk("MID_B016_EV9");
             v20 = ["PID_B016_容疑者1", "PID_B016_容疑者2", "PID_B016_容疑者3", "PID_B016_容疑者4"];
             v24 = ["Reinforce01", "Reinforce02", "Reinforce03", "Reinforce04"];
