@@ -62,12 +62,8 @@ callback[Event.Turn](1, 1, 0) {
     ev::TimeWait(500);
     ev::SkipEscape();
     ev::TutorialDialogMustShow("MID_B016_DIALOG1");
-    ev::VariableSet("Spy", ev::RandomGetGame() % 3);
-    if(ev::VariableGet("Spy") == 1) {
-        ev::VariableSet("Spy2", 0);
-    } else {
-        ev::VariableSet("Spy2", 2 - ev::VariableGet("Spy"));
-    }
+    ev::VariableSet("Spy", ev::RandomGetGame() % 2);
+    ev::VariableSet("Spy2", 2);
 }
 
 callback[Event.Reinforce](-1, -1, 1) {
