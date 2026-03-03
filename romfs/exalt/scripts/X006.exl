@@ -1,0 +1,147 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("DV");
+    ev::FlagEntry("GroupAttack");
+    ev::FlagEntry("GroupAttack2");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::ChapterSetTrickDragon(1);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    v0 = ev::UnitGetByPIDForce("PID_X006_ボス", 1);
+    if (v0) {
+        ev::UnitSetPrivateSkill(v0, "SPID_敗北条件離脱");
+        ev::UnitSetEnhance(v0, 36);
+        ev::UnitSetEnhance(v0, 37);
+        ev::UnitSetEnhance(v0, 38);
+        ev::UnitSetEnhance(v0, 39);
+        ev::UnitSetEnhance(v0, 40);
+        ev::UnitSetEnhance(v0, 41);
+        ev::UnitSetEnhance(v0, 42);
+        ev::UnitSetEnhance(v0, 43);
+        ev::UnitSetEnhance(v0, 44);
+        ev::UnitSetEnhance(v0, 45);
+        ev::UnitSetEnhance(v0, 46);
+        ev::UnitSetEnhance(v0, 47);
+        ev::UnitSetEnhance(v0, 48);
+        ev::UnitSetEnhance(v0, 49);
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X006_OP1");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::TutorialDialogMustShow("MID_X006_EV");
+    ev::TutorialDialogMustShow("MID_X006_DIALOG");
+}
+
+callback[Event.Turn](-1, -1, 0) {
+    ev::FlagClr("DV");
+}
+
+callback[Event.Turn](-1, -1, 0) {
+    if (ev::FlagGet("GroupAttack") && !ev::FlagGet("GroupAttack2")) {
+        ev::FlagSet("GroupAttack2");
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            v1 = ev::AiGetBand(v0);
+            if (v1 == 10) {
+                ev::AiSetSequence(v0, 2, "AI_AT_AttackToHeal", "");
+            }
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+    }
+}
+
+callback[Event.Reinforce](7, 7, 1) {
+    ev::Dispos("Reinforce01", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](10, 10, 1) {
+    ev::Dispos("Reinforce02", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](12, 12, 1) {
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce05", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](15, 15, 1) {
+    ev::Dispos("Reinforce06", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](20, 20, 1) {
+    ev::Dispos("Reinforce07", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce08", 8);
+    ev::DisposWait();
+}
+
+callback[Event.BattleTalk]("PID_X006_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_X006_BT1");
+    ev::FlagSet("戦闘会話");
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.BattleTalk]("PID_X006_ダークマージ上", 1, "", -1, 1, "GroupAttack") {
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.BattleTalk]("PID_X006_ダークマージ2", 1, "", -1, 1, "GroupAttack") {
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.BattleTalk]("PID_X006_アクスファイター2", 1, "", -1, 1, "GroupAttack") {
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.BattleTalk]("PID_X006_アクスファイター3", 1, "", -1, 1, "GroupAttack") {
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.BattleTalk]("PID_X006_シーフ2", 1, "", -1, 1, "GroupAttack") {
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.BattleTalk]("PID_X006_ロッドナイト2", 1, "", -1, 1, "GroupAttack") {
+    ev::FlagSet("GroupAttack");
+}
+
+callback[Event.Die]("PID_X006_ボス", 1, "", -1) {
+    ev::Talk("MID_X006_BOSS_DIE1");
+}
+
+callback[Event.Die](MIDORI, 0, "", -1) {
+    ev::Talk("MID_X006_DIE_ミドリコ");
+}
+
+callback[Event.MapComplete]() {
+    ev::ItemGain(0, IRON_YUMI);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X006_ED1");
+}
+
