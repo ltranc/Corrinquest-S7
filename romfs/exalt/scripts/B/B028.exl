@@ -23,6 +23,8 @@ callback[Event.MapLoad]() {
             ev::UnitDoubleOn(v0, v1);
         }
     }
+    ev::Dispos("Placeholders", 4);
+    #SUREFOOTED is Resolve!
     ev::GiveSkill("PID_B028_TIROKAFTERI", HOSHIDAN_UNITY, DARTING_BLOW, 0);
     ev::GiveSkill("PID_B028_NOODLE", DRAGON_FANG, NOHRIAN_TRUST, 0);
     ev::GiveSkill("PID_B028_DUSK", POISON_STRIKE, DUELISTS_BLOW, INEVITABLE_END);
@@ -33,6 +35,25 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_BONES", ARMORED_BLOW, DEMOISELLE, 0);
     ev::GiveSkill("PID_B028_AKECHI", POISON_STRIKE, DUELISTS_BLOW, INEVITABLE_END);
     ev::GiveSkill("PID_B028_CORNBALL", DEMOISELLE, STAFF_SAVANT, BEAST_SHIELD_SKILL);
+    ev::GiveSkill("PID_B028_HEX", ARMORED_BLOW, DEFENDER, 0);
+    ev::GiveSkill("PID_B028_NACNUD", WARY_FIGHTER, PAVISE, 0);
+    ev::GiveSkill("PID_B028_GAMBLOR", VANTAGE, AWAKENING, 0);
+    ev::GiveSkill("PID_B028_PROFEFOR", DANCING_BLADE, SPEEDTAKER_SKILL, 0);
+    ev::GiveSkill("PID_B028_LUCKYDUCK", MIRACLE, RENEWAL, 0);
+    ev::GiveSkill("PID_B028_FAMINE", WARY_FIGHTER, PAVISE, 0);
+    ev::GiveSkill("PID_B028_MAG", HEARTSEEKER, WARDING_BLOW, 0);
+    ev::GiveSkill("PID_B028_ELIZABETH", ARMORED_BLOW, VANTAGE, 0);
+    ev::GiveSkill("PID_B028_SHATTER", ELBOW_ROOM, DEFENDER, 0);
+    ev::GiveSkill("PID_B028_GREY", INSPIRATION, MOVEMENT_PLUS_1, 0);
+    ev::GiveSkill("PID_B028_KATS", DARTING_BLOW, DUELISTS_BLOW, 0);
+    ev::GiveSkill("PID_B028_KAZENUN", RENEWAL, STAFF_SAVANT, INEVITABLE_END);
+    ev::GiveSkill("PID_B028_BUGGED", AXEBREAKER, DARTING_BLOW, 0);
+    ev::GiveSkill("PID_B028_A2", POISON_STRIKE, INEVITABLE_END, 0);
+    ev::GiveSkill("PID_B028_LISGOGAMBLI", DRAGON_FANG, SPEEDTAKER_SKILL, 0);
+    ev::GiveSkill("PID_B028_SAPPHIRE", DEMOISELLE, STAFF_SAVANT, INEVITABLE_END);
+    ev::GiveSkill("PID_B028_OCTOPUSVIO", REND_HEAVEN, QUIXOTIC, 0);
+    ev::GiveSkill("PID_B028_DARGON", CHARM, DRACONIC_HEX, 0);
+    ev::GiveSkill("PID_B028_JACK", DEMOISELLE, INSPIRATION, 0);
 }
 
 callback[Event.MapFree]() {
@@ -493,8 +514,8 @@ callback[Event.TurnAfter](1, 4, 1) {
         ev::SkipDisable();
         anonfn30(3, 23, 3, 22);
         anonfn30(4, 23, 4, 22);
-        anonfn30(26, 23, 27, 23);
-        anonfn30(26, 24, 27, 24);
+        anonfn30(25, 23, 26, 23);
+        anonfn30(25, 24, 26, 24);
         ev::SkipEnable();
         ev::FlagSet("Paired");
     }
@@ -617,7 +638,8 @@ callback[Event.Reinforce](1, -1, 1) {
 }
 
 callback[Event.TurnAfter](-1, -1, 1) {
-    ev::ResolveEffect("PID_B028_PLACEHOLDER");
+    ev::ResolveEffect("PID_B028_GAMBLOR");
+    ev::ResolveEffect("PID_B028_ZEV");
     ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
 }
 
@@ -628,7 +650,10 @@ callback[Event.Reinforce](1, 7, 1) {
 
 callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ShadowgiftEffect("PID_B028_CAMILLANT");
-    ev::ResolveEffect("PID_B028_PLACEHOLDER");
+    ev::ShadowgiftEffect("PID_B028_MAG");
+    ev::ShadowgiftEffect("PID_B028_ELIZABETH");
+    ev::ResolveEffect("PID_B028_GAMBLOR");
+    ev::ResolveEffect("PID_B028_ZEV");
 }
 
 callback[Event.Area](12, 20, 18, 30, 0, "SidesPairUp") {
