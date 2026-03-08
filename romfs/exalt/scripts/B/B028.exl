@@ -54,6 +54,11 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_OCTOPUSVIO", REND_HEAVEN, QUIXOTIC, 0);
     ev::GiveSkill("PID_B028_DARGON", CHARM, DRACONIC_HEX, 0);
     ev::GiveSkill("PID_B028_JACK", DEMOISELLE, INSPIRATION, 0);
+    ev::GiveSkill("PID_B028_FALINKS", DRAGON_FANG, HOSHIDAN_UNITY, 0);
+    ev::GiveSkill("PID_B028_ADORACLE", IRON_WILL, VANTAGE, 0);
+    ev::GiveSkill("PID_B028_MINIDURIN", DRACONIC_HEX, HEARTSEEKER, 0);
+    ev::GiveSkill("PID_B028_MANATO", AGGRESSOR, DUELISTS_BLOW, 0);
+    ev::GiveSkill("PID_B028_PORPANIX", DANCING_BLADE, DARTING_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -652,6 +657,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ShadowgiftEffect("PID_B028_CAMILLANT");
     ev::ShadowgiftEffect("PID_B028_MAG");
     ev::ShadowgiftEffect("PID_B028_ELIZABETH");
+    ev::ShadowgiftEffect("PID_B028_MINIDURIN");
     ev::ResolveEffect("PID_B028_GAMBLOR");
     ev::ResolveEffect("PID_B028_ZEV");
 }
