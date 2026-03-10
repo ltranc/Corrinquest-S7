@@ -1,0 +1,526 @@
+include std:fe14:prelude;
+
+def anonfn0() {
+    ev::VariableEntry("風Handle1", 0);
+    ev::VariableEntry("風Handle2", 0);
+    ev::VariableEntry("風Handle3", 0);
+    ev::VariableEntry("風Handle4", 0);
+    ev::VariableEntry("風Handle5", 0);
+    ev::VariableEntry("風Index1", 0);
+    ev::VariableEntry("風Index2", 0);
+    ev::VariableEntry("風Index3", 0);
+    ev::VariableEntry("風Index4", 0);
+    ev::VariableEntry("風Index5", 0);
+}
+
+def anonfn1(v0, v1) {
+    v2 = [
+        "風Handle1", "風Handle2", "風Handle3", "風Handle4", 
+        "風Handle5", 
+    ];
+    v7 = [
+        "風Index1", "風Index2", "風Index3", "風Index4", 
+        "風Index5", 
+    ];
+    v12 = v1 * 32 + v0;
+    for (v13 = 0; v13 < 5; v13++) {
+        if (ev::VariableGet(v7[v13]) == v12) {
+            v14 = ev::VariableGet(v2[v13]);
+            ev::VariableSet(v7[v13], 0);
+            ev::VariableSet(v2[v13], 0);
+            return v14;
+        }
+    }
+    ev::Warning("風エフェクトハンドルの取得に失敗");
+    return 0;
+}
+
+def anonfn2(v0, v1, v2) {
+    v3 = [
+        "風Handle1", "風Handle2", "風Handle3", "風Handle4", 
+        "風Handle5", 
+    ];
+    v8 = [
+        "風Index1", "風Index2", "風Index3", "風Index4", 
+        "風Index5", 
+    ];
+    v13 = v2 * 32 + v1;
+    for (v14 = 0; v14 < 5; v14++) {
+        if (!ev::VariableGet(v3[v14])) {
+            ev::VariableSet(v8[v14], v13);
+            ev::VariableSet(v3[v14], v0);
+            return 0;
+        }
+    }
+    ev::Warning("風エフェクトハンドルの保存に失敗");
+}
+
+def anonfn3(v0, v1) {
+    v2 = v0 + 2;
+    if (v1 == 4) {
+        for (v3 = 0; v3 < 5; v3++) {
+            ev::TrickSet(v0 + v3, 1, 12, 1, 1);
+        }
+        v4 = ev::EffectPlayEternal3D("Fld_B020_Wind_Loop", v2, 1);
+        anonfn2(v4, v0, v1);
+        goto l4;
+    }
+    for (v5 = 0; v5 < 5; v5++) {
+        ev::TrickSet(v0 + v5, 29, 12, 1, 1);
+    }
+    v6 = ev::EffectPlayEternal3D("Fld_B020_Wind_Loop2", v2, 29);
+    ev::EffectRotate(v6, 180);
+    anonfn2(v6, v0, v1);
+    label l4;
+    yield;
+}
+
+def anonfn4(v0, v1, v2) {
+    if (ev::TrickTst(v0, v1, 12, 1)) {
+        v3 = anonfn1(v0, v2);
+        v4 = v0 + 2;
+        if (v2 == 4) {
+            v3 = ev::EffectPlayEternal3D("Fld_B020_Wind_Loop", v4, v1);
+            goto l2;
+        }
+        v3 = ev::EffectPlayEternal3D("Fld_B020_Wind_Loop2", v4, v1);
+        ev::EffectRotate(v3, 180);
+        label l2;
+        anonfn2(v3, v0, v2);
+        return 1;
+    }
+    return 0;
+}
+
+def anonfn5() {
+    v0 = 0;
+    v1 = 0;
+    for (v2 = 1; v2 <= 25; v2++) {
+        if (v0 > 0) {
+            v0--;
+            goto l3;
+        }
+        if (anonfn4(v2, 1, 4)) {
+            v0 = 4;
+        }
+        label l3;
+        if (v1 > 0) {
+            v1--;
+            goto l5;
+        }
+        if (anonfn4(v2, 29, 8)) {
+            v1 = 4;
+        }
+        label l5;
+    }
+}
+
+def anonfn6(v0, v1, v2, v3, v4) {
+    if (ev::TrickTst(v2, v3, 12, 1)) {
+        v5 = v2 + 2;
+        ev::CameraSetPosition(v5, 15);
+        ev::CameraSetDistanceFromFar();
+        ev::CameraSetAngleFromFar();
+        ev::CameraWait();
+        ev::CameraWaitDistance();
+        ev::CameraWaitAngle();
+        v6 = anonfn1(v2, v4);
+        ev::EffectFadeOut(v6, 100);
+        if (v0 == -1 || v0 == 1) {
+            v7 = ev::EffectPlay3D("Fld_B020_HighWind", v5, v3);
+            goto l3;
+        }
+        v7 = ev::EffectPlay3D("Fld_B020_Wind", v5, v3);
+        label l3;
+        if (v4 == 8) {
+            ev::EffectRotate(v7, 180);
+        }
+        for (v8 = 0; v8 < 5; v8++) {
+            ev::TrickSet(v2 + v8, v3, 12, 2, 1);
+            ev::GimmickWindBlow(v2 + v8, v4, v0, 5, v1);
+        }
+        yield;
+        ev::EffectWait();
+        ev::UnitMoveWait();
+    }
+}
+
+def anonfn7(v0) {
+    v1 = 0;
+    if (ev::FlagGet("SeizeAllowed") || ev::FlagGet("敵増援2")) {
+        v1 = -1;
+    }
+    v2 = 0;
+    if (v0) {
+        if (ev::DifficultyGet() <= 0) {
+            v1 = 1;
+            goto l4;
+        }
+        v1 = -1;
+        label l4;
+        v2 = 1;
+    }
+    for (v3 = 1; v3 <= 25; v3++) {
+        anonfn6(v1, v2, v3, 1, 4);
+        anonfn6(v1, v2, v3, 29, 8);
+    }
+    ev::CameraSetDistanceFromConfig();
+    ev::CameraSetAngleFromConfig();
+}
+
+def ev::LocalTutorial0() {
+    return "MID_B020_DIALOG1";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話_プレイヤー");
+    ev::FlagEntry("戦闘会話ツクヨミ");
+    ev::FlagEntry("戦闘会話ツクヨミ_プレイヤー");
+    ev::FlagEntry("敵増援条件1");
+    ev::FlagEntry("敵増援1");
+    ev::FlagEntry("敵増援条件2");
+    ev::FlagEntry("敵増援2");
+    ev::FlagEntry("SeizeAllowed");
+    ev::FlagEntry("WaneTrade");
+    ev::FlagEntry("Galzussies");
+    anonfn0();
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleBreakdown(1);
+    ev::ChapterSetTrickDragon(3);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    if (ev::DifficultyGet() == 2) {
+        v0 = ev::UnitGetByPosition(8, 4);
+        if (v0) {
+            ev::AiSetDisposPosition(v0, 8, 9);
+        }
+        v1 = ev::UnitGetByPosition(10, 4);
+        if (v1) {
+            ev::AiSetDisposPosition(v1, 10, 9);
+        }
+        v2 = ev::UnitGetByPosition(9, 5);
+        if (v2) {
+            ev::AiSetDisposPosition(v2, 9, 10);
+        }
+    }
+    if (ev::DifficultyGet() <= 0) {
+        v3 = ev::UnitGetByPID("PID_B020_ボス");
+        if (v3) {
+            ev::UnitSetPrivateSkill(v3, "SPID_回避-20");
+        }
+        goto l5;
+    }
+    if (ev::DifficultyGet() <= 1) {
+        v4 = ev::UnitGetByPID("PID_B020_ボス");
+        if (v4) {
+            ev::UnitSetPrivateSkill(v4, "SPID_回避-10");
+        }
+    }
+    label l5;
+    v5 = ev::UnitGetByPID(HAYATO);
+    ev::UnitItemToTransporter(v5);
+    ev::UnitExpulsionByIndex(v5);
+    v6 = ev::UnitGetByPID(RHAJAT);
+    ev::UnitItemToTransporter(v6);
+    ev::UnitExpulsionByIndex(v6);
+    v7 = ev::UnitGetByPID("PID_B020_ボス");
+    if (v7) {
+        ev::UnitSetPrivateSkill(v7, "SPID_強制スキル発動");
+        ev::UnitSetPrivateSkill(v7, "SPID_強制必殺回避");
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B020_OP1");
+    ev::CutScene("B020_OP1_1");
+    ev::CutScene("B020_OP2");
+}
+
+callback[Event.MapSetting]() {
+    ev::TrickStringSet("All", 12, 2, 2);
+    anonfn3(8, 4);
+    anonfn3(17, 8);
+    ev::TrickSet(21, 3, 3, 2, 0);
+}
+
+callback[Event.MapSettingResume]() {
+    anonfn5();
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::SkipEscape();
+    ev::TutorialDialogMustShow("MID_B020_DIALOG1");
+    ev::TutorialDialogMustShow("MID_B020_DIALOG");
+}
+
+callback[Event.Turn](2, -1, 0) {
+    anonfn7(0);
+    v0 = ev::TurnGet() % 6;
+    match (v0) {
+        1 -> {
+            anonfn3(8, 4);
+            anonfn3(17, 8);
+        }
+        2 -> {
+            anonfn3(3, 8);
+            anonfn3(16, 4);
+        }
+        3 -> {
+            anonfn3(4, 4);
+            anonfn3(9, 8);
+            anonfn3(14, 4);
+            anonfn3(19, 8);
+        }
+        4 -> {
+            anonfn3(1, 8);
+            anonfn3(12, 8);
+            anonfn3(21, 8);
+        }
+        5 -> {
+            anonfn3(7, 4);
+            anonfn3(17, 4);
+        }
+        0 -> {
+            anonfn3(1, 8);
+            anonfn3(6, 8);
+            anonfn3(11, 8);
+            anonfn3(16, 8);
+            anonfn3(21, 8);
+        }
+    }
+}
+
+callback[Event.Turn](-1, -1, 1) {
+    if (!ev::FlagGet("敵増援条件1") && ev::ForceUnitGetCountArea(0, 1, 1, 11, 16, 1) > 0) {
+        ev::FlagSet("敵増援条件1");
+    }
+    if (!ev::FlagGet("敵増援条件2") && ev::ForceUnitGetCountArea(0, 18, 2, 24, 8, 1) > 0) {
+        ev::FlagSet("敵増援条件2");
+    }
+}
+
+callback[Event.Turn](6, -1, 2) {
+    v0 = ev::UnitGetByPID("PID_B020_シャラ");
+    v1 = ev::UnitGetByPID("PID_B020_ツクヨミ");
+    if (v0) {
+        if (!ev::UnitItemIsExist(v0, WANE_FESTAL)) {
+            if (v1) {
+                if (ev::UnitItemIsExist(v1, WANE_FESTAL)) {
+                    ev::ItemGainSilent(v0, WANE_FESTAL);
+                    ev::UnitItemClearDrop(v0);
+                    ev::UnitItemPutOff(v1, WANE_FESTAL);
+                }
+            }
+        }
+    }
+}
+
+callback[Event.Turn](15, 15, 0) {
+    if(!ev::FlagGet("SeizeAllowed")) {
+        ev::Talk("MID_B020_EV2");
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            ev::AiSetActive(v0, 1);
+            ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            v1 = ev::ForceUnitGetNext(v0);
+            v0 = v1;
+        }
+    }
+}
+
+callback[Event.Turn](20, 20, 0) {
+    if (!ev::FlagGet("敵増援条件2")) {
+        ev::Talk("MID_B020_EV1");
+        ev::FlagSet("敵増援条件2");
+    }
+}
+
+callback[Event.Reinforce](3, 3, 1) {
+    ev::Dispos("Reinforce01", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("敵増援条件1") && !ev::FlagGet("敵増援1")) {
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        ev::FlagSet("敵増援1");
+    }
+    if (ev::FlagGet("敵増援条件2") && !ev::FlagGet("敵増援2")) {
+        ev::Dispos("Reinforce04", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce05", 8);
+        ev::DisposWait();
+        ev::FlagSet("敵増援2");
+        if (!ev::FlagGet("SeizeAllowed")) {
+            ev::TutorialDialogMustShow("MID_B020_DIALOG2");
+            ev::BGMStop(100);
+            ev::BMapBGMChnageFlagOn();
+        }
+    }
+    if (!ev::UnitGetByPID("PID_B020_ボス") && !ev::FlagGet("Galzussies")) {
+        ev::Dispos("Reinforce06", 8);
+        ev::DisposWait();
+        ev::FlagSet("Galzussies");
+        
+    }
+}
+
+callback[Event.Reinforce](30, 30, 1) {
+    if (!ev::FlagGet("Galzussies")) {
+        ev::Dispos("Reinforce06", 8);
+        ev::DisposWait();
+        ev::FlagSet("Galzussies");
+    }
+    v0 = ev::ForceUnitGetFirst(1);
+    while (v0) {
+        ev::AiSetActive(v0, 1);
+        ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+        v1 = ev::ForceUnitGetNext(v0);
+        v0 = v1;
+    }
+}
+
+def ev::Defeat() {
+    if (ev::FlagGet("SeizeAllowed")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B020_ツクヨミ")) {
+        return 0;
+    }
+    return 1;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "Defeat") {
+    ev::TrickSet(21, 3, 3, 1, 0);
+    ev::FlagSet("SeizeAllowed");
+    if (!ev::FlagGet("敵増援2")) {
+        ev::TutorialDialogMustShow("MID_B020_DIALOG2");
+        ev::BGMStop(100);
+        ev::BMapBGMChnageFlagOn();
+    }
+}
+
+callback[Event.Area](1, 1, 11, 16, 0, "敵増援条件1") {
+    ev::FlagSet("敵増援条件1");
+}
+
+callback[Event.Area](18, 2, 24, 8, 0, "敵増援条件2") {
+    ev::FlagSet("敵増援条件2");
+}
+
+def ev::FugaFight() {
+    v0 = ev::UnitGetByPID("PID_B020_ボス");
+    if (!v0) {
+        return 0;
+    }
+    if (v0 && !ev::UnitTstPrivateSkill(v0, "SPID_強制必殺回避")) {
+        return 0;
+    }
+    if (ev::FlagGet("戦闘会話_プレイヤー")) {
+        return 1;
+    }
+    if (ev::FlagGet("戦闘会話")) {
+        return 1;
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "FugaFight") {
+    v0 = ev::UnitGetByPID("PID_B020_ボス");
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_強制スキル発動");
+        ev::UnitClrPrivateSkill(v0, "SPID_強制必殺回避");
+    }
+}
+
+callback[Event.BattleTalk]("PID_B020_ボス", 1, CORRIN_M, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B020_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B020_ボス", 1, CORRIN_F, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B020_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B020_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B020_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B020_ツクヨミ", 1, CORRIN_M, -1, 1, "戦闘会話ツクヨミ_プレイヤー") {
+    ev::Talk("MID_B020_BT5");
+    ev::FlagSet("戦闘会話ツクヨミ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B020_ツクヨミ", 1, CORRIN_F, -1, 1, "戦闘会話ツクヨミ_プレイヤー") {
+    ev::Talk("MID_B020_BT5");
+    ev::FlagSet("戦闘会話ツクヨミ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B020_ツクヨミ", 1, "", -1, 1, "戦闘会話ツクヨミ") {
+    ev::Talk("MID_B020_BT3");
+    ev::FlagSet("戦闘会話ツクヨミ");
+}
+
+callback[Event.Die]("PID_B020_ボス", 1, "", -1) {
+    ev::Talk("MID_B020_BOSS_DIE1");
+}
+
+callback[Event.Die]("PID_B020_ツクヨミ", 1, "", -1) {
+    ev::Talk("MID_B020_BOSS_DIE2");
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::MapEventBeginForComplete();
+    ev::CameraSetPosition(21, 5);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::Dispos("Event11", 2052);
+    ev::BGMPlay("STRM_EVT_BRAVE_A1", 0);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B020_ED_1");
+    ev::BGMVolume(0, 7000);
+    v0 = ev::UnitGetByPID("PID_B020_EDイベント用フウガ");
+    v1 = ev::UnitGetByPID("PID_B020_EDイベント用ツクヨミ");
+    ev::UnitMovePosition(v0, 10, 5, 0);
+    ev::TimeWait(250);
+    ev::UnitMovePosition(v1, 11, 5, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B020_ED_2");
+    v2 = ev::UnitGetPlayer();
+    v3 = ev::UnitGetByPID(AZURA);
+    ev::UnitMovePosition(v2, 12, 5, 0);
+    ev::UnitMovePosition(v3, 13, 5, 0);
+    ev::UnitMoveWait();
+    ev::BGMStop(2000);
+    ev::EnvSEOff(2000);
+    ev::FadeOut(3, 0, 2000);
+    ev::FadeWait();
+    ev::MapEventEndForComplete();
+}
+
+callback[Event.MapEnding]() {}
+
