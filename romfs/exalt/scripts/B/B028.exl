@@ -59,6 +59,14 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_MINIDURIN", DRACONIC_HEX, HEARTSEEKER, 0);
     ev::GiveSkill("PID_B028_MANATO", AGGRESSOR, DUELISTS_BLOW, 0);
     ev::GiveSkill("PID_B028_PORPANIX", DANCING_BLADE, DARTING_BLOW, 0);
+    ev::GiveSkill("PID_B028_CHESHIRE", VANTAGE, RENEWAL, 0);
+    ev::GiveSkill("PID_B028_VENUS", DEMOISELLE, STAFF_SAVANT, 0);
+    ev::GiveSkill("PID_B028_HOOONK", QUICK_DRAW, CERTAIN_BLOW, 0);
+    ev::GiveSkill("PID_B028_CATALYST", POISON_STRIKE, TOMEBREAKER, 0);
+    ev::GiveSkill("PID_B028_LUCY", DARTING_BLOW, WARDING_BLOW, 0);
+    ev::GiveSkill("PID_B028_VILAIRE", EVENHANDED, AGGRESSOR, 0);
+    ev::GiveSkill("PID_B028_GANDORF", HEARTSEEKER, IGNIS, 0);
+    ev::GiveSkill("PID_B028_GALVIOR", POISON_STRIKE, REPLICATE, 0);
 }
 
 callback[Event.MapFree]() {
@@ -645,6 +653,7 @@ callback[Event.Reinforce](1, -1, 1) {
 callback[Event.TurnAfter](-1, -1, 1) {
     ev::ResolveEffect("PID_B028_GAMBLOR");
     ev::ResolveEffect("PID_B028_ZEV");
+    ev::ResolveEffect("PID_B028_LUCY");
     ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
 }
 
@@ -660,9 +669,10 @@ callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ShadowgiftEffect("PID_B028_MINIDURIN");
     ev::ResolveEffect("PID_B028_GAMBLOR");
     ev::ResolveEffect("PID_B028_ZEV");
+    ev::ResolveEffect("PID_B028_LUCY");
 }
 
-callback[Event.Area](12, 20, 18, 30, 0, "SidesPairUp") {
+callback[Event.Area](12, 15, 18, 30, 0, "SidesPairUp") {
     ev::FlagSet("SidesPairUp");
 }
 

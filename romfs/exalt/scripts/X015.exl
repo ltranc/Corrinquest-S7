@@ -1,0 +1,795 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("竜脈1");
+    ev::FlagEntry("竜脈2");
+    ev::FlagEntry("竜脈3");
+    ev::FlagEntry("竜脈4");
+    ev::FlagEntry("竜脈5");
+    ev::FlagEntry("竜脈6");
+    ev::FlagEntry("竜脈7");
+    ev::VariableEntry("敵生成番号", 0);
+    ev::VariableEntry("敵生成数", 0);
+    ev::VariableEntry("Seasons", 0);
+    ev::FlagEntry("Activated");
+    ev::FlagEntry("CyanPair");
+    ev::FlagEntry("FightCyan3");
+    ev::FlagEntry("CyanProc");
+    ev::VariableEntry("SeasonsMax", 8);
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetTrickDragon(1);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    v0 = ev::UnitGetByPID("PID_X015_ESAU");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, EVEN_BETTER);
+        ev::UnitAddEquipSkill(v0, AGGRESSOR);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_LUFA");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, IRON_WILL);
+        ev::UnitAddEquipSkill(v0, QUICK_DRAW);
+        ev::UnitAddEquipSkill(v0, DEATH_BLOW);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_LAURENCE");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, HEAVY_BLADE);
+        ev::UnitAddEquipSkill(v0, AETHER);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_NIGHTBOT");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, ELBOW_ROOM);
+        ev::UnitAddEquipSkill(v0, ARMORED_BLOW);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_FIRE");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, IRON_WILL);
+        ev::UnitAddEquipSkill(v0, DUELISTS_BLOW);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_VANA");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, DEMOISELLE);
+        ev::UnitAddEquipSkill(v0, LIVE_TO_SERVE);
+        ev::UnitAddEquipSkill(v0, STAFF_SAVANT);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_BROMLEY");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, ELBOW_ROOM);
+        ev::UnitAddEquipSkill(v0, AEGIS);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_JETBLACKJAY");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, MALEFIC_AURA);
+        ev::UnitAddEquipSkill(v0, CERTAIN_BLOW);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_SIDHE");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, LUCKY_SEVEN);
+        ev::UnitAddEquipSkill(v0, PASS);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_FORSYTH");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, IRON_WILL);
+        ev::UnitAddEquipSkill(v0, SOL);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_NOODLE");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, VANTAGE);
+        ev::UnitAddEquipSkill(v0, AWAKENING);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_AMAZA");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, MIRACLE);
+        ev::UnitAddEquipSkill(v0, COUNTER);
+        ev::UnitAddEquipSkill(v0, STAFF_SAVANT);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_ULPIANUS");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, HP_PLUS_5);
+        ev::UnitAddEquipSkill(v0, RALLY_STRENGTH);
+        ev::UnitSetHP(v0, ev::UnitGetMHP(v0));
+    }
+    v0 = ev::UnitGetByPID("PID_X015_CLAY");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, NATURAL_COVER);
+        ev::UnitAddEquipSkill(v0, LUNA);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_CANDLE");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, SOLIDARITY);
+        ev::UnitAddEquipSkill(v0, REPLICATE);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_UMBER");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, QUICK_DRAW);
+        ev::UnitAddEquipSkill(v0, LUNGE);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_SAGE");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, RALLY_LUCK);
+        ev::UnitAddEquipSkill(v0, RALLY_MAGIC);
+        ev::UnitAddEquipSkill(v0, STAFF_SAVANT);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_TATOOLO");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, QUICK_DRAW);
+        ev::UnitAddEquipSkill(v0, CERTAIN_BLOW);
+    }
+    v0 = ev::UnitGetByPID("PID_X015_ELPIS");
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, ELBOW_ROOM);
+        ev::UnitAddEquipSkill(v0, ARMORED_BLOW);
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X015_OP1");
+    ev::MapEventBeginForOpening(1);
+    ev::Dispos("Event01", 4);
+    ev::CameraSetPosition(13, 28);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(2000);
+    ev::Dispos("Event02", 4096);
+    v0 = ev::UnitGetByPID(SIEGBERT);
+    ev::UnitTransferByIndex(v0, 0);
+    ev::DisposWait();
+    ev::Talk("MID_X015_OP1_2_1");
+    ev::Dispos("Event03", 4096);
+    ev::DisposWait();
+    ev::Talk("MID_X015_OP1_2_2");
+    ev::UnitMovePosition(v0, 15, 26, 0);
+    ev::UnitMoveWait();
+    v1 = ev::UnitGetByPID("PID_X015_OPイベント用敵1");
+    v2 = [577, 0];
+    ev::Battle(v0, 0, v1, 0, &v2[0]);
+    ev::UnitExpulsionByIndex(v1);
+    ev::TimeWait(1000);
+    v4 = ev::UnitGetByPID("PID_X015_OPイベント用敵2");
+    v5 = [577, 0];
+    ev::Battle(v0, 0, v4, 0, &v5[0]);
+    ev::UnitExpulsionByIndex(v4);
+    ev::Talk("MID_X015_OP1_2_3");
+    ev::UnitMovePosition(v0, 14, 15, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_X015_OP1_2_4");
+    v7 = ev::UnitGetByPID(XANDER);
+    ev::UnitMovePosition(v7, 14, 16, 0);
+    ev::UnitMoveWait();
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForOpening();
+    ev::UnitExpulsionByIndex(v0);
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X015_OP2");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    ev::TutorialDialogMustShow("MID_X015_DIALOG");
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_X015_CYAN7");
+    if (v0 && !ev::FlagGet("CyanPair")) {
+        v1 = ev::ForceUnitGetFirst(1);
+        while (v1) {
+            if (ev::UnitIsClone(v1)) {
+                break;
+            }
+            v1 = ev::ForceUnitGetNext(v1);
+        }
+        ev::CameraSetPositionByUnit(v0);
+        ev::CameraWait();
+        ev::TimeWait(250);
+        ev::UnitDoubleOn(v0, v1);
+        ev::TimeWait(250);
+        ev::FlagSet("CyanPair");
+    }
+}
+
+def anonfn6(v0, v1) {
+    v2 = [
+        "Reinforce01_1", "Reinforce02_1", "Reinforce03_1", "Reinforce04_1", 
+        "Reinforce05_1", "Reinforce06_1", "Reinforce07_1", 
+    ];
+    v9 = [
+        "Reinforce01_2", "Reinforce02_2", "Reinforce03_2", "Reinforce04_2", 
+        "Reinforce05_2", "Reinforce06_2", "Reinforce07_2", 
+    ];
+    v16 = [
+        18, 27, 4, 21, 
+        23, 21, 9, 16, 
+        23, 12, 16, 10, 
+        21, 8, 
+    ];
+    v30 = v16[2 * v0];
+    v31 = v16[2 * v0 + 1];
+    if (ev::TrickTst(v30, v31, 11, 2)) {
+        return 0;
+    }
+    if (v1 == 1) {
+        ev::Dispos(v2[v0], 8);
+        goto l2;
+    }
+    ev::Dispos(v9[v0], 8);
+    label l2;
+    ev::DisposWait();
+    return 1;
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    v0 = 2;
+    v1 = ev::VariableGet("敵生成数");
+    if (v1 >= 12) {
+        v0 = 1;
+    }
+    v2 = 1;
+    if (ev::DifficultyGet() >= 2 && v1 < 20) {
+        v2 = 2;
+    }
+    v3 = -1;
+    for (v4 = 0; v4 < v2; v4++) {
+        v5 = ev::VariableGet("敵生成番号");
+        v6 = v5;
+        while (1) {
+            v7 = v5;
+            v5++;
+            if (v5 == 7) {
+                v5 = 0;
+            }
+            if (v5 == v3) {
+                break;
+            }
+            if (anonfn6(v7, v0)) {
+                ev::VariableAdd("敵生成数", v0);
+                v3 = v7;
+                break;
+            }
+            if (v6 == v5) {
+                break;
+            }
+        }
+        ev::VariableSet("敵生成番号", v5);
+    }
+}
+
+callback[Event.Reinforce](1, 1, 1) {
+    v0 = ev::UnitGetByPID("PID_X015_CANDLE");
+    if (v0) {
+        ev::CameraSetPositionByUnit(v0);
+        ev::CameraWait();
+        ev::TimeWait(250);
+        v1 = ev::UnitCreateClone(v0, ev::UnitGetX(v0) + 1, ev::UnitGetY(v0));
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("Activated")) {
+        v0 = ev::VariableGet("Seasons");
+        v1 = ev::VariableGet("SeasonsMax");
+        if (v0 < v1) {
+            match (v0) {
+                0 -> {
+                    ev::Dispos("Reinforce01", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN1");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, MOVEMENT_PLUS_1);
+                        ev::UnitAddEquipSkill(v0, RALLY_SKILL);
+                        ev::UnitAddEquipSkill(v0, SHURIKENBREAKER);
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_VELVET");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, DUELISTS_BLOW);
+                        ev::UnitAddEquipSkill(v1, VANTAGE);
+                        ev::UnitAddEquipSkill(v1, AGGRESSOR);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN1");
+                    }
+                    ev::BGMStop(500);
+                    ev::BMapBGMChnageFlagOn();
+                }
+                1 -> {
+                    ev::Dispos("Reinforce02", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN2");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, QUICK_DRAW);
+                        ev::UnitAddEquipSkill(v0, AIR_SUPERIORITY);
+                        ev::UnitAddEquipSkill(v0, AMATERASU);
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_TRUEBLADE");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, POISON_STRIKE);
+                        ev::UnitAddEquipSkill(v1, SHURIKENFAIRE);
+                        ev::UnitAddEquipSkill(v1, INEVITABLE_END);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN2");
+                    }
+                }
+                2 -> {
+                    ev::Dispos("Reinforce03", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN3");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, HEARTSEEKER);
+                        ev::UnitAddEquipSkill(v0, MALEFIC_AURA);
+                        ev::UnitAddEquipSkill(v0, LIFETAKER);
+                        ev::UnitSetPrivateSkill(v0, "SPID_強制スキル発動");
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_FERIKSU");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, NATURAL_COVER);
+                        ev::UnitAddEquipSkill(v1, LUNA);
+                        ev::UnitAddEquipSkill(v1, ARMORED_BLOW);
+                    }
+                    v2 = ev::UnitGetByPID("PID_X015_LUM");
+                    if (v2) {
+                        ev::UnitAddEquipSkill(v2, HEARTSEEKER);
+                        ev::UnitAddEquipSkill(v2, MALEFIC_AURA);
+                        ev::UnitAddEquipSkill(v2, BOWBREAKER);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN3");
+                    }
+                }
+                3 -> {
+                    ev::Dispos("Reinforce04", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN4");
+                    v1 = ev::UnitGetByPID("PID_X015_ADEX");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, HEARTSEEKER);
+                        ev::UnitAddEquipSkill(v1, MALEFIC_AURA);
+                        ev::UnitAddEquipSkill(v1, VENGEANCE);
+                    }
+                    v2 = ev::UnitGetByPID("PID_X015_OPAL");
+                    if (v2) {
+                        ev::UnitAddEquipSkill(v2, DARTING_BLOW);
+                        ev::UnitAddEquipSkill(v2, RALLY_MOVEMENT);
+                        ev::UnitAddEquipSkill(v2, GALEFORCE);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN4");
+                    }
+                }
+                4 -> {
+                    ev::Dispos("Reinforce05", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN5");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, IRON_WILL);
+                        ev::UnitAddEquipSkill(v0, IGNIS);
+                        ev::UnitAddEquipSkill(v0, INSPIRATION);
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_ROBIN");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, NATURAL_COVER);
+                        ev::UnitAddEquipSkill(v1, ASTRA);
+                        ev::UnitAddEquipSkill(v1, POINT_BLANK_SKILL);
+                    }
+                    v2 = ev::UnitGetByPID("PID_X015_HAHNEYMANN");
+                    if (v2) {
+                        ev::UnitAddEquipSkill(v2, HP_PLUS_5);
+                        ev::UnitAddEquipSkill(v2, DUAL_STRIKER);
+                        ev::UnitAddEquipSkill(v2, AXEFAIRE);
+                        ev::UnitSetHP(v2, ev::UnitGetMHP(v2));
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN5");
+                    }
+                }
+                5 -> {
+                    ev::Dispos("Reinforce06", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN6");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, DANCING_BLADE);
+                        ev::UnitAddEquipSkill(v0, AETHER);
+                        ev::UnitAddEquipSkill(v0, AGGRESSOR);
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_NOVA");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, HEARTSEEKER);
+                        ev::UnitAddEquipSkill(v1, MALEFIC_AURA);
+                        ev::UnitAddEquipSkill(v1, VENGEANCE);
+                    }
+                    v2 = ev::UnitGetByPID("PID_X015_MAPLE");
+                    if (v2) {
+                        ev::UnitAddEquipSkill(v2, NATURAL_COVER);
+                        ev::UnitAddEquipSkill(v2, WARY_FIGHTER);
+                        ev::UnitAddEquipSkill(v2, PAVISE);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN6");
+                    }
+                }
+                6 -> {
+                    ev::Dispos("Reinforce07", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN7");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, POTENT_POTION);
+                        ev::UnitAddEquipSkill(v0, QUICK_DRAW);
+                        ev::UnitAddEquipSkill(v0, REPLICATE);
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::TimeWait(250);
+                        v3 = ev::UnitCreateClone(v0, 10, 29);
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_CHEW");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, DUELISTS_BLOW);
+                        ev::UnitAddEquipSkill(v1, ASTRA);
+                        ev::UnitAddEquipSkill(v1, SWORDFAIRE);
+                    }
+                    v2 = ev::UnitGetByPID("PID_X015_GLADIIA");
+                    if (v2) {
+                        ev::UnitAddEquipSkill(v2, GOOD_FORTUNE);
+                        ev::UnitAddEquipSkill(v2, VOICE_OF_PEACE);
+                        ev::UnitAddEquipSkill(v2, AWAKENING);
+                        ev::UnitSetEnhance(v2, 9);
+                        ev::UnitSetEnhance(v2, 14);
+                        ev::UnitSetEnhance(v2, 15);
+                    }
+                    v4 = ev::UnitGetByPID("PID_X015_LORENZ");
+                    if (v4) {
+                        ev::UnitAddEquipSkill(v4, ELBOW_ROOM);
+                        ev::UnitAddEquipSkill(v4, DEFENDER);
+                        ev::UnitAddEquipSkill(v4, AEGIS);
+                    }
+                    v5 = ev::UnitGetByPID("PID_X015_LEFTNIP");
+                    if (v5) {
+                        ev::UnitAddEquipSkill(v5, HEAVY_BLADE);
+                        ev::UnitAddEquipSkill(v5, DEATH_BLOW);
+                        ev::UnitAddEquipSkill(v5, LANCEBREAKER);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN7");
+                    }
+                }
+                7 -> {
+                    ev::Dispos("Reinforce08", 1032);
+                    ev::DisposWait();
+                    v0 = ev::UnitGetByPID("PID_X015_CYAN8");
+                    if (v0) {
+                        ev::UnitAddEquipSkill(v0, POISON_STRIKE);
+                        ev::UnitAddEquipSkill(v0, LIVE_TO_SERVE);
+                        ev::UnitAddEquipSkill(v0, TOMEBREAKER);
+                    }
+                    v1 = ev::UnitGetByPID("PID_X015_CBTENTUSIAST");
+                    if (v1) {
+                        ev::UnitAddEquipSkill(v1, HP_PLUS_5);
+                        ev::UnitAddEquipSkill(v1, RALLY_STRENGTH);
+                        ev::UnitAddEquipSkill(v1, AXEFAIRE);
+                        ev::UnitSetHP(v1, ev::UnitGetMHP(v2));
+                    }
+                    v2 = ev::UnitGetByPID("PID_X015_KURAMA");
+                    if (v2) {
+                        ev::UnitAddEquipSkill(v2, EVENHANDED);
+                        ev::UnitAddEquipSkill(v2, EVEN_BETTER);
+                        ev::UnitAddEquipSkill(v2, AGGRESSOR);
+                    }
+                    if (v0) {
+                        ev::CameraSetPositionByUnit(v0);
+                        ev::CameraWait();
+                        ev::BGMStop(1000);
+                        ev::TimeWait(200);
+                        ev::Talk("MID_X015_CYAN8");
+                    }
+                }
+            }
+            ev::VariableInc("Seasons");
+            if (ev::VariableGet("Seasons") == ev::VariableGet("SeasonsMax")) {
+                ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+            }
+        }
+    }
+}
+
+callback[Event.Reinforce](1, -1, 1) {
+    ev::RallyEffectForStaffUnits("PID_X015_VANA");
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "") {
+    ev::ShadowgiftEffect("PID_X015_FORSYTH");
+}
+
+def ev::GiveSkill(v0, v1, v2, v3) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        ev::UnitAddEquipSkill(v0, v1);
+        if (v2 != 0) {
+            ev::UnitAddEquipSkill(v0, v2);
+        }
+        if (v3 != 0) {
+            ev::UnitAddEquipSkill(v0, v3);
+        }
+        if (ev::UnitIsEquipSkill(v0, FOREIGN_PRINCESS)) {
+            ev::UnitSetEnhance(v0, 9);
+            ev::UnitSetEnhance(v0, 10);
+            ev::UnitSetEnhance(v0, 14);
+            ev::UnitSetEnhance(v0, 15);
+        }
+        if (ev::UnitIsEquipSkill(v0, HP_PLUS_5)) {
+            ev::UnitSetHP(v0, ev::UnitGetMHP(v0));
+        }
+    }
+}
+
+def ev::ShadowgiftEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        ev::UnitClrEnhance(v0, 7);
+        ev::UnitClrEnhance(v0, 6);
+        ev::UnitClrEnhance(v0, 5);
+        v1 = ev::UnitGetWeakness(v0, 2);
+        if (v1 > 1) {
+            v1 = v1 * -1;
+            ev::UnitAddWeakness(v0, 2, v1);
+        }
+        v1 = ev::UnitGetWeakness(v0, 1);
+        if (v1 > 1) {
+            v1 = v1 * -1;
+            ev::UnitAddWeakness(v0, 1, v1);
+        }
+    }
+}
+
+def ev::ResolveEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        if (ev::UnitGetHP(v0) * 2 <= ev::UnitGetMHP(v0)) {
+            ev::UnitSetEnhance(v0, 16);
+            ev::UnitSetEnhance(v0, 17);
+            ev::UnitSetEnhance(v0, 18);
+            ev::UnitSetEnhance(v0, 19);
+            goto l0;
+        }
+        ev::UnitClrEnhance(v0, 16);
+        ev::UnitClrEnhance(v0, 17);
+        ev::UnitClrEnhance(v0, 18);
+        ev::UnitClrEnhance(v0, 19);
+    }
+    label l0;
+}
+
+def ev::FortifySpectrumEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        v1 = ev::UnitGetX(v0);
+        v2 = ev::UnitGetY(v0);
+        v3 = ev::ForceUnitGetFirst(1);
+        while (v3) {
+            v4 = ev::UnitGetX(v3);
+            v5 = ev::UnitGetY(v3);
+            if (v1 - v4 == 1 || v4 - v1 == 1) {
+                if (v2 == v5) {
+                    ev::UnitSetEnhance(v3, 31);
+                }
+            }
+            if (v5 - v2 == 1 || v2 - v5 == 1) {
+                if (v1 == v4) {
+                    ev::UnitSetEnhance(v3, 31);
+                }
+            }
+            v6 = ev::ForceUnitGetNext(v3);
+            v3 = v6;
+        }
+    }
+}
+
+def ev::WitchsBrewEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        v1 = ev::RandomGetGame() % 100;
+        v2 = ev::UnitGetCapability(v0, 5, 1);
+        v2 = v2 * 2;
+        if (ev::UnitIsEquipSkill(v0, HOSHIDAN_UNITY)) {
+            v2 = v2 + 10;
+        }
+        if (v1 < v2) {
+            v3 = ev::RandomGetGame() % 8;
+            match (v3) {
+                0 -> {
+                    if (!ev::UnitTstEnhance(v0, 8)) {
+                        ev::UnitSetEnhance(v0, 8);
+                        ev::UnitSetHP(v0, ev::UnitGetHP(v0) + 5);
+                        if (ev::UnitIsEquipSkill(v0, POTENT_POTION)) {
+                            ev::UnitSetHP(v0, ev::UnitGetHP(v0) + 2);
+                        }
+                    }
+                }
+                1 -> {
+                    if (!ev::UnitTstEnhance(v0, 9)) {
+                        ev::UnitSetEnhance(v0, 9);
+                    }
+                }
+                2 -> {
+                    if (!ev::UnitTstEnhance(v0, 10)) {
+                        ev::UnitSetEnhance(v0, 10);
+                    }
+                }
+                3 -> {
+                    if (!ev::UnitTstEnhance(v0, 11)) {
+                        ev::UnitSetEnhance(v0, 11);
+                    }
+                }
+                4 -> {
+                    if (!ev::UnitTstEnhance(v0, 12)) {
+                        ev::UnitSetEnhance(v0, 12);
+                    }
+                }
+                5 -> {
+                    if (!ev::UnitTstEnhance(v0, 13)) {
+                        ev::UnitSetEnhance(v0, 13);
+                    }
+                }
+                6 -> {
+                    if (!ev::UnitTstEnhance(v0, 14)) {
+                        ev::UnitSetEnhance(v0, 14);
+                    }
+                }
+                7 -> {
+                    if (!ev::UnitTstEnhance(v0, 15)) {
+                        ev::UnitSetEnhance(v0, 15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+def ev::ProfiteerEffect(v0) {
+    v0 = ev::UnitGetByPID(v0);
+    if (v0) {
+        v1 = ev::RandomGetGame() % 100;
+        v2 = ev::UnitGetCapability(v0, 5, 1);
+        v2 = v2 * 3;
+        v2 = v2 / 2;
+        if (ev::UnitIsEquipSkill(v0, HOSHIDAN_UNITY)) {
+            v2 = v2 + 10;
+        }
+        if (v1 < v2) {
+            ev::ItemGainSilent(v0, GOLD_BAR);
+        }
+    }
+}
+
+def ev::RallyEffectForStaffUnits(v0) {
+    v1 = ev::UnitGetByPID(v0);
+    v2 = ev::UnitGetX(v1);
+    v3 = ev::UnitGetY(v1);
+    if (v1) {
+        if (!ev::UnitTstStatus(v1, 1, 0)) {
+            v4 = ev::ForceUnitGetFirst(1);
+            while (v4) {
+                if (!ev::UnitIsPID(v4, v0)) {
+                    v5 = ev::UnitGetX(v4);
+                    v6 = ev::UnitGetY(v4);
+                    v7 = v2 - v5;
+                    if (v7 < 0) {
+                        v7 = v7 * -1;
+                    }
+                    v8 = v3 - v6;
+                    if (v8 < 0) {
+                        v8 = v8 * -1;
+                    }
+                    if (v7 + v8 <= 2) {
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYSTRENGTH")) {
+                            ev::UnitSetEnhance(v4, 23);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYMAGIC")) {
+                            ev::UnitSetEnhance(v4, 24);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYSKILL")) {
+                            ev::UnitSetEnhance(v4, 25);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYSPEED")) {
+                            ev::UnitSetEnhance(v4, 26);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYLUCK")) {
+                            ev::UnitSetEnhance(v4, 27);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYDEFENSE")) {
+                            ev::UnitSetEnhance(v4, 28);
+                        }
+                        if (ev::UnitIsEquipSkill(v1, "SEID_DUMMYRALLYRESISTANCE")) {
+                            ev::UnitSetEnhance(v4, 29);
+                        }
+                    }
+                }
+                v4 = ev::ForceUnitGetNext(v4);
+            }
+        }
+    }
+}
+
+def ev::CyanFight() {
+    if (ev::FlagGet("CyanProc")) {
+        return 0;
+    }
+    if (ev::FlagGet("FightCyan3")) {
+        return 1;
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "CyanFight") {
+    v0 = ev::UnitGetByPID("PID_X015_CYAN3");
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_強制スキル発動");
+    }
+    ev::FlagSet("CyanProc");
+}
+
+callback[Event.BattleTalk]("PID_X015_CYAN3", 1, "", -1, 1, "FightCyan3") {
+    ev::FlagSet("FightCyan3");
+}
+
+callback[Event.Die](SIEGBERT, -1, "", -1) {
+    ev::Talk("MID_X015_DIE_ジークベルト");
+}
+
+callback[Event.MapComplete]() {
+    ev::ItemGain(0, IRON_SWORD);
+    ev::ItemGain(0, IRON_LANCE);
+    ev::ItemGain(0, JAVELIN);
+    ev::ItemGain(0, CONCOCTION);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X015_ED1");
+}
+

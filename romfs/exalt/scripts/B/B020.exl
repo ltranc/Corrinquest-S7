@@ -184,6 +184,7 @@ callback[Event.ScriptLoad]() {
     ev::FlagEntry("SeizeAllowed");
     ev::FlagEntry("WaneTrade");
     ev::FlagEntry("Galzussies");
+    ev::VariableEntry("Aggro", 0);
     anonfn0();
 }
 
@@ -336,6 +337,25 @@ callback[Event.Turn](15, 15, 0) {
             ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
             v1 = ev::ForceUnitGetNext(v0);
             v0 = v1;
+        }
+    }
+}
+
+callback[Event.Turn](1, 17, 0) {
+    if(ev::FlagGet("SeizeAllowed")) {
+        v0 = ev::VariableGet("Aggro");
+        if(v0 < 2) {
+            ev::VariableInc("Aggro");
+            if(v0 == 1) {
+                v0 = ev::ForceUnitGetFirst(1);
+                while (v0) {
+                    if((ev::AiGetBand(v0) == 8) || (ev::AiGetBand(v0) == 4)) {
+                        ev::AiSetActive(v0, 1);
+                        ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+                    }
+                    v0 = ev::ForceUnitGetNext(v0);
+                }
+            }
         }
     }
 }

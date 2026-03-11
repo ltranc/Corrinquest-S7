@@ -1,0 +1,216 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話オロチ");
+    ev::FlagEntry("戦闘会話ユウギリ");
+    ev::FlagEntry("戦闘会話タクミ");
+    ev::FlagEntry("敵増援");
+    ev::VariableEntry("Activated", 0);
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B013_OP1");
+    ev::CutScene("B013_OP2");
+    ev::CutScene("B013_OP3");
+    ev::GMapMove("Btl_CastleDark_Entrance", "Btl_KnightLand_CityArea", 12.0);
+    ev::BGMPlay("STRM_EVT_AMB_B2", 0);
+    ev::CutScene("B013_OP4");
+}
+
+callback[Event.MapSetting]() {
+    ev::TrickSet(3, 14, 1, 2, 2);
+    ev::TrickSet(7, 17, 1, 2, 2);
+}
+
+callback[Event.Reinforce](3, 4, 1) {
+    if (ev::DifficultyGet() == 0) {
+        if (ev::TurnGet() != 4) {
+            return 0;
+        }
+        goto l2;
+    }
+    if (ev::TurnGet() != 3) {
+        return 0;
+    }
+    label l2;
+    ev::Dispos("Reinforce01", 8);
+    ev::DisposWait();
+    v0 = ev::UnitGetByPID("PID_B013_シーフ");
+    if (v0) {
+        ev::UnitSetMovePower(v0, 3);
+        ev::CameraSetAngle(-40);
+        ev::CameraSetDistanceFromNear();
+        ev::Talk("MID_B013_ZOEN1");
+        ev::CameraSetAngleFromConfig();
+        ev::CameraSetDistanceFromConfig();
+        ev::TimeWait(500);
+    }
+}
+
+def anonfn6() {
+    if (ev::FlagGet("敵増援")) {
+        return 0;
+    }
+    v0 = ev::ForceUnitGetFirst(1);
+    v1 = 0;
+    while (v0) {
+        if (ev::AiGetBand(v0) == 1) {
+            if (ev::AiGetActive(v0)) {
+                return 1;
+            }
+            v1++;
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+    return v1 == 0;
+}
+
+def anonfn7() {
+    if (ev::FlagGet("敵増援") && ev::VariableGet("Activated") < 2) {
+        return 1;
+    }
+    return 0;
+}
+
+def anonfn8() {
+    if (ev::FlagGet("敵増援") || ev::VariableGet("Activated") == 2) {
+        return 0;
+    }
+    v0 = ev::ForceUnitGetFirst(1);
+    v1 = 0;
+    v2 = 0;
+    v3 = 0;
+    if (ev::UnitGetByPID("PID_B013_シーフ")) {
+        v3 = 1;
+    }
+    while (v0) {
+        if (ev::AiGetBand(v0) == 1) {
+            v1++;
+        }
+        v2++;
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+    return v2 - v1 == v3;
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (anonfn7()) {
+        if (ev::VariableGet("Activated") == 2) {
+            v0 = ev::ForceUnitGetFirst(1);
+            while (v0) {
+                if ((ev::AiGetBand(v0) == 2 || ev::AiGetBand(v0) == 3) || ev::AiGetBand(v0) == 4) {
+                    ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+                }
+                v0 = ev::ForceUnitGetNext(v0);
+            }
+        }
+        ev::VariableInc("Activated");
+    }
+    if (anonfn6()) {
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        ev::BGMStop(100);
+        ev::BMapBGMChnageFlagOn();
+        ev::FlagSet("敵増援");
+    }
+    if (anonfn8()) {
+        if (ev::VariableGet("Activated") == 1) {
+            v0 = ev::ForceUnitGetFirst(1);
+            while (v0) {
+                ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+                v0 = ev::ForceUnitGetNext(v0);
+            }
+        }
+        ev::VariableInc("Activated");
+    }
+}
+
+callback[Event.BattleTalk]("PID_B013_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B013_BT4");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B013_オロチ", 1, "", -1, 1, "戦闘会話オロチ") {
+    ev::Talk("MID_B013_BT2");
+    ev::FlagSet("戦闘会話オロチ");
+}
+
+callback[Event.BattleTalk]("PID_B013_ユウギリ", 1, "", -1, 1, "戦闘会話ユウギリ") {
+    ev::Talk("MID_B013_BT3");
+    ev::FlagSet("戦闘会話ユウギリ");
+}
+
+callback[Event.BattleTalk]("PID_B013_タクミ", 1, "", -1, 1, "戦闘会話タクミ") {
+    ev::Talk("MID_B013_BT1");
+    ev::FlagSet("戦闘会話タクミ");
+}
+
+callback[Event.Die]("PID_B013_ボス", 1, "", -1) {
+    ev::Talk("MID_B013_BOSS_DIE4");
+}
+
+callback[Event.Die]("PID_B013_オロチ", 1, "", -1) {
+    ev::Talk("MID_B013_BOSS_DIE2");
+}
+
+callback[Event.Die]("PID_B013_ユウギリ", 1, "", -1) {
+    ev::Talk("MID_B013_BOSS_DIE3");
+}
+
+callback[Event.Die]("PID_B013_タクミ", 1, "", -1) {
+    ev::Talk("MID_B013_BOSS_DIE1");
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::MapEventBeginForComplete();
+    ev::CameraSetPosition(5, 9);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::Dispos("Event11", 2052);
+    ev::BGMPlay("STRM_EVT_AMB_A1_2", 300);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B013_ED1_1");
+    ev::BGMVolume(0, 8000);
+    v0 = ev::UnitGetByPID("PID_B013_EDイベント用タクミ");
+    ev::UnitMovePosition(v0, 0, 10, 2);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B013_ED1_2");
+    v1 = ev::UnitGetPlayer();
+    v2 = ev::UnitGetByPID(AZURA);
+    ev::UnitMovePosition(v1, 14, 12, 0);
+    ev::UnitMovePosition(v2, 13, 12, 0);
+    ev::UnitMoveWait();
+    ev::MapEventEndForComplete();
+}
+
+callback[Event.MapEnding]() {
+    ev::BGMPlay("STRM_EVT_STRAIN_E3", 0);
+    ev::MoviePlay("shvarie");
+    ev::CutScene("B013_ED2");
+}
+
