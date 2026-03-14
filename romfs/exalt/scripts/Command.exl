@@ -1,0 +1,641 @@
+include std:fe14:prelude;
+
+def ev::TimeWait(v0) {
+    v1 = ev::TimeMSecToFrame(v0);
+    while (!ev::SkipIsActive()) {
+        if (v1 <= 0) {
+            break;
+        }
+        v1 -= ev::TimeGetSpeed();
+        yield;
+    }
+}
+
+def ev::TimeWaitConfig(v0) {
+    v1 = ev::TimeMSecToFrame(v0);
+    while (!ev::SkipIsActive()) {
+        if (v1 <= 0) {
+            break;
+        }
+        v1 -= ev::TimeGetConfigSpeed();
+        yield;
+    }
+}
+
+def ev::SkipYield() {
+    if (!ev::SkipIsActive()) {
+        yield;
+    }
+}
+
+def ev::FadeWait() {
+    while (ev::FadeIsWait()) {
+        yield;
+    }
+}
+
+def ev::ChapterShowWinRuleTelop() {
+    v0 = ev::SkipIsDisable();
+    if (!v0) {
+        ev::SkipDisable();
+    }
+    ev::ChapterShowWinRuleTelopImpl();
+    if (!v0) {
+        ev::SkipEnable();
+    }
+}
+
+def ev::DisposWait() {
+    while (ev::DisposIsWait()) {
+        yield;
+    }
+}
+
+def ev::ForceUnitGetCountPID(v0, v1) {
+    v2 = 0;
+    v3 = ev::ForceUnitGetFirst(v0);
+    while (v3) {
+        v4 = ev::ForceUnitGetNext(v3);
+        if (ev::UnitIsPID(v3, v1)) {
+            v2++;
+        }
+        v3 = v4;
+    }
+    return v2;
+}
+
+def ev::ForceUnitSetDontAttack(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        ev::UnitSetDontAttack(v2, v1);
+        v2 = v3;
+    }
+}
+
+def ev::ForceUnitSetDontAttackForce(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        ev::UnitSetDontAttackForce(v2, v1);
+        v2 = v3;
+    }
+}
+
+def ev::ForceUnitIsDamaged(v0) {
+    v1 = ev::ForceUnitGetFirst(v0);
+    while (v1) {
+        v2 = ev::ForceUnitGetNext(v1);
+        if (ev::UnitGetHP(v1) < ev::UnitGetMHP(v1)) {
+            return 1;
+        }
+        v1 = v2;
+    }
+    return 0;
+}
+
+def ev::ForceUnitItemIsExist(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        if (ev::UnitItemIsExist(v2, v1)) {
+            return 1;
+        }
+        v2 = v3;
+    }
+    return 0;
+}
+
+def ev::ForceUnitItemPutOff(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        ev::UnitItemPutOff(v2, v1);
+        v2 = v3;
+    }
+}
+
+def ev::ForceUnitSetInvalidEternal(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        ev::UnitSetInvalidEternal(v2, v1);
+        v2 = v3;
+    }
+}
+
+def ev::ForceUnitSetInvalidUseDoping(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        ev::UnitSetInvalidUseDoping(v2, v1);
+        v2 = v3;
+    }
+}
+
+def ev::ForceUnitSetInvalidUseClassChange(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v0);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        ev::UnitSetInvalidUseClassChange(v2, v1);
+        v2 = v3;
+    }
+}
+
+def ev::UnitGetPlayer() {
+    v0 = 0;
+    if (!v0) {
+        v0 = ev::UnitGetByPID(CORRIN_F);
+    }
+    if (!v0) {
+        v0 = ev::UnitGetByPID(CORRIN_M);
+    }
+    return v0;
+}
+
+def ev::UnitMoveWait() {
+    while (ev::UnitIsMoveWait()) {
+        yield;
+    }
+}
+
+def ev::UnitHpEffectWait() {
+    while (ev::UnitIsHpEffectWait()) {
+        yield;
+    }
+}
+
+def ev::UnitPlayerIsMale() {
+    v0 = ev::UnitGetPlayer();
+    return ev::UnitIsPID(v0, CORRIN_M);
+}
+
+def ev::TrickSetForDragon(v0, v1, v2, v3, v4) {
+    ev::MiracleTelop();
+    ev::BeginMiracle();
+    ev::MiracleShoot(v0, v1, v4);
+    ev::TrickSet(v0, v1, 11, v2, 1);
+    ev::TrickStringSet(v4, 12, v3, 0);
+    ev::EffectWait();
+    ev::EndMiracle();
+}
+
+def ev::TrickSetForDragonDirectShoot(v0, v1, v2, v3, v4, v5, v6) {
+    ev::MiracleTelop();
+    ev::BeginMiracle();
+    ev::MiracleShootXY(v0, v1, v5, v6);
+    ev::TrickSet(v0, v1, 11, v2, 1);
+    ev::TrickStringSet(v4, 12, v3, 0);
+    ev::EffectWait();
+    ev::EndMiracle();
+}
+
+def ev::TrickSetAnyForDragon(v0, v1, v2, v3, v4, v5) {
+    ev::MiracleTelop();
+    ev::BeginMiracle();
+    ev::MiracleShoot(v0, v1, v5);
+    ev::TrickSet(v0, v1, 11, v3, 1);
+    ev::TrickStringSet(v2, 11, v3, 1);
+    ev::TrickStringSet(v5, 12, v4, 0);
+    ev::EffectWait();
+    ev::EndMiracle();
+}
+
+def ev::TrickSetAnyForDragonDirectShoot(v0, v1, v2, v3, v4, v5, v6, v7) {
+    ev::MiracleTelop();
+    ev::BeginMiracle();
+    ev::MiracleShootXY(v0, v1, v6, v7);
+    ev::TrickSet(v0, v1, 11, v3, 1);
+    ev::TrickStringSet(v2, 11, v3, 1);
+    ev::TrickStringSet(v5, 12, v4, 0);
+    ev::EffectWait();
+    ev::EndMiracle();
+}
+
+def ev::TrickSetAnyForDragonDirectShootNoTelop(v0, v1, v2, v3, v4, v5, v6, v7) {
+    ev::BeginMiracle();
+    ev::MiracleShootXY(v0, v1, v6, v7);
+    ev::TrickSet(v0, v1, 11, v3, 1);
+    ev::TrickStringSet(v2, 11, v3, 1);
+    ev::TrickStringSet(v5, 12, v4, 0);
+    ev::EffectWait();
+    ev::EndMiracle();
+}
+
+def ev::TrickSetForDragonNoArea(v0, v1, v2) {
+    ev::MiracleTelop();
+    ev::MiracleShoot(v0, v1, "None");
+    ev::TrickSet(v0, v1, 11, v2, 1);
+    ev::EffectWait();
+}
+
+def ev::BeginMiracle() {
+    ev::BandOpen();
+    ev::CameraSetDistanceFromNear();
+}
+
+def ev::EndMiracle() {
+    ev::BandClose();
+    ev::CameraSetDistanceFromConfig();
+}
+
+def ev::BeginTrickSetForDragon(v0, v1, v2, v3, v4) {
+    ev::MiracleTelop();
+    ev::BeginMiracle();
+    ev::MiracleShoot(v0, v1, v4);
+}
+
+def ev::EndTrickSetForDragon(v0, v1, v2, v3, v4) {
+    ev::TrickSet(v0, v1, 11, v2, 1);
+    ev::TrickStringSet(v4, 12, v3, 0);
+    ev::EffectWait();
+    ev::EndMiracle();
+}
+
+def ev::CameraSetPositionByUnit(v0) {
+    if (!v0) {
+        return 0;
+    }
+    if (ev::UnitGetForce(v0) >= 3) {
+        return 0;
+    }
+    v1 = ev::UnitGetX(v0);
+    v2 = ev::UnitGetY(v0);
+    ev::CameraSetPosition(v1, v2);
+    return 1;
+}
+
+def ev::EffectPreloadWait(v0) {
+    while (ev::EffectIsPreload(v0)) {
+        yield;
+    }
+}
+
+def ev::EffectWait() {
+    while (ev::EffectIsPlaying()) {
+        yield;
+    }
+}
+
+def ev::TelopWait() {
+    while (ev::TelopIsWait()) {
+        yield;
+    }
+}
+
+def ev::MoviePlay(v0) {
+    if (!ev::SkipIsActive()) {
+        v1 = ev::SkipIsDisable();
+        if (!v1) {
+            ev::SkipDisable();
+        }
+        ev::MapSuspend();
+        ev::MoviePlayImpl(v0, 1);
+        ev::MapResume();
+        if (!v1) {
+            ev::SkipEnable();
+        }
+        if (ev::MovieIsSkipped()) {
+            ev::SkipTrigger();
+        }
+    }
+}
+
+def ev::MoviePlayNoBind(v0) {
+    if (!ev::SkipIsActive()) {
+        ev::MoviePlayNoBindWithEscapeSkip(v0);
+    }
+}
+
+def ev::MoviePlayWithEscapeSkip(v0) {
+    v1 = ev::SkipIsDisable();
+    if (!v1) {
+        ev::SkipDisable();
+    }
+    ev::MapSuspend();
+    ev::MoviePlayImpl(v0, 1);
+    ev::MapResume();
+    if (!v1) {
+        ev::SkipEnable();
+    }
+}
+
+def ev::MoviePlayNoBindWithEscapeSkip(v0) {
+    v1 = ev::SkipIsDisable();
+    if (!v1) {
+        ev::SkipDisable();
+    }
+    ev::MapSuspend();
+    ev::MoviePlayImpl(v0, 0);
+    ev::MapResume();
+    if (!v1) {
+        ev::SkipEnable();
+    }
+}
+
+def ev::MovieWaitUntilPaused() {
+    while (!ev::SkipIsActive()) {
+        if (!ev::MovieIsExist()) {
+            return 0;
+        }
+        if (ev::MovieIsPaused()) {
+            return 0;
+        }
+        yield;
+    }
+}
+
+def ev::MapEventBeginForOpening(v0) {
+    ev::MapEventDirectBeginForOpening(ev::ChapterGetName(), v0);
+}
+
+def ev::MapEventDirectBeginForOpening(v0, v1) {
+    if (v1 != 0) {
+        ev::ChapterSetTrickDragon(v1);
+    }
+    ev::TerrainLoad(v0);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::TerrainDrawBegin();
+    ev::EffectHideTrick();
+    ev::ChapterSetHideHpGauge(1);
+    ev::BeginEventCamera();
+}
+
+def ev::MapEventEndForOpening() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::ChapterSetHideHpGauge(0);
+    ev::EffectShowTrick();
+    ev::TerrainDrawEnd();
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+    ev::EndEventCamera();
+}
+
+def ev::MapEventBeginForComplete() {
+    ev::ForceUnitDelete(0);
+    ev::ForceUnitDelete(1);
+    ev::ForceUnitDelete(2);
+    ev::EffectHideTrick();
+    ev::ChapterSetHideHpGauge(1);
+    ev::BeginEventCamera();
+}
+
+def ev::MapEventEndForComplete() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::ChapterSetHideHpGauge(0);
+    ev::EffectShowTrick();
+    ev::EndEventCamera();
+}
+
+def ev::CutSceneGameEventBegin(v0, v1) {
+    if (ev::FlagGet(v1)) {
+        return 0;
+    }
+    if (v0) {
+        ev::SkipDisable();
+        goto l2;
+    }
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    label l2;
+    ev::FlagSet(v1);
+    return 1;
+}
+
+def ev::CutSceneGameEventEnd(v0) {
+    if (v0) {
+        ev::SkipEnable();
+        goto l1;
+    }
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    label l1;
+}
+
+def ev::Clamp(v0, v1, v2) {
+    if (v0 < v1) {
+        return v1;
+    }
+    if (v0 > v2) {
+        return v2;
+    }
+    return v0;
+}
+
+def ev::BeginEventCamera() {
+    ev::BandOpen();
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+}
+
+def ev::EndEventCamera() {
+    ev::BandClose();
+    ev::CameraSetRoll(0);
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+}
+
+def ev::FadeOutEventCamera() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::EndEventCamera();
+}
+
+callback[Event.GlobalLoad]() {}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("Shadowgift");
+    ev::FlagEntry("RallySpectrum");
+    ev::FlagEntry("Resolve");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        if (ev::UnitIsEquipSkill(v0, SHADOWGIFT)) {
+            ev::FlagSet("Shadowgift");
+            v2 = ev::UnitGetByPID("PID_B024_アサマ");
+            if (v2) {
+                if (!ev::UnitIsEquipSkill(v2, STAFF_SAVANT)) {
+                    ev::UnitAddEquipSkill(v2, STAFF_SAVANT);
+                }
+            }
+            break;
+        }
+        if ((ev::UnitIsJID(v0, WITCH_F) || ev::UnitIsJID(v0, "JID_魔女男")) && ev::UnitGetLevel(v0) < 5) {
+            ev::FlagSet("Shadowgift");
+            break;
+        }
+        v0 = v1;
+    }
+}
+
+callback[Event.Turn](2, -1, 0) {
+    if (ev::FlagGet("Shadowgift")) {
+        v0 = ev::ForceUnitGetFirst(0);
+        while (v0) {
+            v1 = ev::ForceUnitGetNext(v0);
+            if (ev::UnitIsEquipSkill(v0, SHADOWGIFT)) {
+                ev::UnitClrEnhance(v0, 7);
+                ev::UnitClrEnhance(v0, 6);
+                ev::UnitClrEnhance(v0, 5);
+                v2 = ev::UnitGetWeakness(v0, 2);
+                if (v2 > 1) {
+                    v2 = (v2 * -1) / 2;
+                    ev::UnitAddWeakness(v0, 2, v2);
+                }
+                v2 = ev::UnitGetWeakness(v0, 1);
+                if (v2 > 1) {
+                    v2 = (v2 * -1) / 2;
+                    ev::UnitAddWeakness(v0, 1, v2);
+                }
+            }
+            v0 = v1;
+        }
+    }
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "") {
+    if (ev::FlagGet("Shadowgift")) {
+        v0 = ev::ForceUnitGetFirst(0);
+        while (v0) {
+            v1 = ev::ForceUnitGetNext(v0);
+            if (ev::UnitIsEquipSkill(v0, SHADOWGIFT) && ev::UnitItemIsExist(v0, NOSFERATU)) {
+                ev::UnitClrEnhance(v0, 7);
+                ev::UnitClrEnhance(v0, 6);
+                ev::UnitClrEnhance(v0, 5);
+                v2 = ev::UnitGetWeakness(v0, 2);
+                if (v2 > 1) {
+                    v2 = v2 * -1;
+                    ev::UnitAddWeakness(v0, 2, v2);
+                }
+                v2 = ev::UnitGetWeakness(v0, 1);
+                if (v2 > 1) {
+                    v2 = v2 * -1;
+                    ev::UnitAddWeakness(v0, 1, v2);
+                }
+            }
+            v0 = v1;
+        }
+    }
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        if (ev::UnitIsEquipSkill(v0, RIFLED_BARREL)) {
+            ev::FlagSet("RallySpectrum");
+            break;
+        }
+        if (((ev::UnitIsJID(v0, GRANDMASTER_M) || ev::UnitIsJID(v0, "JID_神軍師女")) && ev::UnitGetLevel(v0) > 10) && ev::UnitGetLevel(v0) < 15) {
+            ev::FlagSet("RallySpectrum");
+            break;
+        }
+        v0 = v1;
+    }
+}
+
+callback[Event.TurnAfter](-1, -1, 0) {
+    if (ev::FlagGet("RallySpectrum")) {
+        v0 = ev::ForceUnitGetFirst(0);
+        while (v0) {
+            v1 = ev::ForceUnitGetNext(v0);
+            if (ev::UnitIsEquipSkill(v0, RIFLED_BARREL) && !ev::UnitIsDoubleChild(v0)) {
+                v2 = ev::UnitGetX(v0);
+                v3 = ev::UnitGetY(v0);
+                v4 = ev::ForceUnitGetFirst(0);
+                while (v4) {
+                    v5 = ev::UnitGetX(v4);
+                    v6 = ev::UnitGetY(v4);
+                    if (v2 - v5 == 1 || v5 - v2 == 1) {
+                        if (v3 == v6) {
+                            ev::UnitSetEnhance(v4, 31);
+                        }
+                    }
+                    if (v6 - v3 == 1 || v3 - v6 == 1) {
+                        if (v2 == v5) {
+                            ev::UnitSetEnhance(v4, 31);
+                        }
+                    }
+                    v7 = ev::ForceUnitGetNext(v4);
+                    v4 = v7;
+                }
+            }
+            v0 = v1;
+        }
+    }
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        if (ev::UnitIsEquipSkill(v0, SUREFOOTED)) {
+            ev::FlagSet("Resolve");
+            break;
+        }
+        if (((ev::UnitIsJID(v0, VANGUARD_M) || ev::UnitIsJID(v0, "JID_ヴァンガード女")) && ev::UnitGetLevel(v0) > 10) && ev::UnitGetLevel(v0) < 15) {
+            ev::FlagSet("Resolve");
+            break;
+        }
+        v0 = v1;
+    }
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "") {
+    if (ev::FlagGet("Resolve")) {
+        v0 = ev::ForceUnitGetFirst(0);
+        while (v0) {
+            if (ev::UnitIsEquipSkill(v0, SUREFOOTED)) {
+                if (ev::UnitGetHP(v0) * 2 <= ev::UnitGetMHP(v0)) {
+                    ev::UnitSetEnhance(v0, 16);
+                    ev::UnitSetEnhance(v0, 17);
+                    ev::UnitSetEnhance(v0, 18);
+                    ev::UnitSetEnhance(v0, 19);
+                    goto l1;
+                }
+                ev::UnitClrEnhance(v0, 16);
+                ev::UnitClrEnhance(v0, 17);
+                ev::UnitClrEnhance(v0, 18);
+                ev::UnitClrEnhance(v0, 19);
+            }
+            label l1;
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+    }
+}
+
+callback[Event.TurnAfter](2, -1, 0) {
+    if (ev::FlagGet("Resolve")) {
+        v0 = ev::ForceUnitGetFirst(0);
+        while (v0) {
+            if (ev::UnitIsEquipSkill(v0, SUREFOOTED)) {
+                if (ev::UnitGetHP(v0) * 2 <= ev::UnitGetMHP(v0)) {
+                    ev::UnitSetEnhance(v0, 16);
+                    ev::UnitSetEnhance(v0, 17);
+                    ev::UnitSetEnhance(v0, 18);
+                    ev::UnitSetEnhance(v0, 19);
+                    goto l1;
+                }
+                ev::UnitClrEnhance(v0, 16);
+                ev::UnitClrEnhance(v0, 17);
+                ev::UnitClrEnhance(v0, 18);
+                ev::UnitClrEnhance(v0, 19);
+            }
+            label l1;
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+    }
+}
+

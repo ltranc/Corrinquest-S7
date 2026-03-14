@@ -1,0 +1,638 @@
+include std:fe14:prelude;
+
+def anonfn0() {
+    ev::VariableEntry("風Handle", 0);
+    ev::VariableEntry("風状態", 0);
+    ev::VariableEntry("風エフェクト状態", -1);
+    ev::VariableEntry("風変化継続", 0);
+    ev::VariableEntry("風通常継続", 0);
+    ev::VariableEntry("HexRemove", 0);
+}
+
+def anonfn1() {
+    v0 = ev::VariableGet("風状態");
+    v1 = ev::VariableGet("風エフェクト状態");
+    if (v1 != v0) {
+        v2 = ev::VariableGet("風Handle");
+        if (v2) {
+            ev::EffectFadeOut(v2, 1000);
+        }
+        match (v0) {
+            1 -> {
+                v2 = ev::EffectPlayEternal3D("Fld_B024_Sakura2_Loop", 0, 0);
+            }
+            2 -> {
+                v2 = ev::EffectPlayEternal3D("Fld_B024_Sakura0_Loop", 0, 0);
+            }
+            else -> {
+                v2 = ev::EffectPlayEternal3D("Fld_B024_Sakura1_Loop", 0, 0);
+            }
+        }
+        ev::VariableSet("風Handle", v2);
+        ev::VariableSet("風エフェクト状態", v0);
+    }
+}
+
+def anonfn2() {
+    v0 = ev::VariableGet("風エフェクト状態");
+    v1 = ev::VariableGet("風Handle");
+    match (v0) {
+        1 -> {
+            v1 = ev::EffectPlayEternal3D("Fld_B024_Sakura2_Loop", 0, 0);
+        }
+        2 -> {
+            v1 = ev::EffectPlayEternal3D("Fld_B024_Sakura0_Loop", 0, 0);
+        }
+        else -> {
+            v1 = ev::EffectPlayEternal3D("Fld_B024_Sakura1_Loop", 0, 0);
+        }
+    }
+    ev::VariableSet("風Handle", v1);
+}
+
+def anonfn3(v0, v1) {
+    v2 = ev::ForceUnitGetFirst(v1);
+    while (v2) {
+        v3 = ev::ForceUnitGetNext(v2);
+        match (v0) {
+            1 -> {
+                ev::UnitSetEnhance(v2, 50);
+                ev::UnitClrEnhance(v2, 51);
+            }
+            2 -> {
+                ev::UnitClrEnhance(v2, 50);
+                ev::UnitSetEnhance(v2, 51);
+            }
+            else -> {
+                ev::UnitClrEnhance(v2, 50);
+                ev::UnitClrEnhance(v2, 51);
+            }
+        }
+        v2 = v3;
+    }
+}
+
+def anonfn4() {
+    v0 = ev::VariableGet("風状態");
+    for (v1 = 0; v1 < 3; v1++) {
+        anonfn3(v0, v1);
+    }
+    anonfn3(v0, 4);
+    ev::MapImageUpdate();
+}
+
+def anonfn5(v0) {
+    ev::VariableSet("風状態", v0);
+    anonfn4();
+    anonfn1();
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話_プレイヤー");
+    ev::FlagEntry("戦闘会話アサマ");
+    ev::FlagEntry("戦闘会話セツナ");
+    ev::FlagEntry("戦闘会話スズカゼ");
+    ev::FlagEntry("戦闘会話スズカゼ_プレイヤー");
+    ev::FlagEntry("戦闘会話リンカ");
+    ev::FlagEntry("戦闘会話リンカ_プレイヤー");
+    ev::FlagEntry("増援条件1");
+    ev::FlagEntry("増援条件2");
+    ev::FlagEntry("増援条件3");
+    ev::FlagEntry("SeizeAllowed");
+    ev::VariableEntry("増援カウンタ1", 0);
+    ev::VariableEntry("増援カウンタ2", 0);
+    ev::VariableEntry("増援カウンタ3", 0);
+    anonfn0();
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleBreakdown(1);
+    ev::ChapterSetTrickDragon(3);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    if (ev::DifficultyGet() <= 0) {
+        v0 = ev::UnitGetByPID("PID_B024_ボス");
+        if (v0) {
+            ev::UnitSetPrivateSkill(v0, "SPID_回避-20");
+        }
+        goto l2;
+    }
+    if (ev::DifficultyGet() <= 1) {
+        v1 = ev::UnitGetByPID("PID_B024_ボス");
+        if (v1) {
+            ev::UnitSetPrivateSkill(v1, "SPID_回避-10");
+        }
+    }
+    label l2;
+    v2 = ev::UnitGetByPID(KAZE);
+    ev::UnitSetNeverSortie(v2, 1);
+    v3 = ev::UnitGetByPID(AZAMA);
+    ev::UnitItemToTransporter(v3);
+    ev::UnitExpulsionByIndex(v3);
+    v4 = ev::UnitGetByPID(MIDORI);
+    ev::UnitItemToTransporter(v4);
+    ev::UnitExpulsionByIndex(v4);
+    v5 = ev::UnitGetByPID(MITAMA);
+    ev::UnitItemToTransporter(v5);
+    ev::UnitExpulsionByIndex(v5);
+    v6 = ev::UnitGetByPID("PID_B024_リンカ");
+    if (v6) {
+        ev::UnitSetEnhance(v6, 8);
+    }
+    v7 = ev::UnitGetByPID("PID_B024_ボス");
+    if (v7) {
+        ev::UnitSetEnhance(v7, 42);
+        ev::UnitSetPrivateSkill(v7, "SPID_強制スキル発動");
+        ev::UnitSetPrivateSkill(v7, "SPID_強制必殺回避");
+    }
+    v8 = ev::UnitGetByPID("PID_B024_セツナ");
+    if (v8) {
+        ev::UnitSetEnhance(v8, 21);
+        ev::UnitSetEnhance(v8, 46);
+        ev::UnitSetEnhance(v8, 47);
+        ev::UnitSetEnhance(v8, 22);
+        ev::UnitSetEnhance(v8, 48);
+        ev::UnitSetEnhance(v8, 49);
+        ev::UnitSetMovePower(v8, 7);
+        ev::UnitSetEnhance(v8, 12);
+        ev::UnitSetEnhance(v8, 42);
+        ev::UnitSetEnhance(v8, 43);
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B024_OP1");
+    ev::BGMPlay("STRM_EVT_GARON_B1", 0);
+    ev::MovieEnablePauseAtEnd();
+    ev::MoviePlayNoBind("izumoa_invade");
+    ev::MovieWaitUntilPaused();
+    ev::Talk("MID_B024_OP2");
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MovieStop();
+    ev::MovieDisablePauseAtEnd();
+    ev::TimeWait(250);
+    ev::CutScene("B024_OP3");
+}
+
+callback[Event.MapSetting]() {
+    if (ev::DifficultyGet() <= 1) {
+        ev::TrickSet(12, 15, 11, 2, 2);
+        goto l1;
+    }
+    ev::TrickSet(13, 17, 11, 2, 2);
+    label l1;
+    if (ev::DifficultyGet() >= 1) {
+        ev::TrickSet(9, 10, 11, 2, 2);
+        ev::TrickSet(14, 4, 11, 2, 2);
+    }
+    anonfn1();
+    ev::TrickSet(12, 1, 3, 2, 0);
+}
+
+callback[Event.MapSettingResume]() {
+    anonfn2();
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::TutorialDialogMustShow("MID_B024_DIALOG");
+    v0 = ev::UnitGetByPID("PID_B024_アサマ");
+    if (v0) {
+        if (ev::UnitIsEquipSkill(v0, STAFF_SAVANT)) {
+            ev::TutorialDialogMustShow("MID_B024_DIALOG2");
+        }
+    }
+}
+
+callback[Event.Turn](1, 1, 1) {
+    if (!ev::UnitGetByPID("PID_B024_ボス")) {
+        return 0;
+    }
+    if (!ev::UnitGetByPID("PID_B024_アサマ")) {
+        return 0;
+    }
+    if (!ev::UnitGetByPID("PID_B024_セツナ")) {
+        return 0;
+    }
+    v0 = 12;
+    v1 = 1;
+    ev::CameraSetPosition(v0, v1);
+    ev::CameraWait();
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_B024_EV1");
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::MoviePlayWithEscapeSkip("s29");
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(500);
+}
+
+callback[Event.Turn](2, -1, 0) {
+    if (ev::VariableGet("風状態") == 1) {
+        ev::BGMStop(500);
+        ev::BMapBGMChnageFlagOn();
+    }
+}
+
+callback[Event.Turn](2, -1, 1) {
+    if (ev::VariableGet("風状態") == 1) {
+        ev::BGMStop(500);
+        ev::BMapBGMChnageFlagOn();
+    }
+}
+
+def ev::AzamaHex() {
+    if (ev::FlagGet("戦闘会話アサマ")) {
+        return 0;
+    }
+    v0 = ev::UnitGetByPID("PID_B024_アサマ");
+    if (v0) {
+        if (ev::UnitIsEquipSkill(v0, STAFF_SAVANT)) {
+            if (ev::MindGetUnit() == v0) {
+                v1 = ev::MindGetTargetUnit();
+                if (ev::UnitGetForce(v1) == 0) {
+                    if (!ev::UnitIsEquipSkill(v1, SHADOWGIFT)) {
+                        return 1;
+                    }
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+callback[Event.Area](10, 7, 10, 7, 1, "AzamaHex") {
+    v0 = ev::UnitGetByPID("PID_B024_アサマ");
+    if (ev::VariableGet("HexRemove") < 6) {
+        if (v0) {
+            ev::VariableInc("HexRemove");
+            v1 = ev::VariableGet("HexRemove");
+            v2 = v1 % 3;
+            if (v1 < 3) {
+                ev::UnitItemPutOff(v0, HEXING_ROD);
+            }
+            match (v2) {
+                0 -> {
+                    ev::UnitItemPutOff(v0, HEXING_ROD);
+                }
+                1 -> {
+                    ev::UnitItemSetEndurance(v0, HEXING_ROD, 2);
+                }
+                2 -> {
+                    ev::UnitItemSetEndurance(v0, HEXING_ROD, 1);
+                }
+            }
+            if (v1 < 3) {
+                ev::ItemGainSilent(v0, HEXING_ROD);
+                ev::UnitItemClearDrop(v0);
+            }
+        }
+    }
+}
+
+callback[Event.Turn](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_B024_リンカ");
+    if (ev::FlagGet("戦闘会話リンカ_プレイヤー") || ev::FlagGet("戦闘会話リンカ")) {
+        if (ev::UnitItemIsExist(v0, "IID_HORSEGODSPIRIT")) {
+            ev::UnitItemPutOff(v0, "IID_HORSEGODSPIRIT");
+            ev::UnitItemEquip(v0);
+        }
+    }
+}
+
+def anonfn19() {
+    v0 = ev::ForceUnitGetFirst(1);
+    while (v0) {
+        if ((ev::UnitIsJCID(v0, "JCID_飛行") && (ev::AiGetBand(v0) == 0 || ev::AiGetActive(v0))) && !ev::UnitTstPrivateSkill(v0, "SPID_移動禁止")) {
+            return 1;
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+    return 0;
+}
+
+callback[Event.Turn](2, -1, 0) {
+    v0 = ev::VariableGet("風変化継続");
+    if (v0 > 0) {
+        v0--;
+        ev::VariableSet("風変化継続", v0);
+        if (v0 <= 0) {
+            anonfn5(0);
+            ev::VariableSet("風通常継続", 1);
+        }
+        goto l2;
+    }
+    v1 = ev::VariableGet("風通常継続");
+    if (v1 > 0) {
+        v1--;
+    }
+    ev::VariableSet("風通常継続", v1);
+    if (v1 <= 0 && anonfn19()) {
+        v2 = ev::UnitGetByPID("PID_B024_ボス");
+        v3 = 12;
+        v4 = 1;
+        if (v2 && ev::TrickTst(v3, v4, 11, 1)) {
+            ev::CameraSetPosition(v3, v4);
+            ev::CameraWait();
+            ev::TrickSetForDragon(v3, v4, 1, 1, "0, 0");
+            anonfn5(1);
+            ev::VariableSet("風変化継続", 2);
+        }
+    }
+    label l2;
+}
+
+def anonfn21(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    v2 = 0;
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            if (ev::AiGetActive(v1)) {
+                return 1;
+            }
+            v2++;
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+    return v2 == 0;
+}
+
+def anonfn22(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    v2 = 0;
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+}
+
+def anonfn23(v0) {
+    v1 = ev::VariableGet(v0);
+    if (v1 < 10) {
+        v1++;
+    }
+    ev::VariableSet(v0, v1);
+    return v1;
+}
+
+callback[Event.Turn](30, 30, 1) {
+    anonfn22(1);
+    anonfn22(2);
+    anonfn22(3);
+    ev::FlagSet("増援条件3");
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (!ev::FlagGet("増援条件1")) {
+        if (ev::TurnGet() >= 3 && anonfn21(1)) {
+            ev::FlagSet("増援条件1");
+        }
+    }
+    if (!ev::FlagGet("増援条件2")) {
+        if (anonfn21(3)) {
+            ev::FlagSet("増援条件2");
+        }
+    }
+    if (ev::DifficultyGet() >= 2) {
+        if (!ev::FlagGet("増援条件3")) {
+            if (anonfn21(5)) {
+                ev::FlagSet("増援条件3");
+            }
+        }
+    }
+    if (ev::FlagGet("増援条件1")) {
+        v0 = anonfn23("増援カウンタ1");
+        match (v0) {
+            1 -> {
+                ev::Dispos("Reinforce11", 8);
+                ev::DisposWait();
+                anonfn4();
+            }
+            2 -> {
+                ev::Dispos("Reinforce12", 8);
+                ev::DisposWait();
+                anonfn4();
+            }
+            3 -> {
+                ev::Dispos("Reinforce13", 8);
+                ev::DisposWait();
+                anonfn4();
+            }
+        }
+    }
+    if (ev::FlagGet("増援条件2")) {
+        v1 = anonfn23("増援カウンタ2");
+        match (v1) {
+            1 -> {
+                ev::Dispos("Reinforce21", 8);
+                ev::DisposWait();
+                anonfn4();
+                ev::Dispos("Reinforce22", 8);
+                ev::DisposWait();
+                anonfn4();
+                if (ev::DifficultyGet() >= 2) {
+                    anonfn22(4);
+                }
+            }
+            2 -> {
+                ev::Dispos("Reinforce23", 8);
+                ev::DisposWait();
+                anonfn4();
+                ev::Dispos("Reinforce24", 8);
+                ev::DisposWait();
+                anonfn4();
+            }
+            3 -> {
+                ev::Dispos("Reinforce25", 8);
+                ev::DisposWait();
+                anonfn4();
+            }
+        }
+    }
+    if (ev::FlagGet("増援条件3")) {
+        v2 = anonfn23("増援カウンタ3");
+        match (v2) {
+            1 -> {
+                ev::Dispos("Reinforce31", 8);
+                ev::DisposWait();
+                anonfn4();
+                ev::Dispos("Reinforce32", 8);
+                ev::DisposWait();
+                anonfn4();
+                if (ev::DifficultyGet() >= 2) {
+                    anonfn22(5);
+                }
+            }
+            2 -> {
+                ev::Dispos("Reinforce33", 8);
+                ev::DisposWait();
+                anonfn4();
+                ev::Dispos("Reinforce34", 8);
+                ev::DisposWait();
+                anonfn4();
+            }
+        }
+    }
+}
+
+def ev::Defeat() {
+    if (ev::FlagGet("SeizeAllowed")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B024_アサマ")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B024_セツナ")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B024_スズカゼ")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B024_リンカ")) {
+        return 0;
+    }
+    return 1;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "Defeat") {
+    ev::TrickSet(12, 1, 3, 1, 0);
+    ev::FlagSet("SeizeAllowed");
+}
+
+callback[Event.Area](10, 1, 18, 7, 0, "増援条件3") {
+    ev::FlagSet("増援条件3");
+}
+
+callback[Event.Area](19, 1, 20, 2, 0, "増援条件3") {
+    ev::FlagSet("増援条件3");
+}
+
+def ev::HinokaFight() {
+    v0 = ev::UnitGetByPID("PID_B024_ボス");
+    if (!v0) {
+        return 0;
+    }
+    if (v0 && !ev::UnitTstPrivateSkill(v0, "SPID_強制必殺回避")) {
+        return 0;
+    }
+    if (ev::FlagGet("戦闘会話_プレイヤー")) {
+        return 1;
+    }
+    if (ev::FlagGet("戦闘会話")) {
+        return 1;
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "HinokaFight") {
+    v0 = ev::UnitGetByPID("PID_B024_ボス");
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_強制スキル発動");
+        ev::UnitClrPrivateSkill(v0, "SPID_強制必殺回避");
+    }
+}
+
+callback[Event.BattleTalk]("PID_B024_ボス", 1, CORRIN_M, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B024_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B024_ボス", 1, CORRIN_F, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B024_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B024_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B024_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B024_アサマ", 1, "", -1, 1, "戦闘会話アサマ") {
+    ev::Talk("MID_B024_BT3");
+    ev::FlagSet("戦闘会話アサマ");
+}
+
+callback[Event.BattleTalk]("PID_B024_セツナ", 1, "", -1, 1, "戦闘会話セツナ") {
+    ev::Talk("MID_B024_BT4");
+    ev::FlagSet("戦闘会話セツナ");
+}
+
+callback[Event.BattleTalk]("PID_B024_スズカゼ", 1, CORRIN_M, -1, 1, "戦闘会話スズカゼ_プレイヤー") {
+    ev::Talk("MID_B024_BT6");
+    ev::FlagSet("戦闘会話スズカゼ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B024_スズカゼ", 1, CORRIN_F, -1, 1, "戦闘会話スズカゼ_プレイヤー") {
+    ev::Talk("MID_B024_BT6");
+    ev::FlagSet("戦闘会話スズカゼ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B024_スズカゼ", 1, "", -1, 1, "戦闘会話スズカゼ") {
+    ev::Talk("MID_B024_BT5");
+    ev::FlagSet("戦闘会話スズカゼ");
+}
+
+callback[Event.BattleTalk]("PID_B024_リンカ", 1, CORRIN_M, -1, 1, "戦闘会話リンカ_プレイヤー") {
+    ev::Talk("MID_B024_BT8");
+    ev::FlagSet("戦闘会話リンカ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B024_リンカ", 1, CORRIN_F, -1, 1, "戦闘会話リンカ_プレイヤー") {
+    ev::Talk("MID_B024_BT8");
+    ev::FlagSet("戦闘会話リンカ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B024_リンカ", 1, "", -1, 1, "戦闘会話リンカ") {
+    ev::Talk("MID_B024_BT7");
+    ev::FlagSet("戦闘会話リンカ");
+}
+
+callback[Event.Die]("PID_B024_ボス", 1, "", -1) {
+    ev::Talk("MID_B024_BOSS_DIE1");
+}
+
+callback[Event.Die]("PID_B024_アサマ", 1, "", -1) {
+    ev::Talk("MID_B024_BOSS_DIE2");
+}
+
+callback[Event.Die]("PID_B024_セツナ", 1, "", -1) {
+    ev::Talk("MID_B024_BOSS_DIE3");
+}
+
+callback[Event.Die]("PID_B024_スズカゼ", 1, "", -1) {
+    ev::Talk("MID_B024_BOSS_DIE4");
+}
+
+callback[Event.Die]("PID_B024_リンカ", 1, "", -1) {
+    ev::Talk("MID_B024_BOSS_DIE5");
+}
+
+callback[Event.MapComplete]() {}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B024_ED");
+    ev::BGMStop(1000);
+    v0 = ev::UnitGetByPID(KAZE);
+    ev::UnitItemToTransporter(v0);
+    ev::UnitExpulsionByIndex(v0);
+}
+
