@@ -1,0 +1,75 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("イグニス味方");
+    ev::FlagEntry("Reinforcements");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Ally", 4);
+    v0 = ev::UnitGetByPID(IGNATIUS);
+    if (v0) {
+        ev::UnitSetBID(v0, OTHER_ARMY);
+    }
+    v1 = ev::UnitGetByPID("PID_X017_ボス3");
+    if (v1) {
+        v2 = ev::UnitCreateClone(v1, 3, 20);
+        ev::UnitDoubleOn(v1, v2);
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X017_OP1");
+}
+
+callback[Event.Turn](1, 1, 0) {}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_X017_ボス");
+    if (ev::AiGetActive(v0) || !v0) {
+        if (!ev::FlagGet("Reinforcements")) {
+            ev::Dispos("Reinforce01", 8);
+            ev::DisposWait();
+            ev::FlagSet("Reinforcements");
+        }
+    }
+}
+
+callback[Event.Talk](BENNY, 0, IGNATIUS, 2, 1, "イグニス味方") {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X017_TK1");
+    v0 = ev::UnitGetByPID(IGNATIUS);
+    ev::UnitTransferByIndex(v0, 0);
+    ev::FlagSet("イグニス味方");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+}
+
+callback[Event.Die](IGNATIUS, -1, "", -1) {
+    ev::Talk("MID_X017_DIE_イグニス");
+}
+
+callback[Event.MapComplete]() {
+    ev::ItemGain(0, IRON_LANCE);
+    ev::ItemGain(0, JAVELIN);
+    ev::ItemGain(0, VULNERARY);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X017_ED1");
+}
+

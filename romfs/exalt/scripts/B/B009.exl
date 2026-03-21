@@ -1,0 +1,254 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("ニュクス味方");
+    ev::FlagEntry("敵増援条件");
+    ev::FlagEntry("敵増援");
+    ev::FlagEntry("BlockedTop");
+    ev::FlagEntry("BlockedLeft");
+    ev::FlagEntry("BlockedRight");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleBreakdown(1);
+    ev::ChapterSetTrickDragon(4);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    v0 = ev::UnitGetByPID(NYX);
+    if (v0) {
+        ev::UnitSetBID(v0, OTHER_ARMY);
+    }
+    if (ev::DifficultyGet() <= 0) {
+        v1 = ev::UnitGetByPID("PID_B009_ボス");
+        if (v1) {
+            ev::UnitSetPrivateSkill(v1, "SPID_回避-10");
+        }
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B009_OP1");
+    ev::CutScene("B009_OP2");
+    ev::CutScene("B009_OP3");
+    ev::GMapMove("Btl_CastleDark_TrialRoom", "Btl_BlackDragon_Inside_Broken", 12.0);
+    ev::BGMPlay("STRM_EVT_BRAVE_B1", 0);
+    ev::MovieEnablePauseAtEnd();
+    ev::MoviePlayNoBind("kingdragon2");
+    ev::MovieWaitUntilPaused();
+    ev::Talk("MID_B009_OP4");
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MovieStop();
+    ev::MovieDisablePauseAtEnd();
+}
+
+callback[Event.Turn](1, 1, 0) {}
+
+callback[Event.Turn](-1, -1, 0) {
+    v0 = ev::UnitGetByPID("PID_B009_巫女");
+    if (v0) {
+        ev::UnitItemSetEndurance(v0, ENFEEBLE, 4);
+        ev::UnitItemSetEndurance(v0, WANE_FESTAL, 5);
+    }
+}
+
+callback[Event.TurnAfter](1, 1, 0) {
+    ev::TutorialShow("TUTID_鍵");
+}
+
+callback[Event.TurnAfter](30, 30, 1) {
+    if (!ev::FlagGet("戦闘会話")) {
+        v0 = ev::UnitGetByPID("PID_B009_ボス");
+        v1 = ev::UnitGetHP(v0);
+        if (v0) {
+            ev::UnitRecreate(v0, "PID_B009_ボス2", 1);
+            ev::UnitSetStatus(v0, 1);
+            ev::UnitSetPrivateSkill(v0, "SPID_リーダー");
+            ev::UnitSetPrivateSkill(v0, "SPID_移動禁止");
+            ev::UnitSetHP(v0, v1);
+            ev::ItemGainSilent(v0, STEEL_NAGEYARI);
+            ev::UnitItemEquip(v0);
+            ev::UnitItemClearDrop(v0);
+            ev::ItemGainSilent(v0, HEART_SEAL);
+            ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+            ev::AiSetSequence(v0, 1, "AI_MI_Null", "");
+            ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+            ev::AiSetSequence(v0, 3, "AI_MV_Null", "");
+        }
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("敵増援条件") && !ev::FlagGet("敵増援")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        if (ev::UnitGetForce(ev::UnitGetByPosition(21, 5)) == 0) {
+            ev::FlagSet("BlockedTop");
+        }
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        if (ev::UnitGetForce(ev::UnitGetByPosition(25, 11)) == 0) {
+            ev::FlagSet("BlockedRight");
+        }
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        if (ev::UnitGetForce(ev::UnitGetByPosition(19, 13)) == 0) {
+            ev::FlagSet("BlockedLeft");
+        }
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            ev::AiSetActive(v0, 1);
+            ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+        ev::FlagSet("敵増援");
+        ev::BGMStop(500);
+        ev::BMapBGMChnageFlagOn();
+        ev::TimeWait(501);
+    }
+}
+
+callback[Event.Turn](30, 30, 1) {
+    if (!ev::FlagGet("敵増援条件")) {
+        ev::Talk("MID_B009_EV4");
+    }
+}
+
+callback[Event.Reinforce](30, 30, 1) {
+    if (!ev::FlagGet("敵増援条件")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            ev::AiSetActive(v0, 1);
+            ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+        ev::FlagSet("敵増援条件");
+        ev::FlagSet("敵増援");
+        ev::BGMStop(500);
+        ev::BMapBGMChnageFlagOn();
+        ev::TimeWait(501);
+    }
+    if (ev::FlagGet("BlockedTop")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        ev::FlagClr("BlockedTop");
+    }
+    if (ev::FlagGet("BlockedRight")) {
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        ev::FlagClr("BlockedRight");
+    }
+    if (ev::FlagGet("BlockedLeft")) {
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        ev::FlagClr("BlockedLeft");
+    }
+}
+
+def ev::IsBossDestroy() {
+    if (ev::TutorialGetFlag("TUTID_二次クラスチェンジ")) {
+        return 0;
+    }
+    if (!ev::UnitGetByPID("PID_B009_ボス") && !ev::UnitGetByPID("PID_B009_ボス2")) {
+        return 1;
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "IsBossDestroy") {
+    ev::TutorialShow("TUTID_二次クラスチェンジ");
+}
+
+callback[Event.Area](19, 6, 25, 9, 0, "敵増援条件") {
+    ev::FlagSet("敵増援条件");
+}
+
+callback[Event.Area](19, 5, 21, 5, 0, "敵増援条件") {
+    ev::FlagSet("敵増援条件");
+}
+
+def anonfn15() {
+    ev::BGMStop(1000);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_B009_EV2");
+    v0 = ev::UnitGetByPID(NYX);
+    ev::UnitTransferByIndex(v0, 0);
+    ev::FlagSet("ニュクス味方");
+    v1 = 15;
+    v2 = 12;
+    ev::BGMStop(2000);
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    if (ev::TrickTst(v1, v2, 0, 1)) {
+        ev::CameraSetPosition(v1, v2);
+        ev::CameraWait();
+        ev::TimeWait(500);
+        ev::BMapBGMResume(7000);
+        ev::EffectPlay3D("Com_Fld_強調カーソル", v1, v2);
+        ev::EffectWait();
+        ev::TimeWait(500);
+        ev::Talk("MID_B009_EV2_02");
+        ev::CameraSetPosition(ev::MindGetX(), ev::MindGetY());
+        ev::CameraWait();
+    }
+}
+
+callback[Event.Talk](CORRIN_M, 0, NYX, 2, 1, "ニュクス味方") {
+    anonfn15();
+}
+
+callback[Event.Talk](CORRIN_F, 0, NYX, 2, 1, "ニュクス味方") {
+    anonfn15();
+}
+
+callback[Event.BattleTalk]("PID_B009_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B009_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B009_ボス2", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B009_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die]("PID_B009_ボス", 1, "", -1) {
+    ev::Talk("MID_B009_BOSS_DIE1");
+}
+
+callback[Event.Die]("PID_B009_ボス2", 1, "", -1) {
+    ev::Talk("MID_B009_BOSS_DIE1");
+}
+
+callback[Event.Die](NYX, 2, "", -1) {
+    ev::Talk("MID_B009_DIE_ニュクス");
+}
+
+callback[Event.MapComplete]() {
+    ev::TutorialSetFlag("TUTID_鍵");
+    ev::TutorialSetFlag("TUTID_二次クラスチェンジ");
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B009_ED");
+}
+

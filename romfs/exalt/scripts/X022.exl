@@ -1,0 +1,125 @@
+include std:fe14:prelude;
+
+def ev::LocalTutorial0() {
+    return "MID_X022_DIALOG1";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("思考変化離脱");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    v0 = ev::UnitGetByPIDForce(NINA, 1);
+    if (v0) {
+        ev::UnitSetBID(v0, RUFFIANS);
+        ev::UnitSetPrivateSkill(v0, "SPID_敗北条件離脱");
+        if (!ev::UnitIsEquipSkill(v0, LOCKTOUCH)) {
+            ev::ItemGainSilent(v0, DOOR_KEY);
+            ev::ItemGainSilent(v0, DOOR_KEY);
+            ev::ItemGainSilent(v0, CHEST_KEY);
+            ev::UnitItemClearDrop(v0);
+        }
+    }
+}
+
+callback[Event.MapFree]() {
+    v0 = ev::UnitGetByPID(NINA);
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_敗北条件離脱");
+    }
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X022_OP1");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::SkipEscape();
+    ev::TutorialDialogMustShow("MID_X022_DIALOG1");
+}
+
+callback[Event.Turn](6, 6, 1) {
+    if (!ev::FlagGet("思考変化離脱")) {
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            if (ev::AiGetBand(v0) == 2) {
+                ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+                ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+                ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            }
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+    }
+}
+
+callback[Event.Reinforce](5, 5, 1) {
+    if (!ev::FlagGet("思考変化離脱")) {
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+    }
+}
+
+callback[Event.Reinforce](7, 7, 1) {
+    if (!ev::FlagGet("思考変化離脱")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+    }
+}
+
+def ev::IsEscaped() {
+    if (ev::FlagGet("思考変化離脱")) {
+        return 0;
+    }
+    if (ev::TurnGet() == 11) {
+        return 1;
+    }
+    if (ev::UnitGetByPIDForce(NINA, 1)) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_X022_シーフ離脱")) {
+        return 0;
+    }
+    return 1;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "IsEscaped") {
+    v0 = ev::ForceUnitGetFirst(1);
+    while (v0) {
+        ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+        ev::AiSetSequence(v0, 1, "AI_MI_Escape", "");
+        ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+        ev::AiSetSequence(v0, 3, "AI_MV_Escape", "");
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+    ev::FlagSet("思考変化離脱");
+}
+
+callback[Event.BattleTalk](NINA, 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_X022_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die](NINA, 1, "", -1) {
+    ev::Talk("MID_X022_BOSS_DIE1");
+}
+
+callback[Event.MapComplete]() {
+    ev::ItemGain(0, IRON_BOW);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X022_ED1");
+}
+

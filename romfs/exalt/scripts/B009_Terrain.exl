@@ -1,0 +1,45 @@
+include std:fe14:prelude;
+
+callback[Event.Poke](17, 8, 1, 1, 3, 0, 0, "") {}
+
+callback[Event.Poke](29, 3, 1, 1, 11, 0, 0, "20, 6") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+    for (v0 = 6; v0 < 12; v0++) {
+        for (v1 = 20; v1 < 26; v1++) {
+            v2 = ev::UnitGetByPosition(v1, v0);
+            if (v2) {
+                ev::UnitHpDamage(v2, ev::UnitGetHP(v2) - 1);
+            }
+        }
+    }
+    ev::UnitHpEffectWait();
+}
+
+callback[Event.Poke](20, 6, 6, 6, 12, 0, 0, "") {}
+
+callback[Event.Poke](17, 3, 1, 1, 0, 15, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Poke](22, 5, 1, 1, 0, 15, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Poke](15, 12, 1, 1, 0, 15, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Poke](23, 13, 1, 1, 0, 15, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Poke](23, 4, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), RESCUE);
+}
+
+callback[Event.Poke](29, 8, 1, 1, 10, 0, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
+    ev::ItemGain(ev::MindGetUnit(), BRASS_NAGINATA);
+}
+
