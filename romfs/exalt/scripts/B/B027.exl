@@ -32,6 +32,9 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B027_DENJI", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_FON", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_SILVER", HEARTSEEKER, VANTAGE, 0);
+    ev::GiveSkill("PID_B027_DITO", WARDING_BLOW, SEAL_DEFENSE, 0);
+    ev::GiveSkill("PID_B027_LTRANCMADEME", POISON_STRIKE, GRISLY_WOUND, 0);
+    ev::GiveSkill("PID_B027_CEDAROIL", STRONG_RIPOSTE, DANCING_BLADE, COUNTERMAGIC);
 }
 
 callback[Event.MapFree]() {
@@ -186,7 +189,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen1") {
 }
 
 def ev::IsDoorOpen2() {
-    return anonfn8(27, 9, "PID_B027_LUCIUS", "PID_B027_2B", "PID_B027_槍聖");
+    return anonfn8(27, 9, "PID_B027_LUCIUS", "PID_B027_2B", "PID_B027_DITO");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen2") {
@@ -202,7 +205,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen3") {
 }
 
 def ev::IsDoorOpen4() {
-    return anonfn8(1, 21, "PID_B027_上忍", "PID_B027_上忍", "PID_B027_上忍");
+    return anonfn8(1, 21, "PID_B027_LTRANCMADEME", "PID_B027_上忍", "PID_B027_上忍");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen4") {
