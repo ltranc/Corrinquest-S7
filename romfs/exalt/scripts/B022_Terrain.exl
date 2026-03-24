@@ -1,0 +1,70 @@
+include std:fe14:prelude;
+
+callback[Event.Poke](13, 1, 1, 1, 3, 0, 0, "") {}
+
+callback[Event.Poke](13, 5, 1, 1, 11, 0, 0, "4, 14, 14, 13, 5, 7, 17, 9, 8, 5, 17, 3") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](19, 16, 1, 1, 11, 0, 0, "4, 14") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](3, 13, 1, 1, 11, 0, 0, "14, 13") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](22, 13, 1, 1, 11, 0, 0, "5, 7") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](6, 6, 1, 1, 11, 0, 0, "17, 9") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](20, 7, 1, 1, 11, 0, 0, "8, 5") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](10, 4, 1, 1, 11, 0, 0, "17, 3") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](15, 4, 1, 1, 11, 0, 0, "11, 6, 14, 6") {
+    ev::TrickSetForDragon(ev::ArgsGetInt(0), ev::ArgsGetInt(1), 2, 2, ev::ArgsGetString(7));
+}
+
+callback[Event.Poke](4, 14, 1, 3, 12, 0, 0, "") {}
+
+callback[Event.Poke](14, 13, 6, 2, 12, 0, 0, "") {}
+
+callback[Event.Poke](5, 7, 5, 3, 12, 0, 0, "") {}
+
+callback[Event.Poke](17, 9, 4, 1, 12, 0, 0, "") {}
+
+callback[Event.Poke](8, 5, 3, 1, 12, 0, 0, "") {}
+
+callback[Event.Poke](17, 3, 3, 4, 12, 0, 0, "") {}
+
+callback[Event.Poke](11, 6, 1, 3, 12, 0, 0, "") {}
+
+callback[Event.Poke](14, 6, 1, 3, 12, 0, 0, "") {}
+
+callback[Event.Poke](12, 3, 1, 1, 0, 30, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Poke](1, 12, 1, 1, 0, 30, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Poke](25, 6, 1, 1, 0, 30, 0, "") {
+    ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
+}
+
+callback[Event.Cannon](13, 8, 1, 1, 25, 0, 25, 100, 5, 3, 7, 1, 8) {}
+
+callback[Event.Cannon](8, 4, 1, 1, 25, 0, 25, 100, 5, 3, 7, 1, 8) {}
+
+callback[Event.Cannon](17, 5, 1, 1, 25, 0, 25, 100, 5, 3, 7, 1, 8) {}
+
