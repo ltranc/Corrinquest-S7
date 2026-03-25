@@ -339,7 +339,7 @@ callback[Event.Turn](30, 30, 0) {
     }
 }
 
-callback[Event.Reinforce](25, 25, 1) {
+callback[Event.Reinforce](30, 30, 1) {
     if (!ev::FlagGet("敵増援竜脈")) {
         v2 = ev::ForceUnitGetFirst(1);
         while (v2) {
