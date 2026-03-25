@@ -83,6 +83,8 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_EVILTACO", DANCING_BLADE, SUREFOOTED, 0);
     ev::GiveSkill("PID_B028_CELLINIA", DARTING_BLOW, DEFENDER, 0);
     ev::GiveSkill("PID_B028_INFERNO", MOVEMENT_PLUS_1, LUCKY_SEVEN, 0);
+    ev::GiveSkill("PID_B028_KARA", HEARTSEEKER, WARDING_BLOW, 0);
+    ev::GiveSkill("PID_B028_LYNN", MIRACLE, STAFF_SAVANT, INEVITABLE_END);
 }
 
 callback[Event.MapFree]() {
@@ -573,6 +575,8 @@ callback[Event.Reinforce](5, 5, 1) {
     ev::DisposWait();
     ev::GiveSkill("PID_B028_LUCKYDUCK", MIRACLE, RENEWAL, 0);
     ev::GiveSkill("PID_B028_KATS", DARTING_BLOW, DUELISTS_BLOW, 0);
+    ev::GiveSkill("PID_B028_A2", POISON_STRIKE, INEVITABLE_END, 0);
+    ev::GiveSkill("PID_B028_LISGOGAMBLI", DRAGON_FANG, SPEEDTAKER_SKILL, 0);
 }
 
 callback[Event.Reinforce](6, 6, 1) {
