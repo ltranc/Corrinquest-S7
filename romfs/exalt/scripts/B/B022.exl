@@ -112,7 +112,6 @@ callback[Event.MapSetting]() {
     }
     ev::TrickSet(13, 1, 3, 2, 0);
     ev::TrickSet(25, 6, 0, 4, 0);
-    ev::TrickSet(1, 12, 0, 4, 0);
 }
 
 callback[Event.Turn](1, 1, 0) {
@@ -270,16 +269,13 @@ callback[Event.Reinforce](-1, -1, 1) {
     if (!ev::FlagGet("敵増援中央")) {
         v0 = ev::UnitGetByPID("PID_B022_絡繰師中央");
         if (!v0) {
-            v1 = 4;
-            if (ev::DifficultyGet() >= 2) {
-                v1 = 3;
-            }
+            v1 = 3;
             v2 = ev::VariableGet("敵増援条件中央カウンタ");
             v2++;
             if (v2 >= v1) {
                 ev::Dispos("Reinforce05", 8);
                 ev::DisposWait();
-                ev::FlagSet("敵増援中央");
+                v2 = 0;
             }
             ev::VariableSet("敵増援条件中央カウンタ", v2);
         }
@@ -337,21 +333,13 @@ callback[Event.Reinforce](10, 10, 1) {
     }
 }
 
-callback[Event.Turn](25, 25, 0) {
+callback[Event.Turn](30, 30, 0) {
     if (!ev::FlagGet("敵増援竜脈")) {
         ev::Talk("MID_B022_EV3");
     }
 }
 
 callback[Event.Reinforce](25, 25, 1) {
-    v0 = ev::UnitGetByPID("PID_B022_修羅2");
-    if (v0) {
-        ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
-    }
-    v1 = ev::UnitGetByPID("PID_B022_陰陽師2");
-    if (v1) {
-        ev::UnitClrPrivateSkill(v1, "SPID_移動禁止");
-    }
     if (!ev::FlagGet("敵増援竜脈")) {
         v2 = ev::ForceUnitGetFirst(1);
         while (v2) {
@@ -387,6 +375,17 @@ callback[Event.Reinforce](25, 25, 1) {
         ev::Dispos("Reinforce12", 8);
         ev::DisposWait();
         ev::FlagSet("敵増援竜脈2");
+    }
+}
+
+callback[Event.Reinforce](35, 35, 1) {
+    v0 = ev::UnitGetByPID("PID_B022_修羅2");
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
+    }
+    v1 = ev::UnitGetByPID("PID_B022_陰陽師2");
+    if (v1) {
+        ev::UnitClrPrivateSkill(v1, "SPID_移動禁止");
     }
 }
 
