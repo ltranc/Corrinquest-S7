@@ -1,0 +1,266 @@
+include std:fe14:prelude;
+
+def ev::LocalTutorial0() {
+    return "MID_X021_DIALOG1";
+}
+
+def ev::LocalTutorial1() {
+    return "MID_B012_DIALOG2";
+}
+
+def ev::LocalTutorial2() {
+    return "MID_B012_DIALOG3";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("ソレイユ味方");
+    ev::FlagEntry("カットシーン");
+    ev::VariableEntry("緑軍生存人数", 0);
+}
+
+callback[Event.MapLoad]() {
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Ally", 4);
+    v0 = ev::UnitGetByPID(SOLEIL);
+    if (v0) {
+        ev::UnitSetBID(v0, OTHER_ARMY);
+    }
+}
+
+callback[Event.Reinforce](15, 15, 1) {
+    v0 = ev::ForceUnitGetFirst(1);
+    while (v0) {
+        if (ev::UnitTstPrivateSkill(v0, "SPID_リーダー")) {
+            goto l2;
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+    ev::ChapterSetWin();
+    label l2;
+    ev::ChapterSetWinRuleDestroyBoss(1);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X021_OP1");
+    ev::MapEventBeginForOpening(0);
+    ev::Dispos("Event01", 4);
+    ev::CameraSetPosition(15, 17);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(2000);
+    ev::Talk("MID_X021_OP1_2_1");
+    v0 = ev::UnitGetByPID("PID_X021_OPイベント用敵1_1");
+    v1 = ev::UnitGetByPID("PID_X021_OPイベント用敵1_2");
+    v2 = ev::UnitGetByPID("PID_X021_OPイベント用敵1_3");
+    ev::UnitMovePosition(v0, 15, 17, 0);
+    ev::TimeWaitConfig(500);
+    ev::UnitMovePosition(v1, 12, 18, 0);
+    ev::TimeWaitConfig(250);
+    ev::UnitMovePosition(v2, 16, 17, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_X021_OP1_2_2");
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::DisableBGMCommandPG();
+    ev::MapEventEndForOpening();
+    ev::EnableBGMCommandPG();
+    ev::CutScene("X021_OP2");
+}
+
+callback[Event.MapSetting]() {
+    if (ev::DifficultyGet() <= 1) {
+        v0 = 14;
+        v1 = 12;
+        ev::TerrainAttributeSetTID(v0, v1, "TID_障害物＠床");
+        ev::TerrainAttributeUpdatePosition(v0, v1);
+    }
+}
+
+def anonfn9(v0, v1) {
+    ev::CameraSetPosition(v0, v1);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    ev::EffectPlay3D("Com_Fld_強調カーソル", v0, v1);
+    ev::EffectWait();
+    ev::TimeWait(500);
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X021_OP3");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    ev::SkipEscape();
+    if (ev::DifficultyGet() <= 1) {
+        anonfn9(14, 12);
+    }
+    anonfn9(16, 12);
+    anonfn9(12, 17);
+    ev::TutorialDialogMustShow("MID_X021_DIALOG1");
+    ev::TutorialDialogMustShow("MID_X021_DIALOG2");
+    ev::TutorialDialogMustShow("MID_X021_DIALOG3");
+}
+
+callback[Event.Reinforce](3, 3, 1) {
+    ev::Dispos("Reinforce15", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce16", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](4, 4, 1) {
+    ev::Dispos("Boss1", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce17", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce18", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](6, 6, 1) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](8, 8, 1) {
+    ev::Dispos("Reinforce17", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce18", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce01", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce02", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce06", 8);
+    ev::DisposWait();
+    ev::Dispos("Fill", 8);
+    ev::DisposWait();
+    ev::BGMStop(100);
+    ev::BMapBGMChnageFlagOn();
+}
+
+callback[Event.Reinforce](10, 10, 1) {
+    ev::Dispos("Boss2", 8);
+    ev::DisposWait();
+    ev::Dispos("Reverse1", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](12, 12, 1) {
+    ev::Dispos("Boss3", 8);
+    ev::DisposWait();
+    v0 = ev::UnitGetByPID("PID_X021_マーシナリー騎士");
+    if (v0) {
+        ev::UnitSetMovePower(v0, 7);
+    }
+}
+
+callback[Event.Reinforce](13, 13, 1) {
+    ev::Dispos("Reinforce04", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce08", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce09", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](14, 14, 1) {
+    ev::Dispos("Reinforce07", 8);
+    ev::DisposWait();
+    ev::Dispos("Reinforce08", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Reinforce](18, 18, 1) {
+    ev::Dispos("DIE", 8);
+    ev::DisposWait();
+}
+
+callback[Event.Talk](LASLOW, 0, SOLEIL, 2, 1, "ソレイユ味方") {
+    ev::BGMStop(1000);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X021_TK1");
+    v0 = ev::UnitGetByPID(SOLEIL);
+    ev::UnitTransferByIndex(v0, 0);
+    ev::FlagSet("ソレイユ味方");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::BGMStop(1000);
+    ev::TimeWait(500);
+}
+
+callback[Event.BattleTalk]("PID_X021_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_X021_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die]("PID_X021_ボス", 1, "", -1) {
+    ev::Talk("MID_X021_BOSS_DIE1");
+}
+
+callback[Event.Die](SOLEIL, -1, "", -1) {
+    ev::Talk("MID_X021_DIE_ソレイユ");
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::VariableSet("緑軍生存人数", ev::ForceUnitGetCount(2));
+}
+
+def ev::X021_アイテム入手(v0) {
+    if (ev::CutSceneGameEventBegin(v0, "カットシーン")) {
+        v1 = ev::VariableGet("緑軍生存人数");
+        if (v1 >= 4) {
+            ev::ItemGain(0, DRACOSHIELD);
+            ev::ItemGain(0, PHYSIC);
+            ev::ItemGain(0, GOLD_BAR);
+            goto l2;
+        }
+        if (v1 >= 3) {
+            ev::ItemGain(0, PHYSIC);
+            ev::ItemGain(0, GOLD_BAR);
+            goto l2;
+        }
+        if (v1 >= 2) {
+            ev::ItemGain(0, GOLD_BAR);
+            goto l2;
+        }
+        if (v1 >= 1) {
+            ev::ItemGain(0, MEND);
+            goto l2;
+        }
+        ev::ItemGain(0, VULNERARY);
+        label l2;
+        ev::ItemGain(0, IRON_SWORD);
+        ev::ItemGain(0, VULNERARY);
+        ev::CutSceneGameEventEnd(v0);
+    }
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X021_ED1");
+    ev::X021_アイテム入手(0);
+}
+
