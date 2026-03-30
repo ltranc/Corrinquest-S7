@@ -103,7 +103,6 @@ def anonfn9(v0, v1) {
 callback[Event.Turn](1, 1, 0) {
     ev::CameraSetAngle(-40);
     ev::CameraSetDistanceFromNear();
-    ev::Talk("MID_X021_OP3");
     ev::CameraSetAngleFromConfig();
     ev::CameraSetDistanceFromConfig();
     ev::TimeWait(500);
