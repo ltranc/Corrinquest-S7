@@ -157,10 +157,8 @@ callback[Event.Reinforce](8, 8, 1) {
     ev::BMapBGMChnageFlagOn();
 }
 
-callback[Event.Reinforce](10, 10, 1) {
+callback[Event.Reinforce](9, 9, 1) {
     ev::Dispos("Boss2", 8);
-    ev::DisposWait();
-    ev::Dispos("Reverse1", 8);
     ev::DisposWait();
 }
 
@@ -173,7 +171,7 @@ callback[Event.Reinforce](12, 12, 1) {
     }
 }
 
-callback[Event.Reinforce](13, 13, 1) {
+callback[Event.Reinforce](15, 15, 1) {
     ev::Dispos("Reinforce04", 8);
     ev::DisposWait();
     ev::Dispos("Reinforce08", 8);
@@ -182,15 +180,10 @@ callback[Event.Reinforce](13, 13, 1) {
     ev::DisposWait();
 }
 
-callback[Event.Reinforce](14, 14, 1) {
+callback[Event.Reinforce](17, 17, 1) {
     ev::Dispos("Reinforce07", 8);
     ev::DisposWait();
     ev::Dispos("Reinforce08", 8);
-    ev::DisposWait();
-}
-
-callback[Event.Reinforce](18, 18, 1) {
-    ev::Dispos("DIE", 8);
     ev::DisposWait();
 }
 
