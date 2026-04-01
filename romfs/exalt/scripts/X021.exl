@@ -169,6 +169,11 @@ callback[Event.Reinforce](12, 12, 1) {
     if (v0) {
         ev::UnitSetMovePower(v0, 7);
     }
+    v0 = ev::ForceUnitGetFirst(2);
+    while(v0) {
+        ev::AiSetSequence(v0, 3, "AI_MV_Force", "0");
+        v0 = ev::ForceUnitGetNext(v0);
+    }
 }
 
 callback[Event.Reinforce](15, 15, 1) {
@@ -185,6 +190,24 @@ callback[Event.Reinforce](17, 17, 1) {
     ev::DisposWait();
     ev::Dispos("Reinforce08", 8);
     ev::DisposWait();
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1) {
+    v0 = ev::UnitGetByPID("PID_X021_ボス6");
+    if (v0) {
+        if (ev::UnitGetHP(v0) * 2 <= ev::UnitGetMHP(v0)) {
+            ev::UnitSetEnhance(v0, 16);
+            ev::UnitSetEnhance(v0, 17);
+            ev::UnitSetEnhance(v0, 18);
+            ev::UnitSetEnhance(v0, 19);
+            goto l0;
+        }
+        ev::UnitClrEnhance(v0, 16);
+        ev::UnitClrEnhance(v0, 17);
+        ev::UnitClrEnhance(v0, 18);
+        ev::UnitClrEnhance(v0, 19);
+    }
+    label l0;
 }
 
 callback[Event.Talk](LASLOW, 0, SOLEIL, 2, 1, "ソレイユ味方") {
