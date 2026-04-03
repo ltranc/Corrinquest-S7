@@ -222,7 +222,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen5") {
 }
 
 def ev::IsDoorOpen6() {
-    return anonfn8(29, 21, "PID_B027_SILVER", "PID_B027_ソーサラー", "PID_B027_ソーサラー");
+    return anonfn8(29, 21, "PID_B027_SILVER", "PID_B027_HERA", "PID_B027_ソーサラー");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen6") {

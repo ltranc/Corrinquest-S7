@@ -547,7 +547,7 @@ callback[Event.TurnAfter](-1, -1, 1) {
 callback[Event.TurnAfter](1, 1, 1) {
 }
 
-callback[Event.TurnAfter](-1, -1, 0) {
+callback[Event.Reinforce](-1, -1, 0) {
     v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
     if(v0) {
         if(!ev::AiGetActive(v0)) {
@@ -556,7 +556,7 @@ callback[Event.TurnAfter](-1, -1, 0) {
     }
 }
 
-callback[Event.TurnAfter](-1, -1, 1) {
+callback[Event.Reinforce](-1, -1, 1) {
     v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
     if(v0) {
         ev::UnitSetMovePower(v0, 6);
