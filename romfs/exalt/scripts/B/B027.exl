@@ -35,6 +35,7 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B027_DITO", WARDING_BLOW, SEAL_DEFENSE, 0);
     ev::GiveSkill("PID_B027_LTRANCMADEME", POISON_STRIKE, GRISLY_WOUND, 0);
     ev::GiveSkill("PID_B027_CEDAROIL", STRONG_RIPOSTE, DANCING_BLADE, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_HERA", HEARTSEEKER, VANTAGE, 0);
 }
 
 callback[Event.MapFree]() {

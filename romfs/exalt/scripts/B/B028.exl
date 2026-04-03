@@ -90,6 +90,8 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_LUNA", INSPIRATION, DEATH_BLOW, 0);
     ev::GiveSkill("PID_B028_SELENA", VANTAGE, AWAKENING, 0);
     ev::GiveSkill("PID_B028_IRA", AETHER, SUREFOOTED, 0);
+    ev::GiveSkill("PID_B028_NIKITA", TOMEFAIRE, VANTAGE, 0);
+    ev::GiveSkill("PID_B028_TORSTEN", COUNTERMAGIC, ARMORED_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -543,6 +545,22 @@ callback[Event.TurnAfter](-1, -1, 1) {
 }
 
 callback[Event.TurnAfter](1, 1, 1) {
+}
+
+callback[Event.TurnAfter](-1, -1, 0) {
+    v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
+    if(v0) {
+        if(!ev::AiGetActive(v0)) {
+            ev::UnitSetMovePower(v0, 5);
+        }
+    }
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
+    if(v0) {
+        ev::UnitSetMovePower(v0, 6);
+    }
 }
 
 callback[Event.TurnAfter](1, 4, 1) {
