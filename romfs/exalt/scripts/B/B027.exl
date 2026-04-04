@@ -36,6 +36,7 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B027_LTRANCMADEME", POISON_STRIKE, GRISLY_WOUND, 0);
     ev::GiveSkill("PID_B027_CEDAROIL", STRONG_RIPOSTE, DANCING_BLADE, COUNTERMAGIC);
     ev::GiveSkill("PID_B027_HERA", HEARTSEEKER, VANTAGE, 0);
+    ev::GiveSkill("PID_B027_CHEW", SEAL_SPEED, ARMORED_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -182,7 +183,7 @@ def anonfn9(v0, v1) {
 }
 
 def ev::IsDoorOpen1() {
-    return anonfn8(3, 9, "PID_B027_DENJI", "PID_B027_FON", "PID_B027_剣聖");
+    return anonfn8(3, 9, "PID_B027_DENJI", "PID_B027_FON", "PID_B027_CHEW");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen1") {
