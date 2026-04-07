@@ -1,0 +1,576 @@
+include std:fe14:prelude;
+
+def ev::LocalTutorial0() {
+    return "MID_B025_DIALOG1";
+}
+
+def ev::LocalTutorial1() {
+    return "MID_B025_DIALOG2";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話_プレイヤー");
+    ev::FlagEntry("戦闘会話サイゾウ");
+    ev::FlagEntry("戦闘会話カゲロウ");
+    ev::FlagEntry("AsugiSpawned");
+    ev::FlagEntry("Paired");
+    ev::FlagEntry("PairSpawn");
+    ev::FlagEntry("Paired1");
+    ev::FlagEntry("Paired2");
+    ev::FlagEntry("PairAggro");
+    ev::FlagEntry("AsugiShiroPair");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::ChapterSetTrickDragon(1);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    v0 = ev::UnitGetPlayer();
+    if (v0) {
+        ev::UnitSetPrivateSkill(v0, "SPID_ダブル禁止");
+        ev::UnitSetPrivateSkill(v0, "SPID_ワープ禁止");
+    }
+    v1 = ev::UnitGetByPID(SAIZO);
+    ev::UnitItemToTransporter(v1);
+    ev::UnitExpulsionByIndex(v1);
+    v2 = ev::UnitGetByPID(RYOMA);
+    ev::UnitItemToTransporter(v2);
+    ev::UnitExpulsionByIndex(v2);
+    v3 = ev::UnitGetByPID(ASUGI);
+    ev::UnitItemToTransporter(v3);
+    ev::UnitExpulsionByIndex(v3);
+    v4 = ev::UnitGetByPID(SHIRO);
+    ev::UnitItemToTransporter(v4);
+    ev::UnitExpulsionByIndex(v4);
+    v5 = ev::UnitGetByPID("PID_B025_ボス");
+    if (v5) {
+        ev::UnitSetEnhance(v5, 46);
+        ev::UnitSetMovePower(v5, 7);
+    }
+}
+
+callback[Event.MapFree]() {
+    v0 = ev::UnitGetPlayer();
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        ev::UnitClrPrivateSkill(v0, "SPID_ワープ禁止");
+    }
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B025_OP1");
+    ev::CutScene("B025_OP2");
+    ev::BGMPlay("STRM_EVT_STRAIN_E2", 0);
+    ev::MoviePlayWithEscapeSkip("s26");
+    ev::BGMPlay("STRM_EVT_STRAIN_E2", 0);
+    ev::CutScene("B025_OP3");
+    ev::MapEventBeginForOpening(1);
+    ev::Dispos("Event01", 2052);
+    ev::Dispos("Event02", 4);
+    ev::CameraSetPosition(15, 14);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(1000);
+    ev::CameraSetPosition(15, 22);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B025_OP4_1");
+    ev::Dispos("Event03", 4096);
+    ev::TimeWaitConfig(250);
+    ev::Dispos("Event04", 4096);
+    ev::DisposWait();
+    ev::Talk("MID_B025_OP4_3");
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForOpening();
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::UnitGetPlayer();
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+    }
+    ev::SkipEscape();
+    v1 = ev::UnitGetByPID("PID_B025_ボス");
+    if (v1) {
+        ev::UnitSetPrivateSkill(v1, "SPID_強制回避");
+        ev::UnitSetPrivateSkill(v1, "SPID_強制必殺回避");
+        ev::UnitSetPrivateSkill(v1, "SPID_必殺禁止");
+        v2 = ev::UnitGetX(v1);
+        v3 = ev::UnitGetY(v1);
+        ev::CameraSetPosition(v2, v3);
+        ev::CameraWait();
+        ev::TimeWait(500);
+        ev::EffectPlay3D("Com_Fld_強調カーソル", v2, v3);
+        ev::EffectWait();
+        ev::TimeWait(500);
+    }
+    ev::TutorialDialogMustShow("MID_B025_DIALOG1");
+    v4 = ev::UnitGetByPID("PID_B025_サイゾウ");
+    if (v4) {
+        v5 = ev::UnitGetX(v4);
+        v6 = ev::UnitGetY(v4);
+        ev::CameraSetPosition(v5, v6);
+        ev::CameraWait();
+        ev::TimeWait(500);
+        ev::EffectPlay3D("Com_Fld_強調カーソル", v5, v6);
+        ev::EffectWait();
+        ev::TimeWait(500);
+    }
+    v7 = ev::UnitGetByPID("PID_B025_カゲロウ");
+    if (v7) {
+        v8 = ev::UnitGetX(v7);
+        v9 = ev::UnitGetY(v7);
+        ev::CameraSetPosition(v8, v9);
+        ev::CameraWait();
+        ev::TimeWait(500);
+        ev::EffectPlay3D("Com_Fld_強調カーソル", v8, v9);
+        ev::EffectWait();
+        ev::TimeWait(500);
+    }
+    ev::TutorialDialogMustShow("MID_B025_DIALOG2");
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    v0 = ev::ForceUnitGetCount(1);
+    if (v0 < 49 && !ev::FlagGet("AsugiSpawned")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        ev::FlagSet("AsugiSpawned");
+        if (!ev::UnitGetByPID("PID_B025_ボス")) {
+            v1 = ev::UnitGetByPID("PID_B025_グレイ");
+            if (v1) {
+                ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+                ev::AiSetSequence(v1, 2, "AI_AT_Attack", "");
+                ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+            }
+            v2 = ev::UnitGetByPID("PID_B025_シノノメ");
+            if (v2) {
+                ev::AiSetSequence(v2, 0, "AI_AC_Everytime", "");
+                ev::AiSetSequence(v2, 2, "AI_AT_Attack", "");
+                ev::AiSetSequence(v2, 3, "AI_MV_WeakEnemy", "");
+            }
+        }
+    }
+    if (!ev::FlagGet("PairAggro")) {
+        v3 = 0;
+        v4 = ev::ForceUnitGetFirst(1);
+        while (v4) {
+            if (ev::AiGetBand(v4) == 9) {
+                v3++;
+            }
+            v4 = ev::ForceUnitGetNext(v4);
+        }
+        if (v3 == 0) {
+            v5 = ev::ForceUnitGetFirst(1);
+            while (v5) {
+                if (ev::AiGetBand(v5) == 8) {
+                    ev::AiSetActive(v5, 1);
+                    ev::AiSetSequence(v5, 3, "AI_MV_WeakEnemy", "");
+                }
+                v5 = ev::ForceUnitGetNext(v5);
+            }
+            ev::FlagSet("PairAggro");
+        }
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    v0 = ev::ForceUnitGetCount(1);
+    if ((v0 < 49 && ev::FlagGet("AsugiSpawned")) && !ev::FlagGet("PairSpawn")) {
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        ev::FlagSet("PairSpawn");
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("Paired1")) {
+        if (!ev::UnitGetByPID("PID_B025_サイゾウ")) {
+            v0 = ev::UnitGetByPID("PID_B025_剣聖2");
+            if (v0 && ev::UnitTstPrivateSkill(v0, "SPID_移動禁止")) {
+                ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+                ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+                ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
+            }
+        }
+    }
+    if (ev::FlagGet("Paired2")) {
+        if (!ev::UnitGetByPID("PID_B025_カゲロウ")) {
+            v0 = ev::UnitGetByPID("PID_B025_兵法者2");
+            if (v0 && ev::UnitTstPrivateSkill(v0, "SPID_移動禁止")) {
+                ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+                ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+                ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
+            }
+        }
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    v0 = ev::UnitGetByPID("PID_B025_グレイ");
+    if (v0) {
+        if (!ev::UnitTstStatus(v0, 1, 0)) {
+            v1 = ev::UnitGetHP(v0);
+            v2 = ev::UnitGetMHP(v0);
+            if (v1 < v2) {
+                if (v1 >= v2 - 4) {
+                    ev::UnitSetHP(v0, v2);
+                    goto l0;
+                }
+                ev::UnitSetHP(v0, v1 + 4);
+            }
+        }
+    }
+    label l0;
+}
+
+callback[Event.Turn](21, 21, 1) {
+    v0 = ev::UnitGetByPID("PID_B025_ボス");
+    if (v0) {
+        ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+        ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+    }
+}
+
+callback[Event.Turn](15, -1, 0) {
+    v0 = ev::TurnGet();
+    if (v0 % 5 > 0) {
+        goto l1;
+    }
+    v0 = v0 - 10;
+    v0 = v0 / 5;
+    if (ev::TrickTst(11, 5, 0, 1)) {
+        match (v0) {
+            1 -> {
+                v1 = ev::UnitGetByPID("PID_B025_ボス");
+                if (v1) {
+                    ev::UnitSetEnhance(v1, 20);
+                    ev::TutorialDialogMustShow("MID_B025_EV1");
+                }
+            }
+            2 -> {
+                v1 = ev::UnitGetByPID("PID_B025_ボス");
+                if (v1) {
+                    ev::UnitSetEnhance(v1, 18);
+                    ev::TutorialDialogMustShow("MID_B025_EV2");
+                }
+            }
+            3 -> {
+                v1 = ev::UnitGetByPID("PID_B025_ボス");
+                if (v1) {
+                    ev::UnitSetEnhance(v1, 22);
+                    ev::TutorialDialogMustShow("MID_B025_EV3");
+                }
+            }
+            4 -> {
+                v1 = ev::UnitGetByPID("PID_B025_ボス");
+                if (v1) {
+                    ev::UnitSetEnhance(v1, 21);
+                    ev::TutorialDialogMustShow("MID_B025_EV4");
+                }
+            }
+            5 -> {
+                v1 = ev::UnitGetByPID("PID_B025_ボス");
+                if (v1) {
+                    ev::UnitSetEnhance(v1, 16);
+                    ev::TutorialDialogMustShow("MID_B025_EV5");
+                }
+            }
+            6 -> {
+                v1 = ev::UnitGetByPID("PID_B025_ボス");
+                if (v1) {
+                    ev::UnitSetEnhance(v1, 19);
+                    ev::TutorialDialogMustShow("MID_B025_EV6");
+                }
+            }
+        }
+    }
+    label l1;
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    if (!ev::TrickTst(11, 5, 0, 1) && !ev::FlagGet("Paired")) {
+        v0 = ev::UnitGetByPID("PID_B025_ボス");
+        v1 = ev::UnitGetByPID("PID_B025_シノノメ");
+        if (v0 && v1) {
+            v2 = ev::UnitGetX(v0);
+            v3 = ev::UnitGetX(v1);
+            v4 = ev::UnitGetY(v0);
+            v5 = ev::UnitGetY(v1);
+            if ((v2 - v3 == 1 || v3 - v2 == 1) && v4 == v5 || (v4 - v5 == 1 || v5 - v4 == 1) && v2 == v3) {
+                if (v0 && v1) {
+                    ev::CameraSetPositionByUnit(v0);
+                    ev::CameraWait();
+                    ev::TimeWait(250);
+                    ev::UnitDoubleOn(v0, v1);
+                    ev::TimeWait(250);
+                    ev::FlagSet("Paired");
+                    ev::AiSetSequence(v1, 2, "AI_AT_Attack", "");
+                    ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+                    ev::AiSetMoveLimit(v1, -1, -1, -1, -1, -1);
+                    ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+                    ev::AiSetMoveLimit(v0, -1, -1, -1, -1, -1);
+                    v6 = ev::UnitGetByPID("PID_B025_グレイ");
+                    if (v6) {
+                        ev::AiSetSequence(v6, 2, "AI_AT_Attack", "");
+                        ev::AiSetMoveLimit(v6, -1, -1, -1, -1, -1);
+                    }
+                    ev::ItemGainSilent(v0, ASUGIS_CONFECT);
+                    ev::UnitItemClearDrop(v0);
+                    ev::UnitItemPutOff(v0, DRACOSHIELD);
+                    ev::ItemGainSilent(v0, DRACOSHIELD);
+                    ev::UnitItemPutOff(v1, ASUGIS_CONFECT);
+                }
+            }
+        }
+    }
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    if (ev::FlagGet("PairSpawn")) {
+        if (!ev::FlagGet("Paired1")) {
+            v0 = ev::UnitGetByPID("PID_B025_剣聖2");
+            if (!v0) {
+                ev::FlagSet("Paired1");
+            }
+            if (v0) {
+                if (ev::UnitGetX(v0) == 7 && ev::UnitGetY(v0) == 7) {
+                    v1 = ev::UnitGetByPID("PID_B025_サイゾウ");
+                    if (v1) {
+                        ev::CameraSetPositionByUnit(v1);
+                        ev::CameraWait();
+                        ev::TimeWait(250);
+                        ev::UnitMovePosition(v0, 6, 2, 0);
+                        ev::TimeWait(350);
+                        ev::UnitDoubleOn(v1, v0);
+                        ev::TimeWait(250);
+                        ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+                        ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+                        ev::UnitSetPrivateSkill(v0, "SPID_移動禁止");
+                        ev::FlagSet("Paired1");
+                    }
+                }
+            }
+        }
+    }
+}
+
+callback[Event.TurnAfter](-1, -1, 1) {
+    if (ev::FlagGet("PairSpawn")) {
+        if (!ev::FlagGet("Paired2")) {
+            v0 = ev::UnitGetByPID("PID_B025_兵法者2");
+            if (!v0) {
+                ev::FlagSet("Paired2");
+            }
+            if (v0) {
+                if (ev::UnitGetX(v0) == 24 && ev::UnitGetY(v0) == 3) {
+                    v1 = ev::UnitGetByPID("PID_B025_カゲロウ");
+                    if (v1) {
+                        ev::CameraSetPositionByUnit(v1);
+                        ev::CameraWait();
+                        ev::TimeWait(250);
+                        ev::UnitMovePosition(v0, 25, 2, 0);
+                        ev::TimeWait(100);
+                        ev::UnitDoubleOn(v1, v0);
+                        ev::TimeWait(250);
+                        ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+                        ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+                        ev::UnitSetPrivateSkill(v0, "SPID_移動禁止");
+                        ev::FlagSet("Paired2");
+                    }
+                }
+            }
+        }
+    }
+}
+
+def ev::IsOpen() {
+    if (!ev::TrickTst(11, 5, 0, 1)) {
+        return 0;
+    }
+    if (ev::ForceUnitGetCount(0) == 1) {
+        return 1;
+    }
+    if (ev::UnitGetByPID("PID_B025_サイゾウ")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B025_カゲロウ")) {
+        return 0;
+    }
+    if (ev::TrickTst(11, 5, 0, 1)) {
+        return 1;
+    }
+    if (ev::TrickTst(18, 5, 0, 1)) {
+        return 1;
+    }
+    if (ev::TrickTst(14, 9, 0, 1)) {
+        return 1;
+    }
+    if (ev::TrickTst(14, 19, 0, 1)) {
+        return 1;
+    }
+    return 0;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "IsOpen") {
+    ev::CameraSetPosition(14, 7);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    ev::TrickSet(11, 5, 0, 2, 1);
+    ev::TrickSet(18, 5, 0, 2, 1);
+    ev::TrickSet(14, 9, 0, 2, 1);
+    ev::TrickSet(14, 19, 0, 2, 0);
+    v0 = ev::UnitGetPlayer();
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_ワープ禁止");
+    }
+    v1 = ev::UnitGetByPID("PID_B025_ボス");
+    if (v1) {
+        ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+        ev::AiSetSequence(v1, 2, "AI_AT_Attack", "");
+        ev::AiSetSequence(v1, 3, "AI_MV_Null", "");
+        ev::UnitClrPrivateSkill(v1, "SPID_強制回避");
+        ev::UnitClrPrivateSkill(v1, "SPID_必殺禁止");
+    }
+    v2 = ev::UnitGetByPID("PID_B025_グレイ");
+    if (v2) {
+        ev::AiSetSequence(v2, 0, "AI_AC_Everytime", "");
+    }
+    v3 = ev::UnitGetByPID("PID_B025_シノノメ");
+    if (v3) {
+        ev::AiSetSequence(v3, 0, "AI_AC_Everytime", "");
+    }
+    ev::BGMStop(500);
+    ev::BMapBGMChnageFlagOn();
+    ev::TimeWait(501);
+}
+
+callback[Event.BattleTalk]("PID_B025_ボス", 1, CORRIN_M, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B025_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B025_ボス", 1, CORRIN_F, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B025_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B025_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B025_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B025_サイゾウ", 1, "", -1, 1, "戦闘会話サイゾウ") {
+    ev::Talk("MID_B025_BT3");
+    ev::FlagSet("戦闘会話サイゾウ");
+}
+
+callback[Event.BattleTalk]("PID_B025_カゲロウ", 1, "", -1, 1, "戦闘会話カゲロウ") {
+    ev::Talk("MID_B025_BT4");
+    ev::FlagSet("戦闘会話カゲロウ");
+}
+
+callback[Event.Die]("PID_B025_ボス", 1, "", -1) {
+    ev::Talk("MID_B025_BOSS_DIE1");
+    v0 = ev::UnitGetByPID("PID_B025_グレイ");
+    if (v0) {
+        ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+        ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+        ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+    }
+    v1 = ev::UnitGetByPID("PID_B025_シノノメ");
+    if (v1) {
+        ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+        ev::AiSetSequence(v1, 2, "AI_AT_Attack", "");
+        ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+    }
+}
+
+callback[Event.Die]("PID_B025_サイゾウ", 1, "", -1) {
+    ev::Talk("MID_B025_BOSS_DIE2");
+    v0 = ev::UnitGetByPID("PID_B025_カゲロウ");
+    if (v0) {
+        ev::UnitItemClearDrop(v0);
+    }
+}
+
+callback[Event.Die]("PID_B025_カゲロウ", 1, "", -1) {
+    ev::Talk("MID_B025_BOSS_DIE3");
+    v0 = ev::UnitGetByPID("PID_B025_サイゾウ");
+    if (v0) {
+        ev::UnitItemClearDrop(v0);
+    }
+}
+
+callback[Event.Die]("PID_B025_シノノメ", 1, "", -1) {
+    if (!ev::FlagGet("Paired")) {
+        v0 = ev::UnitGetByPID("PID_B025_グレイ");
+        if (v0) {
+            ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+            ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+        }
+        v1 = ev::UnitGetByPID("PID_B025_ボス");
+        if (v1) {
+            ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+            ev::AiSetMoveLimit(v1, -1, -1, -1, -1, -1);
+        }
+    }
+}
+
+callback[Event.MapComplete]() {
+    v0 = ev::UnitGetPlayer();
+    if (v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        ev::UnitClrPrivateSkill(v0, "SPID_ワープ禁止");
+    }
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::MapEventBeginForComplete();
+    ev::Dispos("Event11", 2052);
+    ev::CameraSetPosition(14, 12);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::BGMPlay("STRM_EVT_AMB_A1", 0);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B025_EV_1");
+    v1 = ev::UnitGetPlayer();
+    ev::UnitMovePosition(v1, 14, 18, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B025_EV_2");
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForComplete();
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B025_ED");
+    ev::CutScene("B025_ED_1");
+    ev::MoviePlayWithEscapeSkip("s14");
+    ev::CutScene("B025_ED2");
+    ev::CutScene("B025_ED3");
+}
+
