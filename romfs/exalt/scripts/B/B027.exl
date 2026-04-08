@@ -37,6 +37,12 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B027_CEDAROIL", STRONG_RIPOSTE, DANCING_BLADE, COUNTERMAGIC);
     ev::GiveSkill("PID_B027_HERA", HEARTSEEKER, VANTAGE, 0);
     ev::GiveSkill("PID_B027_CHEW", SEAL_SPEED, ARMORED_BLOW, 0);
+    ev::GiveSkill("PID_B027_KOHAKU", SEAL_SPEED, ARMORED_BLOW, 0);
+    v0 = ev::UnitGetByPID("PID_B027_KOHAKU");
+    if(v0) {
+        ev::UnitSetEnhance(v0, 11);
+        ev::UnitSetEnhance(v0, 13);
+    }
 }
 
 callback[Event.MapFree]() {
@@ -183,7 +189,7 @@ def anonfn9(v0, v1) {
 }
 
 def ev::IsDoorOpen1() {
-    return anonfn8(3, 9, "PID_B027_DENJI", "PID_B027_FON", "PID_B027_CHEW");
+    return anonfn8(3, 9, "PID_B027_DENJI", "PID_B027_FON", "PID_B027_KOHAKU");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen1") {
@@ -233,6 +239,10 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen6") {
 callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ResolveEffect("PID_B027_GAMBLOR");
     ev::ResolveEffect("PID_B027_LUCIUS");
+}
+
+callback[Event.Reinforce](1, 7, 1) {
+    ev::WitchsBrewEffect("PID_B027_KOHAKU");
 }
 
 def ev::GiveSkill(v0, v1, v2, v3) {
