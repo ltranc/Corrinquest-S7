@@ -67,7 +67,6 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_GANDORF", HEARTSEEKER, IGNIS, BOWBREAKER);
     ev::GiveSkill("PID_B028_GALVIOR", POISON_STRIKE, REPLICATE, 0);
     ev::GiveSkill("PID_B028_JORDYN", QUICK_DRAW, CERTAIN_BLOW, 0);
-    ev::GiveSkill("PID_B028_BUTTHEAD", AETHER, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B028_DARKASSA", HEARTSEEKER, MALEFIC_AURA, 0);
     ev::GiveSkill("PID_B028_DONQUIXOTE", AEGIS, INSPIRATION, 0);
     ev::GiveSkill("PID_B028_CHOPPED", POISON_STRIKE, DUELISTS_BLOW, INEVITABLE_END);
@@ -100,6 +99,7 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_WILD", LUCKY_SEVEN, PASS, 0);
     ev::GiveSkill("PID_B028_ROANO", STRONG_RIPOSTE, SOL, 0);
     ev::GiveSkill("PID_B028_KIWI", RENEWAL, COUNTER, STAFF_SAVANT);
+    ev::GiveSkill("PID_B028_CHADICUS", SUREFOOTED, ARMORED_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -626,6 +626,7 @@ callback[Event.Reinforce](6, 6, 1) {
     ev::GiveSkill("PID_B028_VILAIRE", EVENHANDED, AGGRESSOR, 0);
     ev::GiveSkill("PID_B028_GANDORF", HEARTSEEKER, IGNIS, BOWBREAKER);
     ev::GiveSkill("PID_B028_HOOONK", QUICK_DRAW, AIR_SUPERIORITY, 0);
+    ev::GiveSkill("PID_B028_BUTTHEAD", AETHER, SUREFOOTED, 0);
     ev::Dispos("Reinforce4", 1032);
     ev::DisposWait();
     ev::GiveSkill("PID_B028_DARKASSA", HEARTSEEKER, MALEFIC_AURA, 0);
@@ -636,6 +637,7 @@ callback[Event.Reinforce](6, 6, 1) {
     ev::GiveSkill("PID_B028_LUNA", INSPIRATION, DEATH_BLOW, 0);
     ev::GiveSkill("PID_B028_SELENA", VANTAGE, AWAKENING, 0);
     ev::GiveSkill("PID_B028_IRA", AETHER, SUREFOOTED, 0);
+    ev::GiveSkill("PID_B028_CHEW", DUELISTS_BLOW, VANTAGE, 0);
 }
 
 callback[Event.Reinforce](7, 7, 1) {
@@ -738,6 +740,8 @@ callback[Event.TurnAfter](-1, -1, 1) {
     ev::ResolveEffect("PID_B028_LUCY");
     ev::ResolveEffect("PID_B028_EVILTACO");
     ev::ResolveEffect("PID_B028_IRA");
+    ev::ResolveEffect("PID_B028_BUTTHEAD");
+    ev::ResolveEffect("PID_B028_CHADICUS");
     ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
 }
 
@@ -758,6 +762,8 @@ callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ResolveEffect("PID_B028_LUCY");
     ev::ResolveEffect("PID_B028_EVILTACO");
     ev::ResolveEffect("PID_B028_IRA");
+    ev::ResolveEffect("PID_B028_BUTTHEAD");
+    ev::ResolveEffect("PID_B028_CHADICUS");
 }
 
 callback[Event.Area](12, 15, 18, 30, 0, "SidesPairUp") {

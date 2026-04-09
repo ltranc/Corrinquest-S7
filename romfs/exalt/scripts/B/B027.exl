@@ -43,6 +43,11 @@ callback[Event.MapLoad]() {
         ev::UnitSetEnhance(v0, 11);
         ev::UnitSetEnhance(v0, 13);
     }
+    ev::GiveSkill("PID_B027_AUDIEJ", POISON_STRIKE, GRISLY_WOUND, 0);
+    v0 = ev::UnitGetByPID("PID_B027_AUDIEJ");
+    if(v0) {
+        ev::UnitSetPrivateSkill(v0, "SPID_スキル発動禁止");
+    }
 }
 
 callback[Event.MapFree]() {
@@ -172,6 +177,13 @@ callback[Event.TurnAfter](1, 1, 1) {
     ev::SkipEnable();
 }
 
+callback[Event.Turn](5, 5, 1) {
+    v0 = ev::UnitGetByPID("PID_B027_AUDIEJ");
+    if(v0) {
+        ev::UnitClrPrivateSkill(v0, "SPID_スキル発動禁止");
+    }
+}
+
 def anonfn8(v0, v1, v2, v3, v4) {
     if (!ev::TrickTst(v0, v1, 9, 1)) {
         return 0;
@@ -213,7 +225,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen3") {
 }
 
 def ev::IsDoorOpen4() {
-    return anonfn8(1, 21, "PID_B027_LTRANCMADEME", "PID_B027_上忍", "PID_B027_上忍");
+    return anonfn8(1, 21, "PID_B027_LTRANCMADEME", "PID_B027_AUDIEJ", "PID_B027_上忍");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen4") {
