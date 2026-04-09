@@ -1,0 +1,179 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("ベロア味方");
+    ev::FlagEntry("増援条件");
+    ev::VariableEntry("増援カウンタ", 0);
+    ev::FlagEntry("TopBlocked");
+    ev::FlagEntry("BottomBlocked");
+    ev::FlagEntry("Move");
+    ev::FlagEntry("DV");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::ChapterSetTrickDragon(3);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X018_OP1");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::TutorialDialogMustShow("MID_X018_DIALOG");
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        if (ev::UnitIsEquipSkill(v0, COUNTER) || ev::UnitIsEquipSkill(v0, COUNTERMAGIC)) {
+            v1 = ev::UnitGetByPID("PID_X018_ボス");
+            if (v1) {
+                ev::AiSetSequence(v1, 2, "AI_AT_Null", "");
+                break;
+            }
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+}
+
+callback[Event.Turn](-1, -1, 0) {
+    ev::FlagClr("DV");
+}
+
+callback[Event.TurnAfter](1, 1, 0) {
+    if (!ev::TutorialGetFlag("TUTID_砲台")) {
+        ev::TutorialShow("TUTID_砲台");
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("増援条件")) {
+        v0 = ev::VariableGet("増援カウンタ");
+        if (v0 < 10) {
+            v0++;
+        }
+        ev::VariableSet("増援カウンタ", v0);
+        match (v0) {
+            1 -> {
+                ev::Dispos("Reinforce01", 8);
+                ev::DisposWait();
+                if (ev::UnitGetForce(ev::UnitGetByPosition(19, 8)) == 0) {
+                    ev::FlagSet("TopBlocked");
+                }
+                ev::Dispos("Reinforce02", 8);
+                ev::DisposWait();
+                if (ev::UnitGetForce(ev::UnitGetByPosition(19, 14)) == 0) {
+                    ev::FlagSet("BottomBlocked");
+                }
+            }
+            3 -> {
+                ev::Dispos("Reinforce03", 8);
+                ev::DisposWait();
+                if (ev::FlagGet("TopBlocked")) {
+                    ev::Dispos("Reinforce01", 8);
+                    ev::DisposWait();
+                }
+                if (ev::FlagGet("BottomBlocked")) {
+                    ev::Dispos("Reinforce02", 8);
+                    ev::DisposWait();
+                }
+                v1 = ev::ForceUnitGetFirst(1);
+                while (v1) {
+                    ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+                    ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+                    v1 = ev::ForceUnitGetNext(v1);
+                }
+            }
+            4 -> {
+                v0 = ev::UnitGetByPID("PID_X018_ボス3");
+                if (v0) {
+                    ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
+                }
+            }
+        }
+        if (ev::VariableGet("増援カウンタ") > 3) {
+            v2 = ev::ForceUnitGetFirst(1);
+            while (v2) {
+                if (!ev::UnitTstPrivateSkill(v2, "SPID_移動禁止") && !ev::UnitTstPrivateSkill(v2, "SPID_リーダー")) {
+                    goto l0;
+                }
+                v2 = ev::ForceUnitGetNext(v2);
+            }
+            v3 = ev::ForceUnitGetFirst(1);
+            while (v3) {
+                if (!ev::UnitTstPrivateSkill(v3, "SPID_リーダー")) {
+                    ev::UnitClrPrivateSkill(v3, "SPID_移動禁止");
+                    ev::AiSetSequence(v3, 3, "AI_MV_WeakEnemy", "");
+                }
+                v3 = ev::ForceUnitGetNext(v3);
+            }
+        }
+    }
+    label l0;
+}
+
+def ev::IsReinforce() {
+    if (ev::FlagGet("増援条件")) {
+        return 0;
+    }
+    if (ev::TurnGet() <= 1) {
+        return 0;
+    }
+    return 1;
+}
+
+callback[Event.Area](1, 1, 11, 2, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 3, 12, 4, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 5, 13, 7, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 8, 12, 14, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 15, 13, 16, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 17, 12, 17, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 18, 11, 18, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Area](1, 19, 10, 20, 0, "IsReinforce") {
+    ev::FlagSet("増援条件");
+}
+
+callback[Event.Die](VELOURIA, 0, "", -1) {
+    ev::Talk("MID_X018_DIE_ベロア");
+}
+
+callback[Event.MapComplete]() {
+    ev::TutorialSetFlag("TUTID_砲台");
+    ev::ItemGain(0, BEASTRUNE);
+    ev::ItemGain(0, VULNERARY);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X018_ED1");
+}
+

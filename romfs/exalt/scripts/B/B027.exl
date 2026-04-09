@@ -43,7 +43,7 @@ callback[Event.MapLoad]() {
         ev::UnitSetEnhance(v0, 11);
         ev::UnitSetEnhance(v0, 13);
     }
-    ev::GiveSkill("PID_B027_AUDIEJ", POISON_STRIKE, GRISLY_WOUND, 0);
+    ev::GiveSkill("PID_B027_AUDIEJ", POISON_STRIKE, LETHALITY, 0);
     v0 = ev::UnitGetByPID("PID_B027_AUDIEJ");
     if(v0) {
         ev::UnitSetPrivateSkill(v0, "SPID_スキル発動禁止");
