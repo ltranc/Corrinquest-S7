@@ -99,7 +99,7 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_WILD", LUCKY_SEVEN, PASS, 0);
     ev::GiveSkill("PID_B028_ROANO", STRONG_RIPOSTE, SOL, 0);
     ev::GiveSkill("PID_B028_KIWI", RENEWAL, COUNTER, STAFF_SAVANT);
-    ev::GiveSkill("PID_B028_CHADICUS", SUREFOOTED, ARMORED_BLOW, 0);
+    ev::GiveSkill("PID_B028_CHADICUS", HEAVY_BLADE, ARMORED_BLOW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -741,7 +741,6 @@ callback[Event.TurnAfter](-1, -1, 1) {
     ev::ResolveEffect("PID_B028_EVILTACO");
     ev::ResolveEffect("PID_B028_IRA");
     ev::ResolveEffect("PID_B028_BUTTHEAD");
-    ev::ResolveEffect("PID_B028_CHADICUS");
     ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
 }
 
@@ -763,7 +762,6 @@ callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ResolveEffect("PID_B028_EVILTACO");
     ev::ResolveEffect("PID_B028_IRA");
     ev::ResolveEffect("PID_B028_BUTTHEAD");
-    ev::ResolveEffect("PID_B028_CHADICUS");
 }
 
 callback[Event.Area](12, 15, 18, 30, 0, "SidesPairUp") {
