@@ -1,0 +1,227 @@
+include std:fe14:prelude;
+
+def ev::LocalTutorial0() {
+    return "MID_X016_DIALOG1";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("処刑増援条件");
+    ev::FlagEntry("処刑増援");
+    ev::FlagEntry("エリア進入");
+    ev::VariableEntry("エリア進入カウンタ", 0);
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Ally", 4);
+    v0 = ev::UnitGetByPID(FORREST);
+    if (v0) {
+        ev::UnitSetBID(v0, OTHER_ARMY);
+    }
+    if (ev::DifficultyGet() <= 0) {
+        v1 = ev::UnitGetByPID("PID_X016_ボス");
+        if (v1) {
+            ev::UnitSetPrivateSkill(v1, "SPID_回避-10");
+        }
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X016_OP1");
+    ev::MapEventBeginForOpening(0);
+    ev::Dispos("Event01", 4);
+    ev::CameraSetPosition(11, 23);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::BGMPlay("STRM_EVT_STRAIN_E1_2", 1000);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(2000);
+    ev::Dispos("Event02", 8);
+    ev::DisposWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_X016_OP3_1");
+    v0 = ev::UnitGetByPID("PID_X016_OPイベント用敵1");
+    v1 = ev::UnitGetByPID("PID_X016_OPイベント用敵2");
+    ev::UnitMovePosition(v0, 12, 23, 0);
+    ev::UnitMovePosition(v1, 11, 24, 0);
+    ev::UnitMoveWait();
+    ev::TimeWait(1000);
+    v2 = ev::UnitGetByPID(FORREST);
+    ev::UnitMovePosition(v0, 14, 23, 0);
+    ev::UnitMovePosition(v1, 13, 24, 0);
+    ev::UnitMovePosition(v2, 13, 23, 0);
+    ev::UnitMoveWait();
+    ev::UnitMovePosition(v2, 13, 6, 0);
+    ev::UnitMovePosition(v0, 14, 6, 0);
+    ev::UnitMovePosition(v1, 13, 7, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_X016_OP3_2");
+    ev::CameraSetPosition(3, 24);
+    ev::CameraWait();
+    ev::Dispos("Event03", 2048);
+    ev::DisposWait();
+    ev::Talk("MID_X016_OP3_3");
+    v3 = ev::UnitGetByPID(ELISE);
+    ev::UnitMovePosition(v3, 13, 24, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_X016_OP3_4");
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForOpening();
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X016_EV1");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    ev::SkipEscape();
+    v0 = 23;
+    v1 = 20;
+    ev::CameraSetPosition(v0, v1);
+    ev::CameraWait();
+    ev::EffectPlay3D("Com_Fld_強調カーソル", v0, v1);
+    ev::EffectWait();
+    ev::TimeWait(500);
+    ev::TutorialDialogMustShow("MID_X016_DIALOG1");
+}
+
+callback[Event.Turn](-1, -1, 1) {
+    if (ev::FlagGet("エリア進入")) {
+        v0 = ev::VariableGet("エリア進入カウンタ");
+        if (v0 < 10) {
+            v0++;
+            ev::VariableSet("エリア進入カウンタ", v0);
+        }
+        match (v0) {
+            1 -> {
+                v1 = ev::ForceUnitGetFirst(1);
+                while (v1) {
+                    v2 = ev::AiGetBand(v1);
+                    if ((v2 == 4 || v2 == 6) || v2 == 8) {
+                        ev::AiSetSequence(v1, 0, "AI_AC_Everytime", "");
+                        ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+                    }
+                    v1 = ev::ForceUnitGetNext(v1);
+                }
+                ev::BGMStop(500);
+                ev::BMapBGMChnageFlagOn();
+            }
+            3 -> {
+                v3 = ev::ForceUnitGetFirst(1);
+                while (v3) {
+                    if (ev::AiGetBand(v3) == 5) {
+                        ev::AiSetSequence(v3, 0, "AI_AC_Everytime", "");
+                        ev::AiSetSequence(v3, 3, "AI_MV_WeakEnemy", "");
+                    }
+                    v3 = ev::ForceUnitGetNext(v3);
+                }
+            }
+        }
+    }
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("処刑増援条件") && !ev::FlagGet("処刑増援")) {
+        ev::CameraSetAngle(-40);
+        ev::CameraSetDistanceFromNear();
+        ev::Talk("MID_X016_EV2");
+        ev::BGMStop(1000);
+        ev::CameraSetAngleFromConfig();
+        ev::CameraSetDistanceFromConfig();
+        ev::TimeWait(500);
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        if (ev::DifficultyGet() >= 2) {
+            v0 = ev::ForceUnitGetFirst(1);
+            while (v0) {
+                if (ev::AiGetBand(v0) == 2) {
+                    ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+                }
+                v0 = ev::ForceUnitGetNext(v0);
+            }
+        }
+        ev::FlagSet("処刑増援");
+    }
+    if (ev::FlagGet("エリア進入")) {
+        v1 = ev::VariableGet("エリア進入カウンタ");
+        if (v1 == 2) {
+            ev::Dispos("Reinforce02", 8);
+            ev::DisposWait();
+            ev::Dispos("Reinforce03", 8);
+            ev::DisposWait();
+        }
+    }
+}
+
+callback[Event.Area](11, 5, 14, 12, 0, "エリア進入") {
+    ev::FlagSet("エリア進入");
+}
+
+callback[Event.Area](15, 5, 23, 20, 0, "エリア進入") {
+    ev::FlagSet("エリア進入");
+}
+
+callback[Event.BattleTalk]("PID_X016_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_X016_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[0x19]("", 1, 1198, 0, 1, "処刑増援条件") {
+    ev::FlagSet("処刑増援条件");
+    v0 = ev::ForceUnitGetFirst(1);
+    while (v0) {
+        if (ev::AiGetBand(v0) == 1) {
+            ev::AiSetSequence(v0, 0, "AI_AC_Everytime", "");
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
+}
+
+callback[Event.Die]("PID_X016_ボス", 1, "", -1) {
+    ev::Talk("MID_X016_BOSS_DIE1");
+}
+
+callback[Event.Die](FORREST, -1, "", -1) {
+    ev::Talk("MID_X016_DIE_フォレオ");
+    v0 = ev::UnitGetByPID("PID_X016_アクスファイター2");
+    v1 = ev::UnitGetByPID("PID_X016_アクスファイター3");
+    if (v0) {
+        ev::AiSetSequence(v0, 2, "AI_AT_Attack", "");
+        ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+    }
+    if (v1) {
+        ev::AiSetSequence(v1, 2, "AI_AT_Attack", "");
+        ev::AiSetSequence(v1, 3, "AI_MV_WeakEnemy", "");
+    }
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X016_ED1");
+}
+

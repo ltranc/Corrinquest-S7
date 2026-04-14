@@ -1,0 +1,191 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("シャラ味方");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::ChapterSetTrickDragon(2);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Reinforce01", 4);
+    ev::Dispos("Reinforce02", 4);
+    ev::Dispos("Reinforce03", 4);
+    ev::Dispos("Reinforce04", 4);
+    ev::Dispos("Reinforce07", 4);
+    v0 = ev::UnitGetByPID(RHAJAT);
+    if (v0) {
+        ev::UnitSetBID(v0, OTHER_ARMY);
+        ev::UnitSetPrivateSkill(v0, "SPID_準特殊演出");
+        ev::UnitSetPrivateSkill(v0, "SPID_デュアル禁止");
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapSetting]() {}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("X014_OP1_0");
+    ev::MapEventBeginForOpening(2);
+    ev::Dispos("Event01", 4);
+    ev::CameraSetPosition(13, 7);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(2000);
+    ev::Dispos("Event03", 8);
+    ev::DisposWait();
+    ev::TimeWait(500);
+    ev::Dispos("Event04", 8);
+    ev::DisposWait();
+    ev::TimeWait(500);
+    ev::Dispos("Event05", 8);
+    ev::DisposWait();
+    ev::TimeWait(500);
+    ev::Dispos("Event06", 8);
+    ev::DisposWait();
+    ev::TimeWait(500);
+    ev::CameraSetPosition(22, 18);
+    ev::CameraWait();
+    ev::Dispos("Event02", 2048);
+    ev::DisposWait();
+    ev::Talk("MID_X014_OP1_1");
+    ev::CameraSetPosition(13, 7);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_X014_OP1_2");
+    ev::BGMStop(1000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForOpening();
+}
+
+def anonfn5(v0, v1, v2, v3) {
+    if (v3 == 0) {
+        if (ev::TurnGet() % 3 == 0) {
+            if (ev::TerrainAttributeIsTID(v1, v2, "TID_毒沼配置／平地") && !ev::FlagGet("シャラ味方")) {
+                ev::Dispos(v0, 8);
+                ev::DisposWait();
+            }
+        }
+        goto l3;
+    }
+    if (ev::TurnGet() % 2) {
+        if (ev::TerrainAttributeIsTID(v1, v2, "TID_毒沼配置／平地") && !ev::FlagGet("シャラ味方")) {
+            ev::Dispos(v0, 8);
+            ev::DisposWait();
+        }
+    }
+    label l3;
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::UnitGetByPID(RHAJAT);
+    if (v0) {
+        ev::CameraSetPositionByUnit(v0);
+        ev::CameraWait();
+        ev::Talk("MID_X014_EV1");
+    }
+    ev::TutorialDialogMustShow("MID_X014_DIALOG");
+}
+
+callback[Event.Turn](-1, -1, 2) {
+    v0 = ev::UnitGetByPID(RHAJAT);
+    if (v0) {
+        ev::UnitItemEquip2(v0, HORSE_SPIRIT);
+    }
+}
+
+callback[Event.Reinforce](4, 4, 1) {
+    v0 = ev::UnitGetByPID(RHAJAT);
+    if (v0) {
+        if (!ev::FlagGet("戦闘会話")) {
+            ev::ItemGainSilent(v0, "IID_FENRIR");
+            ev::UnitItemClearDrop(v0);
+            ev::CameraSetPositionByUnit(v0);
+            ev::CameraWait();
+            ev::Talk("MID_X014_EV2");
+        }
+    }
+}
+
+callback[Event.Reinforce](1, -1, 1) {
+    anonfn5("Reinforce07", 17, 18, ev::DifficultyGet());
+}
+
+callback[Event.Reinforce](3, -1, 1) {
+    anonfn5("Reinforce06", 10, 17, ev::DifficultyGet());
+    anonfn5("Reinforce08", 20, 12, ev::DifficultyGet());
+}
+
+callback[Event.Reinforce](6, -1, 1) {
+    anonfn5("Reinforce09", 23, 5, ev::DifficultyGet());
+    anonfn5("Reinforce05", 1, 16, ev::DifficultyGet());
+}
+
+callback[Event.Reinforce](9, -1, 1) {
+    anonfn5("Reinforce01", 3, 4, ev::DifficultyGet());
+    anonfn5("Reinforce02", 7, 8, ev::DifficultyGet());
+    anonfn5("Reinforce03", 10, 4, ev::DifficultyGet());
+    anonfn5("Reinforce04", 15, 9, ev::DifficultyGet());
+}
+
+callback[Event.Talk](HAYATO, -1, RHAJAT, -1, 1, "シャラ味方") {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_X014_TK1");
+    v0 = ev::UnitGetByPID(RHAJAT);
+    ev::UnitTransferByIndex(v0, 0);
+    ev::UnitClrPrivateSkill(v0, "SPID_準特殊演出");
+    ev::UnitClrPrivateSkill(v0, "SPID_デュアル禁止");
+    ev::FlagSet("シャラ味方");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+}
+
+callback[Event.BattleTalk](RHAJAT, 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_X014_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die](RHAJAT, 1, "", -1) {
+    ev::Talk("MID_X014_BOSS_DIE1");
+}
+
+callback[Event.Die](RHAJAT, 0, "", -1) {
+    ev::Talk("MID_X014_DIE_シャラ");
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::ItemGain(0, OX_SPIRIT);
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("X014_ED1");
+    v0 = ev::UnitGetByPID(RHAJAT);
+    if ((!ev::UnitPlayerIsMale() && v0) && ev::UnitIsMotherPID(v0, CORRIN_F)) {
+        ev::CutScene("X014_ED2B");
+        goto l3;
+    }
+    ev::CutScene("X014_ED2");
+    label l3;
+}
+

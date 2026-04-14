@@ -1,0 +1,291 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("ピックアップ主人公");
+    ev::FlagEntry("ピックアップヒノカ");
+    ev::FlagEntry("ピックアップタクミ");
+    ev::FlagEntry("ピックアップカミラ");
+    ev::FlagEntry("ピックアップサクラ");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleEnemyNumberLessThanOrEqualTo(0);
+    ev::ChapterSetTrickDragon(1);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Ally", 4);
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::MoviePlayWithEscapeSkip("s01");
+    ev::CutScene("A000_OP1_Battle");
+}
+
+callback[Event.MapSetting]() {
+    v0 = ev::UnitGetPlayer();
+    if (v0) {
+        ev::UnitSetPrivateSkill(v0, "SPID_特殊武器使用不可");
+        v1 = (13 - ev::UnitGetCapability(v0, 6, 1)) - 2;
+        ev::UnitSetHP(v0, ev::UnitGetHP(v0) - v1);
+        ev::CameraSetPosition(ev::UnitGetX(v0), ev::UnitGetY(v0));
+        ev::CameraInstant();
+    }
+    v2 = ev::UnitGetByPID("PID_A000_リョウマ");
+    ev::UnitSetPrivateSkill(v2, "SPID_強制スキル発動");
+    ev::ChapterSetHideSystemMenu(1);
+    ev::ChapterSetHideProperty(1);
+    ev::ChapterSetHideTrade(1);
+    ev::ChapterSetHideDouble(1);
+    ev::ChapterSetHideAI(1);
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_OP1");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+}
+
+callback[Event.TurnAfter](1, 1, 0) {
+    ev::TutorialShow("TUTID_戦闘");
+}
+
+callback[Event.Turn](1, 1, 1) {
+    ev::TutorialShow("TUTID_行動の交代");
+}
+
+callback[Event.Turn](1, 1, 2) {
+    ev::Dispos("Reinforce02", 8);
+    ev::DisposWait();
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV_赤軍");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+}
+
+callback[Event.Turn](2, 2, 0) {
+    ev::Dispos("Reinforce03", 8);
+    ev::DisposWait();
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV_緑軍");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+}
+
+callback[Event.TurnAfter](2, 2, 0) {
+    ev::Dispos("Reinforce01", 8);
+    ev::DisposWait();
+    v0 = 19;
+    v1 = 11;
+    ev::CameraSetPosition(v0, v1);
+    ev::CameraWait();
+    ev::TimeWait(500);
+    ev::EffectPlay3D("Com_Fld_強調カーソル", v0, v1);
+    ev::EffectWait();
+    ev::TimeWait(500);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV2");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    v2 = ev::UnitGetByPID("PID_A000_タクミ");
+    if (v2) {
+        ev::UnitTransferByIndex(v2, 0);
+    }
+    ev::FlagClr("ピックアップ主人公");
+    ev::FlagClr("ピックアップヒノカ");
+    ev::FlagClr("ピックアップタクミ");
+}
+
+callback[Event.Turn](2, 2, 1) {
+    ev::ChapterSetWin();
+}
+
+def ev::IsComplete() {
+    if (ev::TurnGet() < 2) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_A000_ランサー増援")) {
+        return 0;
+    }
+    return 1;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "IsComplete") {
+    ev::ChapterSetWin();
+}
+
+def ev::IsPick1() {
+    return !ev::FlagGet("ピックアップ主人公");
+}
+
+callback[Event.Pick](CORRIN_M, 0, "IsPick1") {
+    if (ev::TurnGet() < 2) {
+        v0 = 19;
+        v1 = 11;
+        ev::CameraSetPosition(v0, v1);
+        ev::CameraWait();
+        ev::TimeWait(500);
+        ev::EffectPlay3D("Com_Fld_強調カーソル", v0, v1);
+        ev::EffectWait();
+        ev::TimeWait(500);
+        ev::CameraSetAngle(-40);
+        ev::CameraSetDistanceFromNear();
+        ev::Talk("MID_A000_EV_主人公");
+        ev::CameraSetAngleFromConfig();
+        ev::CameraSetDistanceFromConfig();
+        ev::TimeWait(500);
+        goto l1;
+    }
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV2_主人公");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    label l1;
+    ev::FlagSet("ピックアップ主人公");
+}
+
+callback[Event.Pick](CORRIN_F, 0, "IsPick1") {
+    if (ev::TurnGet() < 2) {
+        ev::CameraSetAngle(-40);
+        ev::CameraSetDistanceFromNear();
+        ev::Talk("MID_A000_EV_主人公");
+        ev::CameraSetAngleFromConfig();
+        ev::CameraSetDistanceFromConfig();
+        ev::TimeWait(500);
+        goto l1;
+    }
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV2_主人公");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    label l1;
+    ev::FlagSet("ピックアップ主人公");
+}
+
+def ev::IsPick2() {
+    return !ev::FlagGet("ピックアップヒノカ");
+}
+
+callback[Event.Pick]("PID_A000_ヒノカ", 2, "IsPick2") {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV_ヒノカ");
+    ev::FlagSet("ピックアップヒノカ");
+}
+
+callback[Event.Pick]("PID_A000_ヒノカ", 0, "IsPick2") {
+    if (ev::UnitGetByPID("PID_A000_ランサー増援")) {
+        ev::CameraSetAngle(-40);
+        ev::CameraSetDistanceFromNear();
+        ev::Talk("MID_A000_EV2_ヒノカ_A");
+        ev::CameraSetAngleFromConfig();
+        ev::CameraSetDistanceFromConfig();
+        ev::TimeWait(500);
+        goto l1;
+    }
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV2_ヒノカ_B");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    label l1;
+    ev::FlagSet("ピックアップヒノカ");
+}
+
+def ev::IsPick3() {
+    return !ev::FlagGet("ピックアップタクミ");
+}
+
+callback[Event.Pick]("PID_A000_タクミ", 2, "IsPick3") {
+    ev::Talk("MID_A000_EV_タクミ");
+    ev::FlagSet("ピックアップタクミ");
+}
+
+callback[Event.Pick]("PID_A000_タクミ", 0, "IsPick3") {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV2_タクミ_A");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+    ev::TutorialShow("TUTID_戦闘（間接）");
+    ev::FlagSet("ピックアップタクミ");
+}
+
+def ev::IsPick4() {
+    return !ev::FlagGet("ピックアップカミラ");
+}
+
+callback[Event.Pick]("PID_A000_カミラ", 1, "IsPick4") {
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_EV_ENEMY_1");
+    ev::FlagSet("ピックアップカミラ");
+}
+
+def ev::IsPick5() {
+    return !ev::FlagGet("ピックアップサクラ");
+}
+
+callback[Event.Pick]("PID_A000_サクラ", 2, "IsPick5") {
+    ev::Talk("MID_A000_EV_サクラ");
+    ev::FlagSet("ピックアップサクラ");
+    ev::CameraSetAngleFromConfig();
+    ev::CameraSetDistanceFromConfig();
+    ev::TimeWait(500);
+}
+
+callback[Event.BattleTalk]("PID_A000_ボス", 1, "PID_A000_リョウマ", -1, 1, "戦闘会話") {
+    ev::Talk("MID_A000_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die]("PID_A000_ボス", 1, "", -1) {
+    ev::Talk("MID_A000_BOSS_DIE1");
+}
+
+callback[Event.MapComplete]() {
+    ev::TutorialSetFlag("TUTID_行動の交代");
+    ev::TutorialSetFlag("TUTID_戦闘");
+    ev::TutorialSetFlag("TUTID_戦闘（間接）");
+    if (ev::UnitGetByPID("PID_A000_ランサー増援")) {
+        ev::CameraSetAngle(-40);
+        ev::CameraSetDistanceFromNear();
+        ev::Talk("MID_A000_ED1_B");
+        goto l1;
+    }
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::Talk("MID_A000_ED1_A");
+    label l1;
+    ev::EnvSEOff(2000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MapEventEndForComplete();
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("A000_ED2");
+}
+

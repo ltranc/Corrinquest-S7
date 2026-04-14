@@ -16,6 +16,7 @@ callback[Event.ScriptLoad]() {
     ev::FlagEntry("FightCyan3");
     ev::FlagEntry("CyanProc");
     ev::VariableEntry("SeasonsMax", 8);
+    ev::FlagEntry("AegonRobinPair");
 }
 
 callback[Event.MapLoad]() {
@@ -205,6 +206,18 @@ callback[Event.TurnAfter](-1, -1, 1) {
         ev::UnitDoubleOn(v0, v1);
         ev::TimeWait(250);
         ev::FlagSet("CyanPair");
+    }
+    v0 = ev::UnitGetByPID("PID_X015_AEGON");
+    v1 = ev::UnitGetByPID("PID_X015_ROBIN");
+    if(v0 && v1 && !ev::FlagGet("AegonRobinPair")) {
+        ev::CameraSetPositionByUnit(v1);
+        ev::CameraWait();
+        ev::TimeWait(250);
+        ev::UnitMovePosition(v1, ev::UnitGetX(v0) - 1, ev::UnitGetY(v0), 0);
+        ev::TimeWait(200);
+        ev::UnitDoubleOn(v0, v1);
+        ev::TimeWait(250);
+        ev::FlagSet("AegonRobinPair");
     }
 }
 
@@ -407,12 +420,11 @@ callback[Event.Reinforce](-1, -1, 1) {
                         ev::UnitAddEquipSkill(v1, ASTRA);
                         ev::UnitAddEquipSkill(v1, POINT_BLANK_SKILL);
                     }
-                    v2 = ev::UnitGetByPID("PID_X015_HAHNEYMANN");
+                    v2 = ev::UnitGetByPID("PID_X015_AEGON");
                     if (v2) {
-                        ev::UnitAddEquipSkill(v2, HP_PLUS_5);
-                        ev::UnitAddEquipSkill(v2, DUAL_STRIKER);
-                        ev::UnitAddEquipSkill(v2, AXEFAIRE);
-                        ev::UnitSetHP(v2, ev::UnitGetMHP(v2));
+                        ev::UnitAddEquipSkill(v2, STRENGTH_PLUS_2);
+                        ev::UnitAddEquipSkill(v2, LUNGE);
+                        ev::UnitAddEquipSkill(v2, RALLY_DEFENSE);
                     }
                     if (v0) {
                         ev::CameraSetPositionByUnit(v0);
