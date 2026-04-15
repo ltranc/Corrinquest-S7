@@ -213,7 +213,7 @@ callback[Event.TurnAfter](-1, -1, 1) {
         ev::CameraSetPositionByUnit(v1);
         ev::CameraWait();
         ev::TimeWait(250);
-        ev::UnitMovePosition(v1, ev::UnitGetX(v0) - 1, ev::UnitGetY(v0), 0);
+        ev::UnitMovePosition(v1, ev::UnitGetX(v0), ev::UnitGetY(v0) - 1, 0);
         ev::TimeWait(200);
         ev::UnitDoubleOn(v0, v1);
         ev::TimeWait(250);
