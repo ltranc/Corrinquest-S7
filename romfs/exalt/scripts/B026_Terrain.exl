@@ -100,9 +100,12 @@ callback[Event.Poke](3, 23, 2, 1, 9, 50, 0, "") {
     }
     ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
     label l1;
-    anonfn0(4);
-    anonfn0(5);
-    anonfn3(10);
+    if (ev::FlagGet("増援条件2")) {
+        anonfn0(3);
+        anonfn0(4);
+        anonfn0(5);
+        anonfn3(10);
+    }
 }
 
 callback[Event.Poke](23, 23, 2, 1, 9, 50, 0, "") {
@@ -112,7 +115,10 @@ callback[Event.Poke](23, 23, 2, 1, 9, 50, 0, "") {
     }
     ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 4, 0);
     label l1;
-    anonfn0(7);
+    if (ev::FlagGet("増援条件1")) {
+        anonfn0(7);
+        anonfn0(6);
+    }
 }
 
 callback[Event.Poke](7, 25, 1, 2, 9, 50, 0, "") {
@@ -128,6 +134,13 @@ callback[Event.Poke](7, 25, 1, 2, 9, 50, 0, "") {
         ev::TrickSet(22, 19, 9, 2, 0);
     }
     ev::FlagSet("増援条件4");
+    v0 = ev::ForceUnitGetFirst(1);
+    while(v0) {
+        if(ev::AiGetBand(v0) == 9) {
+           ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
 }
 
 callback[Event.Poke](20, 25, 1, 2, 9, 50, 0, "") {
@@ -143,6 +156,13 @@ callback[Event.Poke](20, 25, 1, 2, 9, 50, 0, "") {
         ev::TrickSet(22, 19, 9, 2, 0);
     }
     ev::FlagSet("増援条件6");
+    v0 = ev::ForceUnitGetFirst(1);
+    while(v0) {
+        if(ev::AiGetBand(v0) == 9) {
+           ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+        }
+        v0 = ev::ForceUnitGetNext(v0);
+    }
 }
 
 callback[Event.Poke](13, 21, 2, 1, 9, 50, 0, "") {

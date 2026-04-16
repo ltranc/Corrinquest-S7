@@ -238,6 +238,19 @@ callback[Event.Reinforce](-1, -1, 1) {
         ev::Dispos("Reinforce03", 8);
         ev::DisposWait();
         ev::FlagSet("増援3");
+        if(!ev::FlagGet("増援条件4") || !ev::FlagGet("増援条件6")) {
+            v0 = ev::ForceUnitGetFirst(1);
+            while(v0) {
+                if(ev::AiGetBand(v0) == 9) {
+                    if(ev::ForceUnitGetCountArea(0, 1, 1, 7, 26, 1) > ev::ForceUnitGetCountArea(0, 20, 1, 26, 26, 1)) {
+                        ev::AiSetSequence(v0, 3, "AI_MV_Position", "pos(3,24)");
+                    } else {
+                        ev::AiSetSequence(v0, 3, "AI_MV_Position", "pos(24,24)");
+                    }
+                }
+                v0 = ev::ForceUnitGetNext(v0);
+            }
+        }
     }
     if (!ev::FlagGet("増援5") && ev::FlagGet("増援4")) {
         ev::Dispos("Reinforce05", 8);

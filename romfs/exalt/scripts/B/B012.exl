@@ -1,0 +1,213 @@
+include std:fe14:prelude;
+
+def ev::LocalTutorial0() {
+    return "MID_B012_DIALOG1";
+}
+
+def ev::LocalTutorial1() {
+    return "MID_B012_DIALOG2";
+}
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("戦闘会話_プレイヤー");
+    ev::FlagEntry("戦闘会話_アクア");
+    ev::FlagEntry("戦闘会話サイゾウ");
+    ev::FlagEntry("戦闘会話サイゾウ_プレイヤー");
+    ev::FlagEntry("戦闘会話サイゾウ_スズカゼ");
+    ev::FlagEntry("戦闘会話カゲロウ");
+    ev::FlagEntry("戦闘会話カゲロウ_プレイヤー");
+    ev::FlagEntry("敵増援条件");
+    ev::FlagEntry("敵増援");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::ChapterSetWinRuleEscapeHero(1);
+    ev::ChapterSetWinRuleLimitTurn(-16);
+    ev::ChapterSetTrickDragon(4);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    v0 = ev::UnitGetByPID(ELISE);
+    if (v0 && ev::UnitGetForce(v0) == 3) {
+        ev::UnitSetNeverSortie(v0, 1);
+    }
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    if (ev::DifficultyGet() <= 0) {
+        v1 = ev::UnitGetByPID("PID_B012_ボス");
+        if (v1) {
+            ev::UnitSetPrivateSkill(v1, "SPID_回避-20");
+        }
+        goto l4;
+    }
+    if (ev::DifficultyGet() <= 1) {
+        v2 = ev::UnitGetByPID("PID_B012_ボス");
+        if (v2) {
+            ev::UnitSetPrivateSkill(v2, "SPID_回避-10");
+        }
+    }
+    label l4;
+    v0 = ev::UnitGetByPID("PID_B012_槍聖");
+    if (v0) {
+        v1 = ev::UnitCreateClone(v0, 7, 1);
+        ev::UnitDoubleOn(v0, v1);
+    }
+}
+
+callback[Event.MapLoad]() {
+    v0 = ev::UnitGetByPID("PID_B012_剣聖");
+    if (v0) {
+        v1 = ev::UnitCreateClone(v0, 13, 1);
+        ev::UnitDoubleOn(v0, v1);
+    }
+}
+
+callback[Event.MapFree]() {
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::CutScene("B012_OP1");
+    ev::CutScene("B012_OP2_1");
+    ev::CutScene("B012_OP2_2");
+    ev::CutScene("B012_OP3A");
+    ev::CutScene("B012_OP3");
+}
+
+callback[Event.MapSetting]() {
+    if (ev::DifficultyGet() <= 1) {
+        ev::TrickSet(10, 11, 11, 2, 2);
+        goto l1;
+    }
+    ev::TrickSet(10, 14, 11, 2, 2);
+    label l1;
+}
+
+callback[Event.Turn](1, 1, 0) {
+    ev::SkipEscape();
+    ev::TutorialDialogMustShow("MID_B012_DIALOG1");
+    ev::TutorialDialogMustShow("MID_B012_DIALOG2");
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::FlagGet("敵増援条件") && !ev::FlagGet("敵増援")) {
+        if (ev::ForceUnitGetCountArea(0, 1, 1, 10, 28, 1) > ev::ForceUnitGetCountArea(0, 10, 1, 19, 28, 1)) {
+            ev::Dispos("Reinforce01", 8);
+            ev::DisposWait();
+            ev::Dispos("Reinforce02B", 8);
+            ev::DisposWait();
+            goto l3;
+        }
+        ev::Dispos("Reinforce01B", 8);
+        ev::DisposWait();
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        label l3;
+        v0 = ev::ForceUnitGetFirst(1);
+        while (v0) {
+            if (ev::AiGetBand(v0) == 1) {
+                ev::AiSetActive(v0, 1);
+                ev::AiSetSequence(v0, 3, "AI_MV_WeakEnemy", "");
+            }
+            v0 = ev::ForceUnitGetNext(v0);
+        }
+        ev::FlagSet("敵増援");
+    }
+}
+
+callback[Event.Area](1, 1, 19, 11, 0, "敵増援条件") {
+    ev::FlagSet("敵増援条件");
+}
+
+callback[Event.BattleTalk]("PID_B012_ボス", 1, CORRIN_M, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B012_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B012_ボス", 1, CORRIN_F, -1, 1, "戦闘会話_プレイヤー") {
+    ev::Talk("MID_B012_BT2");
+    ev::FlagSet("戦闘会話_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B012_ボス", 1, AZURA, -1, 1, "戦闘会話_アクア") {
+    ev::Talk("MID_B012_BT3");
+    ev::FlagSet("戦闘会話_アクア");
+}
+
+callback[Event.BattleTalk]("PID_B012_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B012_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.BattleTalk]("PID_B012_サイゾウ", 1, CORRIN_M, -1, 1, "戦闘会話サイゾウ_プレイヤー") {
+    ev::Talk("MID_B012_BT5");
+    ev::FlagSet("戦闘会話サイゾウ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B012_サイゾウ", 1, CORRIN_F, -1, 1, "戦闘会話サイゾウ_プレイヤー") {
+    ev::Talk("MID_B012_BT5");
+    ev::FlagSet("戦闘会話サイゾウ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B012_サイゾウ", 1, KAZE, -1, 1, "戦闘会話サイゾウ_スズカゼ") {
+    ev::Talk("MID_B012_BT6");
+    ev::FlagSet("戦闘会話サイゾウ_スズカゼ");
+}
+
+callback[Event.BattleTalk]("PID_B012_サイゾウ", 1, "", -1, 1, "戦闘会話サイゾウ") {
+    ev::Talk("MID_B012_BT4");
+    ev::FlagSet("戦闘会話サイゾウ");
+}
+
+callback[Event.BattleTalk]("PID_B012_カゲロウ", 1, CORRIN_M, -1, 1, "戦闘会話カゲロウ_プレイヤー") {
+    ev::Talk("MID_B012_BT8");
+    ev::FlagSet("戦闘会話カゲロウ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B012_カゲロウ", 1, CORRIN_F, -1, 1, "戦闘会話カゲロウ_プレイヤー") {
+    ev::Talk("MID_B012_BT8");
+    ev::FlagSet("戦闘会話カゲロウ_プレイヤー");
+}
+
+callback[Event.BattleTalk]("PID_B012_カゲロウ", 1, "", -1, 1, "戦闘会話カゲロウ") {
+    ev::Talk("MID_B012_BT7");
+    ev::FlagSet("戦闘会話カゲロウ");
+}
+
+callback[Event.Die]("PID_B012_ボス", 1, "", -1) {
+    ev::Talk("MID_B012_BOSS_DIE1");
+}
+
+callback[Event.Die]("PID_B012_サイゾウ", 1, "", -1) {
+    ev::Talk("MID_B012_BOSS_DIE2");
+}
+
+callback[Event.Die]("PID_B012_カゲロウ", 1, "", -1) {
+    ev::Talk("MID_B012_BOSS_DIE3");
+}
+
+callback[Event.GameOver]() {
+    if (ev::ChapterGetWinLoseResult() == 5) {
+        ev::BGMStop(2000);
+        ev::Talk("MID_B012_TURNOVER");
+        goto l1;
+    }
+    ev::GameOverCommon();
+    label l1;
+}
+
+callback[Event.MapComplete]() {
+    ev::BeginEventCamera();
+    ev::Talk("MID_B012_ED_リョウマ");
+    ev::FadeOutEventCamera();
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B012_ED");
+    ev::CutScene("B012_ED2");
+}
+
