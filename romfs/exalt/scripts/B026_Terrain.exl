@@ -75,7 +75,7 @@ callback[Event.Poke](19, 12, 1, 2, 9, 50, 0, "") {
 
 callback[Event.Poke](5, 19, 1, 2, 9, 50, 0, "") {
     ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
-    if (!ev::FlagGet("増援条件4") || !ev::FlagGet("増援条件6")) {
+    if (!ev::FlagGet("増援条件4") && !ev::FlagGet("増援条件6")) {
         ev::TrickSet(22, 19, 9, 4, 0);
     }
     anonfn1(4);
@@ -86,7 +86,7 @@ callback[Event.Poke](5, 19, 1, 2, 9, 50, 0, "") {
 
 callback[Event.Poke](22, 19, 1, 2, 9, 50, 0, "") {
     ev::TrickSet(ev::ArgsGetInt(0), ev::ArgsGetInt(1), ev::ArgsGetInt(4), 2, 0);
-    if (!ev::FlagGet("増援条件4") || !ev::FlagGet("増援条件6")) {
+    if (!ev::FlagGet("増援条件4") && !ev::FlagGet("増援条件6")) {
         ev::TrickSet(5, 19, 9, 4, 0);
     }
     anonfn0(7);
