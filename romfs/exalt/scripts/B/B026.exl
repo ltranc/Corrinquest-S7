@@ -238,7 +238,7 @@ callback[Event.Reinforce](-1, -1, 1) {
         ev::Dispos("Reinforce03", 8);
         ev::DisposWait();
         ev::FlagSet("増援3");
-        if(!ev::FlagGet("増援条件4") || !ev::FlagGet("増援条件6")) {
+        if(!ev::FlagGet("増援条件4") && !ev::FlagGet("増援条件6")) {
             v0 = ev::ForceUnitGetFirst(1);
             while(v0) {
                 if(ev::AiGetBand(v0) == 9) {
