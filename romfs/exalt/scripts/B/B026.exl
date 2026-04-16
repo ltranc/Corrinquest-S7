@@ -54,16 +54,7 @@ callback[Event.MapLoad]() {
     v1 = ev::UnitGetByPID("PID_B026_ガンズ");
     if (v1) {
         ev::UnitSetPrivateSkill(v1, "SPID_強制必殺回避");
-        ev::UnitSetPrivateSkill(v1, "SPID_ワープ禁止");
         ev::UnitSetMovePower(v1, 7);
-    }
-    v2 = ev::ForceUnitGetNext(v1);
-    if (v2) {
-        ev::UnitSetPrivateSkill(v2, "SPID_ワープ禁止");
-    }
-    v3 = ev::ForceUnitGetNext(v2);
-    if (v3) {
-        ev::UnitSetPrivateSkill(v3, "SPID_ワープ禁止");
     }
 }
 
@@ -143,7 +134,7 @@ def anonfn6(v0) {
 }
 
 callback[Event.Reinforce](-1, -1, 1) {
-    if (ev::FlagGet("増援3")) {
+    if (ev::FlagGet("増援3") && (ev::FlagGet("増援条件4") || ev::FlagGet("増援条件6"))) {
         ev::VariableInc("Move");
         v0 = ev::VariableGet("Move");
         match (v0) {
@@ -413,9 +404,11 @@ callback[Event.Die]("PID_B026_ボス", 1, "", -1) {
 
 callback[Event.Die]("PID_B026_ガンズ", 1, "", -1) {
     ev::Talk("MID_B026_BOSS_DIE2");
-    v0 = ev::VariableGet("Move");
-    if (v0 < 4) {
-        ev::VariableSet("Move", 4);
+    if(ev::FlagGet("増援条件4") || ev::FlagGet("増援条件6")) {
+        v0 = ev::VariableGet("Move");
+        if (v0 < 4) {
+            ev::VariableSet("Move", 4);
+        }
     }
 }
 

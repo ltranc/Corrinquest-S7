@@ -26,7 +26,6 @@ def anonfn2(v0) {
     while (v1) {
         if (ev::AiGetBand(v1) == v0) {
             ev::AiSetSequence(v1, 0, "AI_AC_AttackRange", "");
-            ev::UnitClrPrivateSkill(v1, "SPID_ワープ禁止");
         }
         v1 = ev::ForceUnitGetNext(v1);
     }
@@ -125,7 +124,7 @@ callback[Event.Poke](7, 25, 1, 2, 9, 50, 0, "") {
     label l1;
     anonfn0(8);
     anonfn2(9);
-    if (!ev::FlagGet("増援条件2")) {
+    if (ev::FlagGet("増援条件1")) {
         ev::TrickSet(22, 19, 9, 2, 0);
     }
     ev::FlagSet("増援条件4");
@@ -140,8 +139,8 @@ callback[Event.Poke](20, 25, 1, 2, 9, 50, 0, "") {
     label l1;
     anonfn0(8);
     anonfn2(9);
-    if (!ev::FlagGet("増援条件1")) {
-        ev::TrickSet(5, 19, 9, 2, 0);
+    if (ev::FlagGet("増援条件2")) {
+        ev::TrickSet(22, 19, 9, 2, 0);
     }
     ev::FlagSet("増援条件6");
 }
