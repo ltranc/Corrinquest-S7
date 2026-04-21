@@ -48,6 +48,8 @@ callback[Event.MapLoad]() {
     if(v0) {
         ev::UnitSetPrivateSkill(v0, "SPID_スキル発動禁止");
     }
+    ev::GiveSkill("PID_B027_JASPER", COUNTER, COUNTERMAGIC, SPENDTHRIFT);
+    ev::GiveSkill("PID_B027_BORP", MOVEMENT_PLUS_1, COUNTERMAGIC, SPENDTHRIFT);
 }
 
 callback[Event.MapFree]() {
