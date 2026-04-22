@@ -40,12 +40,14 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B027_KOHAKU", SEAL_SPEED, ARMORED_BLOW, 0);
     v0 = ev::UnitGetByPID("PID_B027_KOHAKU");
     if(v0) {
+        #Skl and Lck tonics
         ev::UnitSetEnhance(v0, 11);
         ev::UnitSetEnhance(v0, 13);
     }
     ev::GiveSkill("PID_B027_AUDIEJ", POISON_STRIKE, LETHALITY, 0);
     v0 = ev::UnitGetByPID("PID_B027_AUDIEJ");
     if(v0) {
+        #Cannot activate proc skills
         ev::UnitSetPrivateSkill(v0, "SPID_スキル発動禁止");
     }
     ev::GiveSkill("PID_B027_JASPER", COUNTER, COUNTERMAGIC, SPENDTHRIFT);
@@ -284,6 +286,7 @@ def ev::GiveSkill(v0, v1, v2, v3) {
     }
 }
 
+#Pairs up units
 def anonfn23(v0, v1) {
     v0 = ev::UnitGetByPID(v0);
     v1 = ev::UnitGetByPID(v1);
@@ -393,6 +396,7 @@ def ev::WitchsBrewEffect(v0) {
         if (v1 < v2) {
             v3 = ev::RandomGetGame() % 8;
             match (v3) {
+                #HP
                 0 -> {
                     if (!ev::UnitTstEnhance(v0, 8)) {
                         ev::UnitSetEnhance(v0, 8);
@@ -402,36 +406,43 @@ def ev::WitchsBrewEffect(v0) {
                         }
                     }
                 }
+                #Str
                 1 -> {
                     if (!ev::UnitTstEnhance(v0, 9)) {
                         ev::UnitSetEnhance(v0, 9);
                     }
                 }
+                #Mag
                 2 -> {
                     if (!ev::UnitTstEnhance(v0, 10)) {
                         ev::UnitSetEnhance(v0, 10);
                     }
                 }
+                #Skl
                 3 -> {
                     if (!ev::UnitTstEnhance(v0, 11)) {
                         ev::UnitSetEnhance(v0, 11);
                     }
                 }
+                #Spd
                 4 -> {
                     if (!ev::UnitTstEnhance(v0, 12)) {
                         ev::UnitSetEnhance(v0, 12);
                     }
                 }
+                #Lck
                 5 -> {
                     if (!ev::UnitTstEnhance(v0, 13)) {
                         ev::UnitSetEnhance(v0, 13);
                     }
                 }
+                #Def
                 6 -> {
                     if (!ev::UnitTstEnhance(v0, 14)) {
                         ev::UnitSetEnhance(v0, 14);
                     }
                 }
+                #Res
                 7 -> {
                     if (!ev::UnitTstEnhance(v0, 15)) {
                         ev::UnitSetEnhance(v0, 15);
@@ -442,6 +453,7 @@ def ev::WitchsBrewEffect(v0) {
     }
 }
 
+#Pairs up units
 def anonfn28(v0, v1, v2, v3) {
     v4 = ev::UnitGetByPosition(v0, v1);
     v5 = ev::UnitGetByPosition(v2, v3);

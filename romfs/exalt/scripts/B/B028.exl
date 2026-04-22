@@ -25,7 +25,7 @@ callback[Event.MapLoad]() {
     }
     ev::Dispos("Placeholders", 4);
     #SUREFOOTED is Resolve!
-    #Rifled Barrel is Fortify Spectrum!
+    #RIFLED_BARREL is Fortify Spectrum!
     #ev::GiveSkill("PID_B028_DUSK", POISON_STRIKE, DUELISTS_BLOW, INEVITABLE_END);
     ev::GiveSkill("PID_B028_DUSK", POISON_STRIKE, DUELISTS_BLOW, 0);
     ev::GiveSkill("PID_B028_CAMILLANT", SAVAGE_BLOW, TRAMPLE, 0);
@@ -81,6 +81,7 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_HARBEEZ", POTENT_POTION, 0, 0);
     v0 = ev::UnitGetByPID("PID_B028_HARBEEZ");
     if(v0) {
+        #Gives HP tonic
         ev::UnitSetEnhance(v0, 8);
         ev::UnitSetHP(v0, ev::UnitGetHP(v0) + 7);
     }
