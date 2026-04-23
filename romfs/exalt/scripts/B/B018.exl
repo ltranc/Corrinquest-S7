@@ -1,0 +1,254 @@
+include std:fe14:prelude;
+
+callback[Event.ScriptLoad]() {
+    ev::FlagEntry("戦闘会話");
+    ev::FlagEntry("敵増援条件1");
+    ev::FlagEntry("敵増援1");
+    ev::FlagEntry("敵増援条件2");
+    ev::FlagEntry("敵増援2");
+}
+
+callback[Event.MapLoad]() {
+    ev::ChapterSetWinRuleDestroyBoss(1);
+    ev::ChapterSetWinRuleLimitTurn(-20);
+    ev::PersonLoad(ev::ChapterGetName());
+    ev::TerrainLoad(ev::ChapterGetName());
+    ev::DisposLoad(ev::ChapterGetName());
+    ev::Dispos("Player", 4);
+    ev::Dispos("Enemy", 4);
+    ev::Dispos("Ally", 4);
+    ev::ForceUnitSetDontAttackForce(1, 2);
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitSetPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    v0 = ev::ForceUnitGetFirst(3);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitSetPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+}
+
+callback[Event.MapFree]() {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    v0 = ev::ForceUnitGetFirst(3);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    ev::DisposFree();
+    ev::TerrainFree();
+    ev::PersonFree(ev::ChapterGetName());
+}
+
+callback[Event.MapOpening]() {
+    ev::MovieEnablePauseAtEnd();
+    ev::BGMPlay("STRM_EVT_AMB_A2", 0);
+    ev::MoviePlayNoBind("izumo");
+    ev::MovieWaitUntilPaused();
+    ev::Talk("MID_B018_OP1");
+    ev::BGMStop(2000);
+    ev::EnvSEOff(1000);
+    ev::FadeOut(3, 0, 1000);
+    ev::FadeWait();
+    ev::MovieStop();
+    ev::MovieDisablePauseAtEnd();
+    ev::TimeWait(250);
+    ev::CutScene("B018_OP2");
+    ev::CutScene("B018_OP3");
+}
+
+callback[Event.Turn](1, 1, 0) {
+    v0 = ev::ForceUnitGetFirst(0);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+    v0 = ev::ForceUnitGetFirst(3);
+    while (v0) {
+        v1 = ev::ForceUnitGetNext(v0);
+        ev::UnitClrPrivateSkill(v0, "SPID_ダブル禁止");
+        v0 = v1;
+    }
+}
+
+def anonfn5(v0) {
+    v1 = ev::ForceUnitGetFirst(1);
+    v2 = 0;
+    while (v1) {
+        if (ev::AiGetBand(v1) == v0) {
+            if (ev::AiGetActive(v1)) {
+                return 1;
+            }
+            v2++;
+        }
+        v1 = ev::ForceUnitGetNext(v1);
+    }
+    return v2 == 0;
+}
+
+callback[Event.Reinforce](-1, -1, 1) {
+    if (ev::DifficultyGet() >= 2) {
+        if (!ev::FlagGet("敵増援条件1") && anonfn5(1)) {
+            ev::FlagSet("敵増援条件1");
+        }
+    }
+    if (ev::FlagGet("敵増援条件1") && !ev::FlagGet("敵増援1")) {
+        ev::Dispos("Reinforce01", 8);
+        ev::DisposWait();
+        ev::ForceUnitSetDontAttackForce(1, 2);
+        ev::FlagSet("敵増援1");
+    }
+    if (ev::FlagGet("敵増援条件2") && !ev::FlagGet("敵増援2")) {
+        v0 = ev::UnitGetByPosition(4, 14);
+        v1 = ev::UnitGetByPosition(4, 15);
+        if (v0 && ev::UnitGetForce(v0) == 0) {
+            ev::Dispos("Reinforce02C", 8);
+            ev::DisposWait();
+            goto l8;
+        }
+        if (v1 && ev::UnitGetForce(v1) == 0) {
+            ev::Dispos("Reinforce02B", 8);
+            ev::DisposWait();
+            goto l8;
+        }
+        ev::Dispos("Reinforce02", 8);
+        ev::DisposWait();
+        label l8;
+        v0 = ev::UnitGetByPosition(22, 14);
+        v1 = ev::UnitGetByPosition(22, 15);
+        if (v0 && ev::UnitGetForce(v0) == 0) {
+            ev::Dispos("Reinforce03C", 8);
+            ev::DisposWait();
+            goto l13;
+        }
+        if (v1 && ev::UnitGetForce(v1) == 0) {
+            ev::Dispos("Reinforce03B", 8);
+            ev::DisposWait();
+            goto l13;
+        }
+        ev::Dispos("Reinforce03", 8);
+        ev::DisposWait();
+        label l13;
+        ev::ForceUnitSetDontAttackForce(1, 2);
+        ev::FlagSet("敵増援2");
+    }
+}
+
+callback[Event.Area](11, 1, 15, 1, 0, "敵増援条件1") {
+    ev::FlagSet("敵増援条件1");
+}
+
+callback[Event.Area](12, 2, 14, 2, 0, "敵増援条件1") {
+    ev::FlagSet("敵増援条件1");
+}
+
+callback[Event.Area](13, 3, 13, 3, 0, "敵増援条件1") {
+    ev::FlagSet("敵増援条件1");
+}
+
+callback[Event.Area](9, 19, 9, 19, 0, "敵増援条件2") {
+    ev::FlagSet("敵増援条件2");
+}
+
+callback[Event.Area](8, 20, 15, 20, 0, "敵増援条件2") {
+    ev::FlagSet("敵増援条件2");
+}
+
+callback[Event.Area](9, 21, 14, 21, 0, "敵増援条件2") {
+    ev::FlagSet("敵増援条件2");
+}
+
+callback[Event.Area](13, 22, 13, 22, 0, "敵増援条件2") {
+    ev::FlagSet("敵増援条件2");
+}
+
+def ev::IsRescue() {
+    if (ev::TrickTst(13, 19, 9, 2)) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B018_ボス2")) {
+        return 0;
+    }
+    if (ev::UnitGetByPID("PID_B018_ボス4")) {
+        return 0;
+    }
+    return 1;
+}
+
+callback[Event.Area](-1, -1, -1, -1, -1, "IsRescue") {
+    v0 = 13;
+    v1 = 19;
+    ev::CameraSetPosition(v0, v1);
+    ev::CameraWait();
+    ev::TrickSet(v0, v1, 9, 2, 0);
+}
+
+callback[Event.BattleTalk]("PID_B018_ボス", 1, "", -1, 1, "戦闘会話") {
+    ev::Talk("MID_B018_BT1");
+    ev::FlagSet("戦闘会話");
+}
+
+callback[Event.Die]("PID_B018_ボス", 1, "", -1) {
+    ev::Talk("MID_B018_BOSS_DIE1");
+}
+
+callback[Event.GameOver]() {
+    if (ev::ChapterGetWinLoseResult() == 5) {
+        ev::BGMStop(2000);
+        ev::Talk("MID_B018_TURNOVER");
+        goto l1;
+    }
+    ev::GameOverCommon();
+    label l1;
+}
+
+callback[Event.MapComplete]() {
+    ev::EnvSEOff(250);
+    ev::FadeOut(3, 0, 250);
+    ev::FadeWait();
+    ev::MapEventBeginForComplete();
+    ev::CameraSetPosition(13, 2);
+    ev::CameraSetAngle(-40);
+    ev::CameraSetDistanceFromNear();
+    ev::CameraInstant();
+    ev::Dispos("Event11", 2052);
+    ev::BGMPlay("STRM_EVT_AMB_B1_2", 50);
+    ev::EnvSEOn(250);
+    ev::FadeIn(3, 0, 250);
+    ev::FadeWait();
+    ev::TimeWait(500);
+    ev::Talk("MID_B018_ED_1");
+    v0 = ev::UnitGetByPID(LEO);
+    ev::UnitMovePosition(v0, 13, 2, 0);
+    ev::UnitMoveWait();
+    ev::Talk("MID_B018_ED_2");
+    v1 = ev::UnitGetByPID("PID_B018_EDイベント用ゾーラ");
+    v2 = [65, 0];
+    ev::Battle(v0, 0, v1, 0, &v2[0]);
+    ev::Talk("MID_B018_ED_3");
+    ev::UnitMoveAlphaDeadOut(v1);
+    ev::UnitMoveWait();
+    ev::UnitExpulsionByIndex(v1);
+    ev::Talk("MID_B018_ED_4");
+    ev::BGMStop(2000);
+    ev::EnvSEOff(2000);
+    ev::FadeOut(3, 0, 2000);
+    ev::FadeWait();
+    ev::MapEventEndForComplete();
+}
+
+callback[Event.MapEnding]() {
+    ev::CutScene("B018_ED2");
+}
+

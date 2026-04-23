@@ -44,7 +44,7 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_ELIZABETH", VANTAGE, 0, 0);
     #ev::GiveSkill("PID_B028_SHATTER", ELBOW_ROOM, DEFENDER, 0);
     ev::GiveSkill("PID_B028_SHATTER", ELBOW_ROOM, 0, 0);
-    ev::GiveSkill("PID_B028_GREY", STRONG_RIPOSTE, INSPIRATION, 0);
+    ev::GiveSkill("PID_B028_GREY", STRONG_RIPOSTE, INSPIRATION, MOVEMENT_PLUS_1);
     ev::GiveSkill("PID_B028_KAZENUN", MIRACLE, RENEWAL, STAFF_SAVANT);
     #ev::GiveSkill("PID_B028_BUGGED", AXEBREAKER, DARTING_BLOW, 0);
     ev::GiveSkill("PID_B028_BUGGED", AXEBREAKER, 0, 0);
@@ -59,8 +59,8 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_DONQUIXOTE", AEGIS, INSPIRATION, 0);
     #ev::GiveSkill("PID_B028_CHOPPED", POISON_STRIKE, DUELISTS_BLOW, INEVITABLE_END);
     ev::GiveSkill("PID_B028_CHOPPED", POISON_STRIKE, DUELISTS_BLOW, 0);
-    #ev::GiveSkill("PID_B028_KAGEAKI", SAVAGE_BLOW, TRAMPLE, 0);
-    ev::GiveSkill("PID_B028_KAGEAKI", TRAMPLE, 0, 0);
+    #ev::GiveSkill("PID_B028_LIDUS", REND_HEAVEN, VANTAGE, 0);
+    ev::GiveSkill("PID_B028_LIDUS", VANTAGE, 0, 0);
     ev::GiveSkill("PID_B028_DORMOUSE", MIRACLE, STAFF_SAVANT, 0);
     ev::GiveSkill("PID_B028_HUGE", WARY_FIGHTER, PAVISE, 0);
     #ev::GiveSkill("PID_B028_EVILTACO", DANCING_BLADE, SUREFOOTED, 0);
@@ -69,15 +69,19 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_INFERNO", LUCKY_SEVEN, 0, 0);
     #ev::GiveSkill("PID_B028_KARA", HEARTSEEKER, WARDING_BLOW, 0);
     ev::GiveSkill("PID_B028_KARA", WARDING_BLOW, 0, 0);
-    ev::GiveSkill("PID_B028_LYNN", MIRACLE, RENEWAL, STAFF_SAVANT);
     ev::GiveSkill("PID_B028_TSUKI", GENTILHOMME, STAFF_SAVANT, AEGIS);
-    #ev::GiveSkill("PID_B028_NIKITA", TOMEFAIRE, VANTAGE, 0);
-    ev::GiveSkill("PID_B028_NIKITA", TOMEFAIRE, 0, 0);
     #ev::GiveSkill("PID_B028_TORSTEN", COUNTERMAGIC, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B028_TORSTEN", COUNTERMAGIC, 0, 0);
+    #ev::GiveSkill("PID_B028_LAINE", POTENT_POTION, SOLIDARITY, 0);
+    ev::GiveSkill("PID_B028_LAINE", POTENT_POTION, 0, 0);
+    v0 = ev::UnitGetByPID("PID_B028_LAINE");
+    if(v0) {
+        ev::UnitSetEnhance(v0, 11);
+    }
     ev::GiveSkill("PID_B028_KIWI", RENEWAL, COUNTER, STAFF_SAVANT);
     #ev::GiveSkill("PID_B028_CHADICUS", HEAVY_BLADE, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B028_CHADICUS", ARMORED_BLOW, 0, 0);
+    #ev::GiveSkill("PID_B028_HARBEEZ", POTENT_POTION, SOLIDARITY, 0);
     ev::GiveSkill("PID_B028_HARBEEZ", POTENT_POTION, 0, 0);
     v0 = ev::UnitGetByPID("PID_B028_HARBEEZ");
     if(v0) {
@@ -86,7 +90,18 @@ callback[Event.MapLoad]() {
         ev::UnitSetHP(v0, ev::UnitGetHP(v0) + 7);
     }
     ev::GiveSkill("PID_B028_POTEMKIN", WARY_FIGHTER, PAVISE, 0);
-    ev::GiveSkill("PID_B028_YURI", MALEFIC_AURA, SAVAGE_BLOW, 0);
+    ev::GiveSkill("PID_B028_TAO", RENEWAL, COUNTER, STAFF_SAVANT);
+    ev::GiveSkill("PID_B028_BASTION", SAVAGE_BLOW, TRAMPLE, 0);
+    ev::Dispos("LolyuriKrazazel", 4);
+    ev::GiveSkill("PID_B028_YURI", HEAVY_BLADE, COUNTERMAGIC, DEFENDER);
+    ev::GiveSkill("PID_B028_HERA", HEARTSEEKER, MALEFIC_AURA, IGNIS);
+    ev::ForceUnitSetDontAttackForce(1, 2);
+    ev::GiveSkill("PID_B028_LEGION", WARY_FIGHTER, PAVISE, 0);
+    ev::GiveSkill("PID_B028_VYK", EVENHANDED, AGGRESSOR, 0);
+    ev::GiveSkill("PID_B028_SOTER", WARY_FIGHTER, PAVISE, 0);
+    ev::GiveSkill("PID_B028_MAY", HEAVY_BLADE, DEATH_BLOW, 0);
+    ev::GiveSkill("PID_B028_KIYOME", RALLY_RESISTANCE, INSPIRATION, 0);
+    ev::GiveSkill("PID_B028_GAASHAMA", DARTING_BLOW, QUICK_DRAW, 0);
 }
 
 callback[Event.MapFree]() {
@@ -561,8 +576,12 @@ callback[Event.Reinforce](-1, -1, 1) {
 callback[Event.TurnAfter](1, 4, 1) {
     if (ev::FlagGet("SidesPairUp") && !ev::FlagGet("Paired")) {
         ev::SkipDisable();
-        anonfn30(3, 23, 3, 22);
+        #anonfn30(3, 23, 3, 22);
+        #anonfn30(4, 23, 4, 22);
         anonfn30(4, 23, 4, 22);
+        anonfn30(5, 23, 5, 22);
+        #anonfn30(26, 23, 27, 23);
+        #anonfn30(26, 24, 27, 24);
         anonfn30(25, 23, 26, 23);
         anonfn30(25, 24, 26, 24);
         ev::SkipEnable();
@@ -570,10 +589,14 @@ callback[Event.TurnAfter](1, 4, 1) {
     }
     if (ev::TurnGet() == 4 && !ev::FlagGet("Paired")) {
         ev::SkipDisable();
-        anonfn30(3, 23, 3, 22);
+        #anonfn30(3, 23, 3, 22);
+        #anonfn30(4, 23, 4, 22);
         anonfn30(4, 23, 4, 22);
-        anonfn30(26, 23, 27, 23);
-        anonfn30(26, 24, 27, 24);
+        anonfn30(5, 23, 5, 22);
+        #anonfn30(26, 23, 27, 23);
+        #anonfn30(26, 24, 27, 24);
+        anonfn30(25, 23, 26, 23);
+        anonfn30(25, 24, 26, 24);
         ev::SkipEnable();
         ev::FlagSet("Paired");
     }
@@ -618,15 +641,17 @@ callback[Event.Reinforce](6, 6, 1) {
     ev::Dispos("Reinforce4", 1032);
     ev::DisposWait();
     ev::GiveSkill("PID_B028_DARKASSA", HEARTSEEKER, MALEFIC_AURA, 0);
-    ev::GiveSkill("PID_B028_LIDUS", REND_HEAVEN, QUIXOTIC, 0);
+    ev::GiveSkill("PID_B028_KAGEAKI", LUNGE, TRAMPLE, 0);
     ev::GiveSkill("PID_B028_LUTONADA", GOOD_FORTUNE, WARY_FIGHTER, 0);
     ev::GiveSkill("PID_B028_BROLAN", HEAVY_BLADE, DEATH_BLOW, 0);
     ev::GiveSkill("PID_B028_FORSYTH", LUCKTAKER_SKILL, LIFE_AND_DEATH, 0);
     ev::GiveSkill("PID_B028_CELLINIA", DARTING_BLOW, SAVAGE_BLOW, 0);
+    ev::GiveSkill("PID_B028_LYNN", RALLY_LUCK, MIRACLE, 0);
     ev::GiveSkill("PID_B028_MOABIUS", VANTAGE, LIFE_AND_DEATH, 0);
     ev::GiveSkill("PID_B028_LUNA", INSPIRATION, DEATH_BLOW, 0);
     ev::GiveSkill("PID_B028_SELENA", VANTAGE, AWAKENING, 0);
     ev::GiveSkill("PID_B028_IRA", AETHER, SUREFOOTED, 0);
+    ev::GiveSkill("PID_B028_NIKITA", QUICK_DRAW, DARTING_BLOW, 0);
     ev::GiveSkill("PID_B028_CHEW", DUELISTS_BLOW, VANTAGE, 0);
 }
 
@@ -636,11 +661,6 @@ callback[Event.Reinforce](7, 7, 1) {
     ev::GiveSkill("PID_B028_KENNY", DEMOISELLE, INSPIRATION, 0);
     ev::GiveSkill("PID_B028_LUCKZO", PROFITEER, SPENDTHRIFT, 0);
     ev::GiveSkill("PID_B028_COLGATE", REND_HEAVEN, QUIXOTIC, 0);
-    ev::GiveSkill("PID_B028_LAINE", POTENT_POTION, SOLIDARITY, 0);
-    v0 = ev::UnitGetByPID("PID_B028_LAINE");
-    if(v0) {
-        ev::UnitSetEnhance(v0, 11);
-    }
     ev::GiveSkill("PID_B028_WILD", LUCKY_SEVEN, PASS, 0);
     ev::GiveSkill("PID_B028_ROANO", STRONG_RIPOSTE, SOL, 0);
     ev::Dispos("Reinforce6", 1032);
@@ -740,13 +760,20 @@ callback[Event.TurnAfter](-1, -1, 1) {
     ev::ResolveEffect("PID_B028_LUCY");
     ev::ResolveEffect("PID_B028_IRA");
     ev::ResolveEffect("PID_B028_BUTTHEAD");
+    ev::ResolveEffect("PID_B028_MAY");
+#    ev::ResolveEffect("PID_B028_ELS2PIDO");
+#    ev::ResolveEffect("PID_B028_LUCIUS");
+    ev::ResolveEffect("PID_B028_GAASHAMA");
     ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
 }
 
 callback[Event.Reinforce](1, 7, 1) {
     ev::WitchsBrewEffect("PID_B028_LUCKZO");
     ev::WitchsBrewEffect("PID_B028_KOHAKU");
+#    ev::WitchsBrewEffect("PID_B028_AURIA");
     ev::ProfiteerEffect("PID_B028_LUCKZO");
+#    ev::ProfiteerEffect("PID_B028_SAGE");
+#    ev::ProfiteerEffect("PID_B028_SKASAHA");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "") {
@@ -755,11 +782,18 @@ callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ShadowgiftEffect("PID_B028_ELIZABETH");
     ev::ShadowgiftEffect("PID_B028_MINIDURIN");
     ev::ShadowgiftEffect("PID_B028_LIDUS");
+#    ev::ShadowgiftEffect("PID_B028_PHTHALO");
+#    ev::ShadowgiftEffect("PID_B028_FUCKMAGIC");
+#    ev::ShadowgiftEffect("PID_B028_KALLIAN");
     ev::ResolveEffect("PID_B028_GAMBLOR");
     ev::ResolveEffect("PID_B028_ZEV");
     ev::ResolveEffect("PID_B028_LUCY");
     ev::ResolveEffect("PID_B028_IRA");
     ev::ResolveEffect("PID_B028_BUTTHEAD");
+    ev::ResolveEffect("PID_B028_MAY");
+#    ev::ResolveEffect("PID_B028_ELS2PIDO");
+#    ev::ResolveEffect("PID_B028_LUCIUS");
+    ev::ResolveEffect("PID_B028_GAASHAMA");
 }
 
 callback[Event.Area](12, 15, 18, 30, 0, "SidesPairUp") {

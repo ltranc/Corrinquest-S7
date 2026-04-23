@@ -23,19 +23,22 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B027_PAPERZAC", AGGRESSOR, SPENDTHRIFT, COUNTERMAGIC);
     ev::GiveSkill("PID_B027_LARGO", SEAL_STRENGTH, CERTAIN_BLOW, 0);
     ev::GiveSkill("PID_B027_LLAMA", QUICK_DRAW, ODD_SHAPED, 0);
+    v0 = ev::UnitGetByPID("PID_B027_LLAMA");
+    if(v0) {
+        ev::UnitSetEnhance(v0, 12);
+        ev::UnitSetEnhance(v0, 42);
+    }
     ev::GiveSkill("PID_B027_LUCIUS", WARDING_BLOW, SEAL_DEFENSE, 0);
     ev::GiveSkill("PID_B027_BANANA", SEAL_STRENGTH, DUELISTS_BLOW, 0);
     ev::GiveSkill("PID_B027_ANNA", SPENDTHRIFT, CERTAIN_BLOW, WARY_FIGHTER);
     ev::GiveSkill("PID_B027_2B", SEAL_DEFENSE, SEAL_SPEED, 0);
-    ev::GiveSkill("PID_B027_LOTTE", GOOD_FORTUNE, SPENDTHRIFT, COUNTERMAGIC);
-    ev::GiveSkill("PID_B027_NHADLEEH", QUICK_DRAW, ODD_SHAPED, 0);
+    ev::GiveSkill("PID_B027_LOTTE", MOVEMENT_PLUS_1, SPENDTHRIFT, COUNTERMAGIC);
     ev::GiveSkill("PID_B027_DENJI", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_FON", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_SILVER", HEARTSEEKER, VANTAGE, 0);
     ev::GiveSkill("PID_B027_DITO", WARDING_BLOW, SEAL_DEFENSE, 0);
     ev::GiveSkill("PID_B027_LTRANCMADEME", POISON_STRIKE, GRISLY_WOUND, 0);
     ev::GiveSkill("PID_B027_CEDAROIL", STRONG_RIPOSTE, DANCING_BLADE, COUNTERMAGIC);
-    ev::GiveSkill("PID_B027_HERA", HEARTSEEKER, VANTAGE, 0);
     ev::GiveSkill("PID_B027_CHEW", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_KOHAKU", SEAL_SPEED, ARMORED_BLOW, 0);
     v0 = ev::UnitGetByPID("PID_B027_KOHAKU");
@@ -50,8 +53,11 @@ callback[Event.MapLoad]() {
         #Cannot activate proc skills
         ev::UnitSetPrivateSkill(v0, "SPID_スキル発動禁止");
     }
-    ev::GiveSkill("PID_B027_JASPER", COUNTER, COUNTERMAGIC, SPENDTHRIFT);
-    ev::GiveSkill("PID_B027_BORP", MOVEMENT_PLUS_1, COUNTERMAGIC, SPENDTHRIFT);
+    ev::GiveSkill("PID_B027_JASPER", COUNTER, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_BORP", MOVEMENT_PLUS_1, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_YOUTA", LIFE_AND_DEATH, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_SNOWY", VENGEANCE, VANTAGE, 0);
+    ev::GiveSkill("PID_B027_NOCKING", QUICK_DRAW, ODD_SHAPED, 0);
 }
 
 callback[Event.MapFree]() {
@@ -240,7 +246,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen4") {
 }
 
 def ev::IsDoorOpen5() {
-    return anonfn8(28, 15, "PID_B027_LLAMA", "PID_B027_NHADLEEH", "PID_B027_弓聖");
+    return anonfn8(28, 15, "PID_B027_LLAMA", "PID_B027_NOCKING", "PID_B027_弓聖");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen5") {
@@ -256,7 +262,9 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen6") {
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "") {
-    ev::ResolveEffect("PID_B027_GAMBLOR");
+#    ev::ShadowgiftEffect("PID_B027_FUCKMAGIC");
+#    ev::ShadowgiftEffect("PID_B027_KALLIAN");
+#    ev::ResolveEffect("PID_B027_GAMBLOR");
     ev::ResolveEffect("PID_B027_LUCIUS");
 }
 

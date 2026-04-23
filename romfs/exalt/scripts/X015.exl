@@ -525,7 +525,7 @@ callback[Event.Reinforce](-1, -1, 1) {
                         ev::UnitAddEquipSkill(v1, HP_PLUS_5);
                         ev::UnitAddEquipSkill(v1, RALLY_STRENGTH);
                         ev::UnitAddEquipSkill(v1, AXEFAIRE);
-                        ev::UnitSetHP(v1, ev::UnitGetMHP(v2));
+                        ev::UnitSetHP(v1, ev::UnitGetMHP(v1));
                     }
                     v2 = ev::UnitGetByPID("PID_X015_KURAMA");
                     if (v2) {
