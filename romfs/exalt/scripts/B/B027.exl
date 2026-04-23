@@ -30,16 +30,24 @@ callback[Event.MapLoad]() {
     }
     ev::GiveSkill("PID_B027_LUCIUS", WARDING_BLOW, SEAL_DEFENSE, 0);
     ev::GiveSkill("PID_B027_BANANA", SEAL_STRENGTH, DUELISTS_BLOW, 0);
+    ev::GiveSkill("PID_B027_OCTOPUSVIO", REND_HEAVEN, QUIXOTIC, SPENDTHRIFT);
     ev::GiveSkill("PID_B027_ANNA", SPENDTHRIFT, CERTAIN_BLOW, WARY_FIGHTER);
     ev::GiveSkill("PID_B027_2B", SEAL_DEFENSE, SEAL_SPEED, 0);
-    ev::GiveSkill("PID_B027_LOTTE", MOVEMENT_PLUS_1, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_LOTTE", GOOD_FORTUNE, DARTING_BLOW, SPENDTHRIFT);
     ev::GiveSkill("PID_B027_DENJI", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_FON", SEAL_SPEED, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B027_SILVER", HEARTSEEKER, VANTAGE, 0);
     ev::GiveSkill("PID_B027_DITO", WARDING_BLOW, SEAL_DEFENSE, 0);
     ev::GiveSkill("PID_B027_LTRANCMADEME", POISON_STRIKE, GRISLY_WOUND, 0);
     ev::GiveSkill("PID_B027_CEDAROIL", STRONG_RIPOSTE, DANCING_BLADE, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_FORSYTH", LIFE_AND_DEATH, VANTAGE, SPENDTHRIFT);
     ev::GiveSkill("PID_B027_CHEW", SEAL_SPEED, ARMORED_BLOW, 0);
+    ev::GiveSkill("PID_B027_LUCKZO", LUCKTAKER_SKILL, PROFITEER, SPENDTHRIFT);
+    v0 = ev::UnitGetByPID("PID_B027_LUCKZO");
+    if(v0) {
+        #Lck tonic
+        ev::UnitSetEnhance(v0, 13);
+    }
     ev::GiveSkill("PID_B027_KOHAKU", SEAL_SPEED, ARMORED_BLOW, 0);
     v0 = ev::UnitGetByPID("PID_B027_KOHAKU");
     if(v0) {
@@ -54,7 +62,7 @@ callback[Event.MapLoad]() {
         ev::UnitSetPrivateSkill(v0, "SPID_スキル発動禁止");
     }
     ev::GiveSkill("PID_B027_JASPER", COUNTER, SPENDTHRIFT, COUNTERMAGIC);
-    ev::GiveSkill("PID_B027_BORP", MOVEMENT_PLUS_1, SPENDTHRIFT, COUNTERMAGIC);
+    ev::GiveSkill("PID_B027_BORP", PAVISE, DARTING_BLOW, SPENDTHRIFT);
     ev::GiveSkill("PID_B027_YOUTA", LIFE_AND_DEATH, SPENDTHRIFT, COUNTERMAGIC);
     ev::GiveSkill("PID_B027_SNOWY", VENGEANCE, VANTAGE, 0);
     ev::GiveSkill("PID_B027_NOCKING", QUICK_DRAW, ODD_SHAPED, 0);
@@ -268,8 +276,19 @@ callback[Event.Area](-1, -1, -1, -1, -1, "") {
     ev::ResolveEffect("PID_B027_LUCIUS");
 }
 
+callback[Event.TurnAfter](-1, -1, 1) {
+#    ev::ResolveEffect("PID_B028_GAMBLOR");
+    ev::ResolveEffect("PID_B028_LUCIUS");
+#    ev::FortifySpectrumEffect("PID_B028_PLACEHOLDER");
+}
+
 callback[Event.Reinforce](1, 7, 1) {
     ev::WitchsBrewEffect("PID_B027_KOHAKU");
+    ev::WitchsBrewEffect("PID_B027_LUCKZO");
+#    ev::WitchsBrewEffect("PID_B028_AURIA");
+    ev::ProfiteerEffect("PID_B028_LUCKZO");
+#    ev::ProfiteerEffect("PID_B028_SAGE");
+#    ev::ProfiteerEffect("PID_B028_SKASAHA");
 }
 
 def ev::GiveSkill(v0, v1, v2, v3) {
