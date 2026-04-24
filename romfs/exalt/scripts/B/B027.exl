@@ -198,7 +198,7 @@ callback[Event.TurnAfter](1, 1, 1) {
     ev::SkipEnable();
 }
 
-callback[Event.Turn](6, 6, 0) {
+callback[Event.Turn](5, 5, 1) {
     v0 = ev::UnitGetByPID("PID_B027_AUDIEJ");
     if(v0) {
         ev::UnitClrPrivateSkill(v0, "SPID_スキル発動禁止");
@@ -262,7 +262,7 @@ callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen5") {
 }
 
 def ev::IsDoorOpen6() {
-    return anonfn8(29, 21, "PID_B027_SILVER", "PID_B027_HERA", "PID_B027_ソーサラー");
+    return anonfn8(29, 21, "PID_B027_SILVER", "PID_B027_SNOWY", "PID_B027_ソーサラー");
 }
 
 callback[Event.Area](-1, -1, -1, -1, -1, "IsDoorOpen6") {
