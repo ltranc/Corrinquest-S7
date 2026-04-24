@@ -595,17 +595,6 @@ callback[Event.TurnAfter](1, 4, 1) {
     }
 }
 
-callback[Event.Reinforce](4, 4, 1) {
-    v0 = ev::UnitGetByPID("PID_B028_YURI");
-    if(v0) {
-        ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
-    }
-    v0 = ev::UnitGetByPID("PID_B028_HERA");
-    if(v0) {
-        ev::UnitClrPrivateSkill(v0, "SPID_移動禁止");
-    }
-}
-
 callback[Event.Reinforce](5, 5, 1) {
     ev::Dispos("Reinforce1", 1032);
     ev::DisposWait();
