@@ -13,7 +13,7 @@ FEFTwiddler - https://github.com/cornquest-stuff/FEFTwiddler-CorrinquestS7/relea
 
 Corn Builder - https://github.com/TASallin/Corrinquest-Corn-Builder/releases
 
-Corn Art Online - Tristan is currently on a work trip and there is no public build available
+Corn Art Online - Tristan is currently on a work trip and there is no public build available right now
 
 
 Changelog - https://docs.google.com/spreadsheets/d/1kQjTcvtT08wkT_QeDvefiZVLlZu58NqWnO19UO5nF-8/edit?usp=sharing
@@ -24,4 +24,5 @@ Credits - https://docs.google.com/document/d/1-dwXUbLP17tARXgEQIQozeMntW7UuwXJkR
 
 Ch27-Endgame in this is the one Cyan played. If you want it to match your own playthrough, you gotta work at it yourself.
 This is a "guide" to my process https://imgur.com/a/corrinquest-deadlord-creation-guide-4Lpqlet
+You can reference this google sheet that I used to keep track and plan https://docs.google.com/spreadsheets/d/1jyiN89oTOv6Dv2gTIQd98SRZF0Wvq3Of4XMbvMbvTwo/edit?usp=sharing
 

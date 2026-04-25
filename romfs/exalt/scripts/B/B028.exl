@@ -629,11 +629,7 @@ callback[Event.Reinforce](6, 6, 1) {
     ev::GiveSkill("PID_B028_CATALYST", POISON_STRIKE, TOMEBREAKER, 0);
     ev::GiveSkill("PID_B028_LUCY", DARTING_BLOW, WARDING_BLOW, 0);
     ev::GiveSkill("PID_B028_VILAIRE", EVENHANDED, AGGRESSOR, 0);
-    ev::GiveSkill("PID_B028_GALVIOR", POISON_STRIKE, REPLICATE, 0);
-    v0 = ev::UnitGetByPID("PID_B028_GALVIOR");
-    if(v0) {
-        ev::UnitCreateClone(v0, 3, 17);
-    }
+    ev::GiveSkill("PID_B028_GALVIOR", POISON_STRIKE, SOLIDARITY, 0);
     ev::GiveSkill("PID_B028_GANDORF", HEARTSEEKER, IGNIS, BOWBREAKER);
     ev::GiveSkill("PID_B028_HOOONK", QUICK_DRAW, AIR_SUPERIORITY, 0);
     ev::GiveSkill("PID_B028_BUTTHEAD", AETHER, SUREFOOTED, 0);
