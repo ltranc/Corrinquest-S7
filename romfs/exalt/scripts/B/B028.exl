@@ -70,6 +70,10 @@ callback[Event.MapLoad]() {
     ev::GiveSkill("PID_B028_TSUKI", GENTILHOMME, STAFF_SAVANT, AEGIS);
     #ev::GiveSkill("PID_B028_TORSTEN", COUNTERMAGIC, ARMORED_BLOW, 0);
     ev::GiveSkill("PID_B028_TORSTEN", COUNTERMAGIC, 0, 0);
+    v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
+    if(v0) {
+        ev::UnitSetMovePower(v0, 5);
+    }
     #ev::GiveSkill("PID_B028_LAINE", POTENT_POTION, SOLIDARITY, 0);
     ev::GiveSkill("PID_B028_LAINE", POTENT_POTION, 0, 0);
     v0 = ev::UnitGetByPID("PID_B028_LAINE");
@@ -550,19 +554,12 @@ callback[Event.TurnAfter](-1, -1, 1) {
 callback[Event.TurnAfter](1, 1, 1) {
 }
 
-callback[Event.Reinforce](-1, -1, 0) {
-    v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
-    if(v0) {
-        if(!ev::AiGetActive(v0)) {
-            ev::UnitSetMovePower(v0, 5);
-        }
-    }
-}
-
 callback[Event.Reinforce](-1, -1, 1) {
     v0 = ev::UnitGetByPID("PID_B028_TORSTEN");
     if(v0) {
-        ev::UnitSetMovePower(v0, 6);
+        if(ev::AiGetActive(v0)) {
+            ev::UnitSetMovePower(v0, 6);
+        }
     }
 }
 
