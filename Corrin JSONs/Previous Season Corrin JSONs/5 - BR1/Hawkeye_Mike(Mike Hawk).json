@@ -1,0 +1,64 @@
+{
+    "name": "Mike Hawk",
+    "twitchUsername": "Hawkeye_Mike",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 2,
+                "name": "Dragon Hairpin"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Malig Knight",
+            "id": 71
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lucky Seven",
+            "id": 87
+        },
+        "personal2": {
+            "name": "Bowbreaker",
+            "id": 83
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Velvet",
+    "twitchUsername": "Creepymuffins",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 0,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 33,
+                "name": "Royal Feather"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 119
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Aether",
+            "id": 26
+        },
+        "personal2": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "tacosir",
+    "twitchUsername": "tacosir",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 45,
+                "name": "Armored Shell"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 9
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 7
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Armored Blow",
+            "id": 61
+        },
+        "personal2": {
+            "name": "Pavise",
+            "id": 33
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

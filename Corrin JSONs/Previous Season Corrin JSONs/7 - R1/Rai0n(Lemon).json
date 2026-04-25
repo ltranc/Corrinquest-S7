@@ -1,0 +1,64 @@
+{
+    "name": "Lemon",
+    "twitchUsername": "Rai0n",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#e8dcb8"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 19
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 21
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "HP +5",
+            "id": 1
+        },
+        "personal2": {
+            "name": "Tomebreaker",
+            "id": 84
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

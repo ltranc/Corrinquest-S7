@@ -1,0 +1,64 @@
+{
+    "name": "Yvel",
+    "twitchUsername": "Yveltel",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 0,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 73
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Air Superiority",
+            "id": 88
+        },
+        "personal2": {
+            "name": "Bowbreaker",
+            "id": 83
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

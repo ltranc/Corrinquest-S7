@@ -1,0 +1,64 @@
+{
+    "name": "Frostbolt",
+    "twitchUsername": "coolified_gaming",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 0,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 7,
+                "name": "Ike's Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 79
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 77
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Duelist's Blow",
+            "id": 57
+        },
+        "personal2": {
+            "name": "Rally Luck",
+            "id": 20
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

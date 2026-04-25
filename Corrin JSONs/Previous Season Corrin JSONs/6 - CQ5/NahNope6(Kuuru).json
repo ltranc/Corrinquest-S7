@@ -1,0 +1,64 @@
+{
+    "name": "Kuuru",
+    "twitchUsername": "NahNope6",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#703865"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 67,
+                "name": "Rimmed Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 54
+        },
+        "promoted": {
+            "name": "Priestess",
+            "id": 56
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Magic +2",
+            "id": 3
+        },
+        "personal2": {
+            "name": "Natural Cover",
+            "id": 52
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

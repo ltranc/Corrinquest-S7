@@ -1,0 +1,64 @@
+{
+    "name": "Zapsev",
+    "twitchUsername": "Zapsev",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "22",
+            "hex": "#e85d64"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 25,
+                "name": "Chef Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 9
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 7
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Defensetaker",
+            "id": 147
+        },
+        "personal2": {
+            "name": "Tomebreaker",
+            "id": 84
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

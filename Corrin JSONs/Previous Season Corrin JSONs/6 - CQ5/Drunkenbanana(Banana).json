@@ -1,0 +1,64 @@
+{
+    "name": "Banana",
+    "twitchUsername": "Drunkenbanana",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 9,
+        "hairDecoration": 3,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "16",
+            "hex": "#3c7986"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 47,
+                "name": "Heart Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 76
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 74
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Warding Blow",
+            "id": 62
+        },
+        "personal2": {
+            "name": "Quick Draw",
+            "id": 49
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

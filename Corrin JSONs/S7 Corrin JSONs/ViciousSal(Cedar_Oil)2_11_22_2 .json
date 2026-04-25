@@ -1,0 +1,73 @@
+{
+  "name": "Cedar Oil",
+  "twitchUsername": "ViciousSal",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 9,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "12",
+      "hex": "#9b4444"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 73,
+        "name": "Roguish Hat"
+      },
+      "face": {
+        "id": 66,
+        "name": "Sunglasses"
+      },
+      "arm": {
+        "id": 8,
+        "name": "Yune Pauldron"
+      },
+      "body": {
+        "id": 140,
+        "name": "Caeldori Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 148
+    },
+    "promoted": {
+      "name": "Vanguard",
+      "id": 167
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Heavy Blade",
+      "id": 158
+    },
+    "personal2": {
+      "name": "Spendthrift",
+      "id": 56
+    }
+  },
+  "creationDate": "2_11_22_2"
+}

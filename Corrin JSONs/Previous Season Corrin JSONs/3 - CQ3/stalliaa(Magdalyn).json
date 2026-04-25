@@ -1,0 +1,64 @@
+{
+    "name": "Magdalyn",
+    "twitchUsername": "stalliaa",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 3,
+        "hairDecoration": 4,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "27",
+            "hex": "#4d81b5"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 21,
+                "name": "White Ribbon"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Amaterasu",
+            "id": 97
+        },
+        "personal2": {
+            "name": "Rally Defense",
+            "id": 21
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

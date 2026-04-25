@@ -1,0 +1,64 @@
+{
+    "name": "Pain+",
+    "twitchUsername": "Xjymus",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 5,
+                "name": "Dragon Feather"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Malig Knight",
+            "id": 71
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Poison Strike",
+            "id": 101
+        },
+        "personal2": {
+            "name": "Grisly Wound",
+            "id": 103
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Vinette",
+    "twitchUsername": "zedcoal",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 1,
+        "hairDecoration": 1,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 65,
+                "name": "Class Headwear"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 28
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 30
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Magic +2",
+            "id": 3
+        },
+        "personal2": {
+            "name": "Quick Draw",
+            "id": 49
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Leon",
+    "twitchUsername": "therussianpanzer",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 53,
+                "name": "Arena Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 23
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 21
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Aegis",
+            "id": 34
+        },
+        "personal2": {
+            "name": "Pavise",
+            "id": 33
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

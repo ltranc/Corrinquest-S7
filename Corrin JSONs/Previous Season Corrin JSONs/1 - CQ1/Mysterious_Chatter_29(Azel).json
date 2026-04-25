@@ -1,0 +1,61 @@
+{
+    "name": "Azel",
+    "twitchUsername": "Mysterious_Chatter_29",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "2",
+            "hex": "#c35855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 87
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Darting Blow",
+            "id": 58
+        },
+        "personal2": {
+            "name": "Savage Blow",
+            "id": 102
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

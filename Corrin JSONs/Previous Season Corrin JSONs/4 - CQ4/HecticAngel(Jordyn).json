@@ -1,0 +1,64 @@
+{
+    "name": "Jordyn",
+    "twitchUsername": "HecticAngel",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 0,
+        "hairDecoration": 5,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 10
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 8
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Darting Blow",
+            "id": 58
+        },
+        "personal2": {
+            "name": "Lifetaker",
+            "id": 98
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

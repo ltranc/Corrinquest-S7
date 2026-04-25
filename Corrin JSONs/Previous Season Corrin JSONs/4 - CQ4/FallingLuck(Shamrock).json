@@ -1,0 +1,64 @@
+{
+    "name": "Shamrock",
+    "twitchUsername": "FallingLuck",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 0,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 87
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Aether",
+            "id": 26
+        },
+        "personal2": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

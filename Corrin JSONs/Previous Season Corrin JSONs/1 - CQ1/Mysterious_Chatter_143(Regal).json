@@ -1,0 +1,61 @@
+{
+    "name": "Regal",
+    "twitchUsername": "Mysterious_Chatter_143",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 4,
+        "hairDecoration": 5,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 84
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Miracle",
+            "id": 36
+        },
+        "personal2": {
+            "name": "Voice of Peace",
+            "id": 77
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

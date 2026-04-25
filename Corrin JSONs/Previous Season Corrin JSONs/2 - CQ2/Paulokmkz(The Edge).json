@@ -1,0 +1,64 @@
+{
+    "name": "The Edge",
+    "twitchUsername": "Paulokmkz",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 11,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 30,
+                "name": "Cross Eyepatch"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 33
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 31
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Vengeance",
+            "id": 32
+        },
+        "personal2": {
+            "name": "Life and Death",
+            "id": 55
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

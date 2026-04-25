@@ -1,0 +1,67 @@
+{
+  "name": "Chopped",
+  "twitchUsername": "xjymus",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 6,
+    "hairstyle": 11,
+    "hairDecoration": 2,
+    "facialDetail": 5,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#7800f0"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 80,
+        "name": "Straw Hat"
+      },
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 84,
+        "name": "Custom Outfit"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Ninja",
+      "id": 159
+    },
+    "promoted": {
+      "name": "Butler/Maid",
+      "id": 93
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Savage Blow",
+      "id": 102
+    },
+    "personal2": {
+      "name": "Grisly Wound",
+      "id": 103
+    }
+  },
+  "creationDate": "2_25_15_39"
+}

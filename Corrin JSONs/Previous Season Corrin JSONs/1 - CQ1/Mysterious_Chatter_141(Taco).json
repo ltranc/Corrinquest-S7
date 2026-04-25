@@ -1,0 +1,61 @@
+{
+    "name": "Taco",
+    "twitchUsername": "Mysterious_Chatter_141",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "6",
+            "hex": "#7dbbc4"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 67
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lifetaker",
+            "id": 98
+        },
+        "personal2": {
+            "name": "Aegis",
+            "id": 34
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

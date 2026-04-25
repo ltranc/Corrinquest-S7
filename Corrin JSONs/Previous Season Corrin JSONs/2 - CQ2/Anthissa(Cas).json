@@ -1,0 +1,64 @@
+{
+    "name": "Cas",
+    "twitchUsername": "Anthissa",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 15,
+                "name": "Flower Band"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Gentilhomme",
+            "id": 73
+        },
+        "personal2": {
+            "name": "Charm",
+            "id": 72
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

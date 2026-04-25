@@ -1,0 +1,64 @@
+{
+    "name": "Brolan",
+    "twitchUsername": "Surge149",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 66,
+                "name": "Sunglasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Blacksmith",
+            "id": 41
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Heartseeker",
+            "id": 89
+        },
+        "personal2": {
+            "name": "HP +5",
+            "id": 1
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

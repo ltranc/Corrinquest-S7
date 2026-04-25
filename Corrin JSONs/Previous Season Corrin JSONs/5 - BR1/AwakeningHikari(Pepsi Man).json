@@ -1,0 +1,64 @@
+{
+    "name": "Pepsi Man",
+    "twitchUsername": "AwakeningHikari",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 79
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 81
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Amaterasu",
+            "id": 97
+        },
+        "personal2": {
+            "name": "Life and Death",
+            "id": 55
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

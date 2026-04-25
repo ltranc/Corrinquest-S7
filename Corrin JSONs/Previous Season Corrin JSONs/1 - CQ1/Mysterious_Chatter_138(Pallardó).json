@@ -1,0 +1,61 @@
+{
+    "name": "Pallard\u00f3",
+    "twitchUsername": "Mysterious_Chatter_138",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 77
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Grisly Wound",
+            "id": 103
+        },
+        "personal2": {
+            "name": "Lunge",
+            "id": 46
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

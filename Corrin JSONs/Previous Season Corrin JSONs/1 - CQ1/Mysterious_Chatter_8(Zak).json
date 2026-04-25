@@ -1,0 +1,61 @@
+{
+    "name": "Zak",
+    "twitchUsername": "Mysterious_Chatter_8",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 67
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Vantage",
+            "id": 39
+        },
+        "personal2": {
+            "name": "Tomebreaker",
+            "id": 84
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

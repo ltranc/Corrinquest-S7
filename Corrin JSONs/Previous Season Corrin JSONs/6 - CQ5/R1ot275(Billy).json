@@ -1,0 +1,64 @@
+{
+    "name": "Billy",
+    "twitchUsername": "R1ot275",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "16",
+            "hex": "#3c7986"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 11,
+                "name": "Mage's Circlet"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 73
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Astra",
+            "id": 27
+        },
+        "personal2": {
+            "name": "Gamble",
+            "id": 85
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Corvin",
+    "twitchUsername": "Mysterious_Chatter_105",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 2,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "20",
+            "hex": "#837267"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "Great Knight",
+            "id": 11
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lunge",
+            "id": 46
+        },
+        "personal2": {
+            "name": "Lifetaker",
+            "id": 98
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

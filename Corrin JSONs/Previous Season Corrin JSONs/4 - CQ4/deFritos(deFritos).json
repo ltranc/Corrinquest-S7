@@ -1,0 +1,64 @@
+{
+    "name": "deFritos",
+    "twitchUsername": "deFritos",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 27
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 29
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Counter",
+            "id": 37
+        },
+        "personal2": {
+            "name": "Countermagic",
+            "id": 38
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

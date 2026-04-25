@@ -1,0 +1,64 @@
+{
+    "name": "Enton",
+    "twitchUsername": "sui_aqua",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#fdd548"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 11,
+                "name": "Mage's Circlet"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 49
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 51
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Amaterasu",
+            "id": 97
+        },
+        "personal2": {
+            "name": "Clarity",
+            "id": 130
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

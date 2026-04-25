@@ -1,0 +1,67 @@
+{
+  "name": "FuckMagic",
+  "twitchUsername": "infactanoose",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 4,
+    "hairstyle": 9,
+    "hairDecoration": 3,
+    "facialDetail": 11,
+    "hairColor": {
+      "value": "23",
+      "hex": "#f59d71"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 66,
+        "name": "Sunglasses"
+      },
+      "arm": null,
+      "body": {
+        "id": 110,
+        "name": "Azura Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Ninja",
+      "id": 76
+    },
+    "promoted": {
+      "name": "Master Ninja",
+      "id": 74
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Tomebreaker",
+      "id": 84
+    },
+    "personal2": {
+      "name": "Shadowgift",
+      "id": 141
+    }
+  },
+  "creationDate": "2_4_11_19"
+}

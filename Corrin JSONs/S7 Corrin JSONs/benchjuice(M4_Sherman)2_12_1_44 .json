@@ -1,0 +1,67 @@
+{
+  "name": "M4 Sherman",
+  "twitchUsername": "benchjuice",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 10,
+    "hairDecoration": 0,
+    "facialDetail": 5,
+    "hairColor": {
+      "value": "15",
+      "hex": "#6f845f"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": {
+        "id": 70,
+        "name": "Rider's Helmet"
+      },
+      "face": null,
+      "arm": {
+        "id": 48,
+        "name": "Battle Flag"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Archer",
+      "id": 157
+    },
+    "promoted": {
+      "name": "Ballistician",
+      "id": 122
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Dual Striker",
+      "id": 132
+    },
+    "personal2": {
+      "name": "Charm",
+      "id": 72
+    }
+  },
+  "creationDate": "2_12_1_44"
+}

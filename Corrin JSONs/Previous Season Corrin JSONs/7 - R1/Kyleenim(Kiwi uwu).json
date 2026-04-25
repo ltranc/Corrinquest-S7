@@ -1,0 +1,64 @@
+{
+    "name": "Kiwi uwu",
+    "twitchUsername": "Kyleenim",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 2,
+        "hairDecoration": 5,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 67,
+                "name": "Rimmed Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Heartseeker",
+            "id": 89
+        },
+        "personal2": {
+            "name": "Gentilhomme",
+            "id": 73
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

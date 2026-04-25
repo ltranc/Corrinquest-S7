@@ -1,0 +1,67 @@
+{
+  "name": "Dormouse",
+  "twitchUsername": "yu_junker",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 5,
+    "hairstyle": 4,
+    "hairDecoration": 0,
+    "facialDetail": 8,
+    "hairColor": {
+      "value": "11",
+      "hex": "#a5a6a6"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 22,
+        "name": "Nightcap"
+      },
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 139,
+        "name": "Mitama Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Monk/Shrine Maiden",
+      "id": 54
+    },
+    "promoted": {
+      "name": "Onmyoji",
+      "id": 52
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Lucky Seven",
+      "id": 87
+    },
+    "personal2": {
+      "name": "Underdog",
+      "id": 86
+    }
+  },
+  "creationDate": "2_11_22_33"
+}

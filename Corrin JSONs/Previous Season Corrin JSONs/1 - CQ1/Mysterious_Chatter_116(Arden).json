@@ -1,0 +1,61 @@
+{
+    "name": "Arden",
+    "twitchUsername": "Mysterious_Chatter_116",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "15",
+            "hex": "#6f845f"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "Great Knight",
+            "id": 11
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Darting Blow",
+            "id": 58
+        },
+        "personal2": {
+            "name": "Movement +1",
+            "id": 9
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

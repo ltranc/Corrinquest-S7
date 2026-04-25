@@ -1,0 +1,64 @@
+{
+    "name": "Urri",
+    "twitchUsername": "ZaneGreedon",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 2,
+        "hairDecoration": 5,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 15,
+                "name": "Flower Band"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 64
+        },
+        "promoted": {
+            "name": "Kinshi Knight",
+            "id": 62
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Veteran Intuition",
+            "id": 159
+        },
+        "personal2": {
+            "name": "Future Sight",
+            "id": 107
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

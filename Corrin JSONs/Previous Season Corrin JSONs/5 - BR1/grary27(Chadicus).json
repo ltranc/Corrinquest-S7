@@ -1,0 +1,64 @@
+{
+    "name": "Chadicus",
+    "twitchUsername": "grary27",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "11",
+            "hex": "#a5a6a6"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 42,
+                "name": "Nohr Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 19
+        },
+        "promoted": {
+            "name": "Vanguard",
+            "id": 125
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Death Blow",
+            "id": 59
+        },
+        "personal2": {
+            "name": "Movement +1",
+            "id": 9
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

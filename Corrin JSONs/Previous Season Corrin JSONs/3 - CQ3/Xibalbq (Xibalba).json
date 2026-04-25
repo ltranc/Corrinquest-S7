@@ -1,0 +1,64 @@
+{
+    "name": "Xibalba",
+    "twitchUsername": "Xibalbq ",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 3,
+        "hairDecoration": 5,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 2,
+                "name": "Dragon Hairpin"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Movement +1",
+            "id": 9
+        },
+        "personal2": {
+            "name": "Shadowgift",
+            "id": 141
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

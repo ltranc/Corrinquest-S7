@@ -1,0 +1,64 @@
+{
+    "name": "Violet",
+    "twitchUsername": "Nintendoblivion",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 3,
+                "name": "Bear Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 14
+        },
+        "promoted": {
+            "name": "General",
+            "id": 16
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Movement +1",
+            "id": 9
+        },
+        "personal2": {
+            "name": "Pass",
+            "id": 111
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Yuri",
+    "twitchUsername": "TheRen33",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#afabdb"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 27
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 29
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Duelist's Blow",
+            "id": 57
+        },
+        "personal2": {
+            "name": "Lethality",
+            "id": 25
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

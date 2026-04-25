@@ -1,0 +1,67 @@
+{
+    "name": "Umber",
+    "twitchUsername": "rt1003",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#635147"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 71,
+                "name": "Cataphract Helm"
+            },
+            "face": null,
+            "arm": null,
+            "body": {
+                "id": 83,
+                "name": "Tank Engine"
+            }
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 67
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Darting Blow",
+            "id": 58
+        },
+        "personal2": {
+            "name": "Dancing Blade",
+            "id": 156
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

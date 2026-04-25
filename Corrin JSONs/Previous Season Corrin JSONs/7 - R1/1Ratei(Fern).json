@@ -1,0 +1,64 @@
+{
+    "name": "Fern",
+    "twitchUsername": "1Ratei",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 49
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 51
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Fortify Spectrum",
+            "id": 151
+        },
+        "personal2": {
+            "name": "Locktouch",
+            "id": 112
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

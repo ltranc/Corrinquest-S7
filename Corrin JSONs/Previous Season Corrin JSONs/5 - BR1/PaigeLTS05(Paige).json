@@ -1,0 +1,64 @@
+{
+    "name": "Paige",
+    "twitchUsername": "PaigeLTS05",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 5,
+        "hairDecoration": 1,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "19",
+            "hex": "#eeb1b1"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 88
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dragon Fang",
+            "id": 28
+        },
+        "personal2": {
+            "name": "Ignis",
+            "id": 136
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

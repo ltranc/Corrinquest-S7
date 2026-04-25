@@ -1,0 +1,64 @@
+{
+    "name": "Sorcha",
+    "twitchUsername": "WhiteCitrus",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 6,
+        "hairDecoration": 1,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "6",
+            "hex": "#7dbbc4"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 34,
+                "name": "Hero Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 84
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Sol",
+            "id": 29
+        },
+        "personal2": {
+            "name": "Counter",
+            "id": 37
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Venus",
+  "twitchUsername": "VenusFloral",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 2,
+    "hairstyle": 0,
+    "hairDecoration": 4,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "19",
+      "hex": "#eeb1b1"
+    },
+    "voice": {
+      "name": "younger",
+      "id": 1
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "HP",
+      "id": 1
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Troubadour Demoiselle",
+      "id": 92
+    },
+    "promoted": {
+      "name": "Butler/Maid",
+      "id": 94
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Charm",
+      "id": 72
+    },
+    "personal2": {
+      "name": "Miracle",
+      "id": 36
+    }
+  },
+  "creationDate": "2_14_18_5"
+}

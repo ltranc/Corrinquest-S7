@@ -1,0 +1,61 @@
+{
+    "name": "Scess",
+    "twitchUsername": "Mysterious_Chatter_78",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 23
+        },
+        "promoted": {
+            "name": "Bow Knight",
+            "id": 25
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lethality",
+            "id": 25
+        },
+        "personal2": {
+            "name": "Awakening",
+            "id": 133
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

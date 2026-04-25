@@ -1,0 +1,64 @@
+{
+    "name": "Nikasna",
+    "twitchUsername": "Nikersen_",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 57,
+                "name": "Pup Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 54
+        },
+        "promoted": {
+            "name": "Priestess",
+            "id": 56
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Profiteer",
+            "id": 105
+        },
+        "personal2": {
+            "name": "Witch's Brew",
+            "id": 153
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

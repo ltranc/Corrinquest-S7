@@ -1,0 +1,70 @@
+{
+  "name": "Audi Ej",
+  "twitchUsername": "LightCosmos16",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 6,
+    "hairstyle": 3,
+    "hairDecoration": 0,
+    "facialDetail": 5,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#000000"
+    },
+    "voice": {
+      "name": "jp-mature",
+      "id": 6
+    },
+    "accessories": {
+      "head": {
+        "id": 60,
+        "name": "Dark Crown"
+      },
+      "face": {
+        "id": 27,
+        "name": "Ninja Mask"
+      },
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Ninja",
+      "id": 75
+    },
+    "promoted": {
+      "name": "Master Ninja",
+      "id": 73
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Hoshidan Unity",
+      "id": 43
+    },
+    "personal2": {
+      "name": "Quixotic",
+      "id": 90
+    }
+  },
+  "creationDate": "3_21_21_58"
+}

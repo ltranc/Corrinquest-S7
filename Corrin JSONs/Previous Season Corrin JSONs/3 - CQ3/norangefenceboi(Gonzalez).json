@@ -1,0 +1,64 @@
+{
+    "name": "Gonzalez",
+    "twitchUsername": "norangefenceboi",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 37,
+                "name": "Golem Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 19
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 17
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Life and Death",
+            "id": 55
+        },
+        "personal2": {
+            "name": "Vengeance",
+            "id": 32
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

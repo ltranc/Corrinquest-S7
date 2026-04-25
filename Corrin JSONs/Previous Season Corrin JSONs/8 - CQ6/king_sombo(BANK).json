@@ -1,0 +1,64 @@
+{
+    "name": "BANK",
+    "twitchUsername": "king_sombo",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 1,
+        "hairDecoration": 3,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "15",
+            "hex": "#6f845f"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 8,
+                "name": "Yune Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 60
+        },
+        "promoted": {
+            "name": "Kinshi Knight",
+            "id": 62
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Bowbreaker",
+            "id": 83
+        },
+        "personal2": {
+            "name": "Movement +1",
+            "id": 9
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "67uinely",
+  "twitchUsername": "blazingEmblem",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 0,
+    "hairstyle": 6,
+    "hairDecoration": 0,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "24",
+      "hex": "#e8db98"
+    },
+    "voice": {
+      "name": "younger",
+      "id": 0
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 37,
+        "name": "Golem Mask"
+      },
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Nohr Prince(ss)",
+      "id": 143
+    },
+    "promoted": {
+      "name": "Lodestar",
+      "id": 124
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Astra",
+      "id": 27
+    },
+    "personal2": {
+      "name": "Quixotic",
+      "id": 90
+    }
+  },
+  "creationDate": "3_12_23_42"
+}

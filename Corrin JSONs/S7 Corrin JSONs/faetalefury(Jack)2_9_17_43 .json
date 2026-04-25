@@ -1,0 +1,70 @@
+{
+  "name": "Jack",
+  "twitchUsername": "faetalefury",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 5,
+    "hairstyle": 9,
+    "hairDecoration": 0,
+    "facialDetail": 9,
+    "hairColor": {
+      "value": "29",
+      "hex": "#f497af"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 33,
+        "name": "Royal Feather"
+      },
+      "arm": {
+        "id": 57,
+        "name": "Pup Tail"
+      },
+      "body": {
+        "id": 90,
+        "name": "Jakob Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Troubadour Demoiselle",
+      "id": 170
+    },
+    "promoted": {
+      "name": "Strategist",
+      "id": 89
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Charm",
+      "id": 72
+    },
+    "personal2": {
+      "name": "Heartseeker",
+      "id": 89
+    }
+  },
+  "creationDate": "2_9_17_43"
+}

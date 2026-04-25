@@ -1,0 +1,61 @@
+{
+    "name": "bob",
+    "twitchUsername": "Mysterious_Chatter_54",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 5,
+        "hairDecoration": 3,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 24
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 22
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shove",
+            "id": 45
+        },
+        "personal2": {
+            "name": "Darting Blow",
+            "id": 58
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

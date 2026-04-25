@@ -1,0 +1,64 @@
+{
+    "name": "Bromley",
+    "twitchUsername": "Endymion0021",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 72,
+                "name": "Berserk Helm"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 9
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 7
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Heartseeker",
+            "id": 89
+        },
+        "personal2": {
+            "name": "Dancing Blade",
+            "id": 156
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,67 @@
+{
+    "name": "Yuri",
+    "twitchUsername": "Lolyuri64",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 7,
+        "hairDecoration": 5,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#6a19b5"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 18,
+                "name": "Princess Crown"
+            },
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 20
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 18
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Death Blow",
+            "id": 59
+        },
+        "personal2": {
+            "name": "Certain Blow",
+            "id": 60
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

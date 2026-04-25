@@ -1,0 +1,61 @@
+{
+    "name": "Pumpernickel",
+    "twitchUsername": "GottaMakeANameFast",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "26",
+            "hex": "#86e1dc"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Movement +1",
+            "id": 9
+        },
+        "personal2": {
+            "name": "Magic +2",
+            "id": 3
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

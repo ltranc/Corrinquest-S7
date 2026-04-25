@@ -1,0 +1,64 @@
+{
+    "name": "Kirby",
+    "twitchUsername": "NebulaKirby",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "10",
+            "hex": "#c0aa9c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 20,
+                "name": "Sun Tiara"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 59
+        },
+        "promoted": {
+            "name": "Falcon Knight",
+            "id": 57
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Seal Strength",
+            "id": 11
+        },
+        "personal2": {
+            "name": "Armored Blow",
+            "id": 61
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

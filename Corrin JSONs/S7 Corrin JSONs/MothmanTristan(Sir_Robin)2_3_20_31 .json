@@ -1,0 +1,67 @@
+{
+  "name": "Sir Robin",
+  "twitchUsername": "MothmanTristan",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 10,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#7e4610"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": {
+        "id": 8,
+        "name": "Yune Pauldron"
+      },
+      "body": {
+        "id": 143,
+        "name": "Ignatius Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "HP",
+      "id": 1
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Monk/Shrine Maiden",
+      "id": 53
+    },
+    "promoted": {
+      "name": "Onmyoji",
+      "id": 51
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Shove",
+      "id": 45
+    },
+    "personal2": {
+      "name": "Dual Guardsman",
+      "id": 157
+    }
+  },
+  "creationDate": "2_3_20_31"
+}

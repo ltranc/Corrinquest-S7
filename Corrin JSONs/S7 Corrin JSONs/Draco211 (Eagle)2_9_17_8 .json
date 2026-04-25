@@ -1,0 +1,73 @@
+{
+  "name": "Eagle",
+  "twitchUsername": "Draco211 ",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 3,
+    "hairstyle": 0,
+    "hairDecoration": 2,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "7",
+      "hex": "#92add0"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 64,
+        "name": "Witch's Hat"
+      },
+      "face": {
+        "id": 66,
+        "name": "Sunglasses"
+      },
+      "arm": {
+        "id": 87,
+        "name": "Ebon Wolf Tail"
+      },
+      "body": {
+        "id": 120,
+        "name": "Camilla Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Dark Mage",
+      "id": 162
+    },
+    "promoted": {
+      "name": "Witch",
+      "id": 123
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Quick Draw",
+      "id": 49
+    },
+    "personal2": {
+      "name": "Dancing Blade",
+      "id": 156
+    }
+  },
+  "creationDate": "2_9_17_8"
+}

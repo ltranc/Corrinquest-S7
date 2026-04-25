@@ -1,0 +1,64 @@
+{
+    "name": "Harley",
+    "twitchUsername": "harleys999",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "14",
+            "hex": "#cfc3a1"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 66,
+                "name": "Sunglasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 73
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Savage Blow",
+            "id": 102
+        },
+        "personal2": {
+            "name": "HP +5",
+            "id": 1
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

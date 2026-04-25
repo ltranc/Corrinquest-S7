@@ -1,0 +1,64 @@
+{
+    "name": "Da Bot",
+    "twitchUsername": "GobaGnon",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 9,
+        "hairDecoration": 4,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "16",
+            "hex": "#3c7986"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 34,
+                "name": "Hero Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Speed",
+            "id": 19
+        },
+        "personal2": {
+            "name": "Rally Strength",
+            "id": 16
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

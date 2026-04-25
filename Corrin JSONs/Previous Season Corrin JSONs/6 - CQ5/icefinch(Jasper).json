@@ -1,0 +1,64 @@
+{
+    "name": "Jasper",
+    "twitchUsername": "icefinch",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 11,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 48,
+                "name": "Battle Flag"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 83
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Amaterasu",
+            "id": 97
+        },
+        "personal2": {
+            "name": "Dragon Ward",
+            "id": 35
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

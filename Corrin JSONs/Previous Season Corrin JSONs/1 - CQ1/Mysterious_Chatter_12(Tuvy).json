@@ -1,0 +1,61 @@
+{
+    "name": "Tuvy",
+    "twitchUsername": "Mysterious_Chatter_12",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 9,
+        "hairColor": {
+            "value": "14",
+            "hex": "#cfc3a1"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Blacksmith",
+            "id": 41
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        },
+        "personal2": {
+            "name": "Axefaire",
+            "id": 67
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

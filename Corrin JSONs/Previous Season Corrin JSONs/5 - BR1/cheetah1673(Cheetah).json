@@ -1,0 +1,64 @@
+{
+    "name": "Cheetah",
+    "twitchUsername": "cheetah1673",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 52,
+                "name": "Item Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 159
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 118
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Swap",
+            "id": 47
+        },
+        "personal2": {
+            "name": "Aether",
+            "id": 26
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

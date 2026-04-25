@@ -1,0 +1,64 @@
+{
+    "name": "Welsy",
+    "twitchUsername": "Welocitaseradico",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 7,
+        "hairDecoration": 5,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "8",
+            "hex": "#c8a2d6"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 84
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Countermagic",
+            "id": 38
+        },
+        "personal2": {
+            "name": "Tomebreaker",
+            "id": 84
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

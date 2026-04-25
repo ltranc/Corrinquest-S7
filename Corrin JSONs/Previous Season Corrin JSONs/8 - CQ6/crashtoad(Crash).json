@@ -1,0 +1,64 @@
+{
+    "name": "Crash",
+    "twitchUsername": "crashtoad",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "15",
+            "hex": "#6f845f"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wolfskin",
+            "id": 95
+        },
+        "promoted": {
+            "name": "Wolfssegner",
+            "id": 97
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Evenhanded",
+            "id": 53
+        },
+        "personal2": {
+            "name": "Quick Draw",
+            "id": 49
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

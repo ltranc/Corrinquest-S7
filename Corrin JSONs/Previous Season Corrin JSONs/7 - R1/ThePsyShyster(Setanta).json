@@ -1,0 +1,64 @@
+{
+    "name": "Setanta",
+    "twitchUsername": "ThePsyShyster",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 11,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "3",
+            "hex": "#d38969"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 11,
+                "name": "Mage's Circlet"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 140
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 87
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Warding Blow",
+            "id": 62
+        },
+        "personal2": {
+            "name": "Tomebreaker",
+            "id": 84
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

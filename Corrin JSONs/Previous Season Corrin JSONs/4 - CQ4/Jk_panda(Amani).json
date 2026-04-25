@@ -1,0 +1,64 @@
+{
+    "name": "Amani",
+    "twitchUsername": "Jk_panda",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 3,
+        "hairDecoration": 1,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "5",
+            "hex": "#abd1a1"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 3,
+                "name": "Bear Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wolfskin",
+            "id": 96
+        },
+        "promoted": {
+            "name": "Wolfssegner",
+            "id": 98
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "HP +5",
+            "id": 1
+        },
+        "personal2": {
+            "name": "Speed +2",
+            "id": 5
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Raion",
+    "twitchUsername": "Mysterious_Chatter_152",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "14",
+            "hex": "#cfc3a1"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 9
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 7
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lancefaire",
+            "id": 66
+        },
+        "personal2": {
+            "name": "Sol",
+            "id": 29
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

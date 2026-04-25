@@ -1,0 +1,64 @@
+{
+    "name": "Waltwo",
+    "twitchUsername": "Gangster Samurott",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 30,
+                "name": "Cross Eyepatch"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 27
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 29
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quick Draw",
+            "id": 49
+        },
+        "personal2": {
+            "name": "Elbow Room",
+            "id": 51
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

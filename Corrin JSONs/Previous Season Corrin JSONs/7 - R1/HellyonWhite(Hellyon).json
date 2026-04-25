@@ -1,0 +1,64 @@
+{
+    "name": "Hellyon",
+    "twitchUsername": "HellyonWhite",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 3,
+        "hairDecoration": 5,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "4",
+            "hex": "#eddbc5"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 20,
+                "name": "Sun Tiara"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 156
+        },
+        "promoted": {
+            "name": "Dark Falcon",
+            "id": 121
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Sol",
+            "id": 29
+        },
+        "personal2": {
+            "name": "Astra",
+            "id": 27
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

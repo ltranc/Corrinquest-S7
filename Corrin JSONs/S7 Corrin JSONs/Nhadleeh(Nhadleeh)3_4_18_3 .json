@@ -1,0 +1,73 @@
+{
+  "name": "Nhadleeh",
+  "twitchUsername": "Nhadleeh",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 0,
+    "hairstyle": 7,
+    "hairDecoration": 3,
+    "facialDetail": 11,
+    "hairColor": {
+      "value": "24",
+      "hex": "#e8db98"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 78,
+        "name": "Wyvern Helm"
+      },
+      "face": {
+        "id": 74,
+        "name": "Ogre Mask"
+      },
+      "arm": {
+        "id": 47,
+        "name": "Heart Pauldron"
+      },
+      "body": {
+        "id": 104,
+        "name": "Keaton Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Lck",
+      "id": 6
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Archer",
+      "id": 63
+    },
+    "promoted": {
+      "name": "Sniper",
+      "id": 65
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Darting Blow",
+      "id": 58
+    },
+    "personal2": {
+      "name": "Luck +4",
+      "id": 6
+    }
+  },
+  "creationDate": "3_4_18_3"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Azuno",
+    "twitchUsername": "KatKeyboardMastah",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "19",
+            "hex": "#eeb1b1"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 23,
+                "name": "Golden Clip"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 20
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 18
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Nohrian Trust",
+            "id": 42
+        },
+        "personal2": {
+            "name": "Certain Blow",
+            "id": 60
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

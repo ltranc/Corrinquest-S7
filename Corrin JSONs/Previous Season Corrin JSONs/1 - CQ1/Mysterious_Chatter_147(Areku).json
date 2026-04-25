@@ -1,0 +1,61 @@
+{
+    "name": "Areku",
+    "twitchUsername": "Mysterious_Chatter_147",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 99
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 101
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Demoiselle",
+            "id": 74
+        },
+        "personal2": {
+            "name": "Strengthtaker",
+            "id": 142
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

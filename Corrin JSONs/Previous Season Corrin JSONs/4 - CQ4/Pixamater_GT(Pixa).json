@@ -1,0 +1,64 @@
+{
+    "name": "Pixa",
+    "twitchUsername": "Pixamater_GT",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 4,
+                "name": "Butterfly Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 33
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 118
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Astra",
+            "id": 27
+        },
+        "personal2": {
+            "name": "Aether",
+            "id": 26
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

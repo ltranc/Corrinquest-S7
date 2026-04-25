@@ -1,0 +1,64 @@
+{
+    "name": "DipDop",
+    "twitchUsername": "Fragmentedzach",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 22,
+                "name": "Nightcap"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 79
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 77
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Sol",
+            "id": 29
+        },
+        "personal2": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

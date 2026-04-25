@@ -1,0 +1,64 @@
+{
+    "name": "Jabber",
+    "twitchUsername": "spengrantest",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "7",
+            "hex": "#92add0"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 67,
+                "name": "Rimmed Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 77
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Foreign Princess",
+            "id": 78
+        },
+        "personal2": {
+            "name": "Astra",
+            "id": 27
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

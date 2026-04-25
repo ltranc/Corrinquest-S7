@@ -1,0 +1,64 @@
+{
+    "name": "Lucia",
+    "twitchUsername": "themissingnoob",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 5,
+        "hairDecoration": 5,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#a07064"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 67,
+                "name": "Rimmed Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 28
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 30
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Life and Death",
+            "id": 55
+        },
+        "personal2": {
+            "name": "Darting Blow",
+            "id": 58
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

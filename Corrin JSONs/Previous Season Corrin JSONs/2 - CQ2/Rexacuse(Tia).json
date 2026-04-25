@@ -1,0 +1,64 @@
+{
+    "name": "Tia",
+    "twitchUsername": "Rexacuse",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 24,
+                "name": "Maid's Band"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 94
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Inspiration",
+            "id": 75
+        },
+        "personal2": {
+            "name": "Solidarity",
+            "id": 135
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Terri",
+    "twitchUsername": "Dumbbenchenergy",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 1,
+        "hairDecoration": 4,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 8,
+                "name": "Yune Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 88
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Air Superiority",
+            "id": 88
+        },
+        "personal2": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

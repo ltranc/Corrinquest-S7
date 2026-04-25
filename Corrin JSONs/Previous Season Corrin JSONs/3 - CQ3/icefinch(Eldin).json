@@ -1,0 +1,64 @@
+{
+    "name": "Eldin",
+    "twitchUsername": "icefinch",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 6,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 35,
+                "name": "Einherjar Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 99
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 101
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Better Odds",
+            "id": 96
+        },
+        "personal2": {
+            "name": "Air Superiority",
+            "id": 88
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

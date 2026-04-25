@@ -1,0 +1,64 @@
+{
+    "name": "Kazeriyu",
+    "twitchUsername": "Kazenin",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 4,
+        "hairDecoration": 4,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "11",
+            "hex": "#a5a6a6"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 64,
+                "name": "Witch's Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 154
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 119
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Darting Blow",
+            "id": 58
+        },
+        "personal2": {
+            "name": "Countermagic",
+            "id": 38
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

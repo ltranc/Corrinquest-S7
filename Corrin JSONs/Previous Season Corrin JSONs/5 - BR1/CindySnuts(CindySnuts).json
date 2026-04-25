@@ -1,0 +1,64 @@
+{
+    "name": "CindySnuts",
+    "twitchUsername": "CindySnuts",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "7",
+            "hex": "#92add0"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 18,
+                "name": "Princess Crown"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 153
+        },
+        "promoted": {
+            "name": "Grandmaster",
+            "id": 127
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lucky Seven",
+            "id": 87
+        },
+        "personal2": {
+            "name": "Malefic Aura",
+            "id": 76
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

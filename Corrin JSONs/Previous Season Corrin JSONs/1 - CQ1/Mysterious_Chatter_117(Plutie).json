@@ -1,0 +1,61 @@
+{
+    "name": "Plutie",
+    "twitchUsername": "Mysterious_Chatter_117",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 3,
+        "hairDecoration": 1,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "29",
+            "hex": "#f497af"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Gentilhomme",
+            "id": 73
+        },
+        "personal2": {
+            "name": "Amaterasu",
+            "id": 97
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

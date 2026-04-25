@@ -1,0 +1,61 @@
+{
+    "name": "Stone ",
+    "twitchUsername": "crashtoad",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 100
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 102
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Movement +1",
+            "id": 9
+        },
+        "personal2": {
+            "name": "Voice of Peace",
+            "id": 77
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

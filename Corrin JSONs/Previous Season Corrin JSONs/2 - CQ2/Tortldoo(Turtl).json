@@ -1,0 +1,64 @@
+{
+    "name": "Turtl",
+    "twitchUsername": "Tortldoo",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 2,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "15",
+            "hex": "#6f845f"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 8,
+                "name": "Yune Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 14
+        },
+        "promoted": {
+            "name": "General",
+            "id": 16
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Aegis",
+            "id": 34
+        },
+        "personal2": {
+            "name": "Quixotic",
+            "id": 90
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

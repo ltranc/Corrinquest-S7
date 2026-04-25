@@ -1,0 +1,64 @@
+{
+    "name": "Gamblor",
+    "twitchUsername": "GamblorTime",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#ffffff"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 17,
+                "name": "Lottery Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 63
+        },
+        "promoted": {
+            "name": "Sniper",
+            "id": 65
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Gamble",
+            "id": 85
+        },
+        "personal2": {
+            "name": "Death Blow",
+            "id": 59
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

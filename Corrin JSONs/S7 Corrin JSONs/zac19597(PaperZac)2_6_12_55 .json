@@ -1,0 +1,67 @@
+{
+  "name": "PaperZac",
+  "twitchUsername": "zac19597",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 10,
+    "hairDecoration": 0,
+    "facialDetail": 11,
+    "hairColor": {
+      "value": "23",
+      "hex": "#f59d71"
+    },
+    "voice": {
+      "name": "younger",
+      "id": 0
+    },
+    "accessories": {
+      "head": {
+        "id": 22,
+        "name": "Nightcap"
+      },
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 85,
+        "name": "Alternate Beast Form"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Def",
+      "id": 7
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Wolfskin",
+      "id": 95
+    },
+    "promoted": {
+      "name": "Wolfssegner",
+      "id": 97
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Wary Fighter",
+      "id": 64
+    },
+    "personal2": {
+      "name": "Counter",
+      "id": 37
+    }
+  },
+  "creationDate": "2_6_12_55"
+}

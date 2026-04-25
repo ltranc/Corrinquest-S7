@@ -1,0 +1,64 @@
+{
+    "name": "Adex Based",
+    "twitchUsername": "adexdawn",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 82,
+                "name": "Dark Skull"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 83
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Foreign Princess",
+            "id": 78
+        },
+        "personal2": {
+            "name": "Natural Cover",
+            "id": 52
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

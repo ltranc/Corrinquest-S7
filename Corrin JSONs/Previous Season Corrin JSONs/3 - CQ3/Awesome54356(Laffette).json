@@ -1,0 +1,64 @@
+{
+    "name": "Laffette",
+    "twitchUsername": "Awesome54356",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "8",
+            "hex": "#c8a2d6"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 54,
+                "name": "Smithy Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 79
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 81
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Air Superiority",
+            "id": 88
+        },
+        "personal2": {
+            "name": "Pavise",
+            "id": 33
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Brolan",
+  "twitchUsername": "Surge149",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 5,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "30",
+      "hex": "#6e4f3b"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 40,
+        "name": "Tinted Glasses"
+      },
+      "arm": {
+        "id": 8,
+        "name": "Yune Pauldron"
+      },
+      "body": {
+        "id": 160,
+        "name": "Ike Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Oni Savage",
+      "id": 39
+    },
+    "promoted": {
+      "name": "Blacksmith",
+      "id": 41
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Renewal",
+      "id": 94
+    },
+    "personal2": {
+      "name": "Dragon Fang",
+      "id": 28
+    }
+  },
+  "creationDate": "2_4_18_52"
+}

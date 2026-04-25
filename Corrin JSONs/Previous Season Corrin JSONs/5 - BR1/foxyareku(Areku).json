@@ -1,0 +1,64 @@
+{
+    "name": "Areku",
+    "twitchUsername": "foxyareku",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 15,
+                "name": "Flower Band"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 99
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 101
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Demoiselle",
+            "id": 74
+        },
+        "personal2": {
+            "name": "Inspiration",
+            "id": 75
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

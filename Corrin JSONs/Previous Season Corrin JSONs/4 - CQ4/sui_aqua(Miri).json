@@ -1,0 +1,64 @@
+{
+    "name": "Miri",
+    "twitchUsername": "sui_aqua",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 0,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 38,
+                "name": "Tengu Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 28
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 30
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Nohrian Trust",
+            "id": 42
+        },
+        "personal2": {
+            "name": "Veteran Intuition",
+            "id": 159
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

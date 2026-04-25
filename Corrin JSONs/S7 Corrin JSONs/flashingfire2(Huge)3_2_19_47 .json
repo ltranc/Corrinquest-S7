@@ -1,0 +1,64 @@
+{
+  "name": "Huge",
+  "twitchUsername": "flashingfire2",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 4,
+    "hairstyle": 9,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#232226"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 102,
+        "name": "Leo Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Knight",
+      "id": 13
+    },
+    "promoted": {
+      "name": "General",
+      "id": 15
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Warding Blow",
+      "id": 62
+    },
+    "personal2": {
+      "name": "Heartseeker",
+      "id": 89
+    }
+  },
+  "creationDate": "3_2_19_47"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Phthalo",
+  "twitchUsername": "vividmercuryy",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 6,
+    "hairDecoration": 0,
+    "facialDetail": 7,
+    "hairColor": {
+      "value": "16",
+      "hex": "#3c7986"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 78,
+        "name": "Wyvern Helm"
+      },
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 107,
+        "name": "Laslow Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Spd",
+      "id": 5
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Wyvern Rider",
+      "id": 69
+    },
+    "promoted": {
+      "name": "Malig Knight",
+      "id": 71
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Wary Fighter",
+      "id": 64
+    },
+    "personal2": {
+      "name": "Shadowgift",
+      "id": 141
+    }
+  },
+  "creationDate": "3_13_23_29"
+}

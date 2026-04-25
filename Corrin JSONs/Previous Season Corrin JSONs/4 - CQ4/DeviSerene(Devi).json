@@ -1,0 +1,64 @@
+{
+    "name": "Devi",
+    "twitchUsername": "DeviSerene",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 3,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 9,
+                "name": "Pink Beret"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 90
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Charm",
+            "id": 72
+        },
+        "personal2": {
+            "name": "Voice of Peace",
+            "id": 77
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

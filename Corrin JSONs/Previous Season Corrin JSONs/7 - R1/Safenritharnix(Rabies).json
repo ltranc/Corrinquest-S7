@@ -1,0 +1,64 @@
+{
+    "name": "Rabies",
+    "twitchUsername": "Safenritharnix",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#b2135e"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 43,
+                "name": "Medicine Trunk"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wolfskin",
+            "id": 95
+        },
+        "promoted": {
+            "name": "Wolfssegner",
+            "id": 97
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Savage Blow",
+            "id": 102
+        },
+        "personal2": {
+            "name": "Lethality",
+            "id": 25
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

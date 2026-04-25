@@ -1,0 +1,64 @@
+{
+    "name": "Ecorrinomics",
+    "twitchUsername": "Nintendoblivion",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 1,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 3,
+                "name": "Bear Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Villager",
+            "id": 105
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 82
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Salvage Blow",
+            "id": 104
+        },
+        "personal2": {
+            "name": "Witch's Brew",
+            "id": 153
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

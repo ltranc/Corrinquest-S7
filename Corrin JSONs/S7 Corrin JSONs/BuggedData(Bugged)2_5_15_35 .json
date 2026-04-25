@@ -1,0 +1,73 @@
+{
+  "name": "Bugged",
+  "twitchUsername": "BuggedData",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 9,
+    "hairDecoration": 0,
+    "facialDetail": 12,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#c869ff"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": {
+        "id": 25,
+        "name": "Chef Hat"
+      },
+      "face": {
+        "id": 4,
+        "name": "Butterfly Mask"
+      },
+      "arm": {
+        "id": 48,
+        "name": "Battle Flag"
+      },
+      "body": {
+        "id": 84,
+        "name": "Custom Outfit"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 24
+    },
+    "promoted": {
+      "name": "Hero",
+      "id": 22
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Swordbreaker",
+      "id": 79
+    },
+    "personal2": {
+      "name": "Lancebreaker",
+      "id": 80
+    }
+  },
+  "creationDate": "2_5_15_35"
+}

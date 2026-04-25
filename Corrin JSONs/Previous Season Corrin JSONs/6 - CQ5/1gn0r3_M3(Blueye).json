@@ -1,0 +1,64 @@
+{
+    "name": "Blueye",
+    "twitchUsername": "1gn0r3_M3",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 42,
+                "name": "Nohr Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 148
+        },
+        "promoted": {
+            "name": "Vanguard",
+            "id": 167
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Death Blow",
+            "id": 59
+        },
+        "personal2": {
+            "name": "Quick Draw",
+            "id": 49
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

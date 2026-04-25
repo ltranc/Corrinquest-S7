@@ -1,0 +1,64 @@
+{
+    "name": "Alara",
+    "twitchUsername": "420Templar",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 8,
+        "hairDecoration": 3,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 50,
+                "name": "Water Gourd"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 40
+        },
+        "promoted": {
+            "name": "Oni Chieftain",
+            "id": 38
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shadowgift",
+            "id": 141
+        },
+        "personal2": {
+            "name": "Wary Fighter",
+            "id": 64
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

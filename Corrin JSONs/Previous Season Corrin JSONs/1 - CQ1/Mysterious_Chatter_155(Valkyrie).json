@@ -1,0 +1,61 @@
+{
+    "name": "Valkyrie",
+    "twitchUsername": "Mysterious_Chatter_155",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 7,
+        "hairDecoration": 4,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "14",
+            "hex": "#cfc3a1"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 60
+        },
+        "promoted": {
+            "name": "Falcon Knight",
+            "id": 58
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Life and Death",
+            "id": 55
+        },
+        "personal2": {
+            "name": "Sol",
+            "id": 29
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

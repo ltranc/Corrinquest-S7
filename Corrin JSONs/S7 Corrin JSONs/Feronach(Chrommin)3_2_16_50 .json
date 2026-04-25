@@ -1,0 +1,70 @@
+{
+  "name": "Chrommin",
+  "twitchUsername": "Feronach",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 5,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 19,
+        "name": "Prince's Crown"
+      },
+      "face": null,
+      "arm": {
+        "id": 61,
+        "name": "Emblem Shield"
+      },
+      "body": {
+        "id": 101,
+        "name": "Xander Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Samurai",
+      "id": 149
+    },
+    "promoted": {
+      "name": "Great Lord",
+      "id": 168
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Aether",
+      "id": 26
+    },
+    "personal2": {
+      "name": "Charm",
+      "id": 72
+    }
+  },
+  "creationDate": "3_2_16_50"
+}

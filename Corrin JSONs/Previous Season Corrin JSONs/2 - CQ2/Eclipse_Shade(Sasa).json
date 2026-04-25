@@ -1,0 +1,64 @@
+{
+    "name": "Sasa",
+    "twitchUsername": "Eclipse_Shade",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 4,
+        "hairDecoration": 5,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 76
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 74
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Astra",
+            "id": 27
+        },
+        "personal2": {
+            "name": "Aether",
+            "id": 26
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

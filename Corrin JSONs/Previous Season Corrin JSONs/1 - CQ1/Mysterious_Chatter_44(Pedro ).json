@@ -1,0 +1,61 @@
+{
+    "name": "Pedro ",
+    "twitchUsername": "Mysterious_Chatter_44",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 11,
+        "hairDecoration": 0,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 159
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 118
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dragon Fang",
+            "id": 28
+        },
+        "personal2": {
+            "name": "Astra",
+            "id": 27
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

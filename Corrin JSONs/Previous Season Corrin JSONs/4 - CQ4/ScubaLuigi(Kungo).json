@@ -1,0 +1,64 @@
+{
+    "name": "Kungo",
+    "twitchUsername": "ScubaLuigi",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 11,
+        "hairDecoration": 0,
+        "facialDetail": 9,
+        "hairColor": {
+            "value": "4",
+            "hex": "#eddbc5"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 38,
+                "name": "Tengu Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Oni Chieftain",
+            "id": 37
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Tactical Advice",
+            "id": 134
+        },
+        "personal2": {
+            "name": "Dual Guardsman",
+            "id": 157
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

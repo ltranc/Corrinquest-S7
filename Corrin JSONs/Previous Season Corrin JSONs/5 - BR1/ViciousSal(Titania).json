@@ -1,0 +1,64 @@
+{
+    "name": "Titania",
+    "twitchUsername": "ViciousSal",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 9,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 8,
+                "name": "Yune Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 64
+        },
+        "promoted": {
+            "name": "Kinshi Knight",
+            "id": 62
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quick Salve",
+            "id": 109
+        },
+        "personal2": {
+            "name": "Elbow Room",
+            "id": 51
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

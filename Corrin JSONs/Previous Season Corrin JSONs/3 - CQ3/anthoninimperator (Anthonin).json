@@ -1,0 +1,64 @@
+{
+    "name": "Anthonin",
+    "twitchUsername": "anthoninimperator ",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "7",
+            "hex": "#92add0"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 35,
+                "name": "Einherjar Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 79
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 81
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Miracle",
+            "id": 36
+        },
+        "personal2": {
+            "name": "Lucktaker",
+            "id": 146
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

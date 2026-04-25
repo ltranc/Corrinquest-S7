@@ -1,0 +1,61 @@
+{
+    "name": "Haar",
+    "twitchUsername": "Mysterious_Chatter_27",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 67
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Axefaire",
+            "id": 67
+        },
+        "personal2": {
+            "name": "Trample",
+            "id": 63
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

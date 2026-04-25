@@ -1,0 +1,64 @@
+{
+    "name": "Robin",
+    "twitchUsername": "Blackwing757",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#ffffff"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 6,
+                "name": "Robin's Books"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 162
+        },
+        "promoted": {
+            "name": "Grandmaster",
+            "id": 169
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Tactical Advice",
+            "id": 134
+        },
+        "personal2": {
+            "name": "Future Sight",
+            "id": 107
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

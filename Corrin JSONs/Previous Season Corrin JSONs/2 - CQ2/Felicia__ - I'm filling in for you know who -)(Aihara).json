@@ -1,0 +1,64 @@
+{
+    "name": "Aihara",
+    "twitchUsername": "Felicia__ - I'm filling in for you know who :-)",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 4,
+        "hairDecoration": 5,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 44,
+                "name": "Lion Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 28
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 30
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Seal Strength",
+            "id": 11
+        },
+        "personal2": {
+            "name": "Bowfaire",
+            "id": 69
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

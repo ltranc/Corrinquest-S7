@@ -1,0 +1,64 @@
+{
+    "name": "Jason-san",
+    "twitchUsername": "Jasonsonic06",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 19,
+                "name": "Prince's Crown"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 49
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 51
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Pavise",
+            "id": 33
+        },
+        "personal2": {
+            "name": "Renewal",
+            "id": 94
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

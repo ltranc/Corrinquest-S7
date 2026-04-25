@@ -1,0 +1,61 @@
+{
+    "name": "Chew",
+    "twitchUsername": "TP_Chew",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "8",
+            "hex": "#c8a2d6"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 67
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Axefaire",
+            "id": 67
+        },
+        "personal2": {
+            "name": "Trample",
+            "id": 63
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

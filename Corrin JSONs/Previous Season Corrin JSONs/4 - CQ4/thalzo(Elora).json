@@ -1,0 +1,64 @@
+{
+    "name": "Elora",
+    "twitchUsername": "thalzo",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 9,
+        "hairDecoration": 5,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 15,
+                "name": "Flower Band"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 28
+        },
+        "promoted": {
+            "name": "Bow Knight",
+            "id": 26
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Death Blow",
+            "id": 59
+        },
+        "personal2": {
+            "name": "Elbow Room",
+            "id": 51
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

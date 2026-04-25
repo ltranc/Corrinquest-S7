@@ -1,0 +1,64 @@
+{
+    "name": "Aurzo",
+    "twitchUsername": "HunterAurzo",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "27",
+            "hex": "#4d81b5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 9,
+                "name": "Pink Beret"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 63
+        },
+        "promoted": {
+            "name": "Kinshi Knight",
+            "id": 61
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Solidarity",
+            "id": 135
+        },
+        "personal2": {
+            "name": "Inspiration",
+            "id": 75
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

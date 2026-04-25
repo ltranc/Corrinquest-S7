@@ -1,0 +1,64 @@
+{
+    "name": "Brian Damage",
+    "twitchUsername": "ZaneGreedon",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 82,
+                "name": "Dark Skull"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 19
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 17
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Odd Shaped",
+            "id": 54
+        },
+        "personal2": {
+            "name": "Death Blow",
+            "id": 59
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

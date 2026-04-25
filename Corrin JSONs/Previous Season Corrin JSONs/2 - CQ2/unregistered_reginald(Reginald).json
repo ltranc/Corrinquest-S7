@@ -1,0 +1,64 @@
+{
+    "name": "Reginald",
+    "twitchUsername": "unregistered_reginald",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 53,
+                "name": "Arena Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 59
+        },
+        "promoted": {
+            "name": "Falcon Knight",
+            "id": 57
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Defense",
+            "id": 21
+        },
+        "personal2": {
+            "name": "Rally Resistance",
+            "id": 22
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

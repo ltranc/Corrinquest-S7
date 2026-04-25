@@ -1,0 +1,64 @@
+{
+    "name": "Eris Greyrat",
+    "twitchUsername": "fevan_sost",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 0,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "2",
+            "hex": "#c35855"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 20
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 22
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quixotic",
+            "id": 90
+        },
+        "personal2": {
+            "name": "Lifetaker",
+            "id": 98
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

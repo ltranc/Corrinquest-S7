@@ -1,0 +1,64 @@
+{
+    "name": "El Stupido",
+    "twitchUsername": "jcrothagain",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#e6e4e3"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 7,
+                "name": "Ike's Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Lancer",
+            "id": 106
+        },
+        "promoted": {
+            "name": "Great Lord",
+            "id": 168
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Movement +1",
+            "id": 9
+        },
+        "personal2": {
+            "name": "Veteran Intuition",
+            "id": 159
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

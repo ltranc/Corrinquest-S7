@@ -1,0 +1,61 @@
+{
+    "name": "Ishtar",
+    "twitchUsername": "Mysterious_Chatter_68",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 9,
+        "hairDecoration": 1,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "7",
+            "hex": "#92add0"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 50
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 52
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Magictaker",
+            "id": 143
+        },
+        "personal2": {
+            "name": "Awakening",
+            "id": 133
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

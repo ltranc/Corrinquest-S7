@@ -1,0 +1,64 @@
+{
+    "name": "Vyleige",
+    "twitchUsername": "vyleige22",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 48,
+                "name": "Battle Flag"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Nohr Prince(ss)",
+            "id": 3
+        },
+        "promoted": {
+            "name": "Nohr Noble",
+            "id": 1
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quixotic",
+            "id": 90
+        },
+        "personal2": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

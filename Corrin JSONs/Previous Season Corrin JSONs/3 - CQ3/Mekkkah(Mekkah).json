@@ -1,0 +1,64 @@
+{
+    "name": "Mekkah",
+    "twitchUsername": "Mekkkah",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 0,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "22",
+            "hex": "#e85d64"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 70
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 68
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Elbow Room",
+            "id": 51
+        },
+        "personal2": {
+            "name": "Astra",
+            "id": 27
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Variable",
+    "twitchUsername": "Variablex5",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 22,
+                "name": "Nightcap"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Villager",
+            "id": 104
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 81
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Luck +4",
+            "id": 6
+        },
+        "personal2": {
+            "name": "Miracle",
+            "id": 36
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

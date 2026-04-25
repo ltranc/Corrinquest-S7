@@ -1,0 +1,64 @@
+{
+    "name": "Panda",
+    "twitchUsername": "Dootmix",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 3,
+                "name": "Bear Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wolfskin",
+            "id": 95
+        },
+        "promoted": {
+            "name": "Wolfssegner",
+            "id": 97
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Renewal",
+            "id": 94
+        },
+        "personal2": {
+            "name": "Even Better",
+            "id": 95
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

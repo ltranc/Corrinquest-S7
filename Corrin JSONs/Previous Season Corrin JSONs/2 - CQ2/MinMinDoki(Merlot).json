@@ -1,0 +1,64 @@
+{
+    "name": "Merlot",
+    "twitchUsername": "MinMinDoki",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 7,
+        "hairDecoration": 2,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 50,
+                "name": "Water Gourd"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 80
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 82
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Witch's Brew",
+            "id": 153
+        },
+        "personal2": {
+            "name": "Odd Shaped",
+            "id": 54
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

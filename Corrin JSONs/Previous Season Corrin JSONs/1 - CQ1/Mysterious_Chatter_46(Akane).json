@@ -1,0 +1,61 @@
+{
+    "name": "Akane",
+    "twitchUsername": "Mysterious_Chatter_46",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 54
+        },
+        "promoted": {
+            "name": "Priestess",
+            "id": 56
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Inspiration",
+            "id": 75
+        },
+        "personal2": {
+            "name": "Amaterasu",
+            "id": 97
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

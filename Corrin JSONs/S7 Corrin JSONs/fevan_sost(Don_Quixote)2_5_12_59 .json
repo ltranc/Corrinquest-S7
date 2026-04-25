@@ -1,0 +1,73 @@
+{
+  "name": "Don Quixote",
+  "twitchUsername": "fevan_sost",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 6,
+    "hairstyle": 3,
+    "hairDecoration": 0,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "30",
+      "hex": "#6e4f3b"
+    },
+    "voice": {
+      "name": "jp-energetic",
+      "id": 5
+    },
+    "accessories": {
+      "head": {
+        "id": 73,
+        "name": "Roguish Hat"
+      },
+      "face": {
+        "id": 33,
+        "name": "Royal Feather"
+      },
+      "arm": {
+        "id": 50,
+        "name": "Water Gourd"
+      },
+      "body": {
+        "id": 83,
+        "name": "Tank Engine"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Cavalier",
+      "id": 9
+    },
+    "promoted": {
+      "name": "Paladin",
+      "id": 7
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Darting Blow",
+      "id": 58
+    },
+    "personal2": {
+      "name": "Quick Draw",
+      "id": 49
+    }
+  },
+  "creationDate": "2_5_12_59"
+}

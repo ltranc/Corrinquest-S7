@@ -1,0 +1,64 @@
+{
+    "name": "Nana",
+    "twitchUsername": "nanabaedude",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 11,
+        "hairDecoration": 4,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 84
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        },
+        "personal2": {
+            "name": "Luna",
+            "id": 30
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

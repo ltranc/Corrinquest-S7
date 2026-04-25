@@ -1,0 +1,64 @@
+{
+    "name": "Crystal",
+    "twitchUsername": "crystal_queen_20",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 1,
+        "hairDecoration": 1,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 150
+        },
+        "promoted": {
+            "name": "Great Lord",
+            "id": 126
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Renewal",
+            "id": 94
+        },
+        "personal2": {
+            "name": "Grisly Wound",
+            "id": 103
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

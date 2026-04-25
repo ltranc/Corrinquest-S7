@@ -1,0 +1,64 @@
+{
+    "name": "Lufa",
+    "twitchUsername": "Shattered2000",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 44,
+                "name": "Lion Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 154
+        },
+        "promoted": {
+            "name": "Grandmaster",
+            "id": 169
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Swap",
+            "id": 47
+        },
+        "personal2": {
+            "name": "Gamble",
+            "id": 85
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

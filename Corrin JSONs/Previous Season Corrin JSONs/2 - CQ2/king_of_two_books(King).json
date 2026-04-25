@@ -1,0 +1,61 @@
+{
+    "name": "King",
+    "twitchUsername": "king_of_two_books",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 23
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 21
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Astra",
+            "id": 27
+        },
+        "personal2": {
+            "name": "Pavise",
+            "id": 33
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

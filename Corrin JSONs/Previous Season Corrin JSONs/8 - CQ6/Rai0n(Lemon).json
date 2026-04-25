@@ -1,0 +1,64 @@
+{
+    "name": "Lemon",
+    "twitchUsername": "Rai0n",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#148557"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 94
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Luck",
+            "id": 20
+        },
+        "personal2": {
+            "name": "Even Better",
+            "id": 95
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

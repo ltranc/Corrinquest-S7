@@ -1,0 +1,67 @@
+{
+    "name": "Sage",
+    "twitchUsername": "MaxPowerGamer777",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 7,
+        "hairDecoration": 2,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "15",
+            "hex": "#6f845f"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 64,
+                "name": "Witch's Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": {
+                "id": 85,
+                "name": "Alternate Beast Form"
+            }
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 54
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 52
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Strength",
+            "id": 16
+        },
+        "personal2": {
+            "name": "Rally Speed",
+            "id": 19
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "MasterOfSex",
+    "twitchUsername": "fevan_sost",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 38,
+                "name": "Tengu Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Villager",
+            "id": 104
+        },
+        "promoted": {
+            "name": "Master of Arms",
+            "id": 35
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Armored Blow",
+            "id": 61
+        },
+        "personal2": {
+            "name": "Gentilhomme",
+            "id": 73
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

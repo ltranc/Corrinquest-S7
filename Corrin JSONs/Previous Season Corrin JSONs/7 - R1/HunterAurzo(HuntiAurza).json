@@ -1,0 +1,64 @@
+{
+    "name": "HuntiAurza",
+    "twitchUsername": "HunterAurzo",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "27",
+            "hex": "#4d81b5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 69,
+                "name": "Pumpkin Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 77
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dual Striker",
+            "id": 132
+        },
+        "personal2": {
+            "name": "Dual Guardsman",
+            "id": 157
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

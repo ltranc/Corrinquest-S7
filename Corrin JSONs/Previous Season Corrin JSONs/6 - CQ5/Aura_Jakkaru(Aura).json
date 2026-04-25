@@ -1,0 +1,64 @@
+{
+    "name": "Aura",
+    "twitchUsername": "Aura_Jakkaru",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 99
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 101
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quick Draw",
+            "id": 49
+        },
+        "personal2": {
+            "name": "Lethality",
+            "id": 25
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

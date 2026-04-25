@@ -1,0 +1,67 @@
+{
+    "name": "Esau",
+    "twitchUsername": "NethaEmerald",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 2,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 3,
+                "name": "Bear Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": {
+                "id": 85,
+                "name": "Alternate Beast Form"
+            }
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 99
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 101
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Renewal",
+            "id": 94
+        },
+        "personal2": {
+            "name": "Better Odds",
+            "id": 96
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

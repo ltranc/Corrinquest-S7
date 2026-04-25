@@ -1,0 +1,64 @@
+{
+    "name": "Fergus",
+    "twitchUsername": "Deviljho126",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 44,
+                "name": "Lion Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 23
+        },
+        "promoted": {
+            "name": "Bow Knight",
+            "id": 25
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Counter",
+            "id": 37
+        },
+        "personal2": {
+            "name": "Dragon Fang",
+            "id": 28
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Roland",
+    "twitchUsername": "MLarvitar",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 9
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 7
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Pass",
+            "id": 111
+        },
+        "personal2": {
+            "name": "Lunge",
+            "id": 46
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

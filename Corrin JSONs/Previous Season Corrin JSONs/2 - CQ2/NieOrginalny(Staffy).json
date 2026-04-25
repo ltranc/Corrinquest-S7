@@ -1,0 +1,64 @@
+{
+    "name": "Staffy",
+    "twitchUsername": "NieOrginalny",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 24,
+                "name": "Maid's Band"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 92
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 94
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Life and Death",
+            "id": 55
+        },
+        "personal2": {
+            "name": "Spendthrift",
+            "id": 56
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

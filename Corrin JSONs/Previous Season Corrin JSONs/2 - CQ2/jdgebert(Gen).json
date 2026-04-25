@@ -1,0 +1,64 @@
+{
+    "name": "Gen",
+    "twitchUsername": "jdgebert",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 32,
+                "name": "Faceless Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 73
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Tomebreaker",
+            "id": 84
+        },
+        "personal2": {
+            "name": "Savage Blow",
+            "id": 102
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

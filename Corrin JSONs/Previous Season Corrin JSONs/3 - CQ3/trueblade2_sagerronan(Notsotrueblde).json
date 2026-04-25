@@ -1,0 +1,64 @@
+{
+    "name": "Notsotrueblde",
+    "twitchUsername": "trueblade2_sagerronan",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "19",
+            "hex": "#eeb1b1"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 91
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 89
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Live to Serve",
+            "id": 100
+        },
+        "personal2": {
+            "name": "Amaterasu",
+            "id": 97
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

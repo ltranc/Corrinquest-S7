@@ -1,0 +1,64 @@
+{
+    "name": "Morbius",
+    "twitchUsername": "Dragontrainerguy2003",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 11,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#384038"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 39,
+                "name": "Jailer Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 79
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 81
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lifetaker",
+            "id": 98
+        },
+        "personal2": {
+            "name": "Grisly Wound",
+            "id": 103
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,73 @@
+{
+  "name": "Largo",
+  "twitchUsername": "ultraluminary_",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 4,
+    "hairDecoration": 0,
+    "facialDetail": 1,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#512950"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 86,
+        "name": "Party Hat"
+      },
+      "face": {
+        "id": 40,
+        "name": "Tinted Glasses"
+      },
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": {
+        "id": 103,
+        "name": "Benny Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Def",
+      "id": 7
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Fighter",
+      "id": 19
+    },
+    "promoted": {
+      "name": "Berserker",
+      "id": 17
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Evenhanded",
+      "id": 53
+    },
+    "personal2": {
+      "name": "Luna",
+      "id": 30
+    }
+  },
+  "creationDate": "2_5_2_35"
+}

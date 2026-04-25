@@ -1,0 +1,64 @@
+{
+    "name": "Baiken",
+    "twitchUsername": "themysteriousemblem",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 6,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "19",
+            "hex": "#eeb1b1"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 50,
+                "name": "Water Gourd"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 32
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Counter",
+            "id": 37
+        },
+        "personal2": {
+            "name": "Vengeance",
+            "id": 32
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

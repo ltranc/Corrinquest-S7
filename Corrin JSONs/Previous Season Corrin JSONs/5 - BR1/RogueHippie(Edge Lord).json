@@ -1,0 +1,64 @@
+{
+    "name": "Edge Lord",
+    "twitchUsername": "RogueHippie",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 33
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 31
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lethality",
+            "id": 25
+        },
+        "personal2": {
+            "name": "Quixotic",
+            "id": 90
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

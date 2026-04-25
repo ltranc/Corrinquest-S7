@@ -1,0 +1,61 @@
+{
+  "name": "Linda",
+  "twitchUsername": "grottosstuff",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 0,
+    "hairstyle": 9,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "15",
+      "hex": "#6f845f"
+    },
+    "voice": {
+      "name": "jp-middle",
+      "id": 3
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Samurai",
+      "id": 34
+    },
+    "promoted": {
+      "name": "Swordmaster",
+      "id": 32
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Death Blow",
+      "id": 59
+    },
+    "personal2": {
+      "name": "Pass",
+      "id": 111
+    }
+  },
+  "creationDate": "2_9_19_33"
+}

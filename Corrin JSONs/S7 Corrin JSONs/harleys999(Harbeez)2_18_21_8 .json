@@ -1,0 +1,70 @@
+{
+  "name": "Harbeez",
+  "twitchUsername": "harleys999",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 2,
+    "hairstyle": 1,
+    "hairDecoration": 0,
+    "facialDetail": 7,
+    "hairColor": {
+      "value": "3",
+      "hex": "#d38969"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 80,
+        "name": "Straw Hat"
+      },
+      "face": null,
+      "arm": {
+        "id": 50,
+        "name": "Water Gourd"
+      },
+      "body": {
+        "id": 152,
+        "name": "Yukimura Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "HP",
+      "id": 1
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Apothecary",
+      "id": 79
+    },
+    "promoted": {
+      "name": "Mechanist",
+      "id": 77
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Renewal",
+      "id": 94
+    },
+    "personal2": {
+      "name": "Countermagic",
+      "id": 38
+    }
+  },
+  "creationDate": "2_18_21_8"
+}

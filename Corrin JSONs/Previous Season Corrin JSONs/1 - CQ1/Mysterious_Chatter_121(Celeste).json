@@ -1,0 +1,61 @@
+{
+    "name": "Celeste",
+    "twitchUsername": "Mysterious_Chatter_121",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 3,
+        "hairDecoration": 1,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 50
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 52
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Countermagic",
+            "id": 38
+        },
+        "personal2": {
+            "name": "Quick Salve",
+            "id": 109
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

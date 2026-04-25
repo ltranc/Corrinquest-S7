@@ -1,0 +1,64 @@
+{
+  "name": "Taco",
+  "twitchUsername": "Tacoloco787",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 2,
+    "hairstyle": 4,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "12",
+      "hex": "#9b4444"
+    },
+    "voice": {
+      "name": "jp-mature",
+      "id": 6
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 30,
+        "name": "Cross Eyepatch"
+      },
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Knight",
+      "id": 13
+    },
+    "promoted": {
+      "name": "General",
+      "id": 15
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Lethality",
+      "id": 25
+    },
+    "personal2": {
+      "name": "Defender",
+      "id": 71
+    }
+  },
+  "creationDate": "4_6_22_32"
+}

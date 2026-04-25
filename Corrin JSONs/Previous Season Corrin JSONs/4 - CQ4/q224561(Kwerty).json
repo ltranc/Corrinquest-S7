@@ -1,0 +1,64 @@
+{
+    "name": "Kwerty",
+    "twitchUsername": "q224561",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 9,
+        "hairDecoration": 2,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "10",
+            "hex": "#c0aa9c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Dark Falcon",
+            "id": 121
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Malefic Aura",
+            "id": 76
+        },
+        "personal2": {
+            "name": "Magic +2",
+            "id": 3
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

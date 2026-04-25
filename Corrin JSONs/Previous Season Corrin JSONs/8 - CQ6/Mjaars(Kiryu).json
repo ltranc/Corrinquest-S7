@@ -1,0 +1,64 @@
+{
+    "name": "Kiryu",
+    "twitchUsername": "Mjaars",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#5b5956"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 5,
+                "name": "Dragon Feather"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Oni Chieftain",
+            "id": 37
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Counter",
+            "id": 37
+        },
+        "personal2": {
+            "name": "Renewal",
+            "id": 94
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

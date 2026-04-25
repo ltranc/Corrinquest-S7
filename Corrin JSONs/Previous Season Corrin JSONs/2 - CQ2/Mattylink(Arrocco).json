@@ -1,0 +1,64 @@
+{
+    "name": "Arrocco",
+    "twitchUsername": "Mattylink",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "16",
+            "hex": "#3c7986"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 8,
+                "name": "Yune Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "General",
+            "id": 15
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lunge",
+            "id": 46
+        },
+        "personal2": {
+            "name": "Tomebreaker",
+            "id": 84
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Cupacinno",
+    "twitchUsername": "Mysterious_Chatter_139",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "26",
+            "hex": "#86e1dc"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 33
+        },
+        "promoted": {
+            "name": "Master of Arms",
+            "id": 35
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Vantage",
+            "id": 39
+        },
+        "personal2": {
+            "name": "Lethality",
+            "id": 25
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

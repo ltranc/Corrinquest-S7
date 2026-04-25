@@ -1,0 +1,61 @@
+{
+    "name": "Senlica",
+    "twitchUsername": "Mysterious_Chatter_16",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "2",
+            "hex": "#c35855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 50
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 52
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Death Blow",
+            "id": 59
+        },
+        "personal2": {
+            "name": "Life and Death",
+            "id": 55
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

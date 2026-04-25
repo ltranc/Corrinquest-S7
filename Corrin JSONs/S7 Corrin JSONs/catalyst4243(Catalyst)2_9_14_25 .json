@@ -1,0 +1,70 @@
+{
+  "name": "Catalyst",
+  "twitchUsername": "catalyst4243",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 5,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "younger",
+      "id": 0
+    },
+    "accessories": {
+      "head": {
+        "id": 24,
+        "name": "Maid's Band"
+      },
+      "face": {
+        "id": 27,
+        "name": "Ninja Mask"
+      },
+      "arm": null,
+      "body": {
+        "id": 89,
+        "name": "Crossdress"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Ninja",
+      "id": 159
+    },
+    "promoted": {
+      "name": "Butler/Maid",
+      "id": 93
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Charm",
+      "id": 72
+    },
+    "personal2": {
+      "name": "Heavy Blade",
+      "id": 158
+    }
+  },
+  "creationDate": "2_9_14_25"
+}

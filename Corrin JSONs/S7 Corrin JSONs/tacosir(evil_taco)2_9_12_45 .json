@@ -1,0 +1,67 @@
+{
+  "name": "evil taco",
+  "twitchUsername": "tacosir",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 2,
+    "hairstyle": 11,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "30",
+      "hex": "#6e4f3b"
+    },
+    "voice": {
+      "name": "standard",
+      "id": 1
+    },
+    "accessories": {
+      "head": {
+        "id": 21,
+        "name": "White Ribbon"
+      },
+      "face": {
+        "id": 66,
+        "name": "Sunglasses"
+      },
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 147
+    },
+    "promoted": {
+      "name": "Vanguard",
+      "id": 125
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Lifetaker",
+      "id": 98
+    },
+    "personal2": {
+      "name": "Vengeance",
+      "id": 32
+    }
+  },
+  "creationDate": "2_9_12_45"
+}

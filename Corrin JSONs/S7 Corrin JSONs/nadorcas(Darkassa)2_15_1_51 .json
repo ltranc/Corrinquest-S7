@@ -1,0 +1,73 @@
+{
+  "name": "Darkassa",
+  "twitchUsername": "nadorcas",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 5,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#56005c"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 3,
+        "name": "Bear Hat"
+      },
+      "face": {
+        "id": 35,
+        "name": "Einherjar Mask"
+      },
+      "arm": {
+        "id": 5,
+        "name": "Dragon Feather"
+      },
+      "body": {
+        "id": 124,
+        "name": "Peri Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Dark Mage",
+      "id": 162
+    },
+    "promoted": {
+      "name": "Witch",
+      "id": 123
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Death Blow",
+      "id": 59
+    },
+    "personal2": {
+      "name": "Certain Blow",
+      "id": 60
+    }
+  },
+  "creationDate": "2_15_1_51"
+}

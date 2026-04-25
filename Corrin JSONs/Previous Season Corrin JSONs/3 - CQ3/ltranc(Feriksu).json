@@ -1,0 +1,64 @@
+{
+    "name": "Feriksu",
+    "twitchUsername": "ltranc",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 49,
+                "name": "General's Shell"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "Great Knight",
+            "id": 11
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Pavise",
+            "id": 33
+        },
+        "personal2": {
+            "name": "Quixotic",
+            "id": 90
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

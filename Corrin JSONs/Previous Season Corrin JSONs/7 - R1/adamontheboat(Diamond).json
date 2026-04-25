@@ -1,0 +1,64 @@
+{
+    "name": "Diamond",
+    "twitchUsername": "adamontheboat",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 25,
+                "name": "Chef Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 14
+        },
+        "promoted": {
+            "name": "General",
+            "id": 16
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Iron Will",
+            "id": 129
+        },
+        "personal2": {
+            "name": "Renewal",
+            "id": 94
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

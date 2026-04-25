@@ -1,0 +1,61 @@
+{
+    "name": "Batsy",
+    "twitchUsername": "Mysterious_Chatter_52",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 32
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shove",
+            "id": 45
+        },
+        "personal2": {
+            "name": "Death Blow",
+            "id": 59
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

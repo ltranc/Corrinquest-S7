@@ -1,0 +1,70 @@
+{
+  "name": "Gaashama",
+  "twitchUsername": "ZaneGreedon",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 4,
+    "hairstyle": 4,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "23",
+      "hex": "#f59d71"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 20,
+        "name": "Sun Tiara"
+      },
+      "face": {
+        "id": 30,
+        "name": "Cross Eyepatch"
+      },
+      "arm": {
+        "id": 48,
+        "name": "Battle Flag"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Sky Knight",
+      "id": 155
+    },
+    "promoted": {
+      "name": "Dark Falcon",
+      "id": 120
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Certain Blow",
+      "id": 60
+    },
+    "personal2": {
+      "name": "Resolve",
+      "id": 152
+    }
+  },
+  "creationDate": "2_7_22_42"
+}

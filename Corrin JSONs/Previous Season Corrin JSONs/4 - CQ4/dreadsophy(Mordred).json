@@ -1,0 +1,64 @@
+{
+    "name": "Mordred",
+    "twitchUsername": "dreadsophy",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 2,
+        "hairDecoration": 1,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "20",
+            "hex": "#837267"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 42,
+                "name": "Nohr Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 32
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Gentilhomme",
+            "id": 73
+        },
+        "personal2": {
+            "name": "Demoiselle",
+            "id": 74
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Nocking",
+  "twitchUsername": "sirhat0",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 2,
+    "hairstyle": 3,
+    "hairDecoration": 3,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "29",
+      "hex": "#f497af"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 73,
+        "name": "Roguish Hat"
+      },
+      "face": {
+        "id": 40,
+        "name": "Tinted Glasses"
+      },
+      "arm": null,
+      "body": {
+        "id": 117,
+        "name": "Setsuna Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Archer",
+      "id": 64
+    },
+    "promoted": {
+      "name": "Sniper",
+      "id": 66
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Strength +2",
+      "id": 2
+    },
+    "personal2": {
+      "name": "Elbow Room",
+      "id": 51
+    }
+  },
+  "creationDate": "2_12_2_17"
+}

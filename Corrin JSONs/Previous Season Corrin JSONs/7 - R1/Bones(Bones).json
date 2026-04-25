@@ -1,0 +1,61 @@
+{
+    "name": "Bones",
+    "twitchUsername": "Bones",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 170
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 89
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "HP +5",
+            "id": 1
+        },
+        "personal2": {
+            "name": "Wary Fighter",
+            "id": 64
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

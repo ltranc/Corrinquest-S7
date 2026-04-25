@@ -1,0 +1,73 @@
+{
+  "name": "Phoenix",
+  "twitchUsername": "greenphoenix08",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 4,
+    "hairstyle": 8,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#4dff16"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 73,
+        "name": "Roguish Hat"
+      },
+      "face": {
+        "id": 67,
+        "name": "Rimmed Glasses"
+      },
+      "arm": {
+        "id": 42,
+        "name": "Nohr Pauldron"
+      },
+      "body": {
+        "id": 99,
+        "name": "Subaki Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 147
+    },
+    "promoted": {
+      "name": "Lodestar",
+      "id": 124
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Sol",
+      "id": 29
+    },
+    "personal2": {
+      "name": "Defense +2",
+      "id": 7
+    }
+  },
+  "creationDate": "2_9_19_22"
+}

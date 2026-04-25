@@ -1,0 +1,64 @@
+{
+    "name": "53",
+    "twitchUsername": "Frank53",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 61,
+                "name": "Emblem Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Nohr Prince(ss)",
+            "id": 3
+        },
+        "promoted": {
+            "name": "Hoshido Noble",
+            "id": 5
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Aether",
+            "id": 26
+        },
+        "personal2": {
+            "name": "Lethality",
+            "id": 25
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

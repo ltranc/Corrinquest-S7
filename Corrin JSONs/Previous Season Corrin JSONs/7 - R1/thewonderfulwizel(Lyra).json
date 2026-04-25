@@ -1,0 +1,64 @@
+{
+    "name": "Lyra",
+    "twitchUsername": "thewonderfulwizel",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 17,
+                "name": "Lottery Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Master of Arms",
+            "id": 36
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Evenhanded",
+            "id": 53
+        },
+        "personal2": {
+            "name": "Grisly Wound",
+            "id": 103
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

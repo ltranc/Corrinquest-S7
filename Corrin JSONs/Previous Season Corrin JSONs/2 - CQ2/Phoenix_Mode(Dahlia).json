@@ -1,0 +1,61 @@
+{
+    "name": "Dahlia",
+    "twitchUsername": "Phoenix_Mode",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 4,
+        "hairDecoration": 3,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 80
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 78
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lifetaker",
+            "id": 98
+        },
+        "personal2": {
+            "name": "Demoiselle",
+            "id": 74
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

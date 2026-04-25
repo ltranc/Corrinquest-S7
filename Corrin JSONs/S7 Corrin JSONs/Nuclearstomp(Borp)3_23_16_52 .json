@@ -1,0 +1,73 @@
+{
+  "name": "Borp",
+  "twitchUsername": "Nuclearstomp",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 4,
+    "hairstyle": 1,
+    "hairDecoration": 3,
+    "facialDetail": 12,
+    "hairColor": {
+      "value": "11",
+      "hex": "#a5a6a6"
+    },
+    "voice": {
+      "name": "jp-energetic",
+      "id": 5
+    },
+    "accessories": {
+      "head": {
+        "id": 80,
+        "name": "Straw Hat"
+      },
+      "face": {
+        "id": 75,
+        "name": "Smither's Guard"
+      },
+      "arm": {
+        "id": 53,
+        "name": "Arena Shield"
+      },
+      "body": {
+        "id": 89,
+        "name": "Crossdress"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Lancer",
+      "id": 177
+    },
+    "promoted": {
+      "name": "General",
+      "id": 16
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Speed +2",
+      "id": 5
+    },
+    "personal2": {
+      "name": "Seal Speed",
+      "id": 13
+    }
+  },
+  "creationDate": "3_23_16_52"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "OWAIN!!",
+    "twitchUsername": "British_leprechaun0",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "4",
+            "hex": "#eddbc5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 7,
+                "name": "Ike's Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 33
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 31
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rend Heaven",
+            "id": 31
+        },
+        "personal2": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

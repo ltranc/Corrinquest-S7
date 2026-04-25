@@ -1,0 +1,64 @@
+{
+    "name": "Frito",
+    "twitchUsername": "deFritos",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "22",
+            "hex": "#e85d64"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 43,
+                "name": "Medicine Trunk"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 91
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 89
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Voice of Peace",
+            "id": 77
+        },
+        "personal2": {
+            "name": "Rally Magic",
+            "id": 17
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

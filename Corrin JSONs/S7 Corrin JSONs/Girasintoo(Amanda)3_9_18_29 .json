@@ -1,0 +1,70 @@
+{
+  "name": "Amanda",
+  "twitchUsername": "Girasintoo",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 0,
+    "hairstyle": 10,
+    "hairDecoration": 0,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "30",
+      "hex": "#6e4f3b"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 81,
+        "name": "Dark Diadem"
+      },
+      "face": null,
+      "arm": {
+        "id": 44,
+        "name": "Lion Shield"
+      },
+      "body": {
+        "id": 133,
+        "name": "Midori Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Spd",
+      "id": 5
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Wyvern Rider",
+      "id": 70
+    },
+    "promoted": {
+      "name": "Malig Knight",
+      "id": 72
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Wary Fighter",
+      "id": 64
+    },
+    "personal2": {
+      "name": "Renewal",
+      "id": 94
+    }
+  },
+  "creationDate": "3_9_18_29"
+}

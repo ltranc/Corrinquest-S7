@@ -1,0 +1,61 @@
+{
+    "name": "Tine",
+    "twitchUsername": "dakraa",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "8",
+            "hex": "#c8a2d6"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Dark Falcon",
+            "id": 121
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Elbow Room",
+            "id": 51
+        },
+        "personal2": {
+            "name": "Shadowgift",
+            "id": 141
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

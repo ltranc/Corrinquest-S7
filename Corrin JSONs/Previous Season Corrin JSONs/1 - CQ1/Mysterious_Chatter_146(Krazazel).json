@@ -1,0 +1,61 @@
+{
+    "name": "Krazazel",
+    "twitchUsername": "Mysterious_Chatter_146",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 0,
+        "hairDecoration": 5,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 50
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 52
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Darting Blow",
+            "id": 58
+        },
+        "personal2": {
+            "name": "Death Blow",
+            "id": 59
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

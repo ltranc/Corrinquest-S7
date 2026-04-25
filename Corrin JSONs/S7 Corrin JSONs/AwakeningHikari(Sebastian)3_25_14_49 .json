@@ -1,0 +1,64 @@
+{
+  "name": "Sebastian",
+  "twitchUsername": "AwakeningHikari",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 3,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#000000"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 90,
+        "name": "Jakob Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Ninja",
+      "id": 159
+    },
+    "promoted": {
+      "name": "Butler/Maid",
+      "id": 93
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Charm",
+      "id": 72
+    },
+    "personal2": {
+      "name": "Lethality",
+      "id": 25
+    }
+  },
+  "creationDate": "3_25_14_49"
+}

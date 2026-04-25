@@ -1,0 +1,64 @@
+{
+    "name": "Rorentsu",
+    "twitchUsername": "ltranc",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#7372ab"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 48,
+                "name": "Battle Flag"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 83
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Pavise",
+            "id": 33
+        },
+        "personal2": {
+            "name": "Quixotic",
+            "id": 90
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

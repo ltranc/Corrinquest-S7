@@ -1,0 +1,64 @@
+{
+    "name": "Gamblecor",
+    "twitchUsername": "mezminte",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 17,
+                "name": "Lottery Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 147
+        },
+        "promoted": {
+            "name": "Lodestar",
+            "id": 124
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Salvage Blow",
+            "id": 104
+        },
+        "personal2": {
+            "name": "Profiteer",
+            "id": 105
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Ly",
+    "twitchUsername": "Lydian_C",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 9,
+        "hairDecoration": 3,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 64
+        },
+        "promoted": {
+            "name": "Sniper",
+            "id": 66
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Life and Death",
+            "id": 55
+        },
+        "personal2": {
+            "name": "Death Blow",
+            "id": 59
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

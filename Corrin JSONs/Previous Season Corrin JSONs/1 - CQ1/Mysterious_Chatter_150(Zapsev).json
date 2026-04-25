@@ -1,0 +1,61 @@
+{
+    "name": "Zapsev",
+    "twitchUsername": "Mysterious_Chatter_150",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "29",
+            "hex": "#f497af"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 70
+        },
+        "promoted": {
+            "name": "Malig Knight",
+            "id": 72
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lifetaker",
+            "id": 98
+        },
+        "personal2": {
+            "name": "Axefaire",
+            "id": 67
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Sweat",
+    "twitchUsername": "Wind_lunatic",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 6,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 30,
+                "name": "Cross Eyepatch"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 75
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 73
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Swordbreaker",
+            "id": 79
+        },
+        "personal2": {
+            "name": "Resistance +2",
+            "id": 8
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

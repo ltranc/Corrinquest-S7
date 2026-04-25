@@ -1,0 +1,64 @@
+{
+    "name": "Viceroy",
+    "twitchUsername": "Yu_Junker",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 4,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "2",
+            "hex": "#c35855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 4,
+                "name": "Butterfly Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 24
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 22
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Astra",
+            "id": 27
+        },
+        "personal2": {
+            "name": "Darting Blow",
+            "id": 58
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

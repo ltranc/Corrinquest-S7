@@ -1,0 +1,64 @@
+{
+    "name": "Mysty",
+    "twitchUsername": "mystym1",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 2,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "9",
+            "hex": "#fedada"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 20
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 18
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Death Blow",
+            "id": 59
+        },
+        "personal2": {
+            "name": "Skilltaker",
+            "id": 144
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

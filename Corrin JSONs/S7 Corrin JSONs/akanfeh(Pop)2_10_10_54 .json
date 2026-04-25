@@ -1,0 +1,70 @@
+{
+  "name": "Pop",
+  "twitchUsername": "akanfeh",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 6,
+    "hairDecoration": 0,
+    "facialDetail": 6,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#fcff99"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 68,
+        "name": "Fox Mask"
+      },
+      "arm": {
+        "id": 88,
+        "name": "Ivory Fox Tail"
+      },
+      "body": {
+        "id": 143,
+        "name": "Ignatius Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Wyvern Rider",
+      "id": 69
+    },
+    "promoted": {
+      "name": "Malig Knight",
+      "id": 71
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Pass",
+      "id": 111
+    },
+    "personal2": {
+      "name": "Gamble",
+      "id": 85
+    }
+  },
+  "creationDate": "2_10_10_54"
+}

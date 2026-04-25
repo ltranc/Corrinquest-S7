@@ -1,0 +1,64 @@
+{
+    "name": "Armstrong",
+    "twitchUsername": "fevan_sost",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "General",
+            "id": 15
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Aegis",
+            "id": 34
+        },
+        "personal2": {
+            "name": "Quixotic",
+            "id": 90
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

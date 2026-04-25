@@ -1,0 +1,61 @@
+{
+    "name": "Noah",
+    "twitchUsername": "TheMysteriousEmblem",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 147
+        },
+        "promoted": {
+            "name": "Lodestar",
+            "id": 124
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lifetaker",
+            "id": 98
+        },
+        "personal2": {
+            "name": "Luna",
+            "id": 30
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

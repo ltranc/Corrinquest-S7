@@ -1,0 +1,61 @@
+{
+  "name": "Rancette",
+  "twitchUsername": "arcadiaofsorrw",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 9,
+    "hairDecoration": 1,
+    "facialDetail": 8,
+    "hairColor": {
+      "value": "14",
+      "hex": "#cfc3a1"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Monk/Shrine Maiden",
+      "id": 54
+    },
+    "promoted": {
+      "name": "Priestess",
+      "id": 56
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Live to Serve",
+      "id": 100
+    },
+    "personal2": {
+      "name": "Lifetaker",
+      "id": 98
+    }
+  },
+  "creationDate": "2_9_18_34"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "SkillIssue",
+    "twitchUsername": "okamihacker11",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "27",
+            "hex": "#4d81b5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 20,
+                "name": "Sun Tiara"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 32
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Skilltaker",
+            "id": 144
+        },
+        "personal2": {
+            "name": "Luna",
+            "id": 30
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

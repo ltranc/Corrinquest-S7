@@ -1,0 +1,64 @@
+{
+    "name": "Fenius",
+    "twitchUsername": "ThePsyShyster",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "3",
+            "hex": "#d38969"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 10,
+                "name": "Trainee Garb"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 91
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 89
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Speed",
+            "id": 19
+        },
+        "personal2": {
+            "name": "Malefic Aura",
+            "id": 76
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

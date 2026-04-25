@@ -1,0 +1,64 @@
+{
+    "name": "Onie",
+    "twitchUsername": "NieOrginalny",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 3,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 34,
+                "name": "Hero Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 64
+        },
+        "promoted": {
+            "name": "Kinshi Knight",
+            "id": 62
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Elbow Room",
+            "id": 51
+        },
+        "personal2": {
+            "name": "Dancing Blade",
+            "id": 156
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

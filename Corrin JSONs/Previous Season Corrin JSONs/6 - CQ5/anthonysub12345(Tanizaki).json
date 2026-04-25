@@ -1,0 +1,64 @@
+{
+    "name": "Tanizaki",
+    "twitchUsername": "anthonysub12345",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "29",
+            "hex": "#f497af"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 2,
+                "name": "Dragon Hairpin"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Oni Chieftain",
+            "id": 37
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Sol",
+            "id": 29
+        },
+        "personal2": {
+            "name": "Aegis",
+            "id": 34
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

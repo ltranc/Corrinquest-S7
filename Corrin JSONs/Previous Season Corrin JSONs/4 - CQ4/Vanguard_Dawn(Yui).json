@@ -1,0 +1,64 @@
+{
+    "name": "Yui",
+    "twitchUsername": "Vanguard_Dawn",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 21,
+                "name": "White Ribbon"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 60
+        },
+        "promoted": {
+            "name": "Falcon Knight",
+            "id": 58
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Defender",
+            "id": 71
+        },
+        "personal2": {
+            "name": "Sol",
+            "id": 29
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

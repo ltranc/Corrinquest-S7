@@ -1,0 +1,73 @@
+{
+  "name": "Glockumi",
+  "twitchUsername": "Nohrian_Pharaoh",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 6,
+    "hairstyle": 5,
+    "hairDecoration": 5,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 80,
+        "name": "Straw Hat"
+      },
+      "face": {
+        "id": 30,
+        "name": "Cross Eyepatch"
+      },
+      "arm": {
+        "id": 5,
+        "name": "Dragon Feather"
+      },
+      "body": {
+        "id": 141,
+        "name": "Rhajat Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Archer",
+      "id": 158
+    },
+    "promoted": {
+      "name": "Ballistician",
+      "id": 164
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Relief",
+      "id": 92
+    },
+    "personal2": {
+      "name": "Lunge",
+      "id": 46
+    }
+  },
+  "creationDate": "3_2_16_11"
+}

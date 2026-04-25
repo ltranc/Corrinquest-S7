@@ -1,0 +1,67 @@
+{
+  "name": "lidus",
+  "twitchUsername": "lidd66",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 2,
+    "hairstyle": 9,
+    "hairDecoration": 2,
+    "facialDetail": 6,
+    "hairColor": {
+      "value": "7",
+      "hex": "#92add0"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 33,
+        "name": "Royal Feather"
+      },
+      "arm": {
+        "id": 61,
+        "name": "Emblem Shield"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Diviner",
+      "id": 50
+    },
+    "promoted": {
+      "name": "Basara",
+      "id": 48
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Shadowgift",
+      "id": 141
+    },
+    "personal2": {
+      "name": "HP +5",
+      "id": 1
+    }
+  },
+  "creationDate": "2_9_19_41"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Goth",
+    "twitchUsername": "Mysterious_Chatter_128",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 91
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 93
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        },
+        "personal2": {
+            "name": "Live to Serve",
+            "id": 100
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

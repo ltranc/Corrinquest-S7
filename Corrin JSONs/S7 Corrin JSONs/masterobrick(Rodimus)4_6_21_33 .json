@@ -1,0 +1,67 @@
+{
+  "name": "Rodimus",
+  "twitchUsername": "masterobrick",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 6,
+    "hairDecoration": 0,
+    "facialDetail": 6,
+    "hairColor": {
+      "value": "22",
+      "hex": "#e85d64"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 70,
+        "name": "Rider's Helmet"
+      },
+      "face": null,
+      "arm": {
+        "id": 51,
+        "name": "Armory Shield"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Def",
+      "id": 7
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 23
+    },
+    "promoted": {
+      "name": "Bow Knight",
+      "id": 25
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "HP +5",
+      "id": 1
+    },
+    "personal2": {
+      "name": "Movement +1",
+      "id": 9
+    }
+  },
+  "creationDate": "4_6_21_33"
+}

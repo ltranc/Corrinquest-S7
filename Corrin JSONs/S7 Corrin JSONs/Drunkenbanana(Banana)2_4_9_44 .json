@@ -1,0 +1,67 @@
+{
+  "name": "Banana",
+  "twitchUsername": "Drunkenbanana",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 9,
+    "hairDecoration": 2,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "27",
+      "hex": "#4d81b5"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": {
+        "id": 47,
+        "name": "Heart Pauldron"
+      },
+      "body": {
+        "id": 115,
+        "name": "Kagero Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Fighter",
+      "id": 20
+    },
+    "promoted": {
+      "name": "Berserker",
+      "id": 18
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Death Blow",
+      "id": 59
+    },
+    "personal2": {
+      "name": "Certain Blow",
+      "id": 60
+    }
+  },
+  "creationDate": "2_4_9_44"
+}

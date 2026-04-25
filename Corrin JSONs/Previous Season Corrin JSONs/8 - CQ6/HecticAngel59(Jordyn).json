@@ -1,0 +1,64 @@
+{
+    "name": "Jordyn",
+    "twitchUsername": "HecticAngel59",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 0,
+        "hairDecoration": 5,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Archer",
+            "id": 64
+        },
+        "promoted": {
+            "name": "Kinshi Knight",
+            "id": 62
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Elbow Room",
+            "id": 51
+        },
+        "personal2": {
+            "name": "Darting Blow",
+            "id": 58
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

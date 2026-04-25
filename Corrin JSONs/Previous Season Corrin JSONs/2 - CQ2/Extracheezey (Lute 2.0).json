@@ -1,0 +1,64 @@
+{
+    "name": "Lute 2.0",
+    "twitchUsername": "Extracheezey ",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 9,
+                "name": "Pink Beret"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 20
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 18
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Skill +2",
+            "id": 4
+        },
+        "personal2": {
+            "name": "Amaterasu",
+            "id": 97
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

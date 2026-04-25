@@ -1,0 +1,64 @@
+{
+    "name": "Dorcassa",
+    "twitchUsername": "Nadorcas",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 5,
+        "hairDecoration": 2,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 31,
+                "name": "Oni Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 40
+        },
+        "promoted": {
+            "name": "Oni Chieftain",
+            "id": 38
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Renewal",
+            "id": 94
+        },
+        "personal2": {
+            "name": "Poison Strike",
+            "id": 101
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

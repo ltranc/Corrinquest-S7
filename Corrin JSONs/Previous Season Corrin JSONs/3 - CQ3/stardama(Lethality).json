@@ -1,0 +1,64 @@
+{
+    "name": "Lethality",
+    "twitchUsername": "stardama",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 9,
+        "hairDecoration": 1,
+        "facialDetail": 9,
+        "hairColor": {
+            "value": "3",
+            "hex": "#d38969"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 13,
+                "name": "Simple Kerchief"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 76
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 74
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quixotic",
+            "id": 90
+        },
+        "personal2": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

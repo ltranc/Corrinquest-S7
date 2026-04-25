@@ -1,0 +1,64 @@
+{
+    "name": "Neptunia",
+    "twitchUsername": "Neptuniia",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 10
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 8
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Axebreaker",
+            "id": 81
+        },
+        "personal2": {
+            "name": "Swordbreaker",
+            "id": 79
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

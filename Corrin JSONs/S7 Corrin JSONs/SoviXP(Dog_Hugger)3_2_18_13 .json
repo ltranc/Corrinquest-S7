@@ -1,0 +1,64 @@
+{
+  "name": "Dog Hugger",
+  "twitchUsername": "SoviXP",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 4,
+    "hairstyle": 1,
+    "hairDecoration": 4,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "9",
+      "hex": "#fedada"
+    },
+    "voice": {
+      "name": "jp-calm",
+      "id": 7
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 27,
+        "name": "Ninja Mask"
+      },
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Res",
+      "id": 8
+    },
+    "bane": {
+      "name": "Skl",
+      "id": 4
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Knight",
+      "id": 146
+    },
+    "promoted": {
+      "name": "Ballistician",
+      "id": 164
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Air Superiority",
+      "id": 88
+    },
+    "personal2": {
+      "name": "Counter",
+      "id": 37
+    }
+  },
+  "creationDate": "3_2_18_13"
+}

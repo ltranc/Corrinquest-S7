@@ -1,0 +1,67 @@
+{
+  "name": "Kiyome",
+  "twitchUsername": "blythe3331",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 11,
+    "hairDecoration": 0,
+    "facialDetail": 7,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 29,
+        "name": "Round Glasses"
+      },
+      "arm": {
+        "id": 43,
+        "name": "Medicine Trunk"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "HP",
+      "id": 1
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Troubadour Gentilhomme",
+      "id": 91
+    },
+    "promoted": {
+      "name": "Strategist",
+      "id": 89
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Charm",
+      "id": 72
+    },
+    "personal2": {
+      "name": "Rally Magic",
+      "id": 17
+    }
+  },
+  "creationDate": "2_9_17_4"
+}

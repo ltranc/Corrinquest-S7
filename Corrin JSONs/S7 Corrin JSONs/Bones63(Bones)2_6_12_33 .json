@@ -1,0 +1,67 @@
+{
+  "name": "Bones",
+  "twitchUsername": "Bones63",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 1,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "29",
+      "hex": "#f497af"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 74,
+        "name": "Ogre Mask"
+      },
+      "arm": null,
+      "body": {
+        "id": 103,
+        "name": "Benny Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "HP",
+      "id": 1
+    },
+    "bane": {
+      "name": "Spd",
+      "id": 5
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Oni Savage",
+      "id": 39
+    },
+    "promoted": {
+      "name": "Blacksmith",
+      "id": 41
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Amaterasu",
+      "id": 97
+    },
+    "personal2": {
+      "name": "Wary Fighter",
+      "id": 64
+    }
+  },
+  "creationDate": "2_6_12_33"
+}

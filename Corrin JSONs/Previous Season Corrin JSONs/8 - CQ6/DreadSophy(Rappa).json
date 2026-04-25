@@ -1,0 +1,64 @@
+{
+    "name": "Rappa",
+    "twitchUsername": "DreadSophy",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 1,
+        "hairDecoration": 5,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "19",
+            "hex": "#eeb1b1"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 31,
+                "name": "Oni Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 76
+        },
+        "promoted": {
+            "name": "Master Ninja",
+            "id": 74
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "HP +5",
+            "id": 1
+        },
+        "personal2": {
+            "name": "Malefic Aura",
+            "id": 76
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

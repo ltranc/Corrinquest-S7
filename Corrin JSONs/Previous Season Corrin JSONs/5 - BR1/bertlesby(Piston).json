@@ -1,0 +1,64 @@
+{
+    "name": "Piston",
+    "twitchUsername": "bertlesby",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "7",
+            "hex": "#92add0"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 51,
+                "name": "Armory Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Blacksmith",
+            "id": 41
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Countermagic",
+            "id": 38
+        },
+        "personal2": {
+            "name": "Swordbreaker",
+            "id": 79
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

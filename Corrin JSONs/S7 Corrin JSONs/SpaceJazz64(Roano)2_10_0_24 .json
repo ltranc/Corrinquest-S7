@@ -1,0 +1,70 @@
+{
+  "name": "Roano",
+  "twitchUsername": "SpaceJazz64",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 6,
+    "hairstyle": 6,
+    "hairDecoration": 0,
+    "facialDetail": 6,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "standard",
+      "id": 1
+    },
+    "accessories": {
+      "head": {
+        "id": 9,
+        "name": "Pink Beret"
+      },
+      "face": null,
+      "arm": {
+        "id": 61,
+        "name": "Emblem Shield"
+      },
+      "body": {
+        "id": 84,
+        "name": "Custom Outfit"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Def",
+      "id": 7
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 23
+    },
+    "promoted": {
+      "name": "Hero",
+      "id": 21
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Hoshidan Unity",
+      "id": 43
+    },
+    "personal2": {
+      "name": "Aether",
+      "id": 26
+    }
+  },
+  "creationDate": "2_10_0_24"
+}

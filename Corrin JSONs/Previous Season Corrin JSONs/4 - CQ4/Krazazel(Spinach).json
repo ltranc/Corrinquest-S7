@@ -1,0 +1,64 @@
+{
+    "name": "Spinach",
+    "twitchUsername": "Krazazel",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 6,
+        "hairstyle": 1,
+        "hairDecoration": 2,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 50
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 52
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shadowgift",
+            "id": 141
+        },
+        "personal2": {
+            "name": "Inspiration",
+            "id": 75
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

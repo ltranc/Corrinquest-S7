@@ -1,0 +1,70 @@
+{
+  "name": "Vivi",
+  "twitchUsername": "IzaYuri",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 6,
+    "hairstyle": 7,
+    "hairDecoration": 0,
+    "facialDetail": 12,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#45e876"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 18,
+        "name": "Princess Crown"
+      },
+      "face": null,
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": {
+        "id": 149,
+        "name": "Nina Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Outlaw",
+      "id": 28
+    },
+    "promoted": {
+      "name": "Bow Knight",
+      "id": 26
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Luna",
+      "id": 30
+    },
+    "personal2": {
+      "name": "Death Blow",
+      "id": 59
+    }
+  },
+  "creationDate": "3_19_16_42"
+}

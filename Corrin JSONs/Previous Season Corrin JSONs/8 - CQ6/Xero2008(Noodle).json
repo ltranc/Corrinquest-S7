@@ -1,0 +1,64 @@
+{
+    "name": "Noodle",
+    "twitchUsername": "Xero2008",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 73,
+                "name": "Roguish Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 149
+        },
+        "promoted": {
+            "name": "Great Lord",
+            "id": 168
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Strong Riposte",
+            "id": 50
+        },
+        "personal2": {
+            "name": "Heavy Blade",
+            "id": 158
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

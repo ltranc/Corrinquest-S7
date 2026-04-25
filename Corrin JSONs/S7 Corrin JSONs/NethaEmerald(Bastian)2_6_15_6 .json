@@ -1,0 +1,64 @@
+{
+  "name": "Bastian",
+  "twitchUsername": "NethaEmerald",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 6,
+    "hairstyle": 4,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "24",
+      "hex": "#e8db98"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": {
+        "id": 87,
+        "name": "Ebon Wolf Tail"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Diviner",
+      "id": 153
+    },
+    "promoted": {
+      "name": "Dread Fighter",
+      "id": 118
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Sol",
+      "id": 29
+    },
+    "personal2": {
+      "name": "Ignis",
+      "id": 136
+    }
+  },
+  "creationDate": "2_6_15_6"
+}

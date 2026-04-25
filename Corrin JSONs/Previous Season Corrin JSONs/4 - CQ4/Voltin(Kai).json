@@ -1,0 +1,64 @@
+{
+    "name": "Kai",
+    "twitchUsername": "Voltin",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Spear Fighter",
+            "id": 45
+        },
+        "promoted": {
+            "name": "Basara",
+            "id": 47
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Seal Resistance",
+            "id": 15
+        },
+        "personal2": {
+            "name": "Ignis",
+            "id": 136
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

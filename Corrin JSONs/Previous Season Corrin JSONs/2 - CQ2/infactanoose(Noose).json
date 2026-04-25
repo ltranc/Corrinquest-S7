@@ -1,0 +1,64 @@
+{
+    "name": "Noose",
+    "twitchUsername": "infactanoose",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 44,
+                "name": "Lion Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 23
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 21
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        },
+        "personal2": {
+            "name": "Luna",
+            "id": 30
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

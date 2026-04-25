@@ -1,0 +1,64 @@
+{
+    "name": "Kiwi :3",
+    "twitchUsername": "kyleenim",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 3,
+        "hairDecoration": 5,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "5",
+            "hex": "#abd1a1"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 80
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 78
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Renewal",
+            "id": 94
+        },
+        "personal2": {
+            "name": "Lethality",
+            "id": 25
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

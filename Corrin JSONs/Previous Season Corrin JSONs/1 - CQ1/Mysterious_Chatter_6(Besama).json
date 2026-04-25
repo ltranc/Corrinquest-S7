@@ -1,0 +1,61 @@
+{
+    "name": "Besama",
+    "twitchUsername": "Mysterious_Chatter_6",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 9,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 53
+        },
+        "promoted": {
+            "name": "Great Master",
+            "id": 55
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Grisly Wound",
+            "id": 103
+        },
+        "personal2": {
+            "name": "Draconic Hex",
+            "id": 10
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

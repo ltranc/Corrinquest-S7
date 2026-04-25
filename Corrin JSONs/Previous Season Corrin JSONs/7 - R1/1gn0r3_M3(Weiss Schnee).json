@@ -1,0 +1,61 @@
+{
+    "name": "Weiss Schnee",
+    "twitchUsername": "1gn0r3_M3",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 9,
+        "hairDecoration": 5,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "1",
+            "hex": "#f6f4ef"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 148
+        },
+        "promoted": {
+            "name": "Lodestar",
+            "id": 166
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dragon Ward",
+            "id": 35
+        },
+        "personal2": {
+            "name": "Nohrian Trust",
+            "id": 42
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

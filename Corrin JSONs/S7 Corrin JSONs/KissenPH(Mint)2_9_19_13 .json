@@ -1,0 +1,70 @@
+{
+  "name": "Mint",
+  "twitchUsername": "KissenPH",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 2,
+    "hairstyle": 1,
+    "hairDecoration": 2,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "14",
+      "hex": "#cfc3a1"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 17,
+        "name": "Lottery Hat"
+      },
+      "face": null,
+      "arm": {
+        "id": 88,
+        "name": "Ivory Fox Tail"
+      },
+      "body": {
+        "id": 121,
+        "name": "Elise Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "HP",
+      "id": 1
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Knight",
+      "id": 14
+    },
+    "promoted": {
+      "name": "Great Knight",
+      "id": 12
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Wary Fighter",
+      "id": 64
+    },
+    "personal2": {
+      "name": "Renewal",
+      "id": 94
+    }
+  },
+  "creationDate": "2_9_19_13"
+}

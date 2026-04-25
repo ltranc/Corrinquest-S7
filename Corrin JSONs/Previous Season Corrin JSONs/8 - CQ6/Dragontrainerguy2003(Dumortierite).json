@@ -1,0 +1,67 @@
+{
+    "name": "Dumortierite",
+    "twitchUsername": "Dragontrainerguy2003",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 1,
+        "hairDecoration": 4,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#1d275e"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 81,
+                "name": "Dark Diadem"
+            },
+            "face": null,
+            "arm": null,
+            "body": {
+                "id": 83,
+                "name": "Tank Engine"
+            }
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 88
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dancing Blade",
+            "id": 156
+        },
+        "personal2": {
+            "name": "Darting Blow",
+            "id": 58
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

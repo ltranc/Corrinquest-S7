@@ -1,0 +1,73 @@
+{
+  "name": "Lisgo Gambli",
+  "twitchUsername": "Shmorsch",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 5,
+    "hairstyle": 5,
+    "hairDecoration": 5,
+    "facialDetail": 11,
+    "hairColor": {
+      "value": "5",
+      "hex": "#abd1a1"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 86,
+        "name": "Party Hat"
+      },
+      "face": {
+        "id": 30,
+        "name": "Cross Eyepatch"
+      },
+      "arm": {
+        "id": 48,
+        "name": "Battle Flag"
+      },
+      "body": {
+        "id": 89,
+        "name": "Crossdress"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Nohr Prince(ss)",
+      "id": 144
+    },
+    "promoted": {
+      "name": "Lodestar",
+      "id": 166
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Quixotic",
+      "id": 90
+    },
+    "personal2": {
+      "name": "Hoshidan Unity",
+      "id": 43
+    }
+  },
+  "creationDate": "2_9_10_56"
+}

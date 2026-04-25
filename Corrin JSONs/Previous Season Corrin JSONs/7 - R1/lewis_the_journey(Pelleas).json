@@ -1,0 +1,61 @@
+{
+    "name": "Pelleas",
+    "twitchUsername": "lewis_the_journey",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 3,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Sorcerer",
+            "id": 83
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Miracle",
+            "id": 36
+        },
+        "personal2": {
+            "name": "Shove",
+            "id": 45
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Diabetes",
+    "twitchUsername": "ThatOneDiabetic",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 8,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "16",
+            "hex": "#3c7986"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 33
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 31
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Heavy Blade",
+            "id": 158
+        },
+        "personal2": {
+            "name": "Dancing Blade",
+            "id": 156
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

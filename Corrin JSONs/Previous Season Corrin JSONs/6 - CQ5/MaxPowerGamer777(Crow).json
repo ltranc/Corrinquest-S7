@@ -1,0 +1,64 @@
+{
+    "name": "Crow",
+    "twitchUsername": "MaxPowerGamer777",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 5,
+        "hairDecoration": 1,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "10",
+            "hex": "#c0aa9c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 48,
+                "name": "Battle Flag"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 70
+        },
+        "promoted": {
+            "name": "Malig Knight",
+            "id": 72
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Elbow Room",
+            "id": 51
+        },
+        "personal2": {
+            "name": "Heartseeker",
+            "id": 89
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

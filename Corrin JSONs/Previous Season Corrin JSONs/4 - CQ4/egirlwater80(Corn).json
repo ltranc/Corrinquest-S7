@@ -1,0 +1,64 @@
+{
+    "name": "Corn",
+    "twitchUsername": "egirlwater80",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "28",
+            "hex": "#af81d5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 23
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 21
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Armored Blow",
+            "id": 61
+        },
+        "personal2": {
+            "name": "Seal Strength",
+            "id": 11
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "boots",
+    "twitchUsername": "bo0ots42",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "30",
+            "hex": "#6e4f3b"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Spear Fighter",
+            "id": 45
+        },
+        "promoted": {
+            "name": "Spear Master",
+            "id": 43
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Axebreaker",
+            "id": 81
+        },
+        "personal2": {
+            "name": "Seal Strength",
+            "id": 11
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

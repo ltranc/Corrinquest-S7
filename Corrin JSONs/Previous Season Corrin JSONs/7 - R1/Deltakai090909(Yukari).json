@@ -1,0 +1,64 @@
+{
+    "name": "Yukari",
+    "twitchUsername": "Deltakai090909",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 9,
+        "hairColor": {
+            "value": "3",
+            "hex": "#d38969"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 64,
+                "name": "Witch's Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 28
+        },
+        "promoted": {
+            "name": "Adventurer",
+            "id": 30
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        },
+        "personal2": {
+            "name": "Ignis",
+            "id": 136
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

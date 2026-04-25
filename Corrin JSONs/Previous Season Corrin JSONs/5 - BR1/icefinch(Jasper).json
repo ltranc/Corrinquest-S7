@@ -1,0 +1,64 @@
+{
+    "name": "Jasper",
+    "twitchUsername": "icefinch",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 29,
+                "name": "Round Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "General",
+            "id": 15
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Tomebreaker",
+            "id": 84
+        },
+        "personal2": {
+            "name": "Amaterasu",
+            "id": 97
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

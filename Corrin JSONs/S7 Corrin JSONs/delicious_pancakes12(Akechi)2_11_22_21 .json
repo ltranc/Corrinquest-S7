@@ -1,0 +1,67 @@
+{
+  "name": "Akechi",
+  "twitchUsername": "delicious_pancakes12",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 1,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "11",
+      "hex": "#a5a6a6"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": {
+        "id": 79,
+        "name": "Malig Helmet"
+      },
+      "face": null,
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Ninja",
+      "id": 75
+    },
+    "promoted": {
+      "name": "Master Ninja",
+      "id": 73
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Sol",
+      "id": 29
+    },
+    "personal2": {
+      "name": "Quixotic",
+      "id": 90
+    }
+  },
+  "creationDate": "2_11_22_21"
+}

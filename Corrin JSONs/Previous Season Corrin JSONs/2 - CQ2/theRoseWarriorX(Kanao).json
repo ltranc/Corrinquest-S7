@@ -1,0 +1,64 @@
+{
+    "name": "Kanao",
+    "twitchUsername": "theRoseWarriorX",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 5,
+        "hairDecoration": 3,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 23,
+                "name": "Golden Clip"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 34
+        },
+        "promoted": {
+            "name": "Swordmaster",
+            "id": 32
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Swordfaire",
+            "id": 65
+        },
+        "personal2": {
+            "name": "Astra",
+            "id": 27
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

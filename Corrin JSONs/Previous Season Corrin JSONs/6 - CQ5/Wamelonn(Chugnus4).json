@@ -1,0 +1,64 @@
+{
+    "name": "Chugnus4",
+    "twitchUsername": "Wamelonn",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 4,
+        "hairDecoration": 3,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "9",
+            "hex": "#fedada"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 22,
+                "name": "Nightcap"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 86
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 88
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shadowgift",
+            "id": 141
+        },
+        "personal2": {
+            "name": "Renewal",
+            "id": 94
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "HawkTwo",
+    "twitchUsername": "blazingEmblem",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 7,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 66,
+                "name": "Sunglasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Diviner",
+            "id": 154
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 119
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shadowgift",
+            "id": 141
+        },
+        "personal2": {
+            "name": "Warding Blow",
+            "id": 62
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

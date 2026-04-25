@@ -1,0 +1,64 @@
+{
+    "name": "Nightbot",
+    "twitchUsername": "mothmantristan",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#6767dc"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 70,
+                "name": "Rider's Helmet"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 14
+        },
+        "promoted": {
+            "name": "Great Knight",
+            "id": 12
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dancing Blade",
+            "id": 156
+        },
+        "personal2": {
+            "name": "Quick Draw",
+            "id": 49
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

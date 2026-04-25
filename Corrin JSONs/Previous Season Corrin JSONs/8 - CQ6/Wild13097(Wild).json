@@ -1,0 +1,64 @@
+{
+    "name": "Wild",
+    "twitchUsername": "Wild13097",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "27",
+            "hex": "#4d81b5"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 20,
+                "name": "Sun Tiara"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Demoiselle",
+            "id": 170
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 89
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Speed",
+            "id": 19
+        },
+        "personal2": {
+            "name": "Rally Strength",
+            "id": 16
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

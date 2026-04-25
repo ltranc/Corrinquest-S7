@@ -1,0 +1,64 @@
+{
+    "name": "Galvior",
+    "twitchUsername": "Galvior",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 6,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 17,
+                "name": "Lottery Hat"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Nohr Prince(ss)",
+            "id": 3
+        },
+        "promoted": {
+            "name": "Nohr Noble",
+            "id": 1
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Wary Fighter",
+            "id": 64
+        },
+        "personal2": {
+            "name": "Renewal",
+            "id": 94
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

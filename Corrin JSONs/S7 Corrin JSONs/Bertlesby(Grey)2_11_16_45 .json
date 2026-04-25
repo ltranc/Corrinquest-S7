@@ -1,0 +1,70 @@
+{
+  "name": "Grey",
+  "twitchUsername": "Bertlesby",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 1,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "jp-mature",
+      "id": 6
+    },
+    "accessories": {
+      "head": {
+        "id": 71,
+        "name": "Cataphract Helm"
+      },
+      "face": null,
+      "arm": {
+        "id": 42,
+        "name": "Nohr Pauldron"
+      },
+      "body": {
+        "id": 84,
+        "name": "Custom Outfit"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "HP",
+      "id": 1
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Cavalier",
+      "id": 9
+    },
+    "promoted": {
+      "name": "Great Knight",
+      "id": 11
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Aegis",
+      "id": 34
+    },
+    "personal2": {
+      "name": "Iron Will",
+      "id": 129
+    }
+  },
+  "creationDate": "2_11_16_45"
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Jonsey ",
+    "twitchUsername": "SuperWill123_",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 5,
+                "name": "Dragon Feather"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Outlaw",
+            "id": 27
+        },
+        "promoted": {
+            "name": "Bow Knight",
+            "id": 25
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Salvage Blow",
+            "id": 104
+        },
+        "personal2": {
+            "name": "Grisly Wound",
+            "id": 103
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

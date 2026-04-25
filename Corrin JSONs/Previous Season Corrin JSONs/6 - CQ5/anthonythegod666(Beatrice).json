@@ -1,0 +1,61 @@
+{
+    "name": "Beatrice",
+    "twitchUsername": "anthonythegod666",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 10,
+        "hairDecoration": 5,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 100
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 102
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dancing Blade",
+            "id": 156
+        },
+        "personal2": {
+            "name": "Wary Fighter",
+            "id": 64
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+  "name": "Snowy",
+  "twitchUsername": "snowysatoru",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 5,
+    "hairDecoration": 5,
+    "facialDetail": 7,
+    "hairColor": {
+      "value": "9",
+      "hex": "#fedada"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "HP",
+      "id": 1
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Dark Mage",
+      "id": 86
+    },
+    "promoted": {
+      "name": "Sorcerer",
+      "id": 84
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Darting Blow",
+      "id": 58
+    },
+    "personal2": {
+      "name": "Death Blow",
+      "id": 59
+    }
+  },
+  "creationDate": "3_25_16_28"
+}

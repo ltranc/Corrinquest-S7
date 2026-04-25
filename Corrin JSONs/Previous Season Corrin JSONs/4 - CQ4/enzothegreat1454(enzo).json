@@ -1,0 +1,61 @@
+{
+    "name": "enzo",
+    "twitchUsername": "enzothegreat1454",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 2,
+        "hairDecoration": 0,
+        "facialDetail": 1,
+        "hairColor": {
+            "value": "6",
+            "hex": "#7dbbc4"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 91
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 93
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Dragon Fang",
+            "id": 28
+        },
+        "personal2": {
+            "name": "Defender",
+            "id": 71
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

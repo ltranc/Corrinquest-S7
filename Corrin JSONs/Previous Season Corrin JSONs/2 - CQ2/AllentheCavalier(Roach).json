@@ -1,0 +1,64 @@
+{
+    "name": "Roach",
+    "twitchUsername": "AllentheCavalier",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 6,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 9,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 51,
+                "name": "Armory Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 13
+        },
+        "promoted": {
+            "name": "General",
+            "id": 15
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Tomebreaker",
+            "id": 84
+        },
+        "personal2": {
+            "name": "Vengeance",
+            "id": 32
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

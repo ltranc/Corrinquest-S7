@@ -1,0 +1,64 @@
+{
+    "name": "Jakes Leash",
+    "twitchUsername": "Ziraak",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 2,
+        "hairDecoration": 5,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "26",
+            "hex": "#86e1dc"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 41,
+                "name": "Fox Tail"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 100
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 102
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rend Heaven",
+            "id": 31
+        },
+        "personal2": {
+            "name": "Aether",
+            "id": 26
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

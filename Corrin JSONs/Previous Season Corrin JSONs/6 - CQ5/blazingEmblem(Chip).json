@@ -1,0 +1,64 @@
+{
+    "name": "Chip",
+    "twitchUsername": "blazingEmblem",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "22",
+            "hex": "#e85d64"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 69,
+                "name": "Pumpkin Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 159
+        },
+        "promoted": {
+            "name": "Dread Fighter",
+            "id": 118
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Grisly Wound",
+            "id": 103
+        },
+        "personal2": {
+            "name": "Savage Blow",
+            "id": 102
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

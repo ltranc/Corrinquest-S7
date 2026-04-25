@@ -1,0 +1,70 @@
+{
+  "name": "Cyan",
+  "twitchUsername": "CyanYoh",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 4,
+    "hairstyle": 4,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "6",
+      "hex": "#7dbbc4"
+    },
+    "voice": {
+      "name": "Cyan",
+      "id": 8
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 31,
+        "name": "Oni Mask"
+      },
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": {
+        "id": 89,
+        "name": "Crossdress"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Oni Savage",
+      "id": 39
+    },
+    "promoted": {
+      "name": "Blacksmith",
+      "id": 41
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Astra",
+      "id": 27
+    },
+    "personal2": {
+      "name": "Certain Blow",
+      "id": 60
+    }
+  },
+  "creationDate": "4_3_22_24"
+}

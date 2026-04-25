@@ -1,0 +1,64 @@
+{
+    "name": "William H Taf",
+    "twitchUsername": "amogussex1milIion",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 6,
+        "hairstyle": 10,
+        "hairDecoration": 1,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#000000"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 66,
+                "name": "Sunglasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Kitsune",
+            "id": 100
+        },
+        "promoted": {
+            "name": "Nine-Tails",
+            "id": 102
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Future Sight",
+            "id": 107
+        },
+        "personal2": {
+            "name": "Warding Blow",
+            "id": 62
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

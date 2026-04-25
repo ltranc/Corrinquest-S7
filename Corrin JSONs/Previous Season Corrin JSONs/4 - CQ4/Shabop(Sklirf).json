@@ -1,0 +1,64 @@
+{
+    "name": "Sklirf",
+    "twitchUsername": "Shabop",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "20",
+            "hex": "#837267"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 53
+        },
+        "promoted": {
+            "name": "Great Master",
+            "id": 55
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Camaraderie",
+            "id": 93
+        },
+        "personal2": {
+            "name": "Counter",
+            "id": 37
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

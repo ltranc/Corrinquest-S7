@@ -1,0 +1,61 @@
+{
+    "name": "Rose",
+    "twitchUsername": "Mysterious_Chatter_65",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "22",
+            "hex": "#e85d64"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 53
+        },
+        "promoted": {
+            "name": "Great Master",
+            "id": 55
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Profiteer",
+            "id": 105
+        },
+        "personal2": {
+            "name": "Salvage Blow",
+            "id": 104
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

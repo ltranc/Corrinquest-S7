@@ -1,0 +1,64 @@
+{
+    "name": "Meilu",
+    "twitchUsername": "ganon_the_calamity",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 4,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 8,
+                "name": "Yune Pauldron"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 24
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 22
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Swordfaire",
+            "id": 65
+        },
+        "personal2": {
+            "name": "Lancebreaker",
+            "id": 80
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,61 @@
+{
+    "name": "Kiwi",
+    "twitchUsername": "Mysterious_Chatter_95",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 9,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "9",
+            "hex": "#fedada"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Lck",
+            "id": 6
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 80
+        },
+        "promoted": {
+            "name": "Merchant",
+            "id": 82
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Luck +4",
+            "id": 6
+        },
+        "personal2": {
+            "name": "Lucktaker",
+            "id": 146
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

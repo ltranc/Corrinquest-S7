@@ -1,0 +1,64 @@
+{
+    "name": "Yarlogins",
+    "twitchUsername": "ChillyWilly4472",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "21",
+            "hex": "#5b5855"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 31,
+                "name": "Oni Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Oni Savage",
+            "id": 39
+        },
+        "promoted": {
+            "name": "Oni Chieftain",
+            "id": 37
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quixotic",
+            "id": 90
+        },
+        "personal2": {
+            "name": "Ignis",
+            "id": 136
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

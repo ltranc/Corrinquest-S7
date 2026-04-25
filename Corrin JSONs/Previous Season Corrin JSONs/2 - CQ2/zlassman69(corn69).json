@@ -1,0 +1,64 @@
+{
+    "name": "corn69",
+    "twitchUsername": "zlassman69",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 5,
+        "hairstyle": 8,
+        "hairDecoration": 2,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "17",
+            "hex": "#4c5f78"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 6,
+                "name": "Robin's Books"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 91
+        },
+        "promoted": {
+            "name": "Strategist",
+            "id": 89
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Rally Strength",
+            "id": 16
+        },
+        "personal2": {
+            "name": "Rally Speed",
+            "id": 19
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

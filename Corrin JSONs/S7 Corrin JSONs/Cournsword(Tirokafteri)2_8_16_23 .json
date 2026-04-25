@@ -1,0 +1,67 @@
+{
+  "name": "Tirokafteri",
+  "twitchUsername": "Cournsword",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 3,
+    "hairstyle": 3,
+    "hairDecoration": 0,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "24",
+      "hex": "#e8db98"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 11,
+        "name": "Mage's Circlet"
+      },
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 149,
+        "name": "Nina Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Nohr Prince(ss)",
+      "id": 4
+    },
+    "promoted": {
+      "name": "Hoshido Noble",
+      "id": 6
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Ignis",
+      "id": 136
+    },
+    "personal2": {
+      "name": "Quixotic",
+      "id": 90
+    }
+  },
+  "creationDate": "2_8_16_23"
+}

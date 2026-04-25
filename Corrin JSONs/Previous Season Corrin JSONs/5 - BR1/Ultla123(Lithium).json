@@ -1,0 +1,64 @@
+{
+    "name": "Lithium",
+    "twitchUsername": "Ultla123",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 4,
+        "hairColor": {
+            "value": "19",
+            "hex": "#eeb1b1"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 20,
+                "name": "Sun Tiara"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 53
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 51
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Demoiselle",
+            "id": 74
+        },
+        "personal2": {
+            "name": "Live to Serve",
+            "id": 100
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

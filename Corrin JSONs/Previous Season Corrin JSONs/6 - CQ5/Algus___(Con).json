@@ -1,0 +1,64 @@
+{
+    "name": "Con",
+    "twitchUsername": "Algus___",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 0,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#cecbff"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 11,
+                "name": "Mage's Circlet"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 60
+        },
+        "promoted": {
+            "name": "Falcon Knight",
+            "id": 58
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Wary Fighter",
+            "id": 64
+        },
+        "personal2": {
+            "name": "Dancing Blade",
+            "id": 156
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

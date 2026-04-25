@@ -1,0 +1,70 @@
+{
+  "name": "Cornball",
+  "twitchUsername": "Sen1225",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 0,
+    "hairstyle": 1,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "12",
+      "hex": "#9b4444"
+    },
+    "voice": {
+      "name": "standard",
+      "id": 0
+    },
+    "accessories": {
+      "head": {
+        "id": 64,
+        "name": "Witch's Hat"
+      },
+      "face": {
+        "id": 69,
+        "name": "Pumpkin Mask"
+      },
+      "arm": null,
+      "body": {
+        "id": 83,
+        "name": "Tank Engine"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Troubadour Demoiselle",
+      "id": 92
+    },
+    "promoted": {
+      "name": "Strategist",
+      "id": 90
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Charm",
+      "id": 72
+    },
+    "personal2": {
+      "name": "Gentilhomme",
+      "id": 73
+    }
+  },
+  "creationDate": "2_6_20_24"
+}

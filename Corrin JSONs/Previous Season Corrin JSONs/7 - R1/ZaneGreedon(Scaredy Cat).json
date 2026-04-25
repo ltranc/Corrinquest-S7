@@ -1,0 +1,64 @@
+{
+    "name": "Scaredy Cat",
+    "twitchUsername": "ZaneGreedon",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 2,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Apothecary",
+            "id": 80
+        },
+        "promoted": {
+            "name": "Mechanist",
+            "id": 78
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Charm",
+            "id": 72
+        },
+        "personal2": {
+            "name": "Dual Striker",
+            "id": 132
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

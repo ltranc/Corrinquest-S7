@@ -1,0 +1,67 @@
+{
+  "name": "HOOONK",
+  "twitchUsername": "sui_aqua",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 1,
+    "hairstyle": 5,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#4a4037"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 66,
+        "name": "Sunglasses"
+      },
+      "arm": null,
+      "body": {
+        "id": 125,
+        "name": "Beruka Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Skl",
+      "id": 4
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Archer",
+      "id": 64
+    },
+    "promoted": {
+      "name": "Kinshi Knight",
+      "id": 62
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Savage Blow",
+      "id": 102
+    },
+    "personal2": {
+      "name": "Lunge",
+      "id": 46
+    }
+  },
+  "creationDate": "3_1_0_15"
+}

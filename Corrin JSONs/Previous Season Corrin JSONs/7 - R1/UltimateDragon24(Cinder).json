@@ -1,0 +1,64 @@
+{
+    "name": "Cinder",
+    "twitchUsername": "UltimateDragon24",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 0,
+        "hairDecoration": 5,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 31,
+                "name": "Oni Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "HP",
+            "id": 1
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 162
+        },
+        "promoted": {
+            "name": "Grandmaster",
+            "id": 169
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lunge",
+            "id": 46
+        },
+        "personal2": {
+            "name": "Movement +1",
+            "id": 9
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

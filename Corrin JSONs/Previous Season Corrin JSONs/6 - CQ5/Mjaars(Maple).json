@@ -1,0 +1,64 @@
+{
+    "name": "Maple",
+    "twitchUsername": "Mjaars",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 10,
+        "hairDecoration": 1,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#5a5f5e"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 61,
+                "name": "Emblem Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Knight",
+            "id": 14
+        },
+        "promoted": {
+            "name": "General",
+            "id": 16
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Iron Will",
+            "id": 129
+        },
+        "personal2": {
+            "name": "Renewal",
+            "id": 94
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

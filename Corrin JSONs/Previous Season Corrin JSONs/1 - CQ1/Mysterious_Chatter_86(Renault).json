@@ -1,0 +1,61 @@
+{
+    "name": "Renault",
+    "twitchUsername": "Mysterious_Chatter_86",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 4,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "26",
+            "hex": "#86e1dc"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Monk/Shrine Maiden",
+            "id": 53
+        },
+        "promoted": {
+            "name": "Onmyoji",
+            "id": 51
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Inspiration",
+            "id": 75
+        },
+        "personal2": {
+            "name": "Draconic Hex",
+            "id": 10
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

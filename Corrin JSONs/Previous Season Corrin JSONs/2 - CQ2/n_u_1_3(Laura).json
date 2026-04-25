@@ -1,0 +1,61 @@
+{
+    "name": "Laura",
+    "twitchUsername": "n_u_1_3",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 9,
+        "hairDecoration": 3,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "7",
+            "hex": "#92add0"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Mercenary",
+            "id": 24
+        },
+        "promoted": {
+            "name": "Hero",
+            "id": 22
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quick Draw",
+            "id": 49
+        },
+        "personal2": {
+            "name": "Swordfaire",
+            "id": 65
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

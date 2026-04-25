@@ -1,0 +1,61 @@
+{
+  "name": "Breaker",
+  "twitchUsername": "nightsoldier15",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 6,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "30",
+      "hex": "#6e4f3b"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Skl",
+      "id": 4
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Fighter",
+      "id": 19
+    },
+    "promoted": {
+      "name": "Hero",
+      "id": 21
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Lancebreaker",
+      "id": 80
+    },
+    "personal2": {
+      "name": "Swordbreaker",
+      "id": 79
+    }
+  },
+  "creationDate": "2_17_11_1"
+}

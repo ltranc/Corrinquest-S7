@@ -1,0 +1,61 @@
+{
+    "name": "Robin",
+    "twitchUsername": "Reflet2210",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 85
+        },
+        "promoted": {
+            "name": "Dark Knight",
+            "id": 87
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Wary Fighter",
+            "id": 64
+        },
+        "personal2": {
+            "name": "Shadowgift",
+            "id": 141
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

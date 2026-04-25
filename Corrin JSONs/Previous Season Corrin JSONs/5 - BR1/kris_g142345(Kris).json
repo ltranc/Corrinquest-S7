@@ -1,0 +1,64 @@
+{
+    "name": "Kris",
+    "twitchUsername": "kris_g142345",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 0,
+        "hairstyle": 6,
+        "hairDecoration": 0,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "24",
+            "hex": "#e8db98"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 33,
+                "name": "Royal Feather"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 155
+        },
+        "promoted": {
+            "name": "Dark Falcon",
+            "id": 120
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Ignis",
+            "id": 136
+        },
+        "personal2": {
+            "name": "Quixotic",
+            "id": 90
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

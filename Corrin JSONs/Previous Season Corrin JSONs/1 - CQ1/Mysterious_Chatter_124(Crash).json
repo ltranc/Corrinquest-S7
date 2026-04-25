@@ -1,0 +1,61 @@
+{
+    "name": "Crash",
+    "twitchUsername": "Mysterious_Chatter_124",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "15",
+            "hex": "#6f845f"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wolfskin",
+            "id": 95
+        },
+        "promoted": {
+            "name": "Wolfssegner",
+            "id": 97
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Even Better",
+            "id": 95
+        },
+        "personal2": {
+            "name": "Resistancetaker",
+            "id": 148
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "Kallian",
+  "twitchUsername": "seyroxvongalahad",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 4,
+    "hairstyle": 11,
+    "hairDecoration": 0,
+    "facialDetail": 5,
+    "hairColor": {
+      "value": "17",
+      "hex": "#4c5f78"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": {
+        "id": 44,
+        "name": "Lion Shield"
+      },
+      "body": {
+        "id": 102,
+        "name": "Leo Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Str",
+      "id": 2
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Dark Mage",
+      "id": 85
+    },
+    "promoted": {
+      "name": "Sorcerer",
+      "id": 83
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Shadowgift",
+      "id": 141
+    },
+    "personal2": {
+      "name": "Renewal",
+      "id": 94
+    }
+  },
+  "creationDate": "2_7_23_7"
+}

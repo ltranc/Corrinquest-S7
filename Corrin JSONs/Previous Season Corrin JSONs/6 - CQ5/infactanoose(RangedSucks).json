@@ -1,0 +1,64 @@
+{
+    "name": "RangedSucks",
+    "twitchUsername": "infactanoose",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 5,
+        "hairDecoration": 0,
+        "facialDetail": 11,
+        "hairColor": {
+            "value": "23",
+            "hex": "#f59d71"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 38,
+                "name": "Tengu Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Res",
+            "id": 8
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Lancer",
+            "id": 106
+        },
+        "promoted": {
+            "name": "Ballistician",
+            "id": 122
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        },
+        "personal2": {
+            "name": "Bowbreaker",
+            "id": 83
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

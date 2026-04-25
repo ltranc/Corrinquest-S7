@@ -1,0 +1,67 @@
+{
+    "name": "Cyan",
+    "twitchUsername": "CyanYoh",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 3,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "6",
+            "hex": "#7dbbc4"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 17,
+                "name": "Lottery Hat"
+            },
+            "face": null,
+            "arm": {
+                "id": 59,
+                "name": "Dread Scabbard"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Str",
+            "id": 2
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Ninja",
+            "id": 159
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 93
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Lancebreaker",
+            "id": 80
+        },
+        "personal2": {
+            "name": "Shurikenbreaker",
+            "id": 82
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

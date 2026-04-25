@@ -1,0 +1,70 @@
+{
+  "name": "Chadicus",
+  "twitchUsername": "grary27",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 9,
+    "hairDecoration": 0,
+    "facialDetail": 3,
+    "hairColor": {
+      "value": "19",
+      "hex": "#eeb1b1"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 66,
+        "name": "Sunglasses"
+      },
+      "arm": {
+        "id": 42,
+        "name": "Nohr Pauldron"
+      },
+      "body": {
+        "id": 107,
+        "name": "Laslow Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Oni Savage",
+      "id": 151
+    },
+    "promoted": {
+      "name": "Vanguard",
+      "id": 125
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Gentilhomme",
+      "id": 73
+    },
+    "personal2": {
+      "name": "Lancebreaker",
+      "id": 80
+    }
+  },
+  "creationDate": "2_4_22_38"
+}

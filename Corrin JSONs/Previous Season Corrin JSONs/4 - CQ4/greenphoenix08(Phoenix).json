@@ -1,0 +1,61 @@
+{
+    "name": "Phoenix",
+    "twitchUsername": "greenphoenix08",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 19
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 17
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Certain Blow",
+            "id": 60
+        },
+        "personal2": {
+            "name": "Skilltaker",
+            "id": 144
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

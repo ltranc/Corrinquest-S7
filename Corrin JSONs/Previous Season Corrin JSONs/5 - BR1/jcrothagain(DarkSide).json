@@ -1,0 +1,64 @@
+{
+    "name": "DarkSide",
+    "twitchUsername": "jcrothagain",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 3,
+        "hairstyle": 2,
+        "hairDecoration": 0,
+        "facialDetail": 5,
+        "hairColor": {
+            "value": "11",
+            "hex": "#a5a6a6"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 4,
+                "name": "Butterfly Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 155
+        },
+        "promoted": {
+            "name": "Dark Falcon",
+            "id": 120
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Shadowgift",
+            "id": 141
+        },
+        "personal2": {
+            "name": "Counter",
+            "id": 37
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

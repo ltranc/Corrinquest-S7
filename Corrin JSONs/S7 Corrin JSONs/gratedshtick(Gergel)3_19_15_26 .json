@@ -1,0 +1,64 @@
+{
+  "name": "Gergel",
+  "twitchUsername": "gratedshtick",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 8,
+    "hairDecoration": 4,
+    "facialDetail": 8,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#1e4d0a"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 92,
+        "name": "Kaze Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Oni Savage",
+      "id": 39
+    },
+    "promoted": {
+      "name": "Blacksmith",
+      "id": 41
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Odd Shaped",
+      "id": 54
+    },
+    "personal2": {
+      "name": "Poison Strike",
+      "id": 101
+    }
+  },
+  "creationDate": "3_19_15_26"
+}

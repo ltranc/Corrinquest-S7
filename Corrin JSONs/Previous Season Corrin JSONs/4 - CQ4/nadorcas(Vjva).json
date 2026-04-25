@@ -1,0 +1,64 @@
+{
+    "name": "Vjva",
+    "twitchUsername": "nadorcas",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 7,
+        "hairDecoration": 2,
+        "facialDetail": 2,
+        "hairColor": {
+            "value": "8",
+            "hex": "#c8a2d6"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 33,
+                "name": "Royal Feather"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Samurai",
+            "id": 150
+        },
+        "promoted": {
+            "name": "Great Lord",
+            "id": 126
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        },
+        "personal2": {
+            "name": "Aegis",
+            "id": 34
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

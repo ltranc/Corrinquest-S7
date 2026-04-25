@@ -1,0 +1,70 @@
+{
+  "name": "Manato",
+  "twitchUsername": "BlackGlurakX",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 0,
+    "hairDecoration": 0,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "12",
+      "hex": "#9b4444"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 31,
+        "name": "Oni Mask"
+      },
+      "arm": {
+        "id": 88,
+        "name": "Ivory Fox Tail"
+      },
+      "body": {
+        "id": 85,
+        "name": "Alternate Beast Form"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Lck",
+      "id": 6
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Kitsune",
+      "id": 99
+    },
+    "promoted": {
+      "name": "Nine-Tails",
+      "id": 101
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Astra",
+      "id": 27
+    },
+    "personal2": {
+      "name": "Aether",
+      "id": 26
+    }
+  },
+  "creationDate": "2_10_2_7"
+}

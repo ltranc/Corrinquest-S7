@@ -1,0 +1,64 @@
+{
+  "name": "Kohaku",
+  "twitchUsername": "Blackwing757",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 0,
+    "hairstyle": 10,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "2",
+      "hex": "#c35855"
+    },
+    "voice": {
+      "name": "jp-energetic",
+      "id": 5
+    },
+    "accessories": {
+      "head": {
+        "id": 21,
+        "name": "White Ribbon"
+      },
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Mag",
+      "id": 3
+    },
+    "bane": {
+      "name": "Skl",
+      "id": 4
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Samurai",
+      "id": 34
+    },
+    "promoted": {
+      "name": "Swordmaster",
+      "id": 32
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Toxic Brew",
+      "id": 155
+    },
+    "personal2": {
+      "name": "Witch's Brew",
+      "id": 153
+    }
+  },
+  "creationDate": "2_4_12_20"
+}

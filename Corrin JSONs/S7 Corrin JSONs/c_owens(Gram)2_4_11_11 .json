@@ -1,0 +1,67 @@
+{
+  "name": "Gram",
+  "twitchUsername": "c_owens",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 3,
+    "hairstyle": 7,
+    "hairDecoration": 2,
+    "facialDetail": 8,
+    "hairColor": {
+      "value": "23",
+      "hex": "#f59d71"
+    },
+    "voice": {
+      "name": "older",
+      "id": 2
+    },
+    "accessories": {
+      "head": {
+        "id": 76,
+        "name": "Sky Hood"
+      },
+      "face": null,
+      "arm": {
+        "id": 88,
+        "name": "Ivory Fox Tail"
+      },
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Def",
+      "id": 7
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Knight",
+      "id": 14
+    },
+    "promoted": {
+      "name": "Great Knight",
+      "id": 12
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Bowbreaker",
+      "id": 83
+    },
+    "personal2": {
+      "name": "Elbow Room",
+      "id": 51
+    }
+  },
+  "creationDate": "2_4_11_11"
+}

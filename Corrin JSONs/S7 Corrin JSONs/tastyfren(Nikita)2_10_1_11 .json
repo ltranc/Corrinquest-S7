@@ -1,0 +1,64 @@
+{
+  "name": "Nikita",
+  "twitchUsername": "tastyfren",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 5,
+    "hairstyle": 7,
+    "hairDecoration": 0,
+    "facialDetail": 10,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#687808"
+    },
+    "voice": {
+      "name": "younger",
+      "id": 1
+    },
+    "accessories": {
+      "head": {
+        "id": 10,
+        "name": "Trainee Garb"
+      },
+      "face": null,
+      "arm": null,
+      "body": null
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Diviner",
+      "id": 50
+    },
+    "promoted": {
+      "name": "Onmyoji",
+      "id": 52
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Astra",
+      "id": 27
+    },
+    "personal2": {
+      "name": "Quixotic",
+      "id": 90
+    }
+  },
+  "creationDate": "2_10_1_11"
+}

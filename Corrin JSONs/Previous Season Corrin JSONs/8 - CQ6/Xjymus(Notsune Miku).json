@@ -1,0 +1,64 @@
+{
+    "name": "Notsune Miku",
+    "twitchUsername": "Xjymus",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 0,
+        "hairstyle": 3,
+        "hairDecoration": 3,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#00ddc0"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 12,
+                "name": "Princess Bow"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Troubadour Gentilhomme",
+            "id": 171
+        },
+        "promoted": {
+            "name": "Butler/Maid",
+            "id": 94
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Demoiselle",
+            "id": 74
+        },
+        "personal2": {
+            "name": "Voice of Peace",
+            "id": 77
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

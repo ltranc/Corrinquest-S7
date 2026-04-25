@@ -1,0 +1,64 @@
+{
+    "name": "Smaggle D",
+    "twitchUsername": "masterobrick",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 5,
+        "hairstyle": 1,
+        "hairDecoration": 4,
+        "facialDetail": 10,
+        "hairColor": {
+            "value": "26",
+            "hex": "#86e1dc"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 67,
+                "name": "Rimmed Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "HP",
+            "id": 1
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Fighter",
+            "id": 20
+        },
+        "promoted": {
+            "name": "Berserker",
+            "id": 18
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Vengeance",
+            "id": 32
+        },
+        "personal2": {
+            "name": "Life and Death",
+            "id": 55
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

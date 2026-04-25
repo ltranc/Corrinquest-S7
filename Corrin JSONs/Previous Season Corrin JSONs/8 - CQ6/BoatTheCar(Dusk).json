@@ -1,0 +1,64 @@
+{
+    "name": "Dusk",
+    "twitchUsername": "BoatTheCar",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 1,
+        "hairstyle": 7,
+        "hairDecoration": 2,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "custom",
+            "hex": "#121212"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 66,
+                "name": "Sunglasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Str",
+            "id": 2
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Dark Mage",
+            "id": 162
+        },
+        "promoted": {
+            "name": "Witch",
+            "id": 123
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quick Draw",
+            "id": 49
+        },
+        "personal2": {
+            "name": "Certain Blow",
+            "id": 60
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

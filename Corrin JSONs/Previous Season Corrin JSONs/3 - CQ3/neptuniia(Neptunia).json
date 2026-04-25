@@ -1,0 +1,64 @@
+{
+    "name": "Neptunia",
+    "twitchUsername": "neptuniia",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 1,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "8",
+            "hex": "#c8a2d6"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 40,
+                "name": "Tinted Glasses"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Lck",
+            "id": 6
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Spear Fighter",
+            "id": 46
+        },
+        "promoted": {
+            "name": "Spear Master",
+            "id": 44
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Seal Defense",
+            "id": 14
+        },
+        "personal2": {
+            "name": "Seal Strength",
+            "id": 11
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

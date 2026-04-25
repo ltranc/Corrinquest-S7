@@ -1,0 +1,73 @@
+{
+  "name": "Bastion",
+  "twitchUsername": "Wielder_Bastion",
+  "appearance": {
+    "build": {
+      "name": "short-male",
+      "gender": "Male",
+      "buildValue": 0,
+      "genderValue": 0
+    },
+    "face": 1,
+    "hairstyle": 1,
+    "hairDecoration": 0,
+    "facialDetail": 9,
+    "hairColor": {
+      "value": "24",
+      "hex": "#e8db98"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 1,
+        "name": "Marth's Tiara"
+      },
+      "face": {
+        "id": 67,
+        "name": "Rimmed Glasses"
+      },
+      "arm": {
+        "id": 61,
+        "name": "Emblem Shield"
+      },
+      "body": {
+        "id": 151,
+        "name": "Fuga Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Spd",
+      "id": 5
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Wyvern Rider",
+      "id": 69
+    },
+    "promoted": {
+      "name": "Malig Knight",
+      "id": 71
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Astra",
+      "id": 27
+    },
+    "personal2": {
+      "name": "Heartseeker",
+      "id": 89
+    }
+  },
+  "creationDate": "2_9_19_34"
+}

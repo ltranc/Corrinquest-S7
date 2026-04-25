@@ -1,0 +1,64 @@
+{
+    "name": "Az",
+    "twitchUsername": "Senerio",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 5,
+        "hairDecoration": 1,
+        "facialDetail": 8,
+        "hairColor": {
+            "value": "26",
+            "hex": "#86e1dc"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 12,
+                "name": "Princess Bow"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 70
+        },
+        "promoted": {
+            "name": "Wyvern Lord",
+            "id": 68
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Air Superiority",
+            "id": 88
+        },
+        "personal2": {
+            "name": "Bowbreaker",
+            "id": 83
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

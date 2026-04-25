@@ -1,0 +1,70 @@
+{
+  "name": "Ira",
+  "twitchUsername": "lugoob",
+  "appearance": {
+    "build": {
+      "name": "short-female",
+      "gender": "Female",
+      "buildValue": 0,
+      "genderValue": 1
+    },
+    "face": 6,
+    "hairstyle": 4,
+    "hairDecoration": 2,
+    "facialDetail": 2,
+    "hairColor": {
+      "value": "3",
+      "hex": "#d38969"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": null,
+      "face": {
+        "id": 31,
+        "name": "Oni Mask"
+      },
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": {
+        "id": 141,
+        "name": "Rhajat Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Def",
+      "id": 7
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Mercenary",
+      "id": 148
+    },
+    "promoted": {
+      "name": "Vanguard",
+      "id": 167
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Astra",
+      "id": 27
+    },
+    "personal2": {
+      "name": "Quixotic",
+      "id": 90
+    }
+  },
+  "creationDate": "2_9_18_13"
+}

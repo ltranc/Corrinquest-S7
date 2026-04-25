@@ -1,0 +1,64 @@
+{
+    "name": "Marixa",
+    "twitchUsername": "Cris_Strider",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 2,
+        "hairstyle": 0,
+        "hairDecoration": 5,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "13",
+            "hex": "#96634c"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 0
+        },
+        "accessories": {
+            "head": {
+                "id": 18,
+                "name": "Princess Crown"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Skl",
+            "id": 4
+        },
+        "bane": {
+            "name": "Mag",
+            "id": 3
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Cavalier",
+            "id": 10
+        },
+        "promoted": {
+            "name": "Paladin",
+            "id": 8
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Quixotic",
+            "id": 90
+        },
+        "personal2": {
+            "name": "Aether",
+            "id": 26
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

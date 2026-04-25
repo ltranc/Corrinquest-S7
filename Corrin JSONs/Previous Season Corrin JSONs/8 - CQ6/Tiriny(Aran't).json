@@ -1,0 +1,64 @@
+{
+    "name": "Aran't",
+    "twitchUsername": "Tiriny",
+    "appearance": {
+        "build": {
+            "name": "tall-male",
+            "gender": "Male",
+            "buildValue": 1,
+            "genderValue": 0
+        },
+        "face": 2,
+        "hairstyle": 4,
+        "hairDecoration": 0,
+        "facialDetail": 0,
+        "hairColor": {
+            "value": "25",
+            "hex": "#8ed484"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": null,
+            "face": null,
+            "arm": {
+                "id": 51,
+                "name": "Armory Shield"
+            },
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Def",
+            "id": 7
+        },
+        "bane": {
+            "name": "Spd",
+            "id": 5
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Spear Fighter",
+            "id": 45
+        },
+        "promoted": {
+            "name": "Spear Master",
+            "id": 43
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Wary Fighter",
+            "id": 64
+        },
+        "personal2": {
+            "name": "Charm",
+            "id": 72
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

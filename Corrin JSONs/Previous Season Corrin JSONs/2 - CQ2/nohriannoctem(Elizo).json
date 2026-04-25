@@ -1,0 +1,64 @@
+{
+    "name": "Elizo",
+    "twitchUsername": "nohriannoctem",
+    "appearance": {
+        "build": {
+            "name": "short-male",
+            "gender": "Male",
+            "buildValue": 0,
+            "genderValue": 0
+        },
+        "face": 1,
+        "hairstyle": 10,
+        "hairDecoration": 0,
+        "facialDetail": 7,
+        "hairColor": {
+            "value": "12",
+            "hex": "#9b4444"
+        },
+        "voice": {
+            "name": "Teen (Mid)",
+            "id": 1
+        },
+        "accessories": {
+            "head": {
+                "id": 19,
+                "name": "Prince's Crown"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Skl",
+            "id": 4
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Wyvern Rider",
+            "id": 69
+        },
+        "promoted": {
+            "name": "Malig Knight",
+            "id": 71
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Inspiration",
+            "id": 75
+        },
+        "personal2": {
+            "name": "Lancebreaker",
+            "id": 80
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

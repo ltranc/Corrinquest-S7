@@ -568,6 +568,9 @@ callback[Event.TurnAfter](1, 4, 1) {
         ev::SkipDisable();
         #anonfn30(3, 23, 3, 24);
         #anonfn30(4, 23, 4, 24);
+        #anonfn30 pairs up the unit at the coordinates of the
+        #first 2 numbers with the unit at the coordinates of
+        #the last 2 numbers. The second unit is the backpack
         anonfn30(4, 23, 4, 24);
         anonfn30(5, 23, 5, 24);
         #anonfn30(26, 23, 27, 23);

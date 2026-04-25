@@ -1,0 +1,67 @@
+{
+  "name": "Gandorf",
+  "twitchUsername": "lewii_11",
+  "appearance": {
+    "build": {
+      "name": "tall-male",
+      "gender": "Male",
+      "buildValue": 1,
+      "genderValue": 0
+    },
+    "face": 3,
+    "hairstyle": 7,
+    "hairDecoration": 0,
+    "facialDetail": 0,
+    "hairColor": {
+      "value": "1",
+      "hex": "#f6f4ef"
+    },
+    "voice": {
+      "name": "mute",
+      "id": 255
+    },
+    "accessories": {
+      "head": {
+        "id": 64,
+        "name": "Witch's Hat"
+      },
+      "face": null,
+      "arm": null,
+      "body": {
+        "id": 154,
+        "name": "Gunter Voice"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Str",
+      "id": 2
+    },
+    "bane": {
+      "name": "Mag",
+      "id": 3
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Dark Mage",
+      "id": 161
+    },
+    "promoted": {
+      "name": "Grandmaster",
+      "id": 127
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "Locktouch",
+      "id": 112
+    },
+    "personal2": {
+      "name": "Axebreaker",
+      "id": 81
+    }
+  },
+  "creationDate": "2_14_15_38"
+}

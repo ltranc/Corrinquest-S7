@@ -1,0 +1,73 @@
+{
+  "name": "Kazenun",
+  "twitchUsername": "Kazenin",
+  "appearance": {
+    "build": {
+      "name": "tall-female",
+      "gender": "Female",
+      "buildValue": 1,
+      "genderValue": 1
+    },
+    "face": 5,
+    "hairstyle": 3,
+    "hairDecoration": 3,
+    "facialDetail": 8,
+    "hairColor": {
+      "value": "custom",
+      "hex": "#454545"
+    },
+    "voice": {
+      "name": "jp-calm",
+      "id": 7
+    },
+    "accessories": {
+      "head": {
+        "id": 60,
+        "name": "Dark Crown"
+      },
+      "face": {
+        "id": 27,
+        "name": "Ninja Mask"
+      },
+      "arm": {
+        "id": 59,
+        "name": "Dread Scabbard"
+      },
+      "body": {
+        "id": 84,
+        "name": "Custom Outfit"
+      }
+    }
+  },
+  "stats": {
+    "boon": {
+      "name": "Skl",
+      "id": 4
+    },
+    "bane": {
+      "name": "Res",
+      "id": 8
+    }
+  },
+  "classes": {
+    "base": {
+      "name": "Monk/Shrine Maiden",
+      "id": 54
+    },
+    "promoted": {
+      "name": "Priestess",
+      "id": 56
+    }
+  },
+  "skills": {
+    "personal1": {
+      "name": "HP +5",
+      "id": 1
+    },
+    "personal2": {
+      "name": "Lethality",
+      "id": 25
+    }
+  },
+  "creationDate": "2_9_23_57"
+}

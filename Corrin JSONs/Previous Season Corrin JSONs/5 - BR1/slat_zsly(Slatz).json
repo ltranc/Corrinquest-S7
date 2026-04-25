@@ -1,0 +1,64 @@
+{
+    "name": "Slatz",
+    "twitchUsername": "slat_zsly",
+    "appearance": {
+        "build": {
+            "name": "short-female",
+            "gender": "Female",
+            "buildValue": 0,
+            "genderValue": 1
+        },
+        "face": 6,
+        "hairstyle": 2,
+        "hairDecoration": 2,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "18",
+            "hex": "#82678c"
+        },
+        "voice": {
+            "name": "Young (Higher)",
+            "id": 1
+        },
+        "accessories": {
+            "head": null,
+            "face": {
+                "id": 27,
+                "name": "Ninja Mask"
+            },
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Mag",
+            "id": 3
+        },
+        "bane": {
+            "name": "Def",
+            "id": 7
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Sky Knight",
+            "id": 156
+        },
+        "promoted": {
+            "name": "Dark Falcon",
+            "id": 121
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Bowbreaker",
+            "id": 83
+        },
+        "personal2": {
+            "name": "Warding Blow",
+            "id": 62
+        }
+    },
+    "timestamp": "1_1_1_1"
+}

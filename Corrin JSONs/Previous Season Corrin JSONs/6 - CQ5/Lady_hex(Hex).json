@@ -1,0 +1,64 @@
+{
+    "name": "Hex",
+    "twitchUsername": "Lady_hex",
+    "appearance": {
+        "build": {
+            "name": "tall-female",
+            "gender": "Female",
+            "buildValue": 1,
+            "genderValue": 1
+        },
+        "face": 3,
+        "hairstyle": 0,
+        "hairDecoration": 5,
+        "facialDetail": 12,
+        "hairColor": {
+            "value": "22",
+            "hex": "#e85d64"
+        },
+        "voice": {
+            "name": "Mature (Lower)",
+            "id": 2
+        },
+        "accessories": {
+            "head": {
+                "id": 1,
+                "name": "Marth's Tiara"
+            },
+            "face": null,
+            "arm": null,
+            "body": null
+        }
+    },
+    "stats": {
+        "boon": {
+            "name": "Spd",
+            "id": 5
+        },
+        "bane": {
+            "name": "Res",
+            "id": 8
+        }
+    },
+    "classes": {
+        "base": {
+            "name": "Nohr Prince(ss)",
+            "id": 144
+        },
+        "promoted": {
+            "name": "Great Lord",
+            "id": 126
+        }
+    },
+    "skills": {
+        "personal1": {
+            "name": "Heartseeker",
+            "id": 89
+        },
+        "personal2": {
+            "name": "Hoshidan Unity",
+            "id": 43
+        }
+    },
+    "timestamp": "1_1_1_1"
+}
