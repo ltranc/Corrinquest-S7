@@ -1,6 +1,6 @@
 # Corrinquest-S7
 
-Modded files for CyanYoh's Corrinquest S6
+Modded files for CyanYoh's Corrinquest S7
 
 Feedback form! - https://forms.gle/hmb7fHZNJdiRToTr8
 Please fill it out! Or at least vote for MVPs
@@ -13,7 +13,7 @@ FEFTwiddler - https://github.com/cornquest-stuff/FEFTwiddler-CorrinquestS7/relea
 
 Corn Builder - https://github.com/TASallin/Corrinquest-Corn-Builder/releases
 
-Corn Art Online - waiting for tristan to send the link lulz
+Corn Art Online - Tristan is currently on a work trip and there is no public build available
 
 
 Changelog - https://docs.google.com/spreadsheets/d/1kQjTcvtT08wkT_QeDvefiZVLlZu58NqWnO19UO5nF-8/edit?usp=sharing
